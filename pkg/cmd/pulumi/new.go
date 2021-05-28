@@ -46,6 +46,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/goversion"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
+	"github.com/pulumi/pulumi/sdk/v3/jvm"
 	"github.com/pulumi/pulumi/sdk/v3/nodejs/npm"
 	"github.com/pulumi/pulumi/sdk/v3/python"
 )
@@ -588,6 +589,8 @@ func installDependencies(proj *workspace.Project, root string) error {
 		if err := goInstallDependencies(); err != nil {
 			return err
 		}
+	} else if strings.EqualFold(proj.Runtime.Name(), "jvm") {
+		return jvmInstallDependenciesAndBuild()
 	}
 
 	return nil
@@ -643,6 +646,21 @@ func dotnetInstallDependenciesAndBuild(proj *workspace.Project, root string) err
 	// restore dependencies, install any plugins, and build the project so it will be
 	// prepped and ready to go for a faster initial `pulumi up`.
 	if err = engine.RunInstallPlugins(proj, pwd, main, nil, plugctx); err != nil {
+		return err
+	}
+
+	fmt.Println("Finished installing dependencies")
+	fmt.Println()
+
+	return nil
+}
+
+func jvmInstallDependenciesAndBuild() error {
+	fmt.Println("Installing dependencies...")
+	fmt.Println()
+
+	err := jvm.Build("", os.Stdout, os.Stderr)
+	if err != nil {
 		return err
 	}
 

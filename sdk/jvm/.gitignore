@@ -1,0 +1,6 @@
+# Ignore Gradle build output directory
+build
+.gradle
+gradlew
+gradlew.bat
+gradle/wrapper

@@ -1,5 +1,5 @@
 PROJECT_NAME := Pulumi SDK
-SUB_PROJECTS := sdk/dotnet sdk/nodejs sdk/python sdk/go
+SUB_PROJECTS := sdk/jvm sdk/dotnet sdk/nodejs sdk/python sdk/go
 include build/common.mk
 
 
