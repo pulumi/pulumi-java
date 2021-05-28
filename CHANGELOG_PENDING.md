@@ -22,6 +22,9 @@
 - [sdk/python] - Reduce `log.debug` calls for improved performance
   [#7295](https://github.com/pulumi/pulumi/pull/7295)
 
+- [sdk/jvm] - Adds an **experimental** JVM support for Pulumi. This code is in experimental state and is subject
+  to change at any point.
+
 ### Bug Fixes
 
 - [sdk/dotnet] - Fix resources destroyed after exception thrown during inline program

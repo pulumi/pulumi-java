@@ -8,5 +8,6 @@ Please see the respective `README`s for information about installing and using t
 * [Python](./python)
 * [Go](./go)
 * [.NET](./dotnet)
+* [JVM](./jvm)
 
 The language providers work by implementing gRPC interfaces defined in [proto/](./proto).

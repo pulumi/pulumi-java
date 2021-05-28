@@ -17,6 +17,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/pulumi/pulumi/sdk/v3/jvm"
 	"io/ioutil"
 	"os"
 	"os/exec"
@@ -588,6 +589,8 @@ func installDependencies(proj *workspace.Project, root string) error {
 		if err := goInstallDependencies(); err != nil {
 			return err
 		}
+	} else if strings.EqualFold(proj.Runtime.Name(), "jvm") {
+		return jvmInstallDependenciesAndBuild()
 	}
 
 	return nil
@@ -643,6 +646,21 @@ func dotnetInstallDependenciesAndBuild(proj *workspace.Project, root string) err
 	// restore dependencies, install any plugins, and build the project so it will be
 	// prepped and ready to go for a faster initial `pulumi up`.
 	if err = engine.RunInstallPlugins(proj, pwd, main, nil, plugctx); err != nil {
+		return err
+	}
+
+	fmt.Println("Finished installing dependencies")
+	fmt.Println()
+
+	return nil
+}
+
+func jvmInstallDependenciesAndBuild() error {
+	fmt.Println("Installing dependencies...")
+	fmt.Println()
+
+	err := jvm.Build("", os.Stdout, os.Stderr)
+	if err != nil {
 		return err
 	}
 
