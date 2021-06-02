@@ -80,12 +80,13 @@ is a pretty standard starting point during debugging that will show a fairly com
 
 ## Submitting a Pull Request
 
-For contributors we use the standard fork based workflow. Fork this repository, create a topic branch, and start hacking away.  When you're ready, make sure you've run the tests (`make travis_pull_request` will run the exact flow we run in CI) and open your PR.
+For contributors, we use the standard fork based workflow. Fork this repository, create a topic branch, and start hacking away.  
+When you're ready, make sure you've run the tests and open your PR.
 When adding a changelog entry, please be sure to use `CHANGELOG_PENDING.md` for the entry - we will then be able to ensure your PR gets into the next release.
 
 ## Getting Help
 
-We're sure there are rough edges and we appreciate you helping out. If you want
+We're sure there are rough edges, and we appreciate you helping out. If you want
 to talk with other folks hacking on Pulumi (or members of the Pulumi team!)
 come hang out `#contribute` channel in the
 [Pulumi Community Slack](https://slack.pulumi.com/).

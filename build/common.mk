@@ -1,6 +1,6 @@
 # Copyright 2016-2018, Pulumi Corporation.  All rights reserved.
 
-# common.mk provides most of the scalfholding for our build system. It
+# common.mk provides most of the scaffolding for our build system. It
 # provides default targets for each project we want to build.
 #
 # The default targets we use are:
@@ -18,12 +18,12 @@
 #             projects, installing also runs yarn link to register
 #             this package, so that other projects can depend on it.
 #
-#  - lint: runs relevent linters for the project
+#  - lint: runs relevant linters for the project
 #
 #  - test_fast: runs the fast tests for a project. These are often
 #               go unit tests or javascript unit tests, they should
 #               complete quickly, as we expect developers to run them
-#               fequently as part of their "inner loop" development.
+#               frequently as part of their "inner loop" development.
 #
 #  - test_all: runs all of test_fast and then runs additional testing,
 #              which may take longer (some times a lot longer!). These
