@@ -18,6 +18,7 @@ build_plugin::
 build:: build_package build_plugin
 
 install_package:: build_package # TODO
+	gradle -Pversion=${VERSION} publishToMavenLocal
 
 install_plugin:: build_plugin
 	GOBIN=$(PULUMI_BIN) go install -ldflags "-X github.com/pulumi/pulumi/sdk/v3/go/common/version.Version=${VERSION}" ${LANGHOST_PKG}
