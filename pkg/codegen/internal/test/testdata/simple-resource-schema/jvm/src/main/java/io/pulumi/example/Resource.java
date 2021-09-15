@@ -22,7 +22,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
-        return io.pulumi.resources.CustomResourceOptions.merge2(defaultOptions, options, id);
+        return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
     public static final class Args extends io.pulumi.resources.ResourceArgs {

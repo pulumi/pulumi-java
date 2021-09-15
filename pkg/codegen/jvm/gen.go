@@ -545,7 +545,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	_, _ = fmt.Fprintf(w, "            .setVersion(Utilities.getVersion())\n")
 	_, _ = fmt.Fprintf(w, "            .build();\n")
 	// TODO
-	_, _ = fmt.Fprintf(w, "        return %s.merge2(defaultOptions, options, id);\n", optionsType)
+	_, _ = fmt.Fprintf(w, "        return %s.merge(defaultOptions, options, id);\n", optionsType)
 	_, _ = fmt.Fprintf(w, "    }\n")
 
 	// TODO
@@ -613,7 +613,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	// Emit the datasource method.
 	_, _ = fmt.Fprintf(w, "    public static CompletableFuture<%s> invokeAsync(%s options) {\n",
 		typeParameter, argsParamDef)
-	_, _ = fmt.Fprintf(w, "        return io.pulumi.deployment.Deployment.getInstance().invokeAsync(\"%s\", %s.class, %s, options.withVersion());\n",
+	_, _ = fmt.Fprintf(w, "        return io.pulumi.deployment.Deployment.getInstance().invokeAsync(\"%s\", io.pulumi.core.internal.Reflection.TypeShape.of(%s.class), %s, Utilities.withVersion(options));\n",
 		fun.Token, typeParameter, argsParamRef)
 	_, _ = fmt.Fprintf(w, "    }\n")
 
