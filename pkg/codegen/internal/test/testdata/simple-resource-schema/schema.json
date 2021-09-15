@@ -117,6 +117,7 @@
     }
   },
   "language": {
+    "jvm": {},
     "csharp": {},
     "go": {
       "importBasePath": "github.com/pulumi/pulumi/pkg/v3/codegen/internal/test/testdata/simple-resource-schema/go/example"
