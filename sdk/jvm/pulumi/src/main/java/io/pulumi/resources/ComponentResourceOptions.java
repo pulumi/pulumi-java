@@ -108,6 +108,14 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable ComponentResourceOptions options1,
             @Nullable ComponentResourceOptions options2
     ) {
+        return merge(options1, options2, null);
+    }
+
+    public static ComponentResourceOptions merge(
+            @Nullable ComponentResourceOptions options1,
+            @Nullable ComponentResourceOptions options2,
+            @Nullable Input<String> id
+    ) {
         options1 = options1 != null ? options1.copy() : Empty;
         options2 = options2 != null ? options2.copy() : Empty;
 
@@ -119,7 +127,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
         }
 
         // first, merge all the normal option values over
-        options1 = mergeSharedOptions(options1, options2);
+        options1 = mergeSharedOptions(options1, options2, id);
 
         options1.providers = mergeNullableList(options1.providers, options2.providers);
 

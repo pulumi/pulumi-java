@@ -217,6 +217,10 @@ public abstract class ResourceOptions {
     }
 
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
+        return mergeSharedOptions(options1, options2, null);
+    }
+
+    protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2, @Nullable Input<String> id) {
         Objects.requireNonNull(options1);
         Objects.requireNonNull(options2);
 
@@ -234,6 +238,8 @@ public abstract class ResourceOptions {
 
         options1.dependsOn = options1.getDependsOn().concat(options2.getDependsOn());
 
+        // Override the ID if one was specified for consistency with other language SDKs.
+        options1.id = id == null ? options1.id : id;
         return options1;
     }
 }

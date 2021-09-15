@@ -4,8 +4,9 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.ResourceArgs;
-import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.Test;
+
+import javax.annotation.Nullable;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;

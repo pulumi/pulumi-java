@@ -146,11 +146,19 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable CustomResourceOptions options1,
             @Nullable CustomResourceOptions options2
     ) {
+        return merge(options1, options2, null);
+    }
+
+    public static CustomResourceOptions merge(
+            @Nullable CustomResourceOptions options1,
+            @Nullable CustomResourceOptions options2,
+            @Nullable Input<String> id
+    ) {
         options1 = options1 != null ? options1.copy() : Empty;
         options2 = options2 != null ? options2.copy() : Empty;
 
         // first, merge all the normal option values over
-        options1 = mergeSharedOptions(options1, options2);
+        options1 = mergeSharedOptions(options1, options2, id);
 
         options1.deleteBeforeReplace = options1.deleteBeforeReplace || options2.deleteBeforeReplace;
         options1.importId = options2.importId == null ? options1.importId : options2.importId;

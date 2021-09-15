@@ -3,9 +3,9 @@ package io.pulumi.core.internal;
 import com.google.common.collect.ComparisonChain;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple5;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -210,7 +210,7 @@ public final class SemanticVersion implements Comparable<SemanticVersion> {
      *   Greater than zero: This instance follows {@code other} in the sort order.
      */
     @Override
-    public int compareTo(@NotNull SemanticVersion other) {
+    public int compareTo(@Nonnull SemanticVersion other) {
         return ComparisonChain.start()
                 .compare(this.major, other.major)
                 .compare(this.minor, other.minor)
