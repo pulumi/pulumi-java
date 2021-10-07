@@ -24,7 +24,16 @@ func TestGeneratePackage(t *testing.T) {
 				path.Join(expectedFilesPath(), "OtherResource.java"),
 				path.Join(expectedFilesPath(), "ArgFunction.java"),
 			},
-			// TODO: more cases
+		},
+		// TODO: more cases
+		{
+			"Simple schema with plain properties",
+			"simple-plain-schema",
+			[]string{
+				path.Join(expectedFilesPath(), "Inputs.java"),
+				path.Join(expectedFilesPath(), "Outputs.java"),
+				path.Join(expectedFilesPath(), "Component.java"),
+			},
 		},
 	}
 	testDir := filepath.Join("..", "internal", "test", "testdata")

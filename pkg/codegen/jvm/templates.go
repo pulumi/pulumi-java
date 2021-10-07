@@ -65,8 +65,15 @@ repositories {
 }
 
 dependencies {
-	implementation("io.pulumi:pulumi:3.6.0+")
+    implementation("io.pulumi:pulumi:3.6.0+")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
+    api("com.google.guava:guava:30.1-jre") // FIXME: do we really want to expose this dep?
+
+    def junitVersion = "5.7.2"
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    testImplementation("org.assertj:assertj-core:3.20.2")
 }
 `
 

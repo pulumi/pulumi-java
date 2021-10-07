@@ -4,15 +4,23 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Optional;
+import java.util.Map;
+import java.util.List;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableList;
 import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 
 @ResourceType(type="example::OtherResource")
 public class OtherResource extends io.pulumi.resources.ComponentResource {
-    @OutputExport(name="foo", type=/* @Nullable */ io.pulumi.example.Resource.class)
+    @OutputExport(name="foo", type=io.pulumi.example.Resource.class, parameters={})
     private Output</* @Nullable */ io.pulumi.example.Resource> foo;
 
+    public Output</* @Nullable */ io.pulumi.example.Resource> getFoo() {
+        return this.foo;
+    }
 
     public OtherResource(String name, OtherResource.Args args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
         super("example::OtherResource", name, args == null ? OtherResource.Args.Empty : args, makeResourceOptions(options, Input.empty()), true);
@@ -25,9 +33,16 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         return io.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
+
     public static final class Args extends io.pulumi.resources.ResourceArgs {
         @InputImport(name="foo")
-        private Input<io.pulumi.example.Resource> foo;
+        private @Nullable Input<io.pulumi.example.Resource> foo;
 
+        public java.util.Optional<Input<io.pulumi.example.Resource>> getFoo() {
+            return java.util.Optional.ofNullable(this.foo);
+        }
+
+        public Args() {
+        }
     }
 }

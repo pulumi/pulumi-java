@@ -31,7 +31,7 @@ class ResourceArgsTest {
     }
 
     @Test
-    void testComplexResourceArgs1_nullValues() {
+    void testComplexResourceArgs1_emptyValues() {
         var args = new ComplexResourceArgs1();
         var map = args.internalTypedOptionalToMapAsync().join();
 

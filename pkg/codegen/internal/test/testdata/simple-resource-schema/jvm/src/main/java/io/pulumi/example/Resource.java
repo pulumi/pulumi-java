@@ -4,18 +4,30 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Optional;
+import java.util.Map;
+import java.util.List;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableList;
 import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 
 @ResourceType(type="example::Resource")
 public class Resource extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="bar", type=/* @Nullable */ String.class)
+    @OutputExport(name="bar", type=String.class, parameters={})
     private Output</* @Nullable */ String> bar;
 
+    public Output</* @Nullable */ String> getBar() {
+        return this.bar;
+    }
 
     public Resource(String name, Resource.Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("example::Resource", name, args == null ? Resource.Args.Empty : args, makeResourceOptions(options, Input.empty()));
+    }
+
+    private Resource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+        super("example::Resource", name, null, makeResourceOptions(options, id));
     }
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
@@ -25,9 +37,19 @@ public class Resource extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    public static Resource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+        return new Resource(name, id, options);
+    }
+
     public static final class Args extends io.pulumi.resources.ResourceArgs {
         @InputImport(name="bar")
-        private Input<String> bar;
+        private @Nullable Input<String> bar;
 
+        public java.util.Optional<Input<String>> getBar() {
+            return java.util.Optional.ofNullable(this.bar);
+        }
+
+        public Args() {
+        }
     }
 }

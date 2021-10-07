@@ -4,6 +4,11 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Optional;
+import java.util.Map;
+import java.util.List;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableList;
 import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
@@ -16,8 +21,14 @@ public class ArgFunction {
 
     public static final class Args extends io.pulumi.resources.InvokeArgs {
         @InputImport(name="arg1")
-        private io.pulumi.example.Resource arg1;
+        private @Nullable io.pulumi.example.Resource arg1;
 
+        public java.util.Optional<io.pulumi.example.Resource> getArg1() {
+            return java.util.Optional.ofNullable(this.arg1);
+        }
+
+        public Args() {
+        }
     }
 
 
