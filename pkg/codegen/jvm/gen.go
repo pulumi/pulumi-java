@@ -992,24 +992,24 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 		typeParameter = fmt.Sprintf("%s.Result", className)
 	}
 
-	argsParamDef := "io.pulumi.deployment.InvokeOptions options"
+	var argsParamDef string
 	argsParamRef := "io.pulumi.resources.InvokeArgs.Empty"
 
-	/*if fun.Inputs != nil {
+	if fun.Inputs != nil {
 		allOptionalInputs := true
 		for _, prop := range fun.Inputs.Properties {
 			allOptionalInputs = allOptionalInputs && !prop.IsRequired
 		}
 
-		var argsDefault, sigil string
+		var nullable string
 		if allOptionalInputs {
 			// If the number of required input properties was zero, we can make the args object optional.
-			argsDefault, sigil = " = null", "?"
+			nullable = "@Nullable "
 		}
 
-		argsParamDef = fmt.Sprintf("%sArgs%s args%s, ", className, sigil, argsDefault)
-		argsParamRef = fmt.Sprintf("args ?? new %sArgs()", className)
-	}*/
+		argsParamDef = fmt.Sprintf("%s%s.Args args, ", nullable, className)
+		argsParamRef = fmt.Sprintf("args == null ? %s.Args.Empty : args", className)
+	}
 
 	if fun.DeprecationMessage != "" {
 		_, _ = fmt.Fprintf(w, "@Deprecated(\"%s\")\n", strings.Replace(fun.DeprecationMessage, `"`, `""`, -1))
@@ -1020,7 +1020,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	// TODO: add comment
 
 	// Emit the datasource method.
-	_, _ = fmt.Fprintf(w, "    public static CompletableFuture<%s> invokeAsync(%s) {\n",
+	_, _ = fmt.Fprintf(w, "    public static CompletableFuture<%s> invokeAsync(%s@Nullable io.pulumi.deployment.InvokeOptions options) {\n",
 		typeParameter, argsParamDef)
 	_, _ = fmt.Fprintf(w, "        return io.pulumi.deployment.Deployment.getInstance().invokeAsync(\"%s\", io.pulumi.core.internal.Reflection.TypeShape.of(%s.class), %s, Utilities.withVersion(options));\n",
 		fun.Token, typeParameter, argsParamRef)

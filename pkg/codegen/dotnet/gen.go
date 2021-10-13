@@ -1020,8 +1020,8 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	className := tokenToFunctionName(fun.Token)
 
-	_, _ = fmt.Fprintf(w, "namespace %s\n", mod.tokenToNamespace(fun.Token, ""))
-	_, _ = fmt.Fprintf(w, "{\n")
+	fmt.Fprintf(w, "namespace %s\n", mod.tokenToNamespace(fun.Token, ""))
+	fmt.Fprintf(w, "{\n")
 
 	var typeParameter string
 	if fun.Outputs != nil {

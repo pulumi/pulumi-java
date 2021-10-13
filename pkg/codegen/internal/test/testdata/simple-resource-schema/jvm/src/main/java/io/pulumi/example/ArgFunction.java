@@ -15,8 +15,8 @@ import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 
 public class ArgFunction {
-    public static CompletableFuture<ArgFunction.Result> invokeAsync(io.pulumi.deployment.InvokeOptions options) {
-        return io.pulumi.deployment.Deployment.getInstance().invokeAsync("example::argFunction", io.pulumi.core.internal.Reflection.TypeShape.of(ArgFunction.Result.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
+    public static CompletableFuture<ArgFunction.Result> invokeAsync(@Nullable ArgFunction.Args args, @Nullable io.pulumi.deployment.InvokeOptions options) {
+        return io.pulumi.deployment.Deployment.getInstance().invokeAsync("example::argFunction", io.pulumi.core.internal.Reflection.TypeShape.of(ArgFunction.Result.class), args == null ? ArgFunction.Args.Empty : args, Utilities.withVersion(options));
     }
 
 
