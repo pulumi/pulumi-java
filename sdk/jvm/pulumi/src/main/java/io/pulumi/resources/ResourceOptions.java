@@ -68,7 +68,7 @@ public abstract class ResourceOptions {
 
     protected static abstract class Builder<T extends ResourceOptions, B extends Builder<T, B>> {
 
-        private final T options;
+        protected final T options;
 
         protected Builder(T options) {
             this.options = options;

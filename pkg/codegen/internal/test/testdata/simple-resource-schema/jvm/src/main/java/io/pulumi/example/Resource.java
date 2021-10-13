@@ -4,6 +4,7 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
@@ -42,14 +43,35 @@ public class Resource extends io.pulumi.resources.CustomResource {
     }
 
     public static final class Args extends io.pulumi.resources.ResourceArgs {
+
+        public static final Args Empty = Args.builder().build();
+
         @InputImport(name="bar")
         private @Nullable Input<String> bar;
 
-        public java.util.Optional<Input<String>> getBar() {
-            return java.util.Optional.ofNullable(this.bar);
+        public Optional<Input<String>> getBar() {
+            return Optional.ofNullable(this.bar);
         }
 
-        public Args() {
+        public Args(@Nullable Input<String> bar) {
+            this.bar = bar;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static final class Builder {
+            private @Nullable Input<String> bar;
+            public Builder setBar(@Nullable Input<String> bar) {
+                this.bar = Objects.requireNonNull(bar);
+                return this;
+            }
+            public Args build() {
+                return new Args(
+                    this.bar
+                );
+            }
         }
     }
 }

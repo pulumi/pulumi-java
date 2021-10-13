@@ -4,6 +4,7 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
@@ -83,6 +84,9 @@ public class Component extends io.pulumi.resources.ComponentResource {
 
 
     public static final class Args extends io.pulumi.resources.ResourceArgs {
+
+        public static final Args Empty = Args.builder().build();
+
         @InputImport(name="a", required=true)
         private Boolean a;
 
@@ -93,29 +97,29 @@ public class Component extends io.pulumi.resources.ComponentResource {
         @InputImport(name="b")
         private @Nullable Boolean b;
 
-        public java.util.Optional<Boolean> getB() {
-            return java.util.Optional.ofNullable(this.b);
+        public Optional<Boolean> getB() {
+            return Optional.ofNullable(this.b);
         }
 
         @InputImport(name="bar")
         private @Nullable Inputs.Foo bar;
 
-        public java.util.Optional<Inputs.Foo> getBar() {
-            return java.util.Optional.ofNullable(this.bar);
+        public Optional<Inputs.Foo> getBar() {
+            return Optional.ofNullable(this.bar);
         }
 
         @InputImport(name="baz")
         private @Nullable List<Inputs.Foo> baz;
 
-        public java.util.Optional<List<Inputs.Foo>> getBaz() {
-            return java.util.Optional.ofNullable(this.baz);
+        public Optional<List<Inputs.Foo>> getBaz() {
+            return Optional.ofNullable(this.baz);
         }
 
         @InputImport(name="bazMap")
         private @Nullable Map<String,Inputs.Foo> bazMap;
 
-        public java.util.Optional<Map<String,Inputs.Foo>> getBazMap() {
-            return java.util.Optional.ofNullable(this.bazMap);
+        public Optional<Map<String,Inputs.Foo>> getBazMap() {
+            return Optional.ofNullable(this.bazMap);
         }
 
         @InputImport(name="c", required=true)
@@ -128,8 +132,8 @@ public class Component extends io.pulumi.resources.ComponentResource {
         @InputImport(name="d")
         private @Nullable Integer d;
 
-        public java.util.Optional<Integer> getD() {
-            return java.util.Optional.ofNullable(this.d);
+        public Optional<Integer> getD() {
+            return Optional.ofNullable(this.d);
         }
 
         @InputImport(name="e", required=true)
@@ -142,18 +146,109 @@ public class Component extends io.pulumi.resources.ComponentResource {
         @InputImport(name="f")
         private @Nullable String f;
 
-        public java.util.Optional<String> getF() {
-            return java.util.Optional.ofNullable(this.f);
+        public Optional<String> getF() {
+            return Optional.ofNullable(this.f);
         }
 
         @InputImport(name="foo")
         private @Nullable Input<Inputs.FooArgs> foo;
 
-        public java.util.Optional<Input<Inputs.FooArgs>> getFoo() {
-            return java.util.Optional.ofNullable(this.foo);
+        public Optional<Input<Inputs.FooArgs>> getFoo() {
+            return Optional.ofNullable(this.foo);
         }
 
-        public Args() {
+        public Args(
+            Boolean a,
+            @Nullable Boolean b,
+            @Nullable Inputs.Foo bar,
+            @Nullable List<Inputs.Foo> baz,
+            @Nullable Map<String,Inputs.Foo> bazMap,
+            Integer c,
+            @Nullable Integer d,
+            String e,
+            @Nullable String f,
+            @Nullable Input<Inputs.FooArgs> foo) {
+            this.a = Objects.requireNonNull(a);
+            this.b = b;
+            this.bar = bar;
+            this.baz = baz;
+            this.bazMap = bazMap;
+            this.c = Objects.requireNonNull(c);
+            this.d = d;
+            this.e = Objects.requireNonNull(e);
+            this.f = f;
+            this.foo = foo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static final class Builder {
+            private Boolean a;
+            public Builder setA(Boolean a) {
+                this.a = a;
+                return this;
+            }
+            private @Nullable Boolean b;
+            public Builder setB(@Nullable Boolean b) {
+                this.b = Objects.requireNonNull(b);
+                return this;
+            }
+            private @Nullable Inputs.Foo bar;
+            public Builder setBar(@Nullable Inputs.Foo bar) {
+                this.bar = Objects.requireNonNull(bar);
+                return this;
+            }
+            private @Nullable List<Inputs.Foo> baz;
+            public Builder setBaz(@Nullable List<Inputs.Foo> baz) {
+                this.baz = Objects.requireNonNull(baz);
+                return this;
+            }
+            private @Nullable Map<String,Inputs.Foo> bazMap;
+            public Builder setBazMap(@Nullable Map<String,Inputs.Foo> bazMap) {
+                this.bazMap = Objects.requireNonNull(bazMap);
+                return this;
+            }
+            private Integer c;
+            public Builder setC(Integer c) {
+                this.c = c;
+                return this;
+            }
+            private @Nullable Integer d;
+            public Builder setD(@Nullable Integer d) {
+                this.d = Objects.requireNonNull(d);
+                return this;
+            }
+            private String e;
+            public Builder setE(String e) {
+                this.e = e;
+                return this;
+            }
+            private @Nullable String f;
+            public Builder setF(@Nullable String f) {
+                this.f = Objects.requireNonNull(f);
+                return this;
+            }
+            private @Nullable Input<Inputs.FooArgs> foo;
+            public Builder setFoo(@Nullable Input<Inputs.FooArgs> foo) {
+                this.foo = Objects.requireNonNull(foo);
+                return this;
+            }
+            public Args build() {
+                return new Args(
+                    this.a,
+                    this.b,
+                    this.bar,
+                    this.baz,
+                    this.bazMap,
+                    this.c,
+                    this.d,
+                    this.e,
+                    this.f,
+                    this.foo
+                );
+            }
         }
     }
 }

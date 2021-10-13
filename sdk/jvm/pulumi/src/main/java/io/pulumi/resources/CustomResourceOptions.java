@@ -55,11 +55,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
 
     public static final class Builder extends ResourceOptions.Builder<CustomResourceOptions, Builder> {
 
-        private final CustomResourceOptions options;
-
         private Builder(CustomResourceOptions options) {
             super(options);
-            this.options = options;
         }
 
         public Builder setDeleteBeforeReplace(boolean deleteBeforeReplace) {

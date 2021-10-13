@@ -179,7 +179,7 @@ func (mod *modContext) typeString(
 	qualifier string,
 	input bool,
 	state bool,
-	wrapInput bool,
+	wrapInput bool, // wrap the type in Input*
 	args bool,
 	requireInitializers bool,
 	optional bool,
@@ -363,7 +363,7 @@ func (mod *modContext) typeStringInner(
 	}
 	if optional {
 		var optionalTyp = TypeShape{
-			Type:       "java.util.Optional",
+			Type:       "Optional",
 			Parameters: []TypeShape{typ},
 		}
 		typ = optionalTyp
@@ -389,7 +389,7 @@ type plainType struct {
 }
 
 func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent string) {
-	argsType := pt.args && !prop.IsPlain
+	isArgsType := pt.args && !prop.IsPlain
 	requireInitializers := !pt.args || prop.IsPlain
 
 	wireName := prop.Name
@@ -399,8 +399,8 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent
 		pt.propertyTypeQualifier,
 		true,                // is input
 		pt.state,            // is state
-		argsType,            // wrap input
-		argsType,            // has args
+		isArgsType,          // wrap input
+		isArgsType,          // has args
 		requireInitializers, // requires initializers
 		false,               // is optional
 		!prop.IsRequired,    // is nullable
@@ -436,9 +436,9 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent
 		pt.propertyTypeQualifier,
 		true,                // is input
 		pt.state,            // is state
-		argsType,            // wrap input
-		argsType,            // has args
-		requireInitializers, // FIMXE: should not require initializers
+		isArgsType,          // wrap input
+		isArgsType,          // has args
+		requireInitializers, // FIXME: should not require initializers, make it immutable
 		!prop.IsRequired,    // is optional
 		false,               // is nullable
 	)
@@ -448,7 +448,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent
 	if required {
 		_, _ = fmt.Fprintf(w, "%s    return this.%s;\n", indent, propertyName)
 	} else {
-		_, _ = fmt.Fprintf(w, "%s    return java.util.Optional.ofNullable(this.%s);\n", indent, propertyName)
+		_, _ = fmt.Fprintf(w, "%s    return Optional.ofNullable(this.%s);\n", indent, propertyName)
 	}
 	_, _ = fmt.Fprintf(w, "%s}\n", indent)
 
@@ -472,6 +472,9 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	// Open the class.
 	// TODO: add comment
 	_, _ = fmt.Fprintf(w, "%spublic static %sclass %s extends %s {\n", indent, final, pt.name, pt.baseClass)
+	_, _ = fmt.Fprintf(w, "\n")
+	_, _ = fmt.Fprintf(w, "%s    public static final %s Empty = %s.builder().build();\n", indent, pt.name, pt.name)
+	_, _ = fmt.Fprintf(w, "\n")
 
 	// Declare each input property.
 	for _, p := range pt.properties {
@@ -479,9 +482,49 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 		_, _ = fmt.Fprintf(w, "\n")
 	}
 
-	// Generate a constructor that will set default values.
-	_, _ = fmt.Fprintf(w, "%s    public %s() {\n", indent, pt.name)
+	// Generate the constructor.
+	_, _ = fmt.Fprintf(w, "%s    public %s(", indent, pt.name)
+
+	// Generate the constructor parameters.
+	for i, prop := range pt.properties {
+		// TODO: factor this out (with similar code in genOutputType)
+		paramName := javaIdentifier(prop.Name)
+		required := prop.IsRequired || pt.mod.isK8sCompatMode()
+		isArgsType := pt.args && !prop.IsPlain
+		requireInitializers := !pt.args || prop.IsPlain
+		paramType := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			true,
+			pt.state,
+			isArgsType,
+			isArgsType,
+			requireInitializers,
+			false,
+			!required,
+		)
+
+		if i == 0 && len(pt.properties) > 1 { // first param
+			_, _ = fmt.Fprint(w, "\n")
+		}
+
+		terminator := ""
+		if i != len(pt.properties)-1 { // not last param
+			terminator = ",\n"
+		}
+
+		paramDef := fmt.Sprintf("%s %s%s", paramType, paramName, terminator)
+		if len(pt.properties) > 1 {
+			paramDef = fmt.Sprintf("%s        %s", indent, paramDef)
+		}
+		_, _ = fmt.Fprint(w, paramDef)
+	}
+
+	_, _ = fmt.Fprintf(w, ") {\n")
+
+	// Generate the constructor body
 	for _, prop := range pt.properties {
+		// set default values or assign given values
 		if prop.DefaultValue != nil {
 			dv, err := pt.mod.getDefaultValue(prop.DefaultValue, prop.Type)
 			if err != nil {
@@ -489,8 +532,68 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 			}
 			propertyName := pt.mod.propertyName(prop)
 			_, _ = fmt.Fprintf(w, "%s    this.%s = %s;\n", indent, propertyName, dv)
+		} else {
+			paramName := javaIdentifier(prop.Name)
+			fieldName := pt.mod.propertyName(prop)
+			required := prop.IsRequired || pt.mod.isK8sCompatMode()
+			if required {
+				_, _ = fmt.Fprintf(w, "%s        this.%s = Objects.requireNonNull(%s);\n", indent, fieldName, paramName)
+			} else {
+				_, _ = fmt.Fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
+			}
 		}
 	}
+	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
+
+	// Generate the builder
+	_, _ = fmt.Fprintf(w, "\n")
+	_, _ = fmt.Fprintf(w, "%s    public static Builder builder() {\n", indent)
+	_, _ = fmt.Fprintf(w, "%s        return new Builder();\n", indent)
+	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
+	_, _ = fmt.Fprintf(w, "\n")
+	_, _ = fmt.Fprintf(w, "%s    public static %sclass Builder {\n", indent, final)
+	for _, prop := range pt.properties {
+		// Add a field and a setter
+		isArgsType := pt.args && !prop.IsPlain
+		requireInitializers := !pt.args || prop.IsPlain
+		propertyName := pt.mod.propertyName(prop)
+		propertyType := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			true,                // is input
+			pt.state,            // is state
+			isArgsType,          // wrap input
+			isArgsType,          // has args
+			requireInitializers, // requires initializers
+			false,               // is optional
+			!prop.IsRequired,    // is nullable
+		)
+		_, _ = fmt.Fprintf(w, "%s        private %s %s;\n", indent, propertyType, propertyName)
+
+		setterName := Title(prop.Name)
+		_, _ = fmt.Fprintf(w, "%s        public Builder set%s(%s %s) {\n", indent, setterName, propertyType, propertyName)
+		required := prop.IsRequired
+		if required {
+			_, _ = fmt.Fprintf(w, "%s            this.%s = %s;\n", indent, propertyName, propertyName)
+		} else {
+			_, _ = fmt.Fprintf(w, "%s            this.%s = Objects.requireNonNull(%s);\n", indent, propertyName, propertyName)
+		}
+		_, _ = fmt.Fprintf(w, "%s            return this;\n", indent)
+		_, _ = fmt.Fprintf(w, "%s        }\n", indent)
+	}
+	_, _ = fmt.Fprintf(w, "%s        public %s build() {\n", indent, pt.name)
+	_, _ = fmt.Fprintf(w, "%s            return new %s(\n", indent, pt.name)
+	for i, prop := range pt.properties {
+		paramName := javaIdentifier(prop.Name)
+		_, _ = fmt.Fprintf(w, "%s                this.%s", indent, paramName)
+		if i != len(pt.properties)-1 { // not last param
+			_, _ = fmt.Fprintf(w, ",\n")
+		} else {
+			_, _ = fmt.Fprintf(w, "\n")
+		}
+	}
+	_, _ = fmt.Fprintf(w, "%s            );\n", indent)
+	_, _ = fmt.Fprintf(w, "%s        }\n", indent)
 	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
 
 	// Close the class.
@@ -538,16 +641,17 @@ func (pt *plainType) genOutputType(w io.Writer, level int) {
 
 	// Generate the constructor parameters.
 	for i, prop := range pt.properties {
+		// TODO: factor this out (with similar code in genInputType)
 		paramName := javaIdentifier(prop.Name)
 		required := prop.IsRequired || pt.mod.isK8sCompatMode()
 		paramType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !required)
 
-		if i == 0 && len(pt.properties) > 1 { // first
+		if i == 0 && len(pt.properties) > 1 { // first param
 			_, _ = fmt.Fprint(w, "\n")
 		}
 
 		terminator := ""
-		if i != len(pt.properties)-1 { // not last
+		if i != len(pt.properties)-1 { // not last param
 			terminator = ",\n"
 		}
 
@@ -564,7 +668,12 @@ func (pt *plainType) genOutputType(w io.Writer, level int) {
 	for _, prop := range pt.properties {
 		paramName := javaIdentifier(prop.Name)
 		fieldName := pt.mod.propertyName(prop)
-		_, _ = fmt.Fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
+		required := prop.IsRequired || pt.mod.isK8sCompatMode()
+		if required {
+			_, _ = fmt.Fprintf(w, "%s        this.%s = Objects.requireNonNull(%s);\n", indent, fieldName, paramName)
+		} else {
+			_, _ = fmt.Fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
+		}
 	}
 	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
 	_, _ = fmt.Fprintf(w, "\n")
@@ -580,7 +689,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) {
 		if required {
 			_, _ = fmt.Fprintf(w, "%s        return this.%s;\n", indent, paramName)
 		} else {
-			_, _ = fmt.Fprintf(w, "%s        return java.util.Optional.ofNullable(this.%s);\n", indent, paramName)
+			_, _ = fmt.Fprintf(w, "%s        return Optional.ofNullable(this.%s);\n", indent, paramName)
 		}
 		_, _ = fmt.Fprintf(w, "%s    }\n", indent)
 	}
@@ -883,10 +992,24 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 		typeParameter = fmt.Sprintf("%s.Result", className)
 	}
 
-	argsParamDef := "io.pulumi.deployment.InvokeOptions"
+	argsParamDef := "io.pulumi.deployment.InvokeOptions options"
 	argsParamRef := "io.pulumi.resources.InvokeArgs.Empty"
 
-	// TODO
+	/*if fun.Inputs != nil {
+		allOptionalInputs := true
+		for _, prop := range fun.Inputs.Properties {
+			allOptionalInputs = allOptionalInputs && !prop.IsRequired
+		}
+
+		var argsDefault, sigil string
+		if allOptionalInputs {
+			// If the number of required input properties was zero, we can make the args object optional.
+			argsDefault, sigil = " = null", "?"
+		}
+
+		argsParamDef = fmt.Sprintf("%sArgs%s args%s, ", className, sigil, argsDefault)
+		argsParamRef = fmt.Sprintf("args ?? new %sArgs()", className)
+	}*/
 
 	if fun.DeprecationMessage != "" {
 		_, _ = fmt.Fprintf(w, "@Deprecated(\"%s\")\n", strings.Replace(fun.DeprecationMessage, `"`, `""`, -1))
@@ -897,7 +1020,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	// TODO: add comment
 
 	// Emit the datasource method.
-	_, _ = fmt.Fprintf(w, "    public static CompletableFuture<%s> invokeAsync(%s options) {\n",
+	_, _ = fmt.Fprintf(w, "    public static CompletableFuture<%s> invokeAsync(%s) {\n",
 		typeParameter, argsParamDef)
 	_, _ = fmt.Fprintf(w, "        return io.pulumi.deployment.Deployment.getInstance().invokeAsync(\"%s\", io.pulumi.core.internal.Reflection.TypeShape.of(%s.class), %s, Utilities.withVersion(options));\n",
 		fun.Token, typeParameter, argsParamRef)
@@ -978,6 +1101,7 @@ func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyType
 // pulumiImports is a slice of common imports that are used with the genHeader method.
 var pulumiImports = []string{
 	"javax.annotation.Nullable",
+	"java.util.Objects",
 	"java.util.Optional",
 	"java.util.Map",
 	"java.util.List",

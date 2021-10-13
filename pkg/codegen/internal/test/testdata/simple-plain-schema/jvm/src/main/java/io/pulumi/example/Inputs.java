@@ -4,6 +4,7 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
@@ -16,6 +17,9 @@ import io.pulumi.core.internal.annotations.*;
 public final class Inputs {
 
     public static final class FooArgs extends io.pulumi.resources.ResourceArgs {
+
+        public static final FooArgs Empty = FooArgs.builder().build();
+
         @InputImport(name="a", required=true)
         private Boolean a;
 
@@ -26,8 +30,8 @@ public final class Inputs {
         @InputImport(name="b")
         private @Nullable Boolean b;
 
-        public java.util.Optional<Boolean> getB() {
-            return java.util.Optional.ofNullable(this.b);
+        public Optional<Boolean> getB() {
+            return Optional.ofNullable(this.b);
         }
 
         @InputImport(name="c", required=true)
@@ -40,8 +44,8 @@ public final class Inputs {
         @InputImport(name="d")
         private @Nullable Integer d;
 
-        public java.util.Optional<Integer> getD() {
-            return java.util.Optional.ofNullable(this.d);
+        public Optional<Integer> getD() {
+            return Optional.ofNullable(this.d);
         }
 
         @InputImport(name="e", required=true)
@@ -54,15 +58,77 @@ public final class Inputs {
         @InputImport(name="f")
         private @Nullable String f;
 
-        public java.util.Optional<String> getF() {
-            return java.util.Optional.ofNullable(this.f);
+        public Optional<String> getF() {
+            return Optional.ofNullable(this.f);
         }
 
-        public FooArgs() {
+        public FooArgs(
+            Boolean a,
+            @Nullable Boolean b,
+            Integer c,
+            @Nullable Integer d,
+            String e,
+            @Nullable String f) {
+            this.a = Objects.requireNonNull(a);
+            this.b = b;
+            this.c = Objects.requireNonNull(c);
+            this.d = d;
+            this.e = Objects.requireNonNull(e);
+            this.f = f;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static final class Builder {
+            private Boolean a;
+            public Builder setA(Boolean a) {
+                this.a = a;
+                return this;
+            }
+            private @Nullable Boolean b;
+            public Builder setB(@Nullable Boolean b) {
+                this.b = Objects.requireNonNull(b);
+                return this;
+            }
+            private Integer c;
+            public Builder setC(Integer c) {
+                this.c = c;
+                return this;
+            }
+            private @Nullable Integer d;
+            public Builder setD(@Nullable Integer d) {
+                this.d = Objects.requireNonNull(d);
+                return this;
+            }
+            private String e;
+            public Builder setE(String e) {
+                this.e = e;
+                return this;
+            }
+            private @Nullable String f;
+            public Builder setF(@Nullable String f) {
+                this.f = Objects.requireNonNull(f);
+                return this;
+            }
+            public FooArgs build() {
+                return new FooArgs(
+                    this.a,
+                    this.b,
+                    this.c,
+                    this.d,
+                    this.e,
+                    this.f
+                );
+            }
         }
     }
 
     public static final class Foo extends io.pulumi.resources.InvokeArgs {
+
+        public static final Foo Empty = Foo.builder().build();
+
         @InputImport(name="a", required=true)
         private Boolean a;
 
@@ -73,8 +139,8 @@ public final class Inputs {
         @InputImport(name="b")
         private @Nullable Boolean b;
 
-        public java.util.Optional<Boolean> getB() {
-            return java.util.Optional.ofNullable(this.b);
+        public Optional<Boolean> getB() {
+            return Optional.ofNullable(this.b);
         }
 
         @InputImport(name="c", required=true)
@@ -87,8 +153,8 @@ public final class Inputs {
         @InputImport(name="d")
         private @Nullable Integer d;
 
-        public java.util.Optional<Integer> getD() {
-            return java.util.Optional.ofNullable(this.d);
+        public Optional<Integer> getD() {
+            return Optional.ofNullable(this.d);
         }
 
         @InputImport(name="e", required=true)
@@ -101,11 +167,70 @@ public final class Inputs {
         @InputImport(name="f")
         private @Nullable String f;
 
-        public java.util.Optional<String> getF() {
-            return java.util.Optional.ofNullable(this.f);
+        public Optional<String> getF() {
+            return Optional.ofNullable(this.f);
         }
 
-        public Foo() {
+        public Foo(
+            Boolean a,
+            @Nullable Boolean b,
+            Integer c,
+            @Nullable Integer d,
+            String e,
+            @Nullable String f) {
+            this.a = Objects.requireNonNull(a);
+            this.b = b;
+            this.c = Objects.requireNonNull(c);
+            this.d = d;
+            this.e = Objects.requireNonNull(e);
+            this.f = f;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static final class Builder {
+            private Boolean a;
+            public Builder setA(Boolean a) {
+                this.a = a;
+                return this;
+            }
+            private @Nullable Boolean b;
+            public Builder setB(@Nullable Boolean b) {
+                this.b = Objects.requireNonNull(b);
+                return this;
+            }
+            private Integer c;
+            public Builder setC(Integer c) {
+                this.c = c;
+                return this;
+            }
+            private @Nullable Integer d;
+            public Builder setD(@Nullable Integer d) {
+                this.d = Objects.requireNonNull(d);
+                return this;
+            }
+            private String e;
+            public Builder setE(String e) {
+                this.e = e;
+                return this;
+            }
+            private @Nullable String f;
+            public Builder setF(@Nullable String f) {
+                this.f = Objects.requireNonNull(f);
+                return this;
+            }
+            public Foo build() {
+                return new Foo(
+                    this.a,
+                    this.b,
+                    this.c,
+                    this.d,
+                    this.e,
+                    this.f
+                );
+            }
         }
     }
 }

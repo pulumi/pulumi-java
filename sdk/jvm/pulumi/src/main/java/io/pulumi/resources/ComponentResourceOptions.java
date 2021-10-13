@@ -48,11 +48,8 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
 
     public static final class Builder extends ResourceOptions.Builder<ComponentResourceOptions, Builder> {
 
-        private final ComponentResourceOptions options;
-
         private Builder(ComponentResourceOptions options) {
             super(options);
-            this.options = options;
         }
 
         public Builder setProvider(@Nullable List<ProviderResource> providers) {

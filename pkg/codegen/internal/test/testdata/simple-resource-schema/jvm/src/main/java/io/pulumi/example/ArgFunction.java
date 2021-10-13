@@ -4,6 +4,7 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
@@ -20,14 +21,35 @@ public class ArgFunction {
 
 
     public static final class Args extends io.pulumi.resources.InvokeArgs {
+
+        public static final Args Empty = Args.builder().build();
+
         @InputImport(name="arg1")
         private @Nullable io.pulumi.example.Resource arg1;
 
-        public java.util.Optional<io.pulumi.example.Resource> getArg1() {
-            return java.util.Optional.ofNullable(this.arg1);
+        public Optional<io.pulumi.example.Resource> getArg1() {
+            return Optional.ofNullable(this.arg1);
         }
 
-        public Args() {
+        public Args(@Nullable io.pulumi.example.Resource arg1) {
+            this.arg1 = arg1;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static final class Builder {
+            private @Nullable io.pulumi.example.Resource arg1;
+            public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
+                this.arg1 = Objects.requireNonNull(arg1);
+                return this;
+            }
+            public Args build() {
+                return new Args(
+                    this.arg1
+                );
+            }
         }
     }
 
@@ -41,8 +63,8 @@ public class ArgFunction {
             this.result = result;
         }
 
-        public java.util.Optional<io.pulumi.example.Resource> getResult() {
-            return java.util.Optional.ofNullable(this.result);
+        public Optional<io.pulumi.example.Resource> getResult() {
+            return Optional.ofNullable(this.result);
         }
     }
 }

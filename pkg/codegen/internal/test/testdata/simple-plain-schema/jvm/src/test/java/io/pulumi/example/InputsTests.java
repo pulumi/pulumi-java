@@ -7,9 +7,10 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class InputTests {
+
     @Test
-    void testComplexResourceArgs1_nullValues() {
-        var args = new Inputs.FooArgs();
+    void testInputsFooArgs_nullValues() {
+        var args = Inputs.FooArgs.Empty;
         var map = args.internalTypedOptionalToMapAsync().join();
 
         assertThat(map).containsKey("a");
@@ -25,5 +26,33 @@ class InputTests {
         assertThat(map).containsEntry("d", Optional.empty());
         assertThat(map).containsEntry("e", Optional.empty());
         assertThat(map).containsEntry("f", Optional.empty());
+    }
+
+    @Test
+    void testInputsFooArgs_simpleValues() {
+        var args = Inputs.FooArgs.builder()
+                .setA(true)
+                .setB(true)
+                .setC(1)
+                .setD(2)
+                .setE("test1")
+                .setF("test2")
+                .build();
+
+        var map = args.internalTypedOptionalToMapAsync().join();
+
+        assertThat(map).containsKey("a");
+        assertThat(map).containsKey("b");
+        assertThat(map).containsKey("c");
+        assertThat(map).containsKey("d");
+        assertThat(map).containsKey("e");
+        assertThat(map).containsKey("f");
+
+        assertThat(map).containsEntry("a", Optional.of(true));
+        assertThat(map).containsEntry("b", Optional.of(true));
+        assertThat(map).containsEntry("c", Optional.of(1));
+        assertThat(map).containsEntry("d", Optional.of(2));
+        assertThat(map).containsEntry("e", Optional.of("test1"));
+        assertThat(map).containsEntry("f", Optional.of("test2"));
     }
 }

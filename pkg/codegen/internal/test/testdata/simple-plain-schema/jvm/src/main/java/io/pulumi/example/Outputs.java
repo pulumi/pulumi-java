@@ -4,6 +4,7 @@
 package io.pulumi.example;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
@@ -32,31 +33,31 @@ public final class Outputs {
             @Nullable Integer d,
             String e,
             @Nullable String f) {
-            this.a = a;
+            this.a = Objects.requireNonNull(a);
             this.b = b;
-            this.c = c;
+            this.c = Objects.requireNonNull(c);
             this.d = d;
-            this.e = e;
+            this.e = Objects.requireNonNull(e);
             this.f = f;
         }
 
         public Boolean getA() {
             return this.a;
         }
-        public java.util.Optional<Boolean> getB() {
-            return java.util.Optional.ofNullable(this.b);
+        public Optional<Boolean> getB() {
+            return Optional.ofNullable(this.b);
         }
         public Integer getC() {
             return this.c;
         }
-        public java.util.Optional<Integer> getD() {
-            return java.util.Optional.ofNullable(this.d);
+        public Optional<Integer> getD() {
+            return Optional.ofNullable(this.d);
         }
         public String getE() {
             return this.e;
         }
-        public java.util.Optional<String> getF() {
-            return java.util.Optional.ofNullable(this.f);
+        public Optional<String> getF() {
+            return Optional.ofNullable(this.f);
         }
     }
 }
