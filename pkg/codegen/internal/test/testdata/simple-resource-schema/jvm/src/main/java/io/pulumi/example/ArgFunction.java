@@ -25,7 +25,7 @@ public class ArgFunction {
         public static final Args Empty = Args.builder().build();
 
         @InputImport(name="arg1")
-        private @Nullable io.pulumi.example.Resource arg1;
+        private final @Nullable io.pulumi.example.Resource arg1;
 
         public Optional<io.pulumi.example.Resource> getArg1() {
             return Optional.ofNullable(this.arg1);
@@ -42,7 +42,7 @@ public class ArgFunction {
         public static final class Builder {
             private @Nullable io.pulumi.example.Resource arg1;
             public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
-                this.arg1 = Objects.requireNonNull(arg1);
+                this.arg1 = arg1;
                 return this;
             }
             public Args build() {

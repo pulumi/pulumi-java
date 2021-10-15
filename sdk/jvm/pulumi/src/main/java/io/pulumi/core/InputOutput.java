@@ -14,7 +14,13 @@ public interface InputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO>> ex
 
     /**
      * Returns a new @see {@link Output<T>} or @see {@link Input<T>} which is a copy of the existing output but marked as
-     * a non-secret. The original output is not modified in any way.
+     * a non-secret. The original output or input is not modified in any way.
      */
-    IO unsecret();
+    IO unsecret(); // TODO: maybe rename asPlaintext()
+
+    /**
+     * Returns a new @see {@link Output<T>} or @see {@link Input<T>} which is a copy of the existing output but marked as
+     * a secret. The original output or input is not modified in any way.
+     */
+    IO secretify(); // TODO: maybe rename asSecret()
 }

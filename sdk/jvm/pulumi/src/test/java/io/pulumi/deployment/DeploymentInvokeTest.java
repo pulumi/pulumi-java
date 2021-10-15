@@ -55,7 +55,6 @@ public class DeploymentInvokeTest {
 
         var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyVoid(r -> {
             assertThat(r).hasSize(1);
-            System.out.println(r);
         });
 
         TypedInputOutput.cast(out).internalGetDataAsync().join();

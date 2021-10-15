@@ -44,7 +44,6 @@ class InputOutputMetadataTest {
     void testOutputInfos() {
         var infos = OutputMetadata.of(Tester.class);
         assertThat(infos).hasSize(4);
-        System.out.println(infos);
     }
 
 }

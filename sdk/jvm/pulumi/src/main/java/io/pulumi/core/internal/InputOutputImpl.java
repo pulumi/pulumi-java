@@ -60,8 +60,12 @@ public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyabl
         return newInstance(this.dataFuture.copy()); // TODO: is the copy deep enough
     }
 
-    public IO unsecret() {
+    public IO unsecret() { // TODO: this look very unsafe to be exposed, what are the use cases? do we need this?
         return internalWithIsSecret(CompletableFuture.completedFuture(false));
+    }
+
+    public IO secretify() {
+        return internalWithIsSecret(CompletableFuture.completedFuture(true));
     }
 
     /**

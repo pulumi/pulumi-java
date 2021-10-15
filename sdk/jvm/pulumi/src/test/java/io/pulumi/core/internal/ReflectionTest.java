@@ -19,6 +19,7 @@ class ReflectionTest {
     @Test
     void test() {
         var tester = new TestValue<>("test");
+        // TODO: proper tests
         System.out.println(tester.getTypeShape());
         System.out.println(tester.getTypeShape().getParameters());
         System.out.println(tester.getTypeToken());

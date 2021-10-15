@@ -23,7 +23,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
         return this.bar;
     }
 
-    public Resource(String name, Resource.Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public Resource(String name, @Nullable Resource.Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("example::Resource", name, args == null ? Resource.Args.Empty : args, makeResourceOptions(options, Input.empty()));
     }
 
@@ -47,7 +47,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
         public static final Args Empty = Args.builder().build();
 
         @InputImport(name="bar")
-        private @Nullable Input<String> bar;
+        private final @Nullable Input<String> bar;
 
         public Optional<Input<String>> getBar() {
             return Optional.ofNullable(this.bar);
@@ -64,7 +64,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
         public static final class Builder {
             private @Nullable Input<String> bar;
             public Builder setBar(@Nullable Input<String> bar) {
-                this.bar = Objects.requireNonNull(bar);
+                this.bar = Input.ensure(bar).secretify();
                 return this;
             }
             public Args build() {

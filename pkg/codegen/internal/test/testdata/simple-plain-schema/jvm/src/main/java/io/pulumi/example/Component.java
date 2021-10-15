@@ -88,70 +88,70 @@ public class Component extends io.pulumi.resources.ComponentResource {
         public static final Args Empty = Args.builder().build();
 
         @InputImport(name="a", required=true)
-        private Boolean a;
+        private final Boolean a;
 
         public Boolean getA() {
             return this.a;
         }
 
         @InputImport(name="b")
-        private @Nullable Boolean b;
+        private final @Nullable Boolean b;
 
         public Optional<Boolean> getB() {
             return Optional.ofNullable(this.b);
         }
 
         @InputImport(name="bar")
-        private @Nullable Inputs.Foo bar;
+        private final @Nullable Inputs.Foo bar;
 
         public Optional<Inputs.Foo> getBar() {
             return Optional.ofNullable(this.bar);
         }
 
         @InputImport(name="baz")
-        private @Nullable List<Inputs.Foo> baz;
+        private final @Nullable List<Inputs.Foo> baz;
 
         public Optional<List<Inputs.Foo>> getBaz() {
             return Optional.ofNullable(this.baz);
         }
 
         @InputImport(name="bazMap")
-        private @Nullable Map<String,Inputs.Foo> bazMap;
+        private final @Nullable Map<String,Inputs.Foo> bazMap;
 
         public Optional<Map<String,Inputs.Foo>> getBazMap() {
             return Optional.ofNullable(this.bazMap);
         }
 
         @InputImport(name="c", required=true)
-        private Integer c;
+        private final Integer c;
 
         public Integer getC() {
             return this.c;
         }
 
         @InputImport(name="d")
-        private @Nullable Integer d;
+        private final @Nullable Integer d;
 
         public Optional<Integer> getD() {
             return Optional.ofNullable(this.d);
         }
 
         @InputImport(name="e", required=true)
-        private String e;
+        private final String e;
 
         public String getE() {
             return this.e;
         }
 
         @InputImport(name="f")
-        private @Nullable String f;
+        private final @Nullable String f;
 
         public Optional<String> getF() {
             return Optional.ofNullable(this.f);
         }
 
         @InputImport(name="foo")
-        private @Nullable Input<Inputs.FooArgs> foo;
+        private final @Nullable Input<Inputs.FooArgs> foo;
 
         public Optional<Input<Inputs.FooArgs>> getFoo() {
             return Optional.ofNullable(this.foo);
@@ -187,52 +187,52 @@ public class Component extends io.pulumi.resources.ComponentResource {
         public static final class Builder {
             private Boolean a;
             public Builder setA(Boolean a) {
-                this.a = a;
+                this.a = Objects.requireNonNull(a);
                 return this;
             }
             private @Nullable Boolean b;
             public Builder setB(@Nullable Boolean b) {
-                this.b = Objects.requireNonNull(b);
+                this.b = b;
                 return this;
             }
             private @Nullable Inputs.Foo bar;
             public Builder setBar(@Nullable Inputs.Foo bar) {
-                this.bar = Objects.requireNonNull(bar);
+                this.bar = bar;
                 return this;
             }
             private @Nullable List<Inputs.Foo> baz;
             public Builder setBaz(@Nullable List<Inputs.Foo> baz) {
-                this.baz = Objects.requireNonNull(baz);
+                this.baz = baz;
                 return this;
             }
             private @Nullable Map<String,Inputs.Foo> bazMap;
             public Builder setBazMap(@Nullable Map<String,Inputs.Foo> bazMap) {
-                this.bazMap = Objects.requireNonNull(bazMap);
+                this.bazMap = bazMap;
                 return this;
             }
             private Integer c;
             public Builder setC(Integer c) {
-                this.c = c;
+                this.c = Objects.requireNonNull(c);
                 return this;
             }
             private @Nullable Integer d;
             public Builder setD(@Nullable Integer d) {
-                this.d = Objects.requireNonNull(d);
+                this.d = d;
                 return this;
             }
             private String e;
             public Builder setE(String e) {
-                this.e = e;
+                this.e = Objects.requireNonNull(e);
                 return this;
             }
             private @Nullable String f;
             public Builder setF(@Nullable String f) {
-                this.f = Objects.requireNonNull(f);
+                this.f = f;
                 return this;
             }
             private @Nullable Input<Inputs.FooArgs> foo;
             public Builder setFoo(@Nullable Input<Inputs.FooArgs> foo) {
-                this.foo = Objects.requireNonNull(foo);
+                this.foo = foo;
                 return this;
             }
             public Args build() {

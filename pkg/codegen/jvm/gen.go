@@ -427,7 +427,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent
 
 	// TODO: add comment
 	_, _ = fmt.Fprintf(w, "%s@InputImport(name=\"%s\"%s)\n", indent, wireName, attributeArgs)
-	_, _ = fmt.Fprintf(w, "%sprivate %s %s;\n", indent, propertyType, propertyName)
+	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType, propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Add getter
@@ -443,6 +443,8 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent
 		false,               // is nullable
 	)
 	getterName := Title(prop.Name)
+	// TODO: add comment
+	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
 	_, _ = fmt.Fprintf(w, "%spublic %s get%s() {\n", indent, getterType, getterName)
 	required := prop.IsRequired
 	if required {
@@ -573,11 +575,16 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 		setterName := Title(prop.Name)
 		_, _ = fmt.Fprintf(w, "%s        public Builder set%s(%s %s) {\n", indent, setterName, propertyType, propertyName)
 		required := prop.IsRequired
-		if required {
-			_, _ = fmt.Fprintf(w, "%s            this.%s = %s;\n", indent, propertyName, propertyName)
+		if prop.Secret {
+			_, _ = fmt.Fprintf(w, "%s            this.%s = Input.ensure(%s).secretify();\n", indent, propertyName, propertyName)
 		} else {
-			_, _ = fmt.Fprintf(w, "%s            this.%s = Objects.requireNonNull(%s);\n", indent, propertyName, propertyName)
+			if required {
+				_, _ = fmt.Fprintf(w, "%s            this.%s = Objects.requireNonNull(%s);\n", indent, propertyName, propertyName)
+			} else {
+				_, _ = fmt.Fprintf(w, "%s            this.%s = %s;\n", indent, propertyName, propertyName)
+			}
 		}
+
 		_, _ = fmt.Fprintf(w, "%s            return this;\n", indent)
 		_, _ = fmt.Fprintf(w, "%s        }\n", indent)
 	}
@@ -810,9 +817,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		baseType = "io.pulumi.resources.CustomResource"
 	}
 
-	if r.DeprecationMessage != "" {
-		_, _ = fmt.Fprintf(w, "@Deprecated(\"%s\")\n", strings.Replace(r.DeprecationMessage, `"`, `""`, -1))
-	}
+	printObsoleteAttribute(w, r.DeprecationMessage, "")
 	_, _ = fmt.Fprintf(w, "@ResourceType(type=\"%s\")\n", r.Token)
 	_, _ = fmt.Fprintf(w, "public class %s extends %s {\n", className, baseType)
 
@@ -863,9 +868,16 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	}
 	argsType := argsClassName
 
-	// TODO
+	allOptionalInputs := true
 	hasConstInputs := false
-	// TODO
+	for _, prop := range r.InputProperties {
+		allOptionalInputs = allOptionalInputs && !prop.IsRequired
+		hasConstInputs = hasConstInputs || prop.ConstValue != nil
+	}
+	if allOptionalInputs || mod.isK8sCompatMode() {
+		// If the number of required input properties was zero, we can make the args object optional.
+		argsType = fmt.Sprintf("@Nullable %s", argsType)
+	}
 
 	tok := r.Token
 	if r.IsProvider {
@@ -1011,9 +1023,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 		argsParamRef = fmt.Sprintf("args == null ? %s.Args.Empty : args", className)
 	}
 
-	if fun.DeprecationMessage != "" {
-		_, _ = fmt.Fprintf(w, "@Deprecated(\"%s\")\n", strings.Replace(fun.DeprecationMessage, `"`, `""`, -1))
-	}
+	printObsoleteAttribute(w, fun.DeprecationMessage, "")
 	// Open the class we'll use for datasources.
 	_, _ = fmt.Fprintf(w, "public class %s {\n", className)
 
@@ -1063,6 +1073,12 @@ func (mod *modContext) genEnums(w io.Writer, enums []*schema.EnumType) error {
 	// TODO
 
 	return nil
+}
+
+func printObsoleteAttribute(w io.Writer, deprecationMessage, indent string) {
+	if deprecationMessage != "" {
+		_, _ = fmt.Fprintf(w, "%s@Deprecated(\"%s\")\n", indent, strings.Replace(deprecationMessage, `"`, `""`, -1))
+	}
 }
 
 // TODO

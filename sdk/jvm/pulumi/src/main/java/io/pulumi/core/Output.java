@@ -5,6 +5,7 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.TypedInputOutput;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -100,6 +101,20 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
 
     static <T> Output<T> empty() {
         return new OutputDefault<>(InputOutputData.empty());
+    }
+
+    static <T, O extends Output<T>> Output<T> ensure(@Nullable O value) { // TODO: rename ofNullable?
+        if (value == null) {
+            return Output.empty();
+        }
+        return value;
+    }
+
+    static <T> Output<T> ensure(@Nullable T value) { // TODO: rename ofNullable?
+        if (value == null) {
+            return Output.empty();
+        }
+        return Output.of(value);
     }
 
     /**

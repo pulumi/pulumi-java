@@ -23,7 +23,7 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         return this.foo;
     }
 
-    public OtherResource(String name, OtherResource.Args args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
+    public OtherResource(String name, @Nullable OtherResource.Args args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
         super("example::OtherResource", name, args == null ? OtherResource.Args.Empty : args, makeResourceOptions(options, Input.empty()), true);
     }
 
@@ -40,7 +40,7 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         public static final Args Empty = Args.builder().build();
 
         @InputImport(name="foo")
-        private @Nullable Input<io.pulumi.example.Resource> foo;
+        private final @Nullable Input<io.pulumi.example.Resource> foo;
 
         public Optional<Input<io.pulumi.example.Resource>> getFoo() {
             return Optional.ofNullable(this.foo);
@@ -57,7 +57,7 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         public static final class Builder {
             private @Nullable Input<io.pulumi.example.Resource> foo;
             public Builder setFoo(@Nullable Input<io.pulumi.example.Resource> foo) {
-                this.foo = Objects.requireNonNull(foo);
+                this.foo = foo;
                 return this;
             }
             public Args build() {

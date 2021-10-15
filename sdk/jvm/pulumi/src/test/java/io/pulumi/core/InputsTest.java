@@ -1,7 +1,6 @@
 package io.pulumi.core;
 
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import io.pulumi.core.internal.TypedInputOutput;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
-class InputsTest {
+public class InputsTest {
 
     @Test
     void testMapConcat() {
@@ -115,5 +114,34 @@ class InputsTest {
                 return new SampleArgs(this.list.build(), this.dict.build());
             }
         }
+    }
+
+    @Test
+    public void testEnsureSecretifyInput() {
+        Input<String> res0_ = Input.ensure((String) null);
+        Input<String> res0 = res0_.secretify();
+        var data0 = InputOutputTests.waitFor(res0);
+        assertThat(data0.getValueNullable()).isEqualTo(null);
+        assertThat(data0.isSecret()).isTrue();
+        assertThat(data0.isPresent()).isFalse();
+        assertThat(data0.isKnown()).isTrue();
+
+        // stringify should not modify the original Input
+        var data0_ = InputOutputTests.waitFor(res0_);
+        assertThat(data0_.isSecret()).isFalse();
+
+        Input<String> res1 = Input.ensure("test1").secretify();
+        var data1 = InputOutputTests.waitFor(res1);
+        assertThat(data1.getValueNullable()).isEqualTo("test1");
+        assertThat(data1.isSecret()).isTrue();
+        assertThat(data1.isPresent()).isTrue();
+        assertThat(data1.isKnown()).isTrue();
+
+        Input<String> res2 = Input.ensure(Input.of("test2")).secretify();
+        var data2 = InputOutputTests.waitFor(res2);
+        assertThat(data2.getValueNullable()).isEqualTo("test2");
+        assertThat(data2.isSecret()).isTrue();
+        assertThat(data2.isPresent()).isTrue();
+        assertThat(data2.isKnown()).isTrue();
     }
 }

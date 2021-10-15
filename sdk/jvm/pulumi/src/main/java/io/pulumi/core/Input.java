@@ -3,6 +3,7 @@ package io.pulumi.core;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.internal.InputOutputData;
 
+import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -94,6 +95,20 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
 
     static <T> Input<T> empty() {
         return new InputDefault<>(InputOutputData.empty());
+    }
+
+    static <T, I extends Input<T>> Input<T> ensure(@Nullable I value) { // TODO: rename ofNullable?
+        if (value == null) {
+            return Input.empty();
+        }
+        return value;
+    }
+
+    static <T> Input<T> ensure(@Nullable T value) { // TODO: rename ofNullable?
+        if (value == null) {
+            return Input.empty();
+        }
+        return Input.of(value);
     }
 
     // Tuple Overloads that take different numbers of inputs or outputs.
