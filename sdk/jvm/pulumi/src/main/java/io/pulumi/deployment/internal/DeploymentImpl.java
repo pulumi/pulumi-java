@@ -785,7 +785,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                             completionSource.setValue(Converter.convertValue(
                                                     contextInfo,
                                                     value.get(),
-                                                    TypeShape.Empty, // FIXME
+                                                    completionSource.getTypeShape(),
                                                     depsOrEmpty
                                             ));
                                         }
@@ -1377,7 +1377,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public <T> void registerTask(String description, CompletableFuture<T> task) {
             Objects.requireNonNull(description);
             Objects.requireNonNull(task);
-            standardLogger.log(Level.FINEST, String.format("Registering task: '%s'", description));
+            standardLogger.log(Level.FINEST, String.format("Registering task: '%s', %s", description, task));
 
             // We may get several of the same tasks with different descriptions. That can
             // happen when the runtime reuses cached tasks that it knows are value-identical
@@ -1405,7 +1405,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var executor = Executors.newWorkStealingPool(parallelism);
             final BlockingQueue<Future<Void>> tasks = new ArrayBlockingQueue<>(parallelism);
             final CompletionService<Void> cs = new ExecutorCompletionService<>(executor, tasks);
-            final Set<CompletableFuture<Void>> seen = Collections.synchronizedSet(new HashSet<>());
 
             // Getting error information from a logger is slightly ugly, but that's what C# implementation does
             Supplier<Integer> exitCode = () -> this.engineLogger.hasLoggedErrors()
@@ -1416,40 +1415,52 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Consumer<CompletableFuture<Void>> handleCompletion = (task) -> {
                 try {
                     // Wait for the task completion (non-blocking).
-                    // At this point it is guaranteed by CompletableFuture.allOf the task is complete.
+                    // At this point it is guaranteed by the execution loop bellow the task is complete.
+                    if (!task.isDone()) {
+                        throw new IllegalStateException(
+                                String.format("expected task to be done at this point, it was not: %s, %s",
+                                        inFlightTasks.get(task),
+                                        task
+                                )
+                        );
+                    }
                     task.join();
 
                     // Log the descriptions of completed tasks.
                     if (standardLogger.isLoggable(Level.FINEST)) {
                         List<String> descriptions = inFlightTasks.getOrDefault(task, List.of()); // FIXME: this should never return null, but it does for whatever reason
                         for (var description : descriptions) {
-                            standardLogger.log(Level.FINEST, String.format("Completed task: %s", description));
+                            standardLogger.log(Level.FINEST, String.format("Completed task: '%s', %s", description, task));
                         }
                     }
                 } finally {
                     // Once finished, remove the task from the set of tasks that are running.
                     this.inFlightTasks.remove(task);
-                    seen.remove(task);
                 }
             };
 
             // Keep looping as long as there are outstanding tasks that are still running.
             while (inFlightTasks.size() > 0) {
+                if (standardLogger.isLoggable(Level.FINEST)) {
+                    standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
+                }
+
                 // Grab all the tasks we currently have running.
                 inFlightTasks.keySet().forEach(task -> {
                     // Take only unseen tasks, that we haven't started processing yet
-                    if (!seen.contains(task) && tasks.remainingCapacity() > 0) {
-                        seen.add(task);
-                        tasks.add(task.orTimeout(30, TimeUnit.SECONDS)); // FIXME: remove
+                    if (!tasks.contains(task) && tasks.remainingCapacity() > 0) {
+                        tasks.add(task); // TODO: should we enforce a timeout here (and make it configurable)?
                     }
                 });
 
                 var f = cs.poll();
                 if (f != null) {
-                    //at this point the future is guaranteed to be solved
-                    //so there won't be any blocking here
                     try {
-                        handleCompletion.accept((CompletableFuture<Void>) f);
+                        if (f.isDone()) {
+                            //at this point the future is guaranteed to be solved
+                            //so there won't be any blocking here
+                            handleCompletion.accept((CompletableFuture<Void>) f);
+                        }
                     } catch (Exception e) {
                         return handleExceptionAsync(e);
                     }

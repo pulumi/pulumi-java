@@ -29,6 +29,10 @@ public final class OutputMetadata extends InputOutputMetadata<OutputExport> {
         this.shape = Objects.requireNonNull(build);
     }
 
+    public TypeShape<?> getFieldTypeShape() {
+        return this.shape;
+    }
+
     @Override
     public OutputExport getAnnotation() {
         return annotation;

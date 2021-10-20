@@ -71,7 +71,11 @@ public class Stack extends ComponentResource {
      * @param options optional stack options
      */
     public Stack(@Nullable StackOptions options) {
-        this(() -> CompletableFuture.completedFuture(Map.of()), options);
+        super(
+                InternalRootPulumiStackTypeName,
+                String.format("%s-%s", Deployment.getInstance().getProjectName(), Deployment.getInstance().getStackName()),
+                convertOptions(options)
+        );
         // set a derived class as the deployment stack
         DeploymentInternal.getInstance().setStack(this);
     }
@@ -83,11 +87,7 @@ public class Stack extends ComponentResource {
      */
     @Internal
     public Stack(Supplier<CompletableFuture<Map<String, Optional<Object>>>> init, @Nullable StackOptions options) {
-        super(
-                InternalRootPulumiStackTypeName,
-                String.format("%s-%s", Deployment.getInstance().getProjectName(), Deployment.getInstance().getStackName()),
-                convertOptions(options)
-        );
+        this(options);
         try {
             this.outputs = Output.of(runInitAsync(init));
         } finally {

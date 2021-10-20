@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import io.pulumi.resources.Resource;
@@ -25,6 +26,8 @@ public interface OutputCompletionSource<T> {
 
     void setValue(InputOutputData</* @Nullable */ T> data);
 
+    TypeShape<?> getTypeShape();
+
     static ImmutableMap<String, OutputCompletionSource<?>> initializeOutputs(Resource resource) {
         return extractOutputInfo(resource.getClass()).entrySet().stream()
                 .collect(toImmutableMap(
@@ -41,7 +44,7 @@ public interface OutputCompletionSource<T> {
                     return incomplete;
                 });
 
-        return TypedInputOutput.outputCompletionSource(output, ImmutableSet.of(resource));
+        return TypedInputOutput.outputCompletionSource(output, ImmutableSet.of(resource), metadata.getFieldTypeShape());
     }
 
     private static <T> ImmutableMap<String, OutputMetadata> extractOutputInfo(Class<T> type) {

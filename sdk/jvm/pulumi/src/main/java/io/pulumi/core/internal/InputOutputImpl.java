@@ -48,7 +48,7 @@ public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyabl
         var deployment = DeploymentInternal.getInstanceOptional();
         if (deployment.isPresent()) {
             deployment.get().getRunner().registerTask(
-                    this.getClass().getTypeName(), dataFuture
+                    this.getClass().getTypeName() + " -> " + dataFuture, dataFuture
             );
         }
     }

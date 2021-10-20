@@ -5,6 +5,7 @@ import com.google.common.collect.Sets;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.grpc.Internal;
 import io.pulumi.core.InputOutput;
+import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.OutputCompletionSource;
 
@@ -59,9 +60,9 @@ public interface TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO
     }
 
     static <T, IO extends InputOutput<T, IO> & Copyable<IO>> OutputCompletionSource<T> outputCompletionSource(
-            InputOutput<T, IO> inputOutput, ImmutableSet<Resource> resources
+            InputOutput<T, IO> inputOutput, ImmutableSet<Resource> resources, TypeShape<?> fieldTypeShape
     ) {
-        var mutator = new OutputCompletionMutator<T>(resources);
+        var mutator = new OutputCompletionMutator<T>(resources, fieldTypeShape);
         TypedInputOutput.cast(inputOutput).mutate(mutator);
         return mutator;
     }
@@ -70,10 +71,12 @@ public interface TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO
     class OutputCompletionMutator<T> implements OutputCompletionSource<T>, ConsumingMutator<T> {
 
         protected final ImmutableSet<Resource> resources;
+        protected final TypeShape<?> fieldTypeShape;
         protected CompletableFuture<InputOutputData<T>> mutableData;
 
-        public OutputCompletionMutator(ImmutableSet<Resource> resources) {
+        public OutputCompletionMutator(ImmutableSet<Resource> resources, TypeShape<?> fieldTypeShape) {
             this.resources = Objects.requireNonNull(resources);
+            this.fieldTypeShape = Objects.requireNonNull(fieldTypeShape);
         }
 
         @CanIgnoreReturnValue
@@ -114,6 +117,11 @@ public interface TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO
                             data.isKnown(),
                             data.isSecret()
                     ));
+        }
+
+        @Override
+        public TypeShape<?> getTypeShape() {
+            return fieldTypeShape;
         }
     }
 }
