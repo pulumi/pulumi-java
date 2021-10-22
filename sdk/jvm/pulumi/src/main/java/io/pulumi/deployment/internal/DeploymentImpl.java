@@ -40,10 +40,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Future;
+import java.util.concurrent.CompletionException;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.*;
 import java.util.logging.Level;
@@ -53,6 +52,7 @@ import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
 import static io.pulumi.core.internal.Environment.*;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
+import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
@@ -765,7 +765,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                     if (resource instanceof CustomResource) {
                                         completionSources.get(Constants.IdPropertyName)
-                                                .setStringValue(id == null ? "" : id, !Strings.isEmptyOrNull(id));
+                                                .setStringValue(id == null ? "" : id, isNonEmptyOrNull(id));
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response
@@ -839,7 +839,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 return TypedInputOutput.cast(options.getId().get())
                         .view(InputOutputData::getValueNullable)
                         .thenCompose(id -> {
-                            if (!Strings.isEmptyOrNull(id)) {
+                            if (isNonEmptyOrNull(id)) {
                                 if (!(resource instanceof CustomResource)) {
                                     throw new IllegalArgumentException("ResourceOptions.id is only valid for a CustomResource");
                                 }
@@ -1321,7 +1321,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          * continuously, asynchronously loop, waiting for these tasks to complete, and only
          * exiting once the set becomes empty.
          */
-        private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = Collections.synchronizedMap(new HashMap<>()); // TODO: try to remove syncing later in code with Collections.synchronizedMap
+        private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
 
         public DefaultRunner(DeploymentState deployment, Logger standardLogger) {
             this.engineLogger = Objects.requireNonNull(Objects.requireNonNull(deployment).logger);
@@ -1330,7 +1330,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         /**
          * @param stackType the Stack type class instance, if class is nested it must be static
-         * @param <T> the Stack type, if class is nested it must be static
+         * @param <T>       the Stack type, if class is nested it must be static
          */
         @Override
         public <T extends Stack> CompletableFuture<Integer> runAsync(Class<T> stackType) {
@@ -1347,7 +1347,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                     throw new IllegalArgumentException(String.format(
                             "Couldn't create an instance of the stack type: '%s', error: %s",
-                            stackType.getTypeName(), e.getMessage()
+                            stackType.getTypeName(), e
                     ), e);
                 }
             });
@@ -1387,7 +1387,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // (for example a completed future). In that case, we just store all the descriptions.
             // We'll print them all out as done once this task actually finishes.
             inFlightTasks.compute(
-                    task.thenApply(ignore -> null),
+                    task.thenApply(ignore -> null), // TODO: should we enforce a timeout here (and make it configurable)?
                     (ignore, descriptions) -> {
                         if (descriptions == null) {
                             return Lists.newArrayList(description);
@@ -1404,9 +1404,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // So the resulting semantics is that we complete
         // when remaining count is zero, or when an exception is thrown.
         private CompletableFuture<Integer> whileRunningAsync() {
-            var parallelism = Runtime.getRuntime().availableProcessors();
-            final BlockingQueue<Future<Void>> tasks = new ArrayBlockingQueue<>(parallelism);
-
             // Getting error information from a logger is slightly ugly, but that's what C# implementation does
             Supplier<Integer> exitCode = () -> this.engineLogger.hasLoggedErrors()
                     ? ProcessExitedBeforeLoggingUserActionableMessage
@@ -1445,25 +1442,15 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
 
                 // Grab all the tasks we currently have running.
-                inFlightTasks.keySet().forEach(task -> {
-                    // Take only unseen tasks, that we haven't started processing yet.
-                    // Adds no more tasks than the queue capacity.
-                    if (!tasks.contains(task) && tasks.remainingCapacity() > 0) {
-                        tasks.add(task/*.orTimeout(15, TimeUnit.MINUTES)*/); // TODO: should we enforce a timeout here (and make it configurable)?
-                    }
-                });
-
-                var f = tasks.poll(); // we remove the task from the queue
-                if (f != null) {
+                for (var task : inFlightTasks.keySet()) {
                     try {
-                        if (f.isDone()) {
+                        if (task.isDone()) {
                             // at this point the future is guaranteed to be solved
                             // so there won't be any blocking here
-                            handleCompletion.accept((CompletableFuture<Void>) f); // will remove from inFlightTasks
+                            handleCompletion.accept(task); // will remove from inFlightTasks
                         } else {
-                            standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", f));
-                            // the task was removed from the queue even thou it was not complete,
-                            // but it will be re-added to the end of the queue in the logic above
+                            standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", task));
+                            // will attempt again in the next iteration
                         }
                     } catch (Exception e) {
                         return handleExceptionAsync(e);
@@ -1491,6 +1478,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     exception.printStackTrace();
                     return ProcessExitedBeforeLoggingUserActionableMessage;
                 });
+            }
+
+            // unwrap the CompletionException (used by CompletableFuture)
+            if (exception instanceof CompletionException
+                    && exception.getCause() != null
+                    && exception.getCause() instanceof Exception) {
+                return handleExceptionAsync((Exception) exception.getCause());
             }
 
             // For the rest of the issue we encounter log the problem to the error stream. if we
@@ -1646,7 +1640,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private static CompletableFuture<String> tryGetResourceUrnAsync(@Nullable Resource resource) {
             if (resource != null) {
                 try {
-                    return TypedInputOutput.cast(resource.getUrn()).view(InputOutputData::getValueNullable);
+                    return TypedInputOutput.cast(resource.getUrn()).view(v -> v.getValueOptional().orElse(""));
                 } catch (Throwable ignore) {
                     // getting the urn for a resource may itself fail, in that case we don't want to
                     // fail to send an logging message. we'll just send the logging message unassociated

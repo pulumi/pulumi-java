@@ -129,7 +129,7 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 	args := []string{}
 
 	// Run from source.
-	args = append(args, "run")
+	args = append(args, "run", "--console=plain")
 
 	if logging.V(5) {
 		commandStr := strings.Join(args, " ")

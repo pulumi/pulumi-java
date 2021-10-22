@@ -263,6 +263,19 @@ public class Converter {
             var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
             var constructorParameters = constructor.getParameters();
             var arguments = new Object[constructorParameters.length];
+            if (constructorParameters.length != constructorAnnotation.value().length) {
+                throw new IllegalArgumentException(String.format(
+                        "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
+                                "and the number of constructor parameters matching the annotated labels. " +
+                                "Constructor '%s' has '%s' parameters, and '%s' label(s) in the annotation.",
+                        targetType.getTypeName(),
+                        OutputCustomType.class.getTypeName(),
+                        OutputCustomType.Constructor.class.getTypeName(),
+                        constructor,
+                        constructorParameters.length,
+                        constructorAnnotation.value().length
+                ));
+            }
             for (int i = 0, n = constructorParameters.length; i < n; i++) {
                 var parameter = constructorParameters[i];
                 var parameterName = constructorAnnotation.value()[i]; // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
@@ -273,11 +286,17 @@ public class Converter {
                 var argValue = Maps.tryGetValue(argumentsMap, parameterName);
                 if (argValue.isEmpty()) {
                     throw new IllegalStateException(String.format(
-                            "Expected a deserialized map value with key '%s', corresponding to a parameter name in constructor: '%s', annotated parameter names: '%s'",
-                            parameterName, constructor,
-                            argumentsMap.entrySet().stream()
-                                    .map(Map.Entry::getKey)
-                                    .collect(joining(","))
+                            "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
+                                    "and the parameter labels in the annotation matching the parameters being deserialized. " +
+                                    "Constructor '%s' has a parameter nr %d (numbered from 0) labeled '%s', " +
+                                    "but it does not match any parameter ready to be deserialized: '%s'",
+                            targetType.getTypeName(),
+                            OutputCustomType.class.getTypeName(),
+                            OutputCustomType.Constructor.class.getTypeName(),
+                            constructor,
+                            i,
+                            parameterName,
+                            String.join(",", argumentsMap.keySet())
                     ));
                 }
                 arguments[i] = tryConvertObjectInner(

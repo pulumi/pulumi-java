@@ -40,8 +40,8 @@ public class Stack extends ComponentResource {
      * may look a bit confusing and may incorrectly look like something that could be removed
      * without changing semantics.
      */
-    @Nullable
     @Internal
+    @Nullable
     public static final Resource InternalRoot = null;
 
     /**

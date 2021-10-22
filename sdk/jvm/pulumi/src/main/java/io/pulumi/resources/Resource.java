@@ -9,6 +9,7 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.core.internal.Strings;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -17,7 +18,10 @@ import io.pulumi.exceptions.ResourceException;
 import javax.annotation.Nullable;
 import java.util.*;
 
+import static io.pulumi.core.internal.Objects.exceptionSupplier;
+import static io.pulumi.core.internal.Objects.require;
 import static io.pulumi.resources.Resources.copyNullableList;
+import static java.util.Objects.requireNonNull;
 
 /**
  * Resource represents a class whose CRUD operations are implemented by a provider plugin.
@@ -81,8 +85,18 @@ public abstract class Resource {
         }
 
         this.urn = null; // this.urn can be set later with the setter or reflection
-        this.type = Objects.requireNonNull(type);
-        this.name = Objects.requireNonNull(name);
+        var exceptionSupplier = exceptionSupplier(
+                () -> new ResourceException(this),
+                (String msg) -> new ResourceException(msg, this)
+        );
+        this.type = require(Strings::isNonEmptyOrNull, type,
+                () -> "expected a resource type, got empty or null",
+                exceptionSupplier
+        );
+        this.name = require(Strings::isNonEmptyOrNull, name,
+                () -> "expected a resource name, got empty or null",
+                exceptionSupplier
+        );
 
         // Before anything else - if there are transformations registered, invoke them in order
         // to transform the properties and options assigned to this resource.
@@ -324,7 +338,7 @@ public abstract class Resource {
     }
 
     private static ParentInfo getParentInfo(@Nullable Resource defaultParent, Alias alias) {
-        Objects.requireNonNull(alias);
+        requireNonNull(alias);
         if (alias.getParent().isPresent())
             return new ParentInfo(alias.getParent().get(), null);
 

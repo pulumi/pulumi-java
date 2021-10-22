@@ -24,4 +24,8 @@ public class Strings {
         }
         return string.isBlank();
     }
+
+    public static boolean isNonEmptyOrNull(String string) {
+        return !isEmptyOrNull(string);
+    }
 }

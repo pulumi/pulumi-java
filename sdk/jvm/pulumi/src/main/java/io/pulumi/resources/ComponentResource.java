@@ -76,7 +76,7 @@ public class ComponentResource extends Resource {
      * @param remote  True if this is a remote component resource
      */
     public ComponentResource(String type, String name, @Nullable ResourceArgs args, @Nullable ComponentResourceOptions options, boolean remote) {
-        super(type, name, false, args == null ? ResourceArgs.Empty : args, options == null ? new ComponentResourceOptions() : options, remote, false);
+        super(type, name, false, args == null ? ResourceArgs.Empty : args, options == null ? ComponentResourceOptions.Empty : options, remote, false);
     }
 
     protected void registerOutputs() {

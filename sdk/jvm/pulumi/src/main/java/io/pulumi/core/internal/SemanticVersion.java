@@ -11,6 +11,8 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
+
 /**
  * A semantic version implementation.
  * Conforms with v2.0.0 of http://semver.org
@@ -227,10 +229,10 @@ public final class SemanticVersion implements Comparable<SemanticVersion> {
     public String toString() {
         var builder = new StringBuilder();
         builder.append(this.major).append(".").append(this.minor).append(".").append(this.patch);
-        if (!Strings.isEmptyOrNull(this.prerelease)) {
+        if (isNonEmptyOrNull(this.prerelease)) {
             builder.append("-").append(this.prerelease);
         }
-        if (!Strings.isEmptyOrNull(this.build)) {
+        if (isNonEmptyOrNull(this.build)) {
             builder.append("-").append(this.build);
         }
         return builder.toString();
