@@ -103,14 +103,14 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         return new OutputDefault<>(InputOutputData.empty());
     }
 
-    static <T, O extends Output<T>> Output<T> ensure(@Nullable O value) { // TODO: rename ofNullable?
+    static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
         if (value == null) {
             return Output.empty();
         }
         return value;
     }
 
-    static <T> Output<T> ensure(@Nullable T value) { // TODO: rename ofNullable?
+    static <T> Output<T> ofNullable(@Nullable T value) {
         if (value == null) {
             return Output.empty();
         }

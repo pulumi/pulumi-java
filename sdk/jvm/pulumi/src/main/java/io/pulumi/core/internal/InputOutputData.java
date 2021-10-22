@@ -131,7 +131,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         return ofNullable(this.resources, this.value, this.known, isSecret);
     }
 
-    public <U> InputOutputData<U> apply(Function<T, U> function) {
+    public <U> InputOutputData<U> apply(Function</* @Nullable */ T, U> function) {
         return ofNullable(this.resources, function.apply(this.value), this.known, this.secret);
     }
 
@@ -182,7 +182,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     public static <T, U> CompletableFuture<InputOutputData<U>> apply(
             CompletableFuture<InputOutputData<T>> dataFuture,
-            Function<T, CompletableFuture<InputOutputData<U>>> func
+            Function</* @Nullable */ T, CompletableFuture<InputOutputData<U>>> func
     ) {
         return dataFuture.thenApply((InputOutputData<T> data) -> {
             ImmutableSet<Resource> resources = data.getResources();

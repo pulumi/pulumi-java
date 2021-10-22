@@ -97,14 +97,14 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
         return new InputDefault<>(InputOutputData.empty());
     }
 
-    static <T, I extends Input<T>> Input<T> ensure(@Nullable I value) { // TODO: rename ofNullable?
+    static <T, I extends Input<T>> Input<T> ofNullable(@Nullable I value) {
         if (value == null) {
             return Input.empty();
         }
         return value;
     }
 
-    static <T> Input<T> ensure(@Nullable T value) { // TODO: rename ofNullable?
+    static <T> Input<T> ofNullable(@Nullable T value) {
         if (value == null) {
             return Input.empty();
         }

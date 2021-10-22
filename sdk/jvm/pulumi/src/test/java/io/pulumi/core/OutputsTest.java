@@ -7,8 +7,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class OutputsTest {
 
     @Test
-    public void testEnsureSecretifyOutput() {
-        Output<String> res0_ = Output.ensure((String) null);
+    public void testNullableSecretifyOutput() {
+        Output<String> res0_ = Output.ofNullable((String) null);
         Output<String> res0 = res0_.secretify();
         var data0 = InputOutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
@@ -20,14 +20,14 @@ public class OutputsTest {
         var data0_ = InputOutputTests.waitFor(res0_);
         assertThat(data0_.isSecret()).isFalse();
 
-        Output<String> res1 = Output.ensure("test1").secretify();
+        Output<String> res1 = Output.ofNullable("test1").secretify();
         var data1 = InputOutputTests.waitFor(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
         assertThat(data1.isPresent()).isTrue();
         assertThat(data1.isKnown()).isTrue();
 
-        Output<String> res2 = Output.ensure(Output.of("test2")).secretify();
+        Output<String> res2 = Output.ofNullable(Output.of("test2")).secretify();
         var data2 = InputOutputTests.waitFor(res2);
         assertThat(data2.getValueNullable()).isEqualTo("test2");
         assertThat(data2.isSecret()).isTrue();

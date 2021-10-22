@@ -40,7 +40,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.*;
 import java.util.logging.Level;
@@ -1402,9 +1405,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // when remaining count is zero, or when an exception is thrown.
         private CompletableFuture<Integer> whileRunningAsync() {
             var parallelism = Runtime.getRuntime().availableProcessors();
-            var executor = Executors.newWorkStealingPool(parallelism);
             final BlockingQueue<Future<Void>> tasks = new ArrayBlockingQueue<>(parallelism);
-            final CompletionService<Void> cs = new ExecutorCompletionService<>(executor, tasks);
 
             // Getting error information from a logger is slightly ugly, but that's what C# implementation does
             Supplier<Integer> exitCode = () -> this.engineLogger.hasLoggedErrors()
@@ -1415,7 +1416,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Consumer<CompletableFuture<Void>> handleCompletion = (task) -> {
                 try {
                     // Wait for the task completion (non-blocking).
-                    // At this point it is guaranteed by the execution loop bellow the task is complete.
+                    // At this point it is guaranteed by the execution loop bellow, that the task is already complete.
                     if (!task.isDone()) {
                         throw new IllegalStateException(
                                 String.format("expected task to be done at this point, it was not: %s, %s",
@@ -1441,25 +1442,28 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             // Keep looping as long as there are outstanding tasks that are still running.
             while (inFlightTasks.size() > 0) {
-                if (standardLogger.isLoggable(Level.FINEST)) {
-                    standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
-                }
+                standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
 
                 // Grab all the tasks we currently have running.
                 inFlightTasks.keySet().forEach(task -> {
-                    // Take only unseen tasks, that we haven't started processing yet
+                    // Take only unseen tasks, that we haven't started processing yet.
+                    // Adds no more tasks than the queue capacity.
                     if (!tasks.contains(task) && tasks.remainingCapacity() > 0) {
-                        tasks.add(task); // TODO: should we enforce a timeout here (and make it configurable)?
+                        tasks.add(task/*.orTimeout(15, TimeUnit.MINUTES)*/); // TODO: should we enforce a timeout here (and make it configurable)?
                     }
                 });
 
-                var f = cs.poll();
+                var f = tasks.poll(); // we remove the task from the queue
                 if (f != null) {
                     try {
                         if (f.isDone()) {
-                            //at this point the future is guaranteed to be solved
-                            //so there won't be any blocking here
-                            handleCompletion.accept((CompletableFuture<Void>) f);
+                            // at this point the future is guaranteed to be solved
+                            // so there won't be any blocking here
+                            handleCompletion.accept((CompletableFuture<Void>) f); // will remove from inFlightTasks
+                        } else {
+                            standardLogger.log(Level.FINEST, String.format("Tasks not done: %s", f));
+                            // the task was removed from the queue even thou it was not complete,
+                            // but it will be re-added to the end of the queue in the logic above
                         }
                     } catch (Exception e) {
                         return handleExceptionAsync(e);

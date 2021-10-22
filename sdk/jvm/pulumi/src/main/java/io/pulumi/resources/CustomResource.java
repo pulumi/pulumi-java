@@ -75,7 +75,7 @@ public class CustomResource extends Resource {
      * deployments and may be missing (unknown) during planning phases.
      */
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return Output.ofNullable(this.id);
     }
 
     /**

@@ -256,7 +256,7 @@ public abstract class Resource {
      * Urn is the stable logical URN used to distinctly address a resource, both before and after deployments.
      */
     public Output<String> getUrn() {
-        return this.urn == null ? Output.empty() : this.urn;
+        return Output.ofNullable(this.urn);
     }
 
     protected void setUrn(@Nullable Output<String> urn) {
