@@ -313,8 +313,22 @@ public class Converter {
                             argValue,
                             TypeShape.extract(parameter)
                     );
-                } else {
+                } else if (parameter.isAnnotationPresent(Nullable.class)) {
                     arguments[i] = null;
+                } else {
+                    throw new IllegalStateException(String.format(
+                            "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
+                                    "and the parameter names in the annotation matching the parameters being deserialized. " +
+                                    "Constructor '%s' parameter named '%s' (nr %d starting from 0) lacks @%s annotation, " +
+                                    "so the value is required, but there is no value to deserialize.",
+                            targetType.getTypeName(),
+                            OutputCustomType.class.getTypeName(),
+                            OutputCustomType.Constructor.class.getTypeName(),
+                            constructor,
+                            parameterName,
+                            i,
+                            Nullable.class.getTypeName()
+                    ));
                 }
             }
 
