@@ -1427,10 +1427,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     // Log the descriptions of completed tasks.
                     if (standardLogger.isLoggable(Level.FINEST)) {
                         List<String> descriptions = inFlightTasks.getOrDefault(task, List.of()); // FIXME: this should never return null, but it does for whatever reason
-                        for (var description : descriptions) {
-                            standardLogger.log(Level.FINEST, String.format("Completed task: '%s', %s", description, task));
-                        }
+                        standardLogger.log(Level.FINEST, String.format("Completed task: '%s', %s", String.join(",", descriptions), task));
                     }
+                } catch (Exception e) {
+                    standardLogger.log(Level.FINEST, String.format("Failed task: '%s', exception: %s", inFlightTasks.get(task), e));
+                    throw e;
                 } finally {
                     // Once finished, remove the task from the set of tasks that are running.
                     this.inFlightTasks.remove(task);
@@ -1487,7 +1488,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 return handleExceptionAsync((Exception) exception.getCause());
             }
 
-            // For the rest of the issue we encounter log the problem to the error stream. if we
+            // For the rest of the issue we encounter log the problem to the error stream. If we
             // successfully do this, then return with a special error code stating as such so that
             // our host doesn't print out another set of errors.
             //
