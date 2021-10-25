@@ -65,6 +65,10 @@ public class DeploymentTests {
             this.config.setConfig(key, value);
         }
 
+        public void overrideConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) {
+            this.config.setAllConfig(config, secretKeys);
+        }
+
         public Runner getRunner() {
             return this.runner;
         }
@@ -238,5 +242,17 @@ public class DeploymentTests {
         if (logger.hasLoggedErrors()) {
             System.out.println("logger.errorCount=" + logger.getErrorCount());
         }
+    }
+
+    public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
+        return new DeploymentImpl.Config(allConfig, configSecretKeys);
+    }
+
+    public static ImmutableMap<String, String> parseConfig(String configJson) {
+        return DeploymentImpl.Config.parseConfig(configJson);
+    }
+
+    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
+        return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
     }
 }

@@ -230,8 +230,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @VisibleForTesting
         Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
-            this.allConfig = allConfig;
-            this.configSecretKeys = configSecretKeys;
+            this.allConfig = Objects.requireNonNull(allConfig);
+            this.configSecretKeys = Objects.requireNonNull(configSecretKeys);
         }
 
         private static Config parse() {
@@ -293,28 +293,45 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private static ImmutableMap<String, String> parseConfig() {
-            var parsedConfig = ImmutableMap.<String, String>builder();
             var envConfig = Environment.getEnvironmentVariable(ConfigEnvKey);
             if (envConfig.isPresent()) {
-                Gson gson = new Gson();
-                var envObject = gson.fromJson(envConfig.get(), JsonElement.class);
-                for (var prop : envObject.getAsJsonObject().entrySet()) {
-                    parsedConfig.put(cleanKey(prop.getKey()), prop.getValue().toString());
-                }
+                return parseConfig(envConfig.get());
+            }
+            return ImmutableMap.of();
+        }
+
+        @Internal
+        @VisibleForTesting
+        static ImmutableMap<String, String> parseConfig(String envConfigJson) {
+            var parsedConfig = ImmutableMap.<String, String>builder();
+
+            var gson = new Gson();
+            var envObject = gson.fromJson(envConfigJson, JsonElement.class);
+            for (var prop : envObject.getAsJsonObject().entrySet()) {
+                parsedConfig.put(cleanKey(prop.getKey()), prop.getValue().getAsString());
             }
 
             return parsedConfig.build();
         }
 
         private static ImmutableSet<String> parseConfigSecretKeys() {
-            var parsedConfigSecretKeys = ImmutableSet.<String>builder();
             var envConfigSecretKeys = Environment.getEnvironmentVariable(ConfigSecretKeysEnvKey);
             if (envConfigSecretKeys.isPresent()) {
-                Gson gson = new Gson();
-                var envObject = gson.fromJson(envConfigSecretKeys.get(), JsonElement.class);
-                for (var element : envObject.getAsJsonArray()) {
-                    parsedConfigSecretKeys.add(element.getAsString());
-                }
+                return parseConfigSecretKeys(envConfigSecretKeys.get());
+            }
+
+            return ImmutableSet.of();
+        }
+
+        @Internal
+        @VisibleForTesting
+        static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
+            var parsedConfigSecretKeys = ImmutableSet.<String>builder();
+
+            var gson = new Gson();
+            var envObject = gson.fromJson(envConfigSecretKeysJson, JsonElement.class);
+            for (var element : envObject.getAsJsonArray()) {
+                parsedConfigSecretKeys.add(element.getAsString());
             }
 
             return parsedConfigSecretKeys.build();

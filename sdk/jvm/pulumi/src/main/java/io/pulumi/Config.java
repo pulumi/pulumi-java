@@ -29,7 +29,6 @@ import java.util.Optional;
 public class Config {
 
     private final String name;
-    private final Gson gson;
 
     private Config() {
         this(Deployment.getInstance().getProjectName());
@@ -43,7 +42,6 @@ public class Config {
         }
 
         this.name = name;
-        this.gson = new Gson();
     }
 
     /**
@@ -137,6 +135,7 @@ public class Config {
     public <T> Optional<T> getObject(String key, Class<T> classOfT) {
         var v = get(key);
         try {
+            var gson = new Gson();
             return v.map(string -> gson.fromJson(string, classOfT));
         } catch (JsonParseException ex) {
             throw new ConfigTypeException(fullKey(key), v, classOfT.getTypeName(), ex);

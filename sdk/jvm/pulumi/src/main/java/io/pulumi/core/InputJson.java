@@ -53,12 +53,12 @@ public final class InputJson extends InputImpl<JsonElement, Input<JsonElement>> 
     }
 
     public static InputJson parse(String json) {
-        Gson gson = new Gson();
+        var gson = new Gson();
         return new InputJson(gson.fromJson(json, JsonElement.class));
     }
 
     public static InputJson parse(Output<String> json) {
-        Gson gson = new Gson();
+        var gson = new Gson();
         return InputJson.of(json.applyValue((String j) -> gson.fromJson(j, JsonElement.class)));
     }
 }

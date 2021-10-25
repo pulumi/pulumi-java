@@ -349,7 +349,7 @@ public class Converter {
     }
 
     private static JsonElement tryConvertJsonElement(String context, Object value) {
-        Gson gson = new Gson();
+        var gson = new Gson();
         StringWriter stringWriter = new StringWriter();
         try {
             JsonWriter jsonWriter = gson.newJsonWriter(stringWriter);
