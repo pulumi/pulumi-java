@@ -7,6 +7,8 @@ import io.pulumi.core.internal.TypedInputOutput;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -66,6 +68,13 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     /**
      * @see Output#apply(Function) for more details.
      */
+    default <U> Output<U> applyOptional(Function<T, Optional<U>> func) {
+        return apply(t -> Output.ofOptional(func.apply(t))); // TODO: a candidate to move to Input.ofOptional
+    }
+
+    /**
+     * @see Output#apply(Function) for more details.
+     */
     default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
         return apply(t -> Output.of(func.apply(t)));
     }
@@ -115,6 +124,15 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
             return Output.empty();
         }
         return Output.of(value);
+    }
+
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // this is a converter method, so it's ok
+    static <T> Output<T> ofOptional(Optional<T> value) {
+        Objects.requireNonNull(value);
+        if (value.isEmpty()) {
+            return Output.empty();
+        }
+        return Output.of(value.get());
     }
 
     /**

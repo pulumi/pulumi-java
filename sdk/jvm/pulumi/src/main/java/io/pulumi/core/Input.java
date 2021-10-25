@@ -4,6 +4,8 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.internal.InputOutputData;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -60,6 +62,13 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
     /**
      * @see Input#apply(Function) for more details.
      */
+    default <U> Input<U> applyOptional(Function<T, Optional<U>> func) {
+        return apply(t -> Input.ofOptional(func.apply(t)));
+    }
+
+    /**
+     * @see Input#apply(Function) for more details.
+     */
     default <U> Input<U> applyFuture(Function<T, CompletableFuture<U>> func) {
         return apply(t -> Input.of(func.apply(t)));
     }
@@ -109,6 +118,15 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
             return Input.empty();
         }
         return Input.of(value);
+    }
+
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // this is a converter method, so it's ok
+    static <T> Input<T> ofOptional(Optional<T> value) {
+        Objects.requireNonNull(value);
+        if (value.isEmpty()) {
+            return Input.empty();
+        }
+        return Input.of(value.get());
     }
 
     // Tuple Overloads that take different numbers of inputs or outputs.
