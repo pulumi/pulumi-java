@@ -3,6 +3,8 @@ package io.pulumi.core.internal.annotations;
 import io.pulumi.core.*;
 import org.junit.jupiter.api.Test;
 
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class InputOutputMetadataTest {
@@ -20,6 +22,9 @@ class InputOutputMetadataTest {
 
         @OutputExport(type = String.class)
         private final Output<String> implicitFoo = Output.of("");
+
+        @OutputExport(type = Map.class, parameters = {String.class, Integer.class})
+        private final Output<Map<String, Integer>> implicitBaz = Output.of(Map.of());
 
         @InputImport(name = "bar")
         private final Input<String> explicitBar = Input.of("");
@@ -43,7 +48,7 @@ class InputOutputMetadataTest {
     @Test
     void testOutputInfos() {
         var infos = OutputMetadata.of(Tester.class);
-        assertThat(infos).hasSize(4);
+        assertThat(infos).hasSize(5);
     }
 
 }

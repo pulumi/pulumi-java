@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
  * <ul>
  *     <li>annotate a field of type @see {@link io.pulumi.core.Output}</li>
  *     <li>the type {@code T} of the @see {@link io.pulumi.core.Output} needs to be given explicitly using {@code type} parameter</li>
- *     <li>if the type {@code T} is also generic, the list of its generiv parameter types mus be given using {@code parameters} parameter</li>
+ *     <li>if the type {@code T} is also generic, the list of its generic parameter types mus be given using {@code parameters} parameter</li>
  * </ul>
  */
 @Retention(RetentionPolicy.RUNTIME)
@@ -23,6 +23,7 @@ public @interface OutputExport {
 
     /**
      * @return the exported output name of the annotated @see {@link io.pulumi.core.Output}
+     * If not set, the name of the annotated field will be used.
      */
     String name() default "";
 
@@ -33,6 +34,7 @@ public @interface OutputExport {
 
     /**
      * @return the generic type parameters of the @see {@link #type()}
+     * If not set, the assumption is that the @see {@link #type()} is not a generic type.
      */
     Class<?>[] parameters() default {};
 }

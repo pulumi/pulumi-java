@@ -3,6 +3,7 @@ package io.pulumi.core.internal.annotations;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
+import io.pulumi.core.internal.Optionals;
 import io.pulumi.core.internal.Reflection;
 import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.exceptions.RunException;
@@ -63,7 +64,7 @@ public final class OutputMetadata extends InputOutputMetadata<OutputExport> {
                 .peek(field1 -> field1.setAccessible(true))
                 .collect(toImmutableMap(
                         f -> Optional.ofNullable(f.getAnnotation(OutputExport.class))
-                                .map(OutputExport::name).orElse(f.getName()),
+                                .flatMap(a -> Optionals.ofBlank(a.name())).orElse(f.getName()),
                         Function.identity()
                 ));
 

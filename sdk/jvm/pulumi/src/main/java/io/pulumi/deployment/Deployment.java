@@ -1,6 +1,7 @@
 package io.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
+import io.pulumi.Stack;
 import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.deployment.internal.DeploymentInstanceHolder;
 import io.pulumi.deployment.internal.DeploymentInternal;
@@ -71,8 +72,8 @@ public interface Deployment {
      */
     CompletableFuture<Void> invokeAsyncVoid(String token, InvokeArgs args);
 
-
     /**
+     * An entry-point to a Pulumi application.
      * @param callback Callback that creates stack resources.
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
      */
@@ -84,6 +85,8 @@ public interface Deployment {
     }
 
     /**
+     * An entry-point to a Pulumi application.
+     * Deployment will instantiate a default stack instance based on the callback passed as {@code callback} parameter.
      * @param callback Callback that creates stack resources.
      * @return A dictionary of stack outputs.
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
@@ -93,6 +96,8 @@ public interface Deployment {
     }
 
     /**
+     * An entry-point to a Pulumi application.
+     * Deployment will instantiate a default stack instance based on the callback passed as {@code callback} parameter.
      * @param callback Callback that creates stack resources.
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
      */
@@ -103,6 +108,8 @@ public interface Deployment {
     }
 
     /**
+     * An entry-point to a Pulumi application.
+     * Deployment will instantiate a default stack instance based on the callback passed as {@code callback} parameter.
      * @param callback Callback that creates stack resources.
      * @see #runAsyncFuture(Supplier, StackOptions) for more details.
      */
@@ -113,33 +120,40 @@ public interface Deployment {
     }
 
     /**
+     * An entry-point to a Pulumi application.
+     * Deployment will instantiate a default stack instance based on the callback passed as {@code callback} parameter.
      * @param callback Callback that creates stack resources.
-     * @param options  optional Stack options.
-     * @see #runAsyncFuture(Supplier, StackOptions) is an entry-point to a Pulumi application.
+     * @param options  Optional Stack options.
      * JVM applications should perform all startup logic
-     * they need in their {@code Main} method and then end with:
+     * they need in their {@code main} method and then end with:
      * <p>
      * <code>
      * public static void main(String[] args) {
-     * // program initialization code ...
+     *     // program initialization code ...
      * <p>
-     * return Deployment.runAsync(() -> {
-     * // Code that creates resources.
-     * });
+     *     return Deployment.runAsync(() -> {
+     *        // Code that creates resources.
+     *     });
      * }
      * </code>
      * </p>
+     * <p>
      * Importantly: Cloud resources cannot be created outside of the lambda passed
      * to any of the @see #runAsync overloads.
+     * </p>
+     * <p>
      * Because cloud Resource construction is inherently asynchronous,
-     * the result of this function is a @see {@link CompletableFuture} which should then be returned or awaited.
-     * This will ensure that any problems that are encountered during
-     * the running of the program are properly reported.
-     * Failure to do this may lead to the program ending early before all resources are properly registered.
-     * <p/>
+     * the result of this function is a @see {@link CompletableFuture} which should
+     * then be returned or awaited. This will ensure that any problems that are
+     * encountered during the running of the program are properly reported.
+     * Failure to do this may lead to the program ending early before all
+     * resources are properly registered.
+     * </p>
      * The function passed to @see #runAsyncFuture(Supplier, StackOptions)
      * can optionally return a @see {@link java.util.Map}.
      * The keys and values in this map will become the outputs for the Pulumi Stack that is created.
+     * @see #runAsyncStack(Class) for more information
+     * @see #runAsyncStack(Supplier) for more information.
      */
     static CompletableFuture<Integer> runAsyncFuture(
             Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback,
@@ -148,6 +162,78 @@ public interface Deployment {
         return DeploymentInternal.createRunnerAndRunAsync(
                 DeploymentInternal.deploymentFactory(),
                 runner -> runner.runAsyncFuture(callback, options)
+        );
+    }
+
+    /**
+     * An entry-point to a Pulumi application.
+     * Deployment will instantiate a new stack instance based on the type passed as {@code stackType} parameter.
+     * @param stackType The stack type to be instantiated
+     * JVM applications should perform all startup logic they
+     * need in their {@code main} method and then end with:
+     * <p>
+     * <code>
+     * public static void main(String[] args) {
+     *     // program initialization code ...
+     * <p>
+     *     return Deployment.runAsyncStack(MyStack.class);
+     * }
+     * </code>
+     * </p>
+     * <p>
+     * Importantly: cloud resources cannot be created outside of the @see Stack component.
+     * </p>
+     * <p>
+     * Because cloud Resource construction is inherently asynchronous, the
+     * result of this function is a @see {@link CompletableFuture} which should then
+     * be returned or awaited. This will ensure that any problems that are
+     * encountered during the running of the program are properly reported.
+     * Failure to do this may lead to the program ending early before all
+     * resources are properly registered.
+     * </p>
+     * @see #runAsyncFuture(Supplier, StackOptions) for more information.
+     * @see #runAsyncStack(Supplier) for more information.
+     */
+    static <S extends Stack> CompletableFuture<Integer> runAsyncStack(Class<S> stackType) {
+        return DeploymentInternal.createRunnerAndRunAsync(
+                DeploymentInternal.deploymentFactory(),
+                runner -> runner.runAsync(stackType)
+        );
+    }
+
+    /**
+     * An entry-point to a Pulumi application.
+     * Deployment will instantiate a new stack instance using the supplier passed as {@code stackFactory} parameter.
+     * @param stackFactory The stack supplier used to create stack instances
+     * JVM applications should perform all startup logic they
+     * need in their {@code main} method and then end with:
+     * <p>
+     * <code>
+     * public static void main(String[] args) {
+     *     // program initialization code ...
+     * <p>
+     *     return Deployment.runAsyncStack(() -> new MyStack()));
+     * }
+     * </code>
+     * </p>
+     * <p>
+     * Importantly: cloud resources cannot be created outside of the @see Stack component.
+     * </p>
+     * <p>
+     * Because cloud Resource construction is inherently asynchronous, the
+     * result of this function is a @see {@link CompletableFuture} which should then
+     * be returned or awaited. This will ensure that any problems that are
+     * encountered during the running of the program are properly reported.
+     * Failure to do this may lead to the program ending early before all
+     * resources are properly registered.
+     * </p>
+     * @see #runAsyncFuture(Supplier, StackOptions) for more information.
+     * @see #runAsyncStack(Class) for more information.
+     */
+    static <S extends Stack> CompletableFuture<Integer> runAsyncStack(Supplier<S> stackFactory) {
+        return DeploymentInternal.createRunnerAndRunAsync(
+                DeploymentInternal.deploymentFactory(),
+                runner -> runner.runAsync(stackFactory)
         );
     }
 }
