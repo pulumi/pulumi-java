@@ -9,11 +9,12 @@ import io.grpc.Internal;
 import io.pulumi.Log;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
+import io.pulumi.core.InputOutput;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Reflection.TypeShape;
-import io.pulumi.core.internal.UntypedInputOutput;
+import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.EnumType;
 import io.pulumi.resources.ComponentResource;
 import io.pulumi.resources.CustomResource;
@@ -155,13 +156,13 @@ public class Serializer {
             return CompletableFuture.completedFuture(serializeJson(ctx, element));
         }
 
-        if (prop instanceof UntypedInputOutput) {
-            var inputOutput = (UntypedInputOutput) prop;
+        if (prop instanceof InputOutput) {
+            var inputOutput = (InputOutput<Object, ?>) prop;
             if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: Recursion into UntypedInputOutput", ctx));
+                Log.debug(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
             }
 
-            return inputOutput.internalGetDataUntypedAsync().thenCompose(
+            return TypedInputOutput.cast(inputOutput).internalGetDataAsync().thenCompose(
                     (InputOutputData<Object> data) -> {
                         this.dependentResources.addAll(data.getResources());
 

@@ -6,18 +6,15 @@ import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.resources.Resource;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 @ParametersAreNonnullByDefault
 @Internal
 public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyable<IO>>
-        implements InputOutput<T, IO>, TypedInputOutput<T, IO>, UntypedInputOutput {
+        extends TypedInputOutput<T, IO> implements InputOutput<T, IO> {
 
     @Internal
     public static final Input<Tuples.Tuple0> TupleZeroIn = Input.of(Tuples.Tuple0.Empty);
@@ -53,29 +50,20 @@ public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyabl
         }
     }
 
-    protected abstract IO newInstance(CompletableFuture<InputOutputData<T>> dataFuture);
-
     public IO copy() {
         // we do not copy the OutputData, because it should be immutable
         return newInstance(this.dataFuture.copy()); // TODO: is the copy deep enough
     }
 
-    public IO unsecret() { // TODO: this look very unsafe to be exposed, what are the use cases? do we need this?
+    public IO asPlaintext() { // TODO: this look very unsafe to be exposed, what are the use cases? do we need this?
         return internalWithIsSecret(CompletableFuture.completedFuture(false));
     }
 
-    public IO secretify() {
+    public IO asSecret() {
         return internalWithIsSecret(CompletableFuture.completedFuture(true));
     }
 
-    /**
-     * @return the secret-ness status of the given output
-     */
-    @Internal
-    public CompletableFuture<Boolean> internalIsSecret() {
-        return this.dataFuture.thenApply(InputOutputData::isSecret);
-    }
-
+    // TODO: replace with mutator
     @Internal
     public IO internalWithIsSecret(CompletableFuture<Boolean> isSecretFuture) {
         return newInstance(
@@ -87,26 +75,10 @@ public abstract class InputOutputImpl<T, IO extends InputOutput<T, IO> & Copyabl
         );
     }
 
+    // TODO: replace with mutator/viewer
     @Internal
     public CompletableFuture<InputOutputData<T>> internalGetDataAsync() {
         return this.dataFuture;
-    }
-
-    @Internal
-    public CompletableFuture<Optional<T>> internalGetValueOptionalAsync() {
-        return this.dataFuture.thenApply(InputOutputData::getValueOptional);
-    }
-
-    @Override
-    @Internal
-    public CompletableFuture<Set<Resource>> internalGetResourcesUntypedAsync() {
-        return this.dataFuture.thenApply(InputOutputData::getResources);
-    }
-
-    @Override
-    @Internal
-    public CompletableFuture<InputOutputData<Object>> internalGetDataUntypedAsync() {
-        return this.dataFuture.thenApply(inputOutputData -> inputOutputData.apply(t -> t));
     }
 
     @Override

@@ -156,7 +156,7 @@ public class StackReference extends CustomResource {
                             // If either the name or set of secret outputs is unknown, we can't do anything smart,
                             // so we just copy the secret-ness from the entire outputs value.
                             if (!(nameOutput.isKnown() && secretOutputNamesData.isKnown())) {
-                                return TypedInputOutput.cast(this.outputs).internalIsSecret();
+                                return TypedInputOutput.cast(this.outputs).view(InputOutputData::isSecret);
                             }
 
                             // Otherwise, if we have a list of outputs we know are secret, we can use that list to determine if this

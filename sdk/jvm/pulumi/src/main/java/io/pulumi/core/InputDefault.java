@@ -2,6 +2,7 @@ package io.pulumi.core;
 
 import io.grpc.Internal;
 import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.internal.InputOutputImpl;
 import io.pulumi.core.internal.TypedInputOutput;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -10,7 +11,7 @@ import java.util.function.Function;
 
 @ParametersAreNonnullByDefault
 @Internal
-public final class InputDefault<T> extends InputImpl<T, Input<T>> implements Input<T> {
+public final class InputDefault<T> extends InputOutputImpl<T, Input<T>> implements Input<T> {
 
     InputDefault(T value) {
         super(value);
@@ -33,13 +34,17 @@ public final class InputDefault<T> extends InputImpl<T, Input<T>> implements Inp
     }
 
     @Override
-    protected InputDefault<T> newInstance(CompletableFuture<InputOutputData<T>> dataFuture) {
+    protected Input<T> newInstance(CompletableFuture<InputOutputData<T>> dataFuture) {
         return new InputDefault<>(dataFuture);
+    }
+
+    public Output<T> toOutput() {
+        return new OutputDefault<>(this.dataFuture.copy());
     }
 
     @Override
     public <U> Input<U> apply(Function<T, Input<U>> func) {
-        return new InputDefault<>(InputOutputData.apply(dataFuture, func.andThen(
+        return new InputDefault<>(InputOutputData.apply(this.dataFuture, func.andThen(
                 o -> TypedInputOutput.cast(o).internalGetDataAsync())));
     }
 

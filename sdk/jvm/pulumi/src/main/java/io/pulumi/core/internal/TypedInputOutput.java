@@ -18,15 +18,15 @@ import java.util.concurrent.CompletableFuture;
  */
 @ParametersAreNonnullByDefault
 @Internal
-public interface TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO>> {
+public abstract class TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO>> {
 
-    CompletableFuture<InputOutputData<T>> internalGetDataAsync();
+    protected abstract IO newInstance(CompletableFuture<InputOutputData<T>> dataFuture);
 
-    CompletableFuture<Boolean> internalIsSecret();
+    public abstract CompletableFuture<InputOutputData<T>> internalGetDataAsync();
 
-    IO internalWithIsSecret(CompletableFuture<Boolean> isSecretFuture);
+    public abstract IO internalWithIsSecret(CompletableFuture<Boolean> isSecretFuture);
 
-    static <T, IO extends InputOutput<T, IO> & Copyable<IO>> TypedInputOutput<T, IO> cast(
+    public static <T, IO extends InputOutput<T, IO> & Copyable<IO>> TypedInputOutput<T, IO> cast(
             InputOutput<T, IO> inputOutput
     ) {
         Objects.requireNonNull(inputOutput);
@@ -41,25 +41,25 @@ public interface TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO
         }
     }
 
-    <U> CompletableFuture<U> view(Viewer<T, U> viewer);
+    public abstract <U> CompletableFuture<U> view(Viewer<T, U> viewer);
 
-    interface Viewer<T, U> {
+    public interface Viewer<T, U> {
         U view(InputOutputData<T> dataFuture);
     }
 
-    <U> U mutate(Mutator<T, U> mutator);
+    public abstract <U> U mutate(Mutator<T, U> mutator);
 
-    interface Mutator<T, U> {
+    public interface Mutator<T, U> {
         U mutate(CompletableFuture<InputOutputData<T>> dataFuture);
     }
 
-    interface ConsumingMutator<T> extends Mutator<T, Void> {
+    public interface ConsumingMutator<T> extends Mutator<T, Void> {
         @CanIgnoreReturnValue
         @Override
         Void mutate(CompletableFuture<InputOutputData<T>> dataFuture);
     }
 
-    static <T, IO extends InputOutput<T, IO> & Copyable<IO>> OutputCompletionSource<T> outputCompletionSource(
+    public static <T, IO extends InputOutput<T, IO> & Copyable<IO>> OutputCompletionSource<T> outputCompletionSource(
             InputOutput<T, IO> inputOutput, ImmutableSet<Resource> resources, TypeShape<?> fieldTypeShape
     ) {
         var mutator = new OutputCompletionMutator<T>(resources, fieldTypeShape);
@@ -68,7 +68,7 @@ public interface TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyable<IO
     }
 
     @ParametersAreNonnullByDefault
-    class OutputCompletionMutator<T> implements OutputCompletionSource<T>, ConsumingMutator<T> {
+    static class OutputCompletionMutator<T> implements OutputCompletionSource<T>, ConsumingMutator<T> {
 
         protected final ImmutableSet<Resource> resources;
         protected final TypeShape<?> fieldTypeShape;

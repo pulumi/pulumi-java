@@ -9,7 +9,7 @@ import com.google.protobuf.Value;
 import io.grpc.Internal;
 import io.pulumi.Log;
 import io.pulumi.Stack;
-import io.pulumi.core.InputList;
+import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
@@ -614,7 +614,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     });
         }
 
-        private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(InputList<Resource> resources) {
+        private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Input<List<Resource>> resources) {
             return TypedInputOutput.cast(resources).view(InputOutputData::getValueNullable);
         }
 

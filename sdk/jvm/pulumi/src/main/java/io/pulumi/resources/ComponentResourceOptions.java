@@ -2,7 +2,6 @@ package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
-import io.pulumi.core.InputList;
 import io.pulumi.core.internal.Copyable;
 import io.pulumi.core.internal.Objects;
 
@@ -26,7 +25,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
     public ComponentResourceOptions(
             @Nullable Input<String> id,
             @Nullable Resource parent,
-            @Nullable InputList<Resource> dependsOn,
+            @Nullable Input<List<Resource>> dependsOn,
             boolean protect,
             @Nullable List<String> ignoreChanges,
             @Nullable String version,
