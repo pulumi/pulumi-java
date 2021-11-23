@@ -2,7 +2,6 @@ package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
-import io.pulumi.core.InputList;
 import io.pulumi.core.InputOutputTests;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -21,7 +20,7 @@ class ResourceOptionsTest {
     private static Stream<Arguments> testMergeSharedOptions() {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
-                        null, null, InputList.empty(), false, null,
+                        null, null, Input.empty(), false, null,
                         null, null, null, null, null, null
                 )),
                 arguments(new TestResourceOptions(
@@ -40,7 +39,7 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Input.of("id"),
                                 null,
-                                InputList.empty(),
+                                Input.empty(),
                                 true,
                                 List.of("b"),
                                 "test",
@@ -53,7 +52,7 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Input.of("id"),
                                 null,
-                                InputList.empty(),
+                                Input.empty(),
                                 true,
                                 List.of("a", "b"),
                                 "test",
@@ -94,7 +93,7 @@ class ResourceOptionsTest {
 
         protected TestResourceOptions() { /* empty */ }
 
-        public TestResourceOptions(@Nullable Input<String> id, @Nullable Resource parent, @Nullable InputList<Resource> dependsOn, boolean protect, @Nullable List<String> ignoreChanges, @Nullable String version, @Nullable ProviderResource provider, @Nullable CustomTimeouts customTimeouts, @Nullable List<ResourceTransformation> resourceTransformations, @Nullable List<Input<Alias>> aliases, @Nullable String urn) {
+        public TestResourceOptions(@Nullable Input<String> id, @Nullable Resource parent, @Nullable Input<List<Resource>> dependsOn, boolean protect, @Nullable List<String> ignoreChanges, @Nullable String version, @Nullable ProviderResource provider, @Nullable CustomTimeouts customTimeouts, @Nullable List<ResourceTransformation> resourceTransformations, @Nullable List<Input<Alias>> aliases, @Nullable String urn) {
             super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts, resourceTransformations, aliases, urn);
         }
     }

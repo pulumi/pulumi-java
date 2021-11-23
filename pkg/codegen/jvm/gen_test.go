@@ -20,9 +20,17 @@ func TestGeneratePackage(t *testing.T) {
 			"Simple schema with local resource properties",
 			"simple-resource-schema",
 			[]string{
-				path.Join(expectedFilesPath(), "Resource.java"),
-				path.Join(expectedFilesPath(), "OtherResource.java"),
-				path.Join(expectedFilesPath(), "ArgFunction.java"),
+				path.Join(expectedFilesPath("example"), "Resource.java"),
+				path.Join(expectedFilesPath("example"), "OtherResource.java"),
+				path.Join(expectedFilesPath("example"), "ArgFunction.java"),
+			},
+		},
+		{
+			"Simple schema with enum types",
+			"simple-enum-schema",
+			[]string{
+				// TODO
+				path.Join(expectedFilesPath("plant"), "Enums.java"),
 			},
 		},
 		// TODO: more cases
@@ -30,9 +38,9 @@ func TestGeneratePackage(t *testing.T) {
 			"Simple schema with plain properties",
 			"simple-plain-schema",
 			[]string{
-				path.Join(expectedFilesPath(), "Inputs.java"),
-				path.Join(expectedFilesPath(), "Outputs.java"),
-				path.Join(expectedFilesPath(), "Component.java"),
+				path.Join(expectedFilesPath("example"), "Inputs.java"),
+				path.Join(expectedFilesPath("example"), "Outputs.java"),
+				path.Join(expectedFilesPath("example"), "Component.java"),
 			},
 		},
 	}
@@ -83,6 +91,8 @@ func TestGeneratePackage(t *testing.T) {
 	}
 }
 
-func expectedFilesPath() string {
-	return path.Join(gradleProjectPath(), "io", "pulumi", "example")
+func expectedFilesPath(elem ...string) string {
+	parts := []string{gradleProjectPath(), "io", "pulumi"}
+	parts = append(parts, elem...)
+	return path.Join(parts...)
 }

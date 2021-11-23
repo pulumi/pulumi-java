@@ -8,11 +8,10 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableList;
 import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
+import io.pulumi.example.Utilities;
 
 public final class Inputs {
 

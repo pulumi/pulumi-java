@@ -16,7 +16,7 @@ import io.pulumi.deployment.InvokeOptions;
 public class {{.ClassName}} {
     // TODO
 
-	// TODO: this probably shoudle be done via a mutator on the InvokeOptions
+	// TODO: this probably should be done via a mutator on the InvokeOptions
 	public static InvokeOptions withVersion(@Nullable InvokeOptions options) {
             if (options != null && options.getVersion().isPresent()) {
                 return options;

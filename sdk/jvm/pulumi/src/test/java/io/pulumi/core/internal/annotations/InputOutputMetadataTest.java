@@ -1,8 +1,11 @@
 package io.pulumi.core.internal.annotations;
 
-import io.pulumi.core.*;
+import io.pulumi.core.Either;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -33,10 +36,10 @@ class InputOutputMetadataTest {
         private final Input<String> implicitBar = Input.of("");
 
         @InputImport(name = "", required = true, json = true)
-        public final InputMap<Integer> inputMap = InputMap.of("k1", 1, "k2", 2);
+        public final Input<Map<String, Integer>> inputMap = Input.ofMap("k1", 1, "k2", 2);
 
         @InputImport
-        public final InputList<Boolean> inputList = InputList.of(true, false);
+        public final Input<List<Boolean>> inputList = Input.ofList(true, false);
     }
 
     @Test

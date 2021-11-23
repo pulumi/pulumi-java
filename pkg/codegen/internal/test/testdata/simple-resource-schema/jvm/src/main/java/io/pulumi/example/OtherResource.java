@@ -8,11 +8,10 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableList;
 import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
+import io.pulumi.example.Utilities;
 
 @ResourceType(type="example::OtherResource")
 public class OtherResource extends io.pulumi.resources.ComponentResource {
@@ -42,8 +41,8 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         @InputImport(name="foo")
         private final @Nullable Input<io.pulumi.example.Resource> foo;
 
-        public Optional<Input<io.pulumi.example.Resource>> getFoo() {
-            return Optional.ofNullable(this.foo);
+        public Input<io.pulumi.example.Resource> getFoo() {
+            return Input.ofNullable(this.foo);
         }
 
         public Args(@Nullable Input<io.pulumi.example.Resource> foo) {

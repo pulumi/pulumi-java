@@ -231,6 +231,11 @@
       }
     },
     "nodejs": {},
+    "jvm": {
+      "packages": {
+        "tree/v1": "tree.v1"
+      }
+    },
     "python": {
       "moduleNameOverrides": {
         "tree/v1": "tree/v1"

@@ -8,11 +8,10 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableList;
 import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
+import io.pulumi.example.Utilities;
 
 @ResourceType(type="example::Component")
 public class Component extends io.pulumi.resources.ComponentResource {
@@ -34,10 +33,10 @@ public class Component extends io.pulumi.resources.ComponentResource {
     public Output</* @Nullable */ Outputs.Foo> getBar() {
         return this.bar;
     }
-    @OutputExport(name="baz", type=ImmutableList.class, parameters={Outputs.Foo.class})
-    private Output</* @Nullable */ ImmutableList<Outputs.Foo>> baz;
+    @OutputExport(name="baz", type=List.class, parameters={Outputs.Foo.class})
+    private Output</* @Nullable */ List<Outputs.Foo>> baz;
 
-    public Output</* @Nullable */ ImmutableList<Outputs.Foo>> getBaz() {
+    public Output</* @Nullable */ List<Outputs.Foo>> getBaz() {
         return this.baz;
     }
     @OutputExport(name="c", type=Integer.class, parameters={})
@@ -153,8 +152,8 @@ public class Component extends io.pulumi.resources.ComponentResource {
         @InputImport(name="foo")
         private final @Nullable Input<Inputs.FooArgs> foo;
 
-        public Optional<Input<Inputs.FooArgs>> getFoo() {
-            return Optional.ofNullable(this.foo);
+        public Input<Inputs.FooArgs> getFoo() {
+            return Input.ofNullable(this.foo);
         }
 
         public Args(

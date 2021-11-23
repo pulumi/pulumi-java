@@ -8,11 +8,10 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Map;
 import java.util.List;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableList;
 import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
+import io.pulumi.example.Utilities;
 
 @ResourceType(type="example::Resource")
 public class Resource extends io.pulumi.resources.CustomResource {
@@ -49,8 +48,8 @@ public class Resource extends io.pulumi.resources.CustomResource {
         @InputImport(name="bar")
         private final @Nullable Input<String> bar;
 
-        public Optional<Input<String>> getBar() {
-            return Optional.ofNullable(this.bar);
+        public Input<String> getBar() {
+            return Input.ofNullable(this.bar);
         }
 
         public Args(@Nullable Input<String> bar) {
@@ -64,7 +63,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
         public static final class Builder {
             private @Nullable Input<String> bar;
             public Builder setBar(@Nullable Input<String> bar) {
-                this.bar = Input.ensure(bar).secretify();
+                this.bar = Input.ofNullable(bar).asSecret();
                 return this;
             }
             public Args build() {
