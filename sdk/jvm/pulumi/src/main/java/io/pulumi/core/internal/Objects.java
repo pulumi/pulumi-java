@@ -1,5 +1,6 @@
 package io.pulumi.core.internal;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.grpc.Internal;
 
 import javax.annotation.Nullable;
@@ -14,6 +15,7 @@ public class Objects {
         throw new UnsupportedOperationException("static class");
     }
 
+    @CanIgnoreReturnValue
     @Nullable
     public static <T, E extends RuntimeException> T require(
             Predicate<T> predicate,
@@ -36,6 +38,8 @@ public class Objects {
         return obj;
     }
 
+    @Nullable
+    @CanIgnoreReturnValue
     public static <T> T require(
             Predicate<T> predicate,
             @Nullable T obj,
@@ -44,6 +48,8 @@ public class Objects {
         return require(predicate, obj, messageSupplier, null);
     }
 
+    @Nullable
+    @CanIgnoreReturnValue
     public static <T> T require(
             Predicate<T> predicate,
             @Nullable T obj
@@ -52,9 +58,26 @@ public class Objects {
     }
 
     @Nullable
-    public static <T> T requireNullState(@Nullable T obj, @Nullable Supplier<String> messageSupplier) {
+    @CanIgnoreReturnValue
+    public static <T> T requireNullState(
+            @Nullable T obj,
+            @Nullable Supplier<String> messageSupplier
+    ) throws IllegalStateException {
         return require(
                 java.util.Objects::isNull,
+                obj,
+                messageSupplier,
+                exceptionSupplier(IllegalStateException::new, IllegalStateException::new)
+        );
+    }
+
+    @CanIgnoreReturnValue
+    public static boolean requireFalseState(
+            boolean obj,
+            @Nullable Supplier<String> messageSupplier
+    ) throws IllegalStateException {
+        return require(
+                o -> !o,
                 obj,
                 messageSupplier,
                 exceptionSupplier(IllegalStateException::new, IllegalStateException::new)

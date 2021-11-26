@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+import static io.pulumi.core.internal.Objects.requireFalseState;
 import static io.pulumi.core.internal.Objects.requireNullState;
 
 /**
@@ -15,8 +16,8 @@ import static io.pulumi.core.internal.Objects.requireNullState;
  * context of a resource creation to determine what the full aliased URN would be.
  * <p>
  * Use @see {@link Urn} in the case where a prior URN is known and can just be specified in
- * full.  Otherwise, provide some subset of the other properties in this type to generate an
- * appropriate urn from the pre-existing values of the @see {@link io.pulumi.resources.Resource}
+ * full. Otherwise, provide some subset of the other properties in this type to generate an
+ * appropriate {@code urn} from the pre-existing values of the @see {@link io.pulumi.resources.Resource}
  * with certain parts overridden.
  * <p>
  * The presence of a property indicates if its value should be used. If absent (i.e. "null"), then the value is not used.
@@ -81,7 +82,7 @@ public class Alias {
         );
     }
 
-    public static Alias create(String urn) {
+    public static Alias withUrn(String urn) {
         return new Alias(
                 Objects.requireNonNull(urn),
                 null,
@@ -94,49 +95,67 @@ public class Alias {
         );
     }
 
-    public static Alias create(
-            Input<String> name,
-            Input<String> type,
-            Input<String> stack,
-            Input<String> project,
-            Input<String> parentUrn
-    ) {
-        return new Alias(
-                null,
-                Objects.requireNonNull(name),
-                Objects.requireNonNull(type),
-                Objects.requireNonNull(stack),
-                Objects.requireNonNull(project),
-                null,
-                Objects.requireNonNull(parentUrn),
-                false
-        );
+    public static Builder builder() {
+        return new Builder();
     }
 
-    public static Alias create(
-            Input<String> name,
-            Input<String> type,
-            Input<String> stack,
-            Input<String> project,
-            Resource parent
-    ) {
-        return new Alias(
-                null,
-                Objects.requireNonNull(name),
-                Objects.requireNonNull(type),
-                Objects.requireNonNull(stack),
-                Objects.requireNonNull(project),
-                Objects.requireNonNull(parent),
-                null,
-                false
-        );
+    public static final class Builder {
+        @Nullable
+        private io.pulumi.core.Input<String> name;
+        @Nullable
+        private io.pulumi.core.Input<String> type;
+        @Nullable
+        private io.pulumi.core.Input<String> stack;
+        @Nullable
+        private io.pulumi.core.Input<String> project;
+        @Nullable
+        private Resource parent;
+        @Nullable
+        private io.pulumi.core.Input<String> parentUrn;
+
+        public Builder setName(@Nullable Input<String> name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setType(@Nullable Input<String> type) {
+            this.type = type;
+            return this;
+        }
+
+        public Builder setStack(@Nullable Input<String> stack) {
+            this.stack = stack;
+            return this;
+        }
+
+        public Builder setProject(@Nullable Input<String> project) {
+            this.project = project;
+            return this;
+        }
+
+        public Builder setParent(@Nullable Resource parent) {
+            requireNullState(name, () -> "Alias should not specify Alias#parent when Alias#parentUrn is set already.");
+            this.parent = parent;
+            return this;
+        }
+
+        public Builder setParentUrn(@Nullable Input<String> parentUrn) {
+            requireNullState(name, () -> "Alias should not specify Alias#parentUrn when Alias#parent is set already.");
+            this.parentUrn = parentUrn;
+            return this;
+        }
+
+        public Alias build() {
+            return new Alias(null, name, type, stack, project, parent, parentUrn, false);
+        }
     }
 
     /**
-     * The previous urn to alias to. If this is provided, no other properties in this type should be provided.
+     * The previous urn to alias to.
+     * If this is provided, no other properties in this type should be provided.
      */
     public Optional<String> getUrn() {
-        // TODO: we cloud probably move this check to regression tests
+        // TODO: we can probably move this check to regression tests with proper constructor/builder
         if (this.urn != null) {
             Function<String, Supplier<String>> conflict = (String field) ->
                     () -> String.format("Alias should not specify both Alias#urn and Alias#%s", field);
@@ -146,37 +165,38 @@ public class Alias {
             requireNullState(stack, conflict.apply("stack"));
             requireNullState(parent, conflict.apply("parent"));
             requireNullState(parentUrn, conflict.apply("parentUrn"));
-            if (noParent)
-                throw new IllegalStateException(conflict.apply("noParent").get());
+            requireFalseState(noParent, conflict.apply("noParent"));
         }
         return Optional.ofNullable(this.urn);
     }
 
     /**
-     * The previous name of the resource. If empty, the current name of the resource is used.
+     * The previous name of the resource.
+     * If empty, the current name of the resource is used.
      */
     public Optional<Input<String>> getName() {
         return Optional.ofNullable(name);
     }
 
     /**
-     * The previous type of the resource. If empty, the current type of the resource is used.
+     * The previous type of the resource.
+     * If empty, the current type of the resource is used.
      */
     public Optional<Input<String>> getType() {
         return Optional.ofNullable(type);
     }
 
     /**
-     * The previous stack of the resource. If empty, defaults to
-     * the value of @see {@link io.pulumi.deployment.Deployment#getStackName()}
+     * The previous stack of the resource.
+     * If empty, defaults to the value of @see {@link io.pulumi.deployment.Deployment#getStackName()}
      */
     public Optional<Input<String>> getStack() {
         return Optional.ofNullable(stack);
     }
 
     /**
-     * The previous project of the resource. if empty, defaults to the value
-     * of @see {@link io.pulumi.deployment.Deployment#getProjectName()}
+     * The previous project of the resource.
+     * If empty, defaults to the value of @see {@link io.pulumi.deployment.Deployment#getProjectName()}
      */
     public Optional<Input<String>> getProject() {
         return Optional.ofNullable(project);
@@ -206,7 +226,8 @@ public class Alias {
     }
 
     /**
-     * Used to indicate the resource previously had no parent.  If "false" this property is ignored.
+     * Used to indicate the resource previously had no parent.
+     * If "false" this property is ignored.
      * <p>
      * Only specify one of "parent" or "parentUrn" or "noParent".
      */

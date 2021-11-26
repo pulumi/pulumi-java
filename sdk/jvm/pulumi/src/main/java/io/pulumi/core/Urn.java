@@ -111,6 +111,6 @@ public class Urn {
         var urn = create(
                 aliasName.toInput(), Input.of(childType), null, parentAlias, null, null);
 
-        return urn.applyValue(Alias::create);
+        return urn.applyValue(Alias::withUrn);
     }
 }
