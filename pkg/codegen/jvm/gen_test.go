@@ -29,11 +29,25 @@ func TestGeneratePackage(t *testing.T) {
 			"Simple schema with enum types",
 			"simple-enum-schema",
 			[]string{
-				// TODO
+				path.Join(expectedFilesPath("plant"), "tree", "v1", "RubberTree.java"),
+				path.Join(expectedFilesPath("plant"), "tree", "v1", "Nursery.java"),
+				path.Join(expectedFilesPath("plant"), "tree", "v1", "Enums.java"),
 				path.Join(expectedFilesPath("plant"), "Enums.java"),
+				path.Join(expectedFilesPath("plant"), "Inputs.java"),
+				path.Join(expectedFilesPath("plant"), "Outputs.java"),
 			},
 		},
-		// TODO: more cases
+		{
+			"External resource schema",
+			"external-resource-schema",
+			[]string{
+				path.Join(expectedFilesPath("example"), "ArgFunction.java"),
+				path.Join(expectedFilesPath("example"), "Cat.java"),
+				path.Join(expectedFilesPath("example"), "Component.java"),
+				path.Join(expectedFilesPath("example"), "Inputs.java"),
+				path.Join(expectedFilesPath("example"), "Workload.java"),
+			},
+		},
 		{
 			"Simple schema with plain properties",
 			"simple-plain-schema",

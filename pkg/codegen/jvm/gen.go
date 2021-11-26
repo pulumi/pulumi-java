@@ -272,10 +272,24 @@ func (mod *modContext) typeStringInner(
 		var resourceType string
 		if strings.HasPrefix(t.Token, "pulumi:providers:") {
 			pkgName := strings.TrimPrefix(t.Token, "pulumi:providers:")
-			resourceType = fmt.Sprintf("%s%s.provider", basePackage, packageName(mod.packages, pkgName))
+			resourceType = fmt.Sprintf("%s%s.Provider", basePackage, packageName(mod.packages, pkgName))
 		} else {
 			namingCtx := mod
-			// TODO
+			if t.Resource != nil && t.Resource.Package != mod.pkg {
+				// If resource type belongs to another package, we apply naming conventions from that package,
+				// including namespace naming and compatibility mode.
+				extPkg := t.Resource.Package
+				var info JVMPackageInfo
+				contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"jvm": Importer}))
+				if v, ok := t.Resource.Package.Language["jvm"].(JVMPackageInfo); ok {
+					info = v
+				}
+				namingCtx = &modContext{
+					pkg:           extPkg,
+					packages:      info.Packages,
+					compatibility: info.Compatibility,
+				}
+			}
 			resourceType = namingCtx.tokenToPackage(t.Token, "")
 			if resourceType != "" {
 				resourceType += "."
@@ -796,7 +810,17 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 }
 
 func genAlias(w io.Writer, alias *schema.Alias) {
-	// TODO
+	_, _ = fmt.Fprintf(w, "Alias.builder()")
+	if alias.Name != nil {
+		_, _ = fmt.Fprintf(w, ".setName(\"%v\")", *alias.Name)
+	}
+	if alias.Project != nil {
+		_, _ = fmt.Fprintf(w, ".setProject(\"%v\")", *alias.Project)
+	}
+	if alias.Type != nil {
+		_, _ = fmt.Fprintf(w, ".setType(\"%v\")", *alias.Type)
+	}
+	_, _ = fmt.Fprintf(w, ".build()")
 }
 
 func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
@@ -833,7 +857,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		propertyName := mod.propertyName(prop)
 		required := prop.IsRequired || mod.isK8sCompatMode()
 		propertyType := mod.typeString(prop.Type, "Outputs", false, false, false, false, false, false, !required)
-		// TODO: C# has some kind of workaround here
+		// TODO: C# has some kind of workaround here for strings
 
 		if prop.Secret {
 			secretProps = append(secretProps, prop.Name)
@@ -903,7 +927,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	}
 	_, _ = fmt.Fprintf(w, "    }\n")
 
-	// Write a private constructor for the use of `Get`.
+	// Write a private constructor for the use of `get`.
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", "null"
 		if r.StateInputs != nil {
@@ -940,12 +964,41 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	_, _ = fmt.Fprintf(w, "    private static %[1]s makeResourceOptions(@Nullable %[1]s options, @Nullable Input<String> id) {\n", optionsType)
 	_, _ = fmt.Fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	_, _ = fmt.Fprintf(w, "            .setVersion(Utilities.getVersion())\n")
-	// TODO: aliases and secrets
+
+	if len(r.Aliases) > 0 {
+		_, _ = fmt.Fprintf(w, "            .setAliases(List.of(\n")
+		for i, alias := range r.Aliases {
+			_, _ = fmt.Fprintf(w, "                ")
+			genAlias(w, alias)
+			isLastElement := i == len(r.Aliases)-1
+			if isLastElement {
+				_, _ = fmt.Fprintf(w, "\n")
+			} else {
+				_, _ = fmt.Fprintf(w, ",\n")
+			}
+		}
+		_, _ = fmt.Fprintf(w, "            ))\n")
+	}
+	if len(secretProps) > 0 {
+		_, _ = fmt.Fprintf(w, "            .setAdditionalSecretOutputs(List.of(\n")
+		for i, sp := range secretProps {
+			_, _ = fmt.Fprintf(w, "                ")
+			_, _ = fmt.Fprintf(w, "%q", sp)
+			isLastElement := i == len(secretProps)-1
+			if isLastElement {
+				_, _ = fmt.Fprintf(w, "\n")
+			} else {
+				_, _ = fmt.Fprintf(w, ",\n")
+			}
+		}
+		_, _ = fmt.Fprintf(w, "            ))\n")
+	}
+
 	_, _ = fmt.Fprintf(w, "            .build();\n")
 	_, _ = fmt.Fprintf(w, "        return %s.merge(defaultOptions, options, id);\n", optionsType)
 	_, _ = fmt.Fprintf(w, "    }\n\n")
 
-	// Write the `Get` method for reading instances of this resource unless this is a provider resource or ComponentResource.
+	// Write the `get` method for reading instances of this resource unless this is a provider resource or ComponentResource.
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", ""
 
@@ -977,7 +1030,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		return err
 	}
 
-	// Generate the `Get` args type, if any.
+	// Generate the `get` args type, if any.
 	if r.StateInputs != nil {
 		state := &plainType{
 			mod:                   mod,
