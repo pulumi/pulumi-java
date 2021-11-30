@@ -17,24 +17,24 @@ public final class Outputs {
 
     @OutputCustomType
     public static final class Container {
-        private final @Nullable io.pulumi.plant.Enums.ContainerBrightness brightness;
+        private final @Nullable io.pulumi.plant.enums.ContainerBrightness brightness;
         private final @Nullable String color;
         private final @Nullable String material;
-        private final io.pulumi.plant.Enums.ContainerSize size;
+        private final io.pulumi.plant.enums.ContainerSize size;
 
         @OutputCustomType.Constructor({"brightness","color","material","size"})
         private Container(
-            @Nullable io.pulumi.plant.Enums.ContainerBrightness brightness,
+            @Nullable io.pulumi.plant.enums.ContainerBrightness brightness,
             @Nullable String color,
             @Nullable String material,
-            io.pulumi.plant.Enums.ContainerSize size) {
+            io.pulumi.plant.enums.ContainerSize size) {
             this.brightness = brightness;
             this.color = color;
             this.material = material;
             this.size = Objects.requireNonNull(size);
         }
 
-        public Optional<io.pulumi.plant.Enums.ContainerBrightness> getBrightness() {
+        public Optional<io.pulumi.plant.enums.ContainerBrightness> getBrightness() {
             return Optional.ofNullable(this.brightness);
         }
         public Optional<String> getColor() {
@@ -43,7 +43,7 @@ public final class Outputs {
         public Optional<String> getMaterial() {
             return Optional.ofNullable(this.material);
         }
-        public io.pulumi.plant.Enums.ContainerSize getSize() {
+        public io.pulumi.plant.enums.ContainerSize getSize() {
             return this.size;
         }
     }

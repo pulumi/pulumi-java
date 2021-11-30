@@ -1,7 +1,6 @@
 package jvm
 
 import (
-	"os"
 	"path"
 	"path/filepath"
 	"testing"
@@ -31,8 +30,13 @@ func TestGeneratePackage(t *testing.T) {
 			[]string{
 				path.Join(expectedFilesPath("plant"), "tree", "v1", "RubberTree.java"),
 				path.Join(expectedFilesPath("plant"), "tree", "v1", "Nursery.java"),
-				path.Join(expectedFilesPath("plant"), "tree", "v1", "Enums.java"),
-				path.Join(expectedFilesPath("plant"), "Enums.java"),
+				path.Join(expectedFilesPath("plant"), "tree", "v1", "enums", "Diameter.java"),
+				path.Join(expectedFilesPath("plant"), "tree", "v1", "enums", "Farm.java"),
+				path.Join(expectedFilesPath("plant"), "tree", "v1", "enums", "RubberTreeVariety.java"),
+				path.Join(expectedFilesPath("plant"), "tree", "v1", "enums", "TreeSize.java"),
+				path.Join(expectedFilesPath("plant"), "enums", "ContainerBrightness.java"),
+				path.Join(expectedFilesPath("plant"), "enums", "ContainerColor.java"),
+				path.Join(expectedFilesPath("plant"), "enums", "ContainerSize.java"),
 				path.Join(expectedFilesPath("plant"), "Inputs.java"),
 				path.Join(expectedFilesPath("plant"), "Outputs.java"),
 			},
@@ -65,8 +69,8 @@ func TestGeneratePackage(t *testing.T) {
 				filepath.Join(testDir, tt.schemaDir, "schema.json"), GeneratePackage)
 			assert.NoError(t, err)
 
-			// create files, FIXME: temporary
-			for path_, file := range files {
+			// create files, FIXME: temporary, use PULUMI_ACCEPT instead
+			/*for path_, file := range files {
 				fullPath := filepath.Join(testDir, tt.schemaDir, "jvm", path_)
 				dir := filepath.Dir(fullPath)
 				err := os.MkdirAll(dir, 0777)
@@ -85,7 +89,7 @@ func TestGeneratePackage(t *testing.T) {
 				if err != out.Close() {
 					t.Errorf("can't close file: '%s': %s", fullPath, err)
 				}
-			}
+			}*/
 			// end of create files
 
 			for path_, _ := range files {

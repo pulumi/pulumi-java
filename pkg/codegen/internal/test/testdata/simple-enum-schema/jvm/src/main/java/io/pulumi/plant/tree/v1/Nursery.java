@@ -39,22 +39,22 @@ public class Nursery extends io.pulumi.resources.CustomResource {
         public static final Args Empty = Args.builder().build();
 
         @InputImport(name="sizes")
-        private final @Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.Enums.TreeSize>>> sizes;
+        private final @Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.enums.TreeSize>>> sizes;
 
-        public Input<Map<String,Input<io.pulumi.plant.tree.v1.Enums.TreeSize>>> getSizes() {
+        public Input<Map<String,Input<io.pulumi.plant.tree.v1.enums.TreeSize>>> getSizes() {
             return Input.ofNullable(this.sizes);
         }
 
         @InputImport(name="varieties", required=true)
-        private final Input<List<Input<io.pulumi.plant.tree.v1.Enums.RubberTreeVariety>>> varieties;
+        private final Input<List<Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>>> varieties;
 
-        public Input<List<Input<io.pulumi.plant.tree.v1.Enums.RubberTreeVariety>>> getVarieties() {
+        public Input<List<Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>>> getVarieties() {
             return this.varieties;
         }
 
         public Args(
-            @Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.Enums.TreeSize>>> sizes,
-            Input<List<Input<io.pulumi.plant.tree.v1.Enums.RubberTreeVariety>>> varieties) {
+            @Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.enums.TreeSize>>> sizes,
+            Input<List<Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>>> varieties) {
             this.sizes = sizes;
             this.varieties = Objects.requireNonNull(varieties);
         }
@@ -64,13 +64,13 @@ public class Nursery extends io.pulumi.resources.CustomResource {
         }
 
         public static final class Builder {
-            private @Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.Enums.TreeSize>>> sizes;
-            public Builder setSizes(@Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.Enums.TreeSize>>> sizes) {
+            private @Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.enums.TreeSize>>> sizes;
+            public Builder setSizes(@Nullable Input<Map<String,Input<io.pulumi.plant.tree.v1.enums.TreeSize>>> sizes) {
                 this.sizes = sizes;
                 return this;
             }
-            private Input<List<Input<io.pulumi.plant.tree.v1.Enums.RubberTreeVariety>>> varieties;
-            public Builder setVarieties(Input<List<Input<io.pulumi.plant.tree.v1.Enums.RubberTreeVariety>>> varieties) {
+            private Input<List<Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>>> varieties;
+            public Builder setVarieties(Input<List<Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>>> varieties) {
                 this.varieties = Objects.requireNonNull(varieties);
                 return this;
             }
