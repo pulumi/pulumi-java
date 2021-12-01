@@ -38,7 +38,7 @@ func TestGeneratePackage(t *testing.T) {
 				path.Join(expectedFilesPath("plant"), "enums", "ContainerColor.java"),
 				path.Join(expectedFilesPath("plant"), "enums", "ContainerSize.java"),
 				path.Join(expectedFilesPath("plant"), "Inputs.java"),
-				path.Join(expectedFilesPath("plant"), "Outputs.java"),
+				path.Join(expectedFilesPath("plant"), "outputs", "Container.java"),
 			},
 		},
 		{
@@ -57,7 +57,7 @@ func TestGeneratePackage(t *testing.T) {
 			"simple-plain-schema",
 			[]string{
 				path.Join(expectedFilesPath("example"), "Inputs.java"),
-				path.Join(expectedFilesPath("example"), "Outputs.java"),
+				path.Join(expectedFilesPath("example"), "outputs", "Foo.java"),
 				path.Join(expectedFilesPath("example"), "Component.java"),
 			},
 		},
@@ -68,29 +68,6 @@ func TestGeneratePackage(t *testing.T) {
 			files, err := test.GeneratePackageFilesFromSchema(
 				filepath.Join(testDir, tt.schemaDir, "schema.json"), GeneratePackage)
 			assert.NoError(t, err)
-
-			// create files, FIXME: temporary, use PULUMI_ACCEPT instead
-			/*for path_, file := range files {
-				fullPath := filepath.Join(testDir, tt.schemaDir, "jvm", path_)
-				dir := filepath.Dir(fullPath)
-				err := os.MkdirAll(dir, 0777)
-				if err != nil {
-					t.Errorf("can't create dir: '%s': %s", dir, err)
-				}
-				out, err := os.Create(fullPath)
-				if err != nil {
-					t.Errorf("can't create file: '%s': %s", fullPath, err)
-				}
-				_, err = out.Write(file)
-				if err != nil {
-					_ = out.Close()
-					t.Errorf("can't write file: '%s': %s", fullPath, err)
-				}
-				if err != out.Close() {
-					t.Errorf("can't close file: '%s': %s", fullPath, err)
-				}
-			}*/
-			// end of create files
 
 			for path_, _ := range files {
 				t.Logf("generated file: %s", path_)

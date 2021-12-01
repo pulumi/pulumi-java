@@ -205,7 +205,7 @@ func (mod *modContext) typeStringInner(
 	case *schema.EnumType:
 		typ.Type = mod.tokenToPackage(t.Token, "")
 		typ.Type += "."
-		typ.Type += "enums"
+		typ.Type += "enums" // TODO: try to replace with 'qualifier'
 		typ.Type += "."
 		typ.Type += tokenToName(t.Token)
 	case *schema.ArrayType:
@@ -260,7 +260,7 @@ func (mod *modContext) typeStringInner(
 			}
 		}
 		objectType := namingCtx.tokenToPackage(t.Token, qualifier)
-		if (objectType == namingCtx.packageName && qualifier == "") || objectType == namingCtx.packageName+"."+qualifier {
+		if objectType == namingCtx.packageName && qualifier == "" {
 			objectType = qualifier
 		}
 		if objectType != "" {
@@ -388,6 +388,7 @@ type plainType struct {
 	properties            []*schema.Property
 	args                  bool
 	state                 bool
+	nested                bool
 }
 
 func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent string) {
@@ -634,7 +635,11 @@ func (pt *plainType) genOutputType(w io.Writer, level int) {
 
 	// Open the class and annotate it appropriately.
 	_, _ = fmt.Fprintf(w, "%s@OutputCustomType\n", indent)
-	_, _ = fmt.Fprintf(w, "%spublic static final class %s {\n", indent, pt.name)
+	if pt.nested {
+		_, _ = fmt.Fprintf(w, "%spublic static final class %s {\n", indent, pt.name)
+	} else {
+		_, _ = fmt.Fprintf(w, "%spublic final class %s {\n", indent, pt.name)
+	}
 
 	// Generate each output field.
 	for _, prop := range pt.properties {
@@ -856,7 +861,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		wireName := prop.Name
 		propertyName := mod.propertyName(prop)
 		required := prop.IsRequired || mod.isK8sCompatMode()
-		propertyType := mod.typeString(prop.Type, "Outputs", false, false, false, false, false, false, !required)
+		propertyType := mod.typeString(prop.Type, "outputs", false, false, false, false, false, false, !required)
 		// TODO: C# has some kind of workaround here for strings
 
 		if prop.Secret {
@@ -1025,6 +1030,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		propertyTypeQualifier: "Inputs",
 		properties:            r.InputProperties,
 		args:                  true,
+		nested:                true,
 	}
 	if err := args.genInputType(w, 1); err != nil {
 		return err
@@ -1041,6 +1047,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 			properties:            r.StateInputs.Properties,
 			args:                  true,
 			state:                 true,
+			nested:                true,
 		}
 		if err := state.genInputType(w, 1); err != nil {
 			return err
@@ -1103,6 +1110,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 			baseClass:             "io.pulumi.resources.InvokeArgs",
 			propertyTypeQualifier: "inputs",
 			properties:            fun.Inputs.Properties,
+			nested:                true,
 		}
 		if err := args.genInputType(w, 1); err != nil {
 			return err
@@ -1116,6 +1124,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 			name:                  "Result",
 			propertyTypeQualifier: "outputs",
 			properties:            fun.Outputs.Properties,
+			nested:                true,
 		}
 		res.genOutputType(w, 1)
 	}
@@ -1537,17 +1546,13 @@ func (mod *modContext) gen(fs fs) error {
 		}
 		if mod.details(t).outputType {
 			buffer := &bytes.Buffer{}
-			mod.genHeader(buffer, mod.getPulumiImports(), "")
-
-			_, _ = fmt.Fprintf(buffer, "public final class Outputs {\n")
-			if err := mod.genType(buffer, t, "Outputs", false, false, false, 1); err != nil {
+			mod.genHeader(buffer, mod.getPulumiImports(), "outputs")
+			if err := mod.genType(buffer, t, "outputs", false, false, false, 0); err != nil {
 				return err
 			}
-			_, _ = fmt.Fprintf(buffer, "}\n")
-
 			// TODO: C# has a k8s compat mode here
 
-			addFile(path.Join("Outputs.java"), buffer.String())
+			addFile(path.Join("outputs", tokenToName(t.Token)+".java"), buffer.String())
 		}
 	}
 
@@ -1561,8 +1566,7 @@ func (mod *modContext) gen(fs fs) error {
 		for i, enum := range mod.enums {
 			buffer := &bytes.Buffer{}
 			mod.genHeader(buffer, importStrings, "enums")
-			err := mod.genEnum(buffer, "enums", enum)
-			if err != nil {
+			if err := mod.genEnum(buffer, "enums", enum); err != nil {
 				return err
 			}
 			if i != len(mod.enums)-1 {

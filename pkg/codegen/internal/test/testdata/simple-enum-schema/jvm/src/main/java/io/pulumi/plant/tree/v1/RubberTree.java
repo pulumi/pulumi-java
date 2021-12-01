@@ -15,10 +15,10 @@ import io.pulumi.plant.Utilities;
 
 @ResourceType(type="plant:tree/v1:RubberTree")
 public class RubberTree extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="container", type=io.pulumi.plant.Outputs.Container.class, parameters={})
-    private Output</* @Nullable */ io.pulumi.plant.Outputs.Container> container;
+    @OutputExport(name="container", type=io.pulumi.plant.outputs.Container.class, parameters={})
+    private Output</* @Nullable */ io.pulumi.plant.outputs.Container> container;
 
-    public Output</* @Nullable */ io.pulumi.plant.Outputs.Container> getContainer() {
+    public Output</* @Nullable */ io.pulumi.plant.outputs.Container> getContainer() {
         return this.container;
     }
     @OutputExport(name="diameter", type=io.pulumi.plant.tree.v1.enums.Diameter.class, parameters={})

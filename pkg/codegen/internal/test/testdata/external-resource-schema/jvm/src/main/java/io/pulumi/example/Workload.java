@@ -15,10 +15,10 @@ import io.pulumi.example.Utilities;
 
 @ResourceType(type="example::Workload")
 public class Workload extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="pod", type=io.pulumi.kubernetes.core/v1.Outputs.Pod.class, parameters={})
-    private Output</* @Nullable */ io.pulumi.kubernetes.core/v1.Outputs.Pod> pod;
+    @OutputExport(name="pod", type=io.pulumi.kubernetes.core/v1.outputs.Pod.class, parameters={})
+    private Output</* @Nullable */ io.pulumi.kubernetes.core/v1.outputs.Pod> pod;
 
-    public Output</* @Nullable */ io.pulumi.kubernetes.core/v1.Outputs.Pod> getPod() {
+    public Output</* @Nullable */ io.pulumi.kubernetes.core/v1.outputs.Pod> getPod() {
         return this.pod;
     }
 
