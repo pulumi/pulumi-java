@@ -3,6 +3,7 @@ package io.pulumi.example;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
+import io.pulumi.example.inputs.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -10,7 +11,7 @@ class InputTests {
 
     @Test
     void testInputsFooArgs_nullValues() {
-        var args = Inputs.FooArgs.Empty;
+        var args = FooArgs.Empty;
         var map = args.internalTypedOptionalToMapAsync().join();
 
         assertThat(map).containsKey("a");
@@ -30,7 +31,7 @@ class InputTests {
 
     @Test
     void testInputsFooArgs_simpleValues() {
-        var args = Inputs.FooArgs.builder()
+        var args = FooArgs.builder()
                 .setA(true)
                 .setB(true)
                 .setC(1)

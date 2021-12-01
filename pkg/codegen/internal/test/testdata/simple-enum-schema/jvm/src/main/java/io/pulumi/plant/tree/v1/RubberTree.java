@@ -70,9 +70,9 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
         public static final Args Empty = Args.builder().build();
 
         @InputImport(name="container")
-        private final @Nullable Input<io.pulumi.plant.Inputs.ContainerArgs> container;
+        private final @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container;
 
-        public Input<io.pulumi.plant.Inputs.ContainerArgs> getContainer() {
+        public Input<io.pulumi.plant.inputs.ContainerArgs> getContainer() {
             return Input.ofNullable(this.container);
         }
 
@@ -105,7 +105,7 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
         }
 
         public Args(
-            @Nullable Input<io.pulumi.plant.Inputs.ContainerArgs> container,
+            @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container,
             Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter,
             @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm,
             @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size,
@@ -122,8 +122,8 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
         }
 
         public static final class Builder {
-            private @Nullable Input<io.pulumi.plant.Inputs.ContainerArgs> container;
-            public Builder setContainer(@Nullable Input<io.pulumi.plant.Inputs.ContainerArgs> container) {
+            private @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container;
+            public Builder setContainer(@Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container) {
                 this.container = container;
                 return this;
             }

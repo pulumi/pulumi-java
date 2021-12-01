@@ -101,23 +101,23 @@ public class Component extends io.pulumi.resources.ComponentResource {
         }
 
         @InputImport(name="bar")
-        private final @Nullable io.pulumi.example.Inputs.Foo bar;
+        private final @Nullable io.pulumi.example.inputs.Foo bar;
 
-        public Optional<io.pulumi.example.Inputs.Foo> getBar() {
+        public Optional<io.pulumi.example.inputs.Foo> getBar() {
             return Optional.ofNullable(this.bar);
         }
 
         @InputImport(name="baz")
-        private final @Nullable List<io.pulumi.example.Inputs.Foo> baz;
+        private final @Nullable List<io.pulumi.example.inputs.Foo> baz;
 
-        public Optional<List<io.pulumi.example.Inputs.Foo>> getBaz() {
+        public Optional<List<io.pulumi.example.inputs.Foo>> getBaz() {
             return Optional.ofNullable(this.baz);
         }
 
         @InputImport(name="bazMap")
-        private final @Nullable Map<String,io.pulumi.example.Inputs.Foo> bazMap;
+        private final @Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap;
 
-        public Optional<Map<String,io.pulumi.example.Inputs.Foo>> getBazMap() {
+        public Optional<Map<String,io.pulumi.example.inputs.Foo>> getBazMap() {
             return Optional.ofNullable(this.bazMap);
         }
 
@@ -150,23 +150,23 @@ public class Component extends io.pulumi.resources.ComponentResource {
         }
 
         @InputImport(name="foo")
-        private final @Nullable Input<io.pulumi.example.Inputs.FooArgs> foo;
+        private final @Nullable Input<io.pulumi.example.inputs.FooArgs> foo;
 
-        public Input<io.pulumi.example.Inputs.FooArgs> getFoo() {
+        public Input<io.pulumi.example.inputs.FooArgs> getFoo() {
             return Input.ofNullable(this.foo);
         }
 
         public Args(
             Boolean a,
             @Nullable Boolean b,
-            @Nullable io.pulumi.example.Inputs.Foo bar,
-            @Nullable List<io.pulumi.example.Inputs.Foo> baz,
-            @Nullable Map<String,io.pulumi.example.Inputs.Foo> bazMap,
+            @Nullable io.pulumi.example.inputs.Foo bar,
+            @Nullable List<io.pulumi.example.inputs.Foo> baz,
+            @Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap,
             Integer c,
             @Nullable Integer d,
             String e,
             @Nullable String f,
-            @Nullable Input<io.pulumi.example.Inputs.FooArgs> foo) {
+            @Nullable Input<io.pulumi.example.inputs.FooArgs> foo) {
             this.a = Objects.requireNonNull(a);
             this.b = b;
             this.bar = bar;
@@ -194,18 +194,18 @@ public class Component extends io.pulumi.resources.ComponentResource {
                 this.b = b;
                 return this;
             }
-            private @Nullable io.pulumi.example.Inputs.Foo bar;
-            public Builder setBar(@Nullable io.pulumi.example.Inputs.Foo bar) {
+            private @Nullable io.pulumi.example.inputs.Foo bar;
+            public Builder setBar(@Nullable io.pulumi.example.inputs.Foo bar) {
                 this.bar = bar;
                 return this;
             }
-            private @Nullable List<io.pulumi.example.Inputs.Foo> baz;
-            public Builder setBaz(@Nullable List<io.pulumi.example.Inputs.Foo> baz) {
+            private @Nullable List<io.pulumi.example.inputs.Foo> baz;
+            public Builder setBaz(@Nullable List<io.pulumi.example.inputs.Foo> baz) {
                 this.baz = baz;
                 return this;
             }
-            private @Nullable Map<String,io.pulumi.example.Inputs.Foo> bazMap;
-            public Builder setBazMap(@Nullable Map<String,io.pulumi.example.Inputs.Foo> bazMap) {
+            private @Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap;
+            public Builder setBazMap(@Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap) {
                 this.bazMap = bazMap;
                 return this;
             }
@@ -229,8 +229,8 @@ public class Component extends io.pulumi.resources.ComponentResource {
                 this.f = f;
                 return this;
             }
-            private @Nullable Input<io.pulumi.example.Inputs.FooArgs> foo;
-            public Builder setFoo(@Nullable Input<io.pulumi.example.Inputs.FooArgs> foo) {
+            private @Nullable Input<io.pulumi.example.inputs.FooArgs> foo;
+            public Builder setFoo(@Nullable Input<io.pulumi.example.inputs.FooArgs> foo) {
                 this.foo = foo;
                 return this;
             }

@@ -52,7 +52,6 @@ public class ArgFunction {
         }
     }
 
-
     @OutputCustomType
     public static final class Result {
         private final @Nullable Integer age;

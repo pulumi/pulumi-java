@@ -13,7 +13,6 @@ import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.plant.Utilities;
 
-
 @OutputCustomType
 public final class Container {
     private final @Nullable io.pulumi.plant.enums.ContainerBrightness brightness;

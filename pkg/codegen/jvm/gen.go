@@ -391,7 +391,7 @@ type plainType struct {
 	nested                bool
 }
 
-func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent string) {
+func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level int) {
 	isArgsType := pt.args && !prop.IsPlain
 	requireInitializers := !pt.args || prop.IsPlain
 
@@ -426,7 +426,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, indent
 		}
 	}
 
-	indent = strings.Repeat(indent, 2)
+	indent := strings.Repeat("    ", level+1)
 
 	// TODO: add comment
 	_, _ = fmt.Fprintf(w, "%s@InputImport(name=\"%s\"%s)\n", indent, wireName, attributeArgs)
@@ -477,17 +477,21 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	if pt.mod.isK8sCompatMode() && (pt.res == nil || !pt.res.IsProvider) {
 		final = ""
 	}
+	static := ""
+	if pt.nested {
+		static = "static "
+	}
 
 	// Open the class.
 	// TODO: add comment
-	_, _ = fmt.Fprintf(w, "%spublic static %sclass %s extends %s {\n", indent, final, pt.name, pt.baseClass)
+	_, _ = fmt.Fprintf(w, "%spublic %s%sclass %s extends %s {\n", indent, static, final, pt.name, pt.baseClass)
 	_, _ = fmt.Fprintf(w, "\n")
 	_, _ = fmt.Fprintf(w, "%s    public static final %s Empty = %s.builder().build();\n", indent, pt.name, pt.name)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Declare each input property.
 	for _, p := range pt.properties {
-		pt.genInputProperty(w, p, indent)
+		pt.genInputProperty(w, p, level)
 		_, _ = fmt.Fprintf(w, "\n")
 	}
 
@@ -573,6 +577,8 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
 	_, _ = fmt.Fprintf(w, "\n")
 	_, _ = fmt.Fprintf(w, "%s    public static %sclass Builder {\n", indent, final)
+
+	// field and setters
 	for _, prop := range pt.properties {
 		// Add a field and a setter
 		isArgsType := pt.args && !prop.IsPlain
@@ -593,11 +599,10 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 
 		setterName := title(prop.Name)
 		_, _ = fmt.Fprintf(w, "%s        public Builder set%s(%s %s) {\n", indent, setterName, propertyType, propertyName)
-		required := prop.IsRequired
 		if prop.Secret {
 			_, _ = fmt.Fprintf(w, "%s            this.%s = Input.ofNullable(%s).asSecret();\n", indent, propertyName, propertyName)
 		} else {
-			if required {
+			if prop.IsRequired {
 				_, _ = fmt.Fprintf(w, "%s            this.%s = Objects.requireNonNull(%s);\n", indent, propertyName, propertyName)
 			} else {
 				_, _ = fmt.Fprintf(w, "%s            this.%s = %s;\n", indent, propertyName, propertyName)
@@ -607,6 +612,8 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 		_, _ = fmt.Fprintf(w, "%s            return this;\n", indent)
 		_, _ = fmt.Fprintf(w, "%s        }\n", indent)
 	}
+
+	// build()
 	_, _ = fmt.Fprintf(w, "%s        public %s build() {\n", indent, pt.name)
 	_, _ = fmt.Fprintf(w, "%s            return new %s(\n", indent, pt.name)
 	for i, prop := range pt.properties {
@@ -630,16 +637,14 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 
 func (pt *plainType) genOutputType(w io.Writer, level int) {
 	indent := strings.Repeat("    ", level)
-
-	_, _ = fmt.Fprintf(w, "\n")
+	static := ""
+	if pt.nested {
+		static = "static "
+	}
 
 	// Open the class and annotate it appropriately.
 	_, _ = fmt.Fprintf(w, "%s@OutputCustomType\n", indent)
-	if pt.nested {
-		_, _ = fmt.Fprintf(w, "%spublic static final class %s {\n", indent, pt.name)
-	} else {
-		_, _ = fmt.Fprintf(w, "%spublic final class %s {\n", indent, pt.name)
-	}
+	_, _ = fmt.Fprintf(w, "%spublic %sfinal class %s {\n", indent, static, pt.name)
 
 	// Generate each output field.
 	for _, prop := range pt.properties {
@@ -897,7 +902,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	// Emit the class constructor.
 	argsClassName := className + ".Args"
 	if mod.isK8sCompatMode() && !r.IsProvider {
-		argsClassName = fmt.Sprintf("%s.%sArgs", mod.tokenToPackage(r.Token, "Inputs"), className)
+		argsClassName = fmt.Sprintf("%s.%sArgs", mod.tokenToPackage(r.Token, "inputs"), className)
 	}
 	argsType := argsClassName
 
@@ -1027,7 +1032,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		res:                   r,
 		name:                  "Args",
 		baseClass:             "io.pulumi.resources.ResourceArgs",
-		propertyTypeQualifier: "Inputs",
+		propertyTypeQualifier: "inputs",
 		properties:            r.InputProperties,
 		args:                  true,
 		nested:                true,
@@ -1043,7 +1048,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 			res:                   r,
 			name:                  "State",
 			baseClass:             "io.pulumi.resources.ResourceArgs",
-			propertyTypeQualifier: "Inputs",
+			propertyTypeQualifier: "inputs",
 			properties:            r.StateInputs.Properties,
 			args:                  true,
 			state:                 true,
@@ -1166,7 +1171,7 @@ func (mod *modContext) genEnum(w io.Writer, qualifier string, enum *schema.EnumT
 	case schema.IntType, schema.StringType, schema.NumberType:
 		// Open the enum and annotate it appropriately.
 		_, _ = fmt.Fprintf(w, "%s@EnumType\n", indent)
-		_, _ = fmt.Fprintf(w, "%[1]spublic enum %[2]s {\n", indent, enumName)
+		_, _ = fmt.Fprintf(w, "%spublic enum %s {\n", indent, enumName)
 		indent := strings.Repeat(indent, 2)
 
 		// Enum values
@@ -1392,7 +1397,19 @@ func (mod *modContext) genHeader(w io.Writer, imports []string, qualifier string
 func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 	w := &bytes.Buffer{}
 
+	mod.genHeader(w, []string{}, "")
+
+	// Open the config class.
+	_, _ = fmt.Fprintf(w, "public static class Config {\n")
+	_, _ = fmt.Fprintf(w, "\n")
+	// Create a config bag for the variables to pull from.
+	_, _ = fmt.Fprintf(w, "    private static final io.pulumi.Config config = new io.pulumi.Config(\"%v\");", mod.pkg.Name)
+	_, _ = fmt.Fprintf(w, "\n")
+
 	// TODO
+
+	// Close the config class and namespace.
+	_, _ = fmt.Fprintf(w, "}\n")
 
 	return w.String(), nil
 }
@@ -1506,43 +1523,42 @@ func (mod *modContext) gen(fs fs) error {
 			importStrings = append(importStrings, i.SortedValues()...)
 		}
 		mod.genHeader(buffer, importStrings, "")
-
 		if err := mod.genFunction(buffer, f); err != nil {
 			return err
 		}
-
 		addFile(tokenToName(f.Token)+".java", buffer.String())
 	}
 
-	// Nested types
+	// Input/Output types
 	for _, t := range mod.types {
 		if mod.details(t).inputType || mod.details(t).stateType {
-			buffer := &bytes.Buffer{}
-			mod.genHeader(buffer, mod.getPulumiImports(), "")
-
-			_, _ = fmt.Fprintf(buffer, "public final class Inputs {\n")
-
 			if mod.details(t).inputType {
 				if mod.details(t).argsType {
-					if err := mod.genType(buffer, t, "Inputs", true, false, true, 1); err != nil {
+					buffer := &bytes.Buffer{}
+					mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
+					if err := mod.genType(buffer, t, "inputs", true, false, true, 0); err != nil {
 						return err
 					}
+					addFile(path.Join("inputs", tokenToName(t.Token)+"Args.java"), buffer.String())
 				}
 				if mod.details(t).plainType {
-					if err := mod.genType(buffer, t, "Inputs", true, false, false, 1); err != nil {
+					buffer := &bytes.Buffer{}
+					mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
+					if err := mod.genType(buffer, t, "inputs", true, false, false, 0); err != nil {
 						return err
 					}
+					addFile(path.Join("inputs", tokenToName(t.Token)+".java"), buffer.String())
 				}
 			}
 
 			if mod.details(t).stateType {
-				if err := mod.genType(buffer, t, "Inputs", true, true, true, 1); err != nil {
+				buffer := &bytes.Buffer{}
+				mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
+				if err := mod.genType(buffer, t, "inputs", true, true, true, 0); err != nil {
 					return err
 				}
+				addFile(path.Join("inputs", tokenToName(t.Token)+"State.java"), buffer.String())
 			}
-
-			_, _ = fmt.Fprintf(buffer, "}\n")
-			addFile(path.Join("Inputs.java"), buffer.String())
 		}
 		if mod.details(t).outputType {
 			buffer := &bytes.Buffer{}
@@ -1551,7 +1567,6 @@ func (mod *modContext) gen(fs fs) error {
 				return err
 			}
 			// TODO: C# has a k8s compat mode here
-
 			addFile(path.Join("outputs", tokenToName(t.Token)+".java"), buffer.String())
 		}
 	}

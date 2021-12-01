@@ -13,7 +13,6 @@ import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.example.Utilities;
 
-
 @OutputCustomType
 public final class Foo {
     private final Boolean a;

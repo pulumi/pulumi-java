@@ -53,15 +53,15 @@ public class Cat extends io.pulumi.resources.CustomResource {
         }
 
         @InputImport(name="pet")
-        private final @Nullable Input<io.pulumi.example.Inputs.PetArgs> pet;
+        private final @Nullable Input<io.pulumi.example.inputs.PetArgs> pet;
 
-        public Input<io.pulumi.example.Inputs.PetArgs> getPet() {
+        public Input<io.pulumi.example.inputs.PetArgs> getPet() {
             return Input.ofNullable(this.pet);
         }
 
         public Args(
             @Nullable Input<Integer> age,
-            @Nullable Input<io.pulumi.example.Inputs.PetArgs> pet) {
+            @Nullable Input<io.pulumi.example.inputs.PetArgs> pet) {
             this.age = age;
             this.pet = pet;
         }
@@ -76,8 +76,8 @@ public class Cat extends io.pulumi.resources.CustomResource {
                 this.age = age;
                 return this;
             }
-            private @Nullable Input<io.pulumi.example.Inputs.PetArgs> pet;
-            public Builder setPet(@Nullable Input<io.pulumi.example.Inputs.PetArgs> pet) {
+            private @Nullable Input<io.pulumi.example.inputs.PetArgs> pet;
+            public Builder setPet(@Nullable Input<io.pulumi.example.inputs.PetArgs> pet) {
                 this.pet = pet;
                 return this;
             }
