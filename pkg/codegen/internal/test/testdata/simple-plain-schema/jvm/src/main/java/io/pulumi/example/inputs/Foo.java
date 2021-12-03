@@ -85,9 +85,17 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
             this.a = Objects.requireNonNull(a);
             return this;
         }
+        public Builder setA(Boolean a) {
+            this.a = Input.of(Objects.requireNonNull(a));
+            return this;
+        }
         private @Nullable Boolean b;
         public Builder setB(@Nullable Boolean b) {
             this.b = b;
+            return this;
+        }
+        public Builder setB(@Nullable Boolean b) {
+            this.b = Input.ofNullable(b);
             return this;
         }
         private Integer c;
@@ -95,9 +103,17 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
             this.c = Objects.requireNonNull(c);
             return this;
         }
+        public Builder setC(Integer c) {
+            this.c = Input.of(Objects.requireNonNull(c));
+            return this;
+        }
         private @Nullable Integer d;
         public Builder setD(@Nullable Integer d) {
             this.d = d;
+            return this;
+        }
+        public Builder setD(@Nullable Integer d) {
+            this.d = Input.ofNullable(d);
             return this;
         }
         private String e;
@@ -105,9 +121,17 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
             this.e = Objects.requireNonNull(e);
             return this;
         }
+        public Builder setE(String e) {
+            this.e = Input.of(Objects.requireNonNull(e));
+            return this;
+        }
         private @Nullable String f;
         public Builder setF(@Nullable String f) {
             this.f = f;
+            return this;
+        }
+        public Builder setF(@Nullable String f) {
+            this.f = Input.ofNullable(f);
             return this;
         }
         public Foo build() {

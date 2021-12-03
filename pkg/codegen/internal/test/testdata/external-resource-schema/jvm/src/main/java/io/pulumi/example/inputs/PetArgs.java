@@ -33,16 +33,16 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     @InputImport(name="nameArray")
-    private final @Nullable Input<List<Input<io.pulumi.random.RandomPet>>> nameArray;
+    private final @Nullable Input<List<io.pulumi.random.RandomPet>> nameArray;
 
-    public Input<List<Input<io.pulumi.random.RandomPet>>> getNameArray() {
+    public Input<List<io.pulumi.random.RandomPet>> getNameArray() {
         return Input.ofNullable(this.nameArray);
     }
 
     @InputImport(name="nameMap")
-    private final @Nullable Input<Map<String,Input<io.pulumi.random.RandomPet>>> nameMap;
+    private final @Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap;
 
-    public Input<Map<String,Input<io.pulumi.random.RandomPet>>> getNameMap() {
+    public Input<Map<String,io.pulumi.random.RandomPet>> getNameMap() {
         return Input.ofNullable(this.nameMap);
     }
 
@@ -54,27 +54,27 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     @InputImport(name="requiredNameArray", required=true)
-    private final Input<List<Input<io.pulumi.random.RandomPet>>> requiredNameArray;
+    private final Input<List<io.pulumi.random.RandomPet>> requiredNameArray;
 
-    public Input<List<Input<io.pulumi.random.RandomPet>>> getRequiredNameArray() {
+    public Input<List<io.pulumi.random.RandomPet>> getRequiredNameArray() {
         return this.requiredNameArray;
     }
 
     @InputImport(name="requiredNameMap", required=true)
-    private final Input<Map<String,Input<io.pulumi.random.RandomPet>>> requiredNameMap;
+    private final Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap;
 
-    public Input<Map<String,Input<io.pulumi.random.RandomPet>>> getRequiredNameMap() {
+    public Input<Map<String,io.pulumi.random.RandomPet>> getRequiredNameMap() {
         return this.requiredNameMap;
     }
 
     public PetArgs(
         @Nullable Input<Integer> age,
         @Nullable Input<io.pulumi.random.RandomPet> name,
-        @Nullable Input<List<Input<io.pulumi.random.RandomPet>>> nameArray,
-        @Nullable Input<Map<String,Input<io.pulumi.random.RandomPet>>> nameMap,
+        @Nullable Input<List<io.pulumi.random.RandomPet>> nameArray,
+        @Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap,
         Input<io.pulumi.random.RandomPet> requiredName,
-        Input<List<Input<io.pulumi.random.RandomPet>>> requiredNameArray,
-        Input<Map<String,Input<io.pulumi.random.RandomPet>>> requiredNameMap) {
+        Input<List<io.pulumi.random.RandomPet>> requiredNameArray,
+        Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap) {
         this.age = age;
         this.name = name;
         this.nameArray = nameArray;
@@ -94,19 +94,35 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
             this.age = age;
             return this;
         }
+        public Builder setAge(@Nullable Integer age) {
+            this.age = Input.ofNullable(age);
+            return this;
+        }
         private @Nullable Input<io.pulumi.random.RandomPet> name;
         public Builder setName(@Nullable Input<io.pulumi.random.RandomPet> name) {
             this.name = name;
             return this;
         }
-        private @Nullable Input<List<Input<io.pulumi.random.RandomPet>>> nameArray;
-        public Builder setNameArray(@Nullable Input<List<Input<io.pulumi.random.RandomPet>>> nameArray) {
+        public Builder setName(@Nullable io.pulumi.random.RandomPet name) {
+            this.name = Input.ofNullable(name);
+            return this;
+        }
+        private @Nullable Input<List<io.pulumi.random.RandomPet>> nameArray;
+        public Builder setNameArray(@Nullable Input<List<io.pulumi.random.RandomPet>> nameArray) {
             this.nameArray = nameArray;
             return this;
         }
-        private @Nullable Input<Map<String,Input<io.pulumi.random.RandomPet>>> nameMap;
-        public Builder setNameMap(@Nullable Input<Map<String,Input<io.pulumi.random.RandomPet>>> nameMap) {
+        public Builder setNameArray(@Nullable List<io.pulumi.random.RandomPet> nameArray) {
+            this.nameArray = Input.ofNullable(nameArray);
+            return this;
+        }
+        private @Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap;
+        public Builder setNameMap(@Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap) {
             this.nameMap = nameMap;
+            return this;
+        }
+        public Builder setNameMap(@Nullable Map<String,io.pulumi.random.RandomPet> nameMap) {
+            this.nameMap = Input.ofNullable(nameMap);
             return this;
         }
         private Input<io.pulumi.random.RandomPet> requiredName;
@@ -114,14 +130,26 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
             this.requiredName = Objects.requireNonNull(requiredName);
             return this;
         }
-        private Input<List<Input<io.pulumi.random.RandomPet>>> requiredNameArray;
-        public Builder setRequiredNameArray(Input<List<Input<io.pulumi.random.RandomPet>>> requiredNameArray) {
+        public Builder setRequiredName(io.pulumi.random.RandomPet requiredName) {
+            this.requiredName = Input.of(Objects.requireNonNull(requiredName));
+            return this;
+        }
+        private Input<List<io.pulumi.random.RandomPet>> requiredNameArray;
+        public Builder setRequiredNameArray(Input<List<io.pulumi.random.RandomPet>> requiredNameArray) {
             this.requiredNameArray = Objects.requireNonNull(requiredNameArray);
             return this;
         }
-        private Input<Map<String,Input<io.pulumi.random.RandomPet>>> requiredNameMap;
-        public Builder setRequiredNameMap(Input<Map<String,Input<io.pulumi.random.RandomPet>>> requiredNameMap) {
+        public Builder setRequiredNameArray(List<io.pulumi.random.RandomPet> requiredNameArray) {
+            this.requiredNameArray = Input.of(Objects.requireNonNull(requiredNameArray));
+            return this;
+        }
+        private Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap;
+        public Builder setRequiredNameMap(Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap) {
             this.requiredNameMap = Objects.requireNonNull(requiredNameMap);
+            return this;
+        }
+        public Builder setRequiredNameMap(Map<String,io.pulumi.random.RandomPet> requiredNameMap) {
+            this.requiredNameMap = Input.of(Objects.requireNonNull(requiredNameMap));
             return this;
         }
         public PetArgs build() {

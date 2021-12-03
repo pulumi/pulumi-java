@@ -44,6 +44,10 @@ public class ArgFunction {
                 this.arg1 = arg1;
                 return this;
             }
+            public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
+                this.arg1 = Input.ofNullable(arg1);
+                return this;
+            }
             public Args build() {
                 return new Args(
                     this.arg1

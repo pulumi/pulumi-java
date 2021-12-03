@@ -220,7 +220,7 @@ func (mod *modContext) typeStringInner(
 		typ.Type = listType
 		typ.Parameters = append(
 			typ.Parameters,
-			mod.typeStringInner(t.ElementType, qualifier, input, state, wrapInput, args, false, false, false),
+			mod.typeStringInner(t.ElementType, qualifier, input, state, false, args, false, false, false),
 		)
 	case *schema.MapType:
 		var mapType string
@@ -240,7 +240,7 @@ func (mod *modContext) typeStringInner(
 		typ.Type = mapType
 		typ.Parameters = append(
 			typ.Parameters,
-			mod.typeStringInner(t.ElementType, qualifier, input, state, wrapInput, args, false, false, false),
+			mod.typeStringInner(t.ElementType, qualifier, input, state, false, args, false, false, false),
 		)
 	case *schema.ObjectType:
 		namingCtx := mod
@@ -391,12 +391,12 @@ type plainType struct {
 	nested                bool
 }
 
-func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level int) {
+func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level int) error {
 	isArgsType := pt.args && !prop.IsPlain
 	requireInitializers := !pt.args || prop.IsPlain
 
 	wireName := prop.Name
-	propertyName := pt.mod.propertyName(prop)
+	propertyName := javaIdentifier(pt.mod.propertyName(prop))
 	propertyType := pt.mod.typeString(
 		prop.Type,
 		pt.propertyTypeQualifier,
@@ -445,23 +445,51 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level 
 		!prop.IsRequired && !isArgsType, // is optional or an Input
 		false,                           // is nullable
 	)
-	getterName := title(prop.Name)
+	getterTypeNonOptional := pt.mod.typeString(
+		prop.Type,
+		pt.propertyTypeQualifier,
+		true,                // is input
+		pt.state,            // is state
+		isArgsType,          // wrap input
+		isArgsType,          // has args
+		requireInitializers, // FIXME: should not require initializers, make it immutable
+		false,               // is a list or map
+		false,               // is nullable
+	)
+	getterName := javaIdentifier("get" + title(prop.Name))
 	// TODO: add comment
 	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
-	_, _ = fmt.Fprintf(w, "%spublic %s get%s() {\n", indent, getterType, getterName)
 	required := prop.IsRequired
+	var returnStatement string
 	if required {
-		_, _ = fmt.Fprintf(w, "%s    return this.%s;\n", indent, propertyName)
+		returnStatement = fmt.Sprintf("this.%s", propertyName)
 	} else {
 		if isArgsType {
-			_, _ = fmt.Fprintf(w, "%s    return Input.ofNullable(this.%s);\n", indent, propertyName)
+			returnStatement = fmt.Sprintf("Input.ofNullable(this.%s)", propertyName)
 		} else {
-			_, _ = fmt.Fprintf(w, "%s    return Optional.ofNullable(this.%s);\n", indent, propertyName)
+			switch prop.Type.(type) {
+			case *schema.ArrayType:
+				getterType = getterTypeNonOptional
+				returnStatement = fmt.Sprintf("this.%s == null ? List.of() : this.%s", propertyName, propertyName)
+			case *schema.MapType:
+				getterType = getterTypeNonOptional
+				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", propertyName, propertyName)
+			default:
+				returnStatement = fmt.Sprintf("Optional.ofNullable(this.%s)", propertyName)
+			}
 		}
 	}
-	_, _ = fmt.Fprintf(w, "%s}\n", indent)
 
-	// TODO
+	if err := getterTemplate.Execute(w, getterTemplateContext{
+		Indent:          strings.Repeat("    ", level+1),
+		GetterType:      getterType.String(),
+		GetterName:      getterName,
+		ReturnStatement: returnStatement,
+	}); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 // TODO
@@ -491,7 +519,10 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 
 	// Declare each input property.
 	for _, p := range pt.properties {
-		pt.genInputProperty(w, p, level)
+		if err := pt.genInputProperty(w, p, level); err != nil {
+			return err
+		}
+		_, _ = fmt.Fprintf(w, "\n")
 		_, _ = fmt.Fprintf(w, "\n")
 	}
 
@@ -539,7 +570,7 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	for _, prop := range pt.properties {
 		// set default values or assign given values
 		paramName := javaIdentifier(prop.Name)
-		fieldName := pt.mod.propertyName(prop)
+		fieldName := javaIdentifier(pt.mod.propertyName(prop))
 		hasDefaultValue := prop.DefaultValue != nil
 		var defaultValueCode string
 		if hasDefaultValue {
@@ -557,7 +588,11 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 					rightType,
 				)
 			default:
-				defaultValue = fmt.Sprintf("Input.of(%s)", defaultValue)
+				if prop.IsRequired {
+					defaultValue = fmt.Sprintf("Input.of(%s)", defaultValue)
+				} else {
+					defaultValue = fmt.Sprintf("Input.ofNullable(%s)", defaultValue)
+				}
 			}
 			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValue)
 		}
@@ -583,7 +618,8 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 		// Add a field and a setter
 		isArgsType := pt.args && !prop.IsPlain
 		requireInitializers := !pt.args || prop.IsPlain
-		propertyName := pt.mod.propertyName(prop)
+		setterName := javaIdentifier("set" + title(prop.Name))
+		propertyName := javaIdentifier(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
 			prop.Type,
 			pt.propertyTypeQualifier,
@@ -595,22 +631,70 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 			false,               // is optional
 			!prop.IsRequired,    // is nullable
 		)
+		// add field
 		_, _ = fmt.Fprintf(w, "%s        private %s %s;\n", indent, propertyType, propertyName)
 
-		setterName := title(prop.Name)
-		_, _ = fmt.Fprintf(w, "%s        public Builder set%s(%s %s) {\n", indent, setterName, propertyType, propertyName)
-		if prop.Secret {
-			_, _ = fmt.Fprintf(w, "%s            this.%s = Input.ofNullable(%s).asSecret();\n", indent, propertyName, propertyName)
-		} else {
-			if prop.IsRequired {
-				_, _ = fmt.Fprintf(w, "%s            this.%s = Objects.requireNonNull(%s);\n", indent, propertyName, propertyName)
+		var assignment = func(propertyName string) string {
+			if prop.Secret {
+				return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
 			} else {
-				_, _ = fmt.Fprintf(w, "%s            this.%s = %s;\n", indent, propertyName, propertyName)
+				if prop.IsRequired {
+					return fmt.Sprintf("this.%s = Objects.requireNonNull(%s)", propertyName, propertyName)
+				} else {
+					return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
+				}
 			}
 		}
 
-		_, _ = fmt.Fprintf(w, "%s            return this;\n", indent)
-		_, _ = fmt.Fprintf(w, "%s        }\n", indent)
+		// add main setter
+		if err := builderSetterTemplate.Execute(w, builderSetterTemplateContext{
+			Indent:       strings.Repeat("    ", level+2),
+			SetterType:   "Builder",
+			SetterName:   setterName,
+			PropertyType: propertyType.String(),
+			PropertyName: propertyName,
+			Assignment:   assignment(propertyName),
+		}); err != nil {
+			return err
+		}
+		_, _ = fmt.Fprintf(w, "\n")
+
+		propertyTypeUnwrapped := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			true,                // is input
+			pt.state,            // is state
+			false,               // don't wrap input
+			isArgsType,          // has args
+			requireInitializers, // requires initializers
+			false,               // is optional
+			!prop.IsRequired,    // is nullable
+		)
+
+		var assignmentUnwrapped = func(propertyName string) string {
+			if prop.Secret {
+				return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
+			} else {
+				if prop.IsRequired {
+					return fmt.Sprintf("this.%s = Input.of(Objects.requireNonNull(%s))", propertyName, propertyName)
+				} else {
+					return fmt.Sprintf("this.%s = Input.ofNullable(%s)", propertyName, propertyName)
+				}
+			}
+		}
+
+		// add overloaded setter
+		if err := builderSetterTemplate.Execute(w, builderSetterTemplateContext{
+			Indent:       strings.Repeat("    ", level+2),
+			SetterType:   "Builder",
+			SetterName:   setterName,
+			PropertyType: propertyTypeUnwrapped.String(),
+			PropertyName: propertyName,
+			Assignment:   assignmentUnwrapped(propertyName),
+		}); err != nil {
+			return err
+		}
+		_, _ = fmt.Fprintf(w, "\n")
 	}
 
 	// build()
@@ -635,7 +719,7 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	return nil
 }
 
-func (pt *plainType) genOutputType(w io.Writer, level int) {
+func (pt *plainType) genOutputType(w io.Writer, level int) error {
 	indent := strings.Repeat("    ", level)
 	static := ""
 	if pt.nested {
@@ -648,7 +732,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) {
 
 	// Generate each output field.
 	for _, prop := range pt.properties {
-		fieldName := pt.mod.propertyName(prop)
+		fieldName := javaIdentifier(pt.mod.propertyName(prop))
 		required := prop.IsRequired || pt.mod.isK8sCompatMode()
 		fieldType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !required)
 		// TODO: add comment
@@ -702,7 +786,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) {
 	// Generate the constructor body.
 	for _, prop := range pt.properties {
 		paramName := javaIdentifier(prop.Name)
-		fieldName := pt.mod.propertyName(prop)
+		fieldName := javaIdentifier(pt.mod.propertyName(prop))
 		required := prop.IsRequired || pt.mod.isK8sCompatMode()
 		if required {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = Objects.requireNonNull(%s);\n", indent, fieldName, paramName)
@@ -716,21 +800,63 @@ func (pt *plainType) genOutputType(w io.Writer, level int) {
 	// Generate getters
 	for _, prop := range pt.properties {
 		paramName := javaIdentifier(prop.Name)
-		getterName := title(paramName)
+		getterName := javaIdentifier("get" + title(prop.Name))
 		required := prop.IsRequired || pt.mod.isK8sCompatMode()
-		getterType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, !required, false)
+		getterType := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false,
+			false,
+			false,
+			false,
+			false,
+			!required,
+			false,
+		)
+		getterTypeNonOptional := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+		)
+
 		// TODO: add comment
-		_, _ = fmt.Fprintf(w, "%s    public %s get%s() {\n", indent, getterType, getterName)
+		var returnStatement string
 		if required {
-			_, _ = fmt.Fprintf(w, "%s        return this.%s;\n", indent, paramName)
+			returnStatement = fmt.Sprintf("this.%s", paramName)
 		} else {
-			_, _ = fmt.Fprintf(w, "%s        return Optional.ofNullable(this.%s);\n", indent, paramName)
+			switch prop.Type.(type) {
+			case *schema.ArrayType:
+				getterType = getterTypeNonOptional
+				returnStatement = fmt.Sprintf("this.%s == null ? List.of() : this.%s", paramName, paramName)
+			case *schema.MapType:
+				getterType = getterTypeNonOptional
+				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", paramName, paramName)
+			default:
+				returnStatement = fmt.Sprintf("Optional.ofNullable(this.%s)", paramName)
+			}
 		}
-		_, _ = fmt.Fprintf(w, "%s    }\n", indent)
+
+		if err := getterTemplate.Execute(w, getterTemplateContext{
+			Indent:          strings.Repeat("    ", level+1),
+			GetterType:      getterType.String(),
+			GetterName:      getterName,
+			ReturnStatement: returnStatement,
+		}); err != nil {
+			return err
+		}
+
+		_, _ = fmt.Fprintf(w, "\n")
 	}
 
 	// Close the class.
 	_, _ = fmt.Fprintf(w, "%s}\n", indent)
+	return nil
 }
 
 func primitiveValue(value interface{}) (string, error) {
@@ -808,7 +934,7 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 			envVars += fmt.Sprintf(", %q", e)
 		}
 
-		getEnv := fmt.Sprintf("Utilities.getEnv%s(%s)", getType, envVars)
+		getEnv := fmt.Sprintf("Utilities.getEnv%s(%s).orElse(null)", getType, envVars)
 		if val != "" {
 			val = fmt.Sprintf("%s == null ? %s : %s", getEnv, val, getEnv)
 		} else {
@@ -820,6 +946,7 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 }
 
 func genAlias(w io.Writer, alias *schema.Alias) {
+	_, _ = fmt.Fprintf(w, "Input.of(")
 	_, _ = fmt.Fprintf(w, "Alias.builder()")
 	if alias.Name != nil {
 		_, _ = fmt.Fprintf(w, ".setName(\"%v\")", *alias.Name)
@@ -831,6 +958,7 @@ func genAlias(w io.Writer, alias *schema.Alias) {
 		_, _ = fmt.Fprintf(w, ".setType(\"%v\")", *alias.Type)
 	}
 	_, _ = fmt.Fprintf(w, ".build()")
+	_, _ = fmt.Fprintf(w, ")")
 }
 
 func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
@@ -889,8 +1017,8 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 
 		// Add getter
 		getterType := outputParameterType
-		getterName := title(prop.Name)
-		_, _ = fmt.Fprintf(w, "    public Output<%s> get%s() {\n", getterType, getterName)
+		getterName := javaIdentifier("get" + title(prop.Name))
+		_, _ = fmt.Fprintf(w, "    public Output<%s> %s() {\n", getterType, getterName)
 		_, _ = fmt.Fprintf(w, "        return this.%s;\n", propertyName)
 		_, _ = fmt.Fprintf(w, "    }\n")
 	}
@@ -961,8 +1089,8 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 				if err != nil {
 					return err
 				}
-				setterSuffix := title(mod.propertyName(prop))
-				_, _ = fmt.Fprintf(w, "        .set%s(%s);\n", setterSuffix, v)
+				setterName := javaIdentifier("set" + title(mod.propertyName(prop)))
+				_, _ = fmt.Fprintf(w, "            .%s(%s)\n", setterName, v)
 			}
 		}
 		_, _ = fmt.Fprintf(w, "            .build();\n")
@@ -1400,10 +1528,10 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 	mod.genHeader(w, []string{}, "")
 
 	// Open the config class.
-	_, _ = fmt.Fprintf(w, "public static class Config {\n")
+	_, _ = fmt.Fprintf(w, "public final class Config {\n")
 	_, _ = fmt.Fprintf(w, "\n")
 	// Create a config bag for the variables to pull from.
-	_, _ = fmt.Fprintf(w, "    private static final io.pulumi.Config config = new io.pulumi.Config(\"%v\");", mod.pkg.Name)
+	_, _ = fmt.Fprintf(w, "    private static final io.pulumi.Config config = io.pulumi.Config.of(\"%v\");", mod.pkg.Name)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// TODO
@@ -1485,7 +1613,7 @@ func (mod *modContext) gen(fs fs) error {
 			if err != nil {
 				return err
 			}
-			addFile(filepath.Join(dir, "Config.java"), config)
+			addFile("Config.java", config)
 			return nil
 		}
 	}
@@ -1804,7 +1932,9 @@ func genSettingsFile(pkg *schema.Package, packageName string, packageReferences 
 // genBuildFile emits build.gradle
 func genBuildFile(pkg *schema.Package, packageName string, packageReferences map[string]string) ([]byte, error) {
 	w := &bytes.Buffer{}
-	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{})
+	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{
+		Name: pkg.Name,
+	})
 	if err != nil {
 		return nil, err
 	}

@@ -30,10 +30,10 @@ class InputTests {
     @Test
     void testContainerArgs_simpleValues() {
         var args = ContainerArgs.builder()
-                .setBrightness(Input.of(ContainerBrightness.ZeroPointOne))
-                .setColor(Input.ofUnion(ContainerColor.Red, ContainerColor.class, String.class))
-                .setMaterial(Input.of("glass"))
-                .setSize(Input.of(ContainerSize.FourInch))
+                .setBrightness(ContainerBrightness.ZeroPointOne)
+                .setColor(Input.ofUnion(ContainerColor.Red, ContainerColor.class, String.class)) // TODO: add sugar for Either
+                .setMaterial("glass")
+                .setSize(ContainerSize.FourInch)
                 .build();
 
         var map = args.internalTypedOptionalToMapAsync().join();

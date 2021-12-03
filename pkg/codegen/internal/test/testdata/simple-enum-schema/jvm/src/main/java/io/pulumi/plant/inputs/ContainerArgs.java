@@ -67,9 +67,17 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.brightness = brightness;
             return this;
         }
+        public Builder setBrightness(@Nullable io.pulumi.plant.enums.ContainerBrightness brightness) {
+            this.brightness = Input.ofNullable(brightness);
+            return this;
+        }
         private @Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color;
         public Builder setColor(@Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color) {
             this.color = color;
+            return this;
+        }
+        public Builder setColor(@Nullable Either<io.pulumi.plant.enums.ContainerColor,String> color) {
+            this.color = Input.ofNullable(color);
             return this;
         }
         private @Nullable Input<String> material;
@@ -77,9 +85,17 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.material = material;
             return this;
         }
+        public Builder setMaterial(@Nullable String material) {
+            this.material = Input.ofNullable(material);
+            return this;
+        }
         private Input<io.pulumi.plant.enums.ContainerSize> size;
         public Builder setSize(Input<io.pulumi.plant.enums.ContainerSize> size) {
             this.size = Objects.requireNonNull(size);
+            return this;
+        }
+        public Builder setSize(io.pulumi.plant.enums.ContainerSize size) {
+            this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
         public ContainerArgs build() {

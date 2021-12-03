@@ -44,6 +44,10 @@ public class ArgFunction {
                 this.name = name;
                 return this;
             }
+            public Builder setName(@Nullable io.pulumi.random.RandomPet name) {
+                this.name = Input.ofNullable(name);
+                return this;
+            }
             public Args build() {
                 return new Args(
                     this.name
