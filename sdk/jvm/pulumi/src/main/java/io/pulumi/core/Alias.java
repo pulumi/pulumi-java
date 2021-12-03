@@ -118,8 +118,18 @@ public class Alias {
             return this;
         }
 
+        public Builder setName(@Nullable String name) {
+            this.name = Input.ofNullable(name);
+            return this;
+        }
+
         public Builder setType(@Nullable Input<String> type) {
             this.type = type;
+            return this;
+        }
+
+        public Builder setType(@Nullable String type) {
+            this.type = Input.ofNullable(type);
             return this;
         }
 
@@ -128,8 +138,18 @@ public class Alias {
             return this;
         }
 
+        public Builder setStack(@Nullable String stack) {
+            this.stack = Input.ofNullable(stack);
+            return this;
+        }
+
         public Builder setProject(@Nullable Input<String> project) {
             this.project = project;
+            return this;
+        }
+
+        public Builder setProject(@Nullable String project) {
+            this.project = Input.ofNullable(project);
             return this;
         }
 

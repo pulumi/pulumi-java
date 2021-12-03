@@ -2,6 +2,7 @@ package io.pulumi.core.internal;
 
 import io.grpc.Internal;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.logging.Level;
@@ -32,15 +33,72 @@ public class Environment {
                 ));
     }
 
+    private static final String[] trueValues = { "1", "t", "T", "true", "TRUE", "True" };
+    private static final String[] falseValues = { "0", "f", "F", "false", "FALSE", "False" };
+
     public static Optional<Boolean> getBooleanEnvironmentVariable(String name) {
         return getEnvironmentVariable(name)
-                .map(value -> Objects.equals(value, "1") || Boolean.parseBoolean(value));
+                .flatMap(value -> {
+                    if (Arrays.stream(trueValues)
+                            .map(v -> v.equalsIgnoreCase(value))
+                            .reduce(false, (b1, b2) -> b1 || b2)
+                    ) {
+                        return Optional.of(true);
+                    }
+                    if (!Arrays.stream(falseValues)
+                            .map(v -> v.equalsIgnoreCase(value))
+                            .reduce(false, (b1, b2) -> b1 || b2)
+                    ) {
+                        return Optional.of(false);
+                    }
+                    return Optional.empty();
+                });
     }
 
     public static boolean requireBooleanEnvironmentVariable(String name) {
         return getBooleanEnvironmentVariable(name).orElseThrow(() ->
                 new IllegalArgumentException(String.format(
-                        "expected environment variable '%s', not found or empty", name)
+                        "expected environment variable '%s', not found or empty, or unparseable as a boolean", name)
                 ));
     }
+
+    public static Optional<Integer> getIntegerEnvironmentVariable(String name) {
+        return getEnvironmentVariable(name)
+                .flatMap(s -> {
+                    try {
+                        return Optional.of(Integer.parseInt(s));
+                    } catch (NumberFormatException ex) {
+                        logger.severe(String.format("can't parse environment variable '%s' as an integer: %s", name, ex.getMessage()));
+                        return Optional.empty();
+                    }
+                });
+    }
+
+    public static int requireIntegerEnvironmentVariable(String name) {
+        return getIntegerEnvironmentVariable(name).orElseThrow(() ->
+                new IllegalArgumentException(String.format(
+                        "expected environment variable '%s', not found or empty, or unparseable as an integer", name)
+                ));
+    }
+
+    public static Optional<Double> getDoubleEnvironmentVariable(String name) {
+        return getEnvironmentVariable(name)
+                .flatMap(s -> {
+                    try {
+                        return Optional.of(Double.parseDouble(s));
+                    } catch (NumberFormatException ex) {
+                        logger.severe(String.format("can't parse environment variable '%s' as a double: %s", name, ex.getMessage()));
+                        return Optional.empty();
+                    }
+                });
+    }
+
+    public static double requireDoubleEnvironmentVariable(String name) {
+        return getDoubleEnvironmentVariable(name).orElseThrow(() ->
+                new IllegalArgumentException(String.format(
+                        "expected environment variable '%s', not found or empty, or unparseable as a double", name)
+                ));
+    }
+
+
 }

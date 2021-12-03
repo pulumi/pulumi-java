@@ -142,6 +142,7 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
 
     // Convenience methods for Either (a.k.a. Union)
 
+    // TODO: maybe we can move this complexity to the codegen, since this is not very useful for an end user anyway
     /**
      * Represents an @see {@link Input} value that can be one of two different types.
      * For example, it might potentially be an "Integer" some of the time
