@@ -606,19 +606,11 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
 
 	// Generate the builder
-	_, _ = fmt.Fprintf(w, "\n")
-	_, _ = fmt.Fprintf(w, "%s    public static Builder builder() {\n", indent)
-	_, _ = fmt.Fprintf(w, "%s        return new Builder();\n", indent)
-	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
-	_, _ = fmt.Fprintf(w, "\n")
-	_, _ = fmt.Fprintf(w, "%s    public static %sclass Builder {\n", indent, final)
-
-	// field and setters
+	var builderFields []builderFieldTemplateContext
+	var builderSetters []builderSetterTemplateContext
 	for _, prop := range pt.properties {
-		// Add a field and a setter
 		isArgsType := pt.args && !prop.IsPlain
 		requireInitializers := !pt.args || prop.IsPlain
-		setterName := javaIdentifier("set" + title(prop.Name))
 		propertyName := javaIdentifier(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
 			prop.Type,
@@ -631,10 +623,15 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 			false,               // is optional
 			!prop.IsRequired,    // is nullable
 		)
-		// add field
-		_, _ = fmt.Fprintf(w, "%s        private %s %s;\n", indent, propertyType, propertyName)
 
-		var assignment = func(propertyName string) string {
+		// add field
+		builderFields = append(builderFields, builderFieldTemplateContext{
+			FieldType: propertyType.String(),
+			FieldName: propertyName,
+		})
+
+		setterName := javaIdentifier("set" + title(prop.Name))
+		assignment := func(propertyName string) string {
 			if prop.Secret {
 				return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
 			} else {
@@ -647,17 +644,12 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 		}
 
 		// add main setter
-		if err := builderSetterTemplate.Execute(w, builderSetterTemplateContext{
-			Indent:       strings.Repeat("    ", level+2),
-			SetterType:   "Builder",
+		builderSetters = append(builderSetters, builderSetterTemplateContext{
 			SetterName:   setterName,
 			PropertyType: propertyType.String(),
 			PropertyName: propertyName,
 			Assignment:   assignment(propertyName),
-		}); err != nil {
-			return err
-		}
-		_, _ = fmt.Fprintf(w, "\n")
+		})
 
 		propertyTypeUnwrapped := pt.mod.typeString(
 			prop.Type,
@@ -671,7 +663,7 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 			!prop.IsRequired,    // is nullable
 		)
 
-		var assignmentUnwrapped = func(propertyName string) string {
+		assignmentUnwrapped := func(propertyName string) string {
 			if prop.Secret {
 				return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
 			} else {
@@ -684,34 +676,28 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 		}
 
 		// add overloaded setter
-		if err := builderSetterTemplate.Execute(w, builderSetterTemplateContext{
+		builderSetters = append(builderSetters, builderSetterTemplateContext{
 			Indent:       strings.Repeat("    ", level+2),
 			SetterType:   "Builder",
 			SetterName:   setterName,
 			PropertyType: propertyTypeUnwrapped.String(),
 			PropertyName: propertyName,
 			Assignment:   assignmentUnwrapped(propertyName),
-		}); err != nil {
-			return err
-		}
-		_, _ = fmt.Fprintf(w, "\n")
+		})
 	}
 
-	// build()
-	_, _ = fmt.Fprintf(w, "%s        public %s build() {\n", indent, pt.name)
-	_, _ = fmt.Fprintf(w, "%s            return new %s(\n", indent, pt.name)
-	for i, prop := range pt.properties {
-		paramName := javaIdentifier(prop.Name)
-		_, _ = fmt.Fprintf(w, "%s                this.%s", indent, paramName)
-		if i != len(pt.properties)-1 { // not last param
-			_, _ = fmt.Fprintf(w, ",\n")
-		} else {
-			_, _ = fmt.Fprintf(w, "\n")
-		}
+	_, _ = fmt.Fprintf(w, "\n")
+	if err := builderTemplate.Execute(w, builderTemplateContext{
+		Indent:     strings.Repeat("    ", level+1),
+		Name:       "Builder",
+		IsFinal:    true,
+		Fields:     builderFields,
+		Setters:    builderSetters,
+		ResultType: pt.name,
+	}); err != nil {
+		return err
 	}
-	_, _ = fmt.Fprintf(w, "%s            );\n", indent)
-	_, _ = fmt.Fprintf(w, "%s        }\n", indent)
-	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
+	_, _ = fmt.Fprintf(w, "\n")
 
 	// Close the class.
 	_, _ = fmt.Fprintf(w, "%s}\n", indent)
@@ -853,6 +839,60 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 
 		_, _ = fmt.Fprintf(w, "\n")
 	}
+
+	// Generate Builder
+	var builderFields []builderFieldTemplateContext
+	var builderSetters []builderSetterTemplateContext
+	for _, prop := range pt.properties {
+		propertyName := javaIdentifier(pt.mod.propertyName(prop))
+		propertyType := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false,            // is input
+			false,            // is state
+			false,            // wrap input
+			false,            // has args
+			false,            // requires initializers
+			false,            // is optional
+			!prop.IsRequired, // is nullable
+		)
+
+		// add field
+		builderFields = append(builderFields, builderFieldTemplateContext{
+			FieldType: propertyType.String(),
+			FieldName: propertyName,
+		})
+
+		setterName := javaIdentifier("set" + title(prop.Name))
+		assignment := func(propertyName string) string {
+			if prop.IsRequired {
+				return fmt.Sprintf("this.%s = Objects.requireNonNull(%s)", propertyName, propertyName)
+			} else {
+				return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
+			}
+		}
+
+		// add setter
+		builderSetters = append(builderSetters, builderSetterTemplateContext{
+			SetterName:   setterName,
+			PropertyType: propertyType.String(),
+			PropertyName: propertyName,
+			Assignment:   assignment(propertyName),
+		})
+	}
+
+	_, _ = fmt.Fprintf(w, "\n")
+	if err := builderTemplate.Execute(w, builderTemplateContext{
+		Indent:     strings.Repeat("    ", level+1),
+		Name:       "Builder",
+		IsFinal:    true,
+		Fields:     builderFields,
+		Setters:    builderSetters,
+		ResultType: pt.name,
+	}); err != nil {
+		return err
+	}
+	_, _ = fmt.Fprintf(w, "\n")
 
 	// Close the class.
 	_, _ = fmt.Fprintf(w, "%s}\n", indent)

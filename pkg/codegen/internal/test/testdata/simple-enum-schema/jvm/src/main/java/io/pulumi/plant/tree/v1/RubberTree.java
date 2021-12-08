@@ -113,7 +113,7 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
             this.container = container;
             this.diameter = diameter == null ? Input.of(io.pulumi.plant.tree.v1.enums.Diameter.Sixinch) : Objects.requireNonNull(diameter);
             this.farm = farm == null ? Input.ofUnion("(unknown)", io.pulumi.plant.tree.v1.enums.Farm.class, String.class) : farm;
-            this.size = size == null ? Input.of(io.pulumi.plant.tree.v1.enums.TreeSize.Medium) : size;
+            this.size = size == null ? Input.ofNullable(io.pulumi.plant.tree.v1.enums.TreeSize.Medium) : size;
             this.type = type == null ? Input.of(io.pulumi.plant.tree.v1.enums.RubberTreeVariety.Burgundy) : Objects.requireNonNull(type);
         }
 
@@ -123,58 +123,67 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
 
         public static final class Builder {
             private @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container;
+
+            private Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter;
+
+            private @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
+
+            private @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size;
+
+            private Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type;
+
             public Builder setContainer(@Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container) {
                 this.container = container;
                 return this;
             }
+
             public Builder setContainer(@Nullable io.pulumi.plant.inputs.ContainerArgs container) {
                 this.container = Input.ofNullable(container);
                 return this;
             }
-            private Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter;
+
             public Builder setDiameter(Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter) {
                 this.diameter = Objects.requireNonNull(diameter);
                 return this;
             }
+
             public Builder setDiameter(io.pulumi.plant.tree.v1.enums.Diameter diameter) {
                 this.diameter = Input.of(Objects.requireNonNull(diameter));
                 return this;
             }
-            private @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
+
             public Builder setFarm(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
                 this.farm = farm;
                 return this;
             }
+
             public Builder setFarm(@Nullable Either<io.pulumi.plant.tree.v1.enums.Farm,String> farm) {
                 this.farm = Input.ofNullable(farm);
                 return this;
             }
-            private @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size;
+
             public Builder setSize(@Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size) {
                 this.size = size;
                 return this;
             }
+
             public Builder setSize(@Nullable io.pulumi.plant.tree.v1.enums.TreeSize size) {
                 this.size = Input.ofNullable(size);
                 return this;
             }
-            private Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type;
+
             public Builder setType(Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type) {
                 this.type = Objects.requireNonNull(type);
                 return this;
             }
+
             public Builder setType(io.pulumi.plant.tree.v1.enums.RubberTreeVariety type) {
                 this.type = Input.of(Objects.requireNonNull(type));
                 return this;
             }
+
             public Args build() {
-                return new Args(
-                    this.container,
-                    this.diameter,
-                    this.farm,
-                    this.size,
-                    this.type
-                );
+                return new Args(container, diameter, farm, size, type);
             }
         }
     }
@@ -200,18 +209,19 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
 
         public static final class Builder {
             private @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
+
             public Builder setFarm(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
                 this.farm = farm;
                 return this;
             }
+
             public Builder setFarm(@Nullable Either<io.pulumi.plant.tree.v1.enums.Farm,String> farm) {
                 this.farm = Input.ofNullable(farm);
                 return this;
             }
+
             public State build() {
-                return new State(
-                    this.farm
-                );
+                return new State(farm);
             }
         }
     }

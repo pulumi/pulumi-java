@@ -55,18 +55,19 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
 
         public static final class Builder {
             private @Nullable Input<io.pulumi.example.Resource> foo;
+
             public Builder setFoo(@Nullable Input<io.pulumi.example.Resource> foo) {
                 this.foo = foo;
                 return this;
             }
+
             public Builder setFoo(@Nullable io.pulumi.example.Resource foo) {
                 this.foo = Input.ofNullable(foo);
                 return this;
             }
+
             public Args build() {
-                return new Args(
-                    this.foo
-                );
+                return new Args(foo);
             }
         }
     }

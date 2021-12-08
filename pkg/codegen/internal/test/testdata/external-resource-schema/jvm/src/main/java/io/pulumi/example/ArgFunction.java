@@ -40,18 +40,19 @@ public class ArgFunction {
 
         public static final class Builder {
             private @Nullable io.pulumi.random.RandomPet name;
+
             public Builder setName(@Nullable io.pulumi.random.RandomPet name) {
                 this.name = name;
                 return this;
             }
+
             public Builder setName(@Nullable io.pulumi.random.RandomPet name) {
                 this.name = Input.ofNullable(name);
                 return this;
             }
+
             public Args build() {
-                return new Args(
-                    this.name
-                );
+                return new Args(name);
             }
         }
     }
@@ -67,6 +68,23 @@ public class ArgFunction {
 
         public Optional<Integer> getAge() {
             return Optional.ofNullable(this.age);
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static final class Builder {
+            private @Nullable Integer age;
+
+            public Builder setAge(@Nullable Integer age) {
+                this.age = age;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(age);
+            }
         }
     }
 }

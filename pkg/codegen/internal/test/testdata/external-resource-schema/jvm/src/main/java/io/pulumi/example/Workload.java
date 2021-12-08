@@ -54,8 +54,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
 
         public static final class Builder {
             public Args build() {
-                return new Args(
-                );
+                return new Args();
             }
         }
     }

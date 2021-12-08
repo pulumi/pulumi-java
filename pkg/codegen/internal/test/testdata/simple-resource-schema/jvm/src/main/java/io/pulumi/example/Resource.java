@@ -65,18 +65,19 @@ public class Resource extends io.pulumi.resources.CustomResource {
 
         public static final class Builder {
             private @Nullable Input<String> bar;
+
             public Builder setBar(@Nullable Input<String> bar) {
                 this.bar = Input.ofNullable(bar).asSecret();
                 return this;
             }
+
             public Builder setBar(@Nullable String bar) {
                 this.bar = Input.ofNullable(bar).asSecret();
                 return this;
             }
+
             public Args build() {
-                return new Args(
-                    this.bar
-                );
+                return new Args(bar);
             }
         }
     }

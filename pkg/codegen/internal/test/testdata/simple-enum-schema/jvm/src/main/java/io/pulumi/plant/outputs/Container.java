@@ -44,4 +44,42 @@ public final class Container {
     public io.pulumi.plant.enums.ContainerSize getSize() {
         return this.size;
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static final class Builder {
+        private @Nullable io.pulumi.plant.enums.ContainerBrightness brightness;
+
+        private @Nullable String color;
+
+        private @Nullable String material;
+
+        private io.pulumi.plant.enums.ContainerSize size;
+
+        public Builder setBrightness(@Nullable io.pulumi.plant.enums.ContainerBrightness brightness) {
+            this.brightness = brightness;
+            return this;
+        }
+
+        public Builder setColor(@Nullable String color) {
+            this.color = color;
+            return this;
+        }
+
+        public Builder setMaterial(@Nullable String material) {
+            this.material = material;
+            return this;
+        }
+
+        public Builder setSize(io.pulumi.plant.enums.ContainerSize size) {
+            this.size = Objects.requireNonNull(size);
+            return this;
+        }
+
+        public Container build() {
+            return new Container(brightness, color, material, size);
+        }
+    }
 }

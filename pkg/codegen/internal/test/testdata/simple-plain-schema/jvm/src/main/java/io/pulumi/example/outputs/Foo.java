@@ -56,4 +56,56 @@ public final class Foo {
     public Optional<String> getF() {
         return Optional.ofNullable(this.f);
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static final class Builder {
+        private Boolean a;
+
+        private @Nullable Boolean b;
+
+        private Integer c;
+
+        private @Nullable Integer d;
+
+        private String e;
+
+        private @Nullable String f;
+
+        public Builder setA(Boolean a) {
+            this.a = Objects.requireNonNull(a);
+            return this;
+        }
+
+        public Builder setB(@Nullable Boolean b) {
+            this.b = b;
+            return this;
+        }
+
+        public Builder setC(Integer c) {
+            this.c = Objects.requireNonNull(c);
+            return this;
+        }
+
+        public Builder setD(@Nullable Integer d) {
+            this.d = d;
+            return this;
+        }
+
+        public Builder setE(String e) {
+            this.e = Objects.requireNonNull(e);
+            return this;
+        }
+
+        public Builder setF(@Nullable String f) {
+            this.f = f;
+            return this;
+        }
+
+        public Foo build() {
+            return new Foo(a, b, c, d, e, f);
+        }
+    }
 }

@@ -40,18 +40,19 @@ public class ArgFunction {
 
         public static final class Builder {
             private @Nullable io.pulumi.example.Resource arg1;
+
             public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
                 this.arg1 = arg1;
                 return this;
             }
+
             public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
                 this.arg1 = Input.ofNullable(arg1);
                 return this;
             }
+
             public Args build() {
-                return new Args(
-                    this.arg1
-                );
+                return new Args(arg1);
             }
         }
     }
@@ -67,6 +68,23 @@ public class ArgFunction {
 
         public Optional<io.pulumi.example.Resource> getResult() {
             return Optional.ofNullable(this.result);
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static final class Builder {
+            private @Nullable io.pulumi.example.Resource result;
+
+            public Builder setResult(@Nullable io.pulumi.example.Resource result) {
+                this.result = result;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(result);
+            }
         }
     }
 }

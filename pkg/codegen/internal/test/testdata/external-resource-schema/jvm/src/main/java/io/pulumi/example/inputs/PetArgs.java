@@ -90,78 +90,91 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final class Builder {
         private @Nullable Input<Integer> age;
+
+        private @Nullable Input<io.pulumi.random.RandomPet> name;
+
+        private @Nullable Input<List<io.pulumi.random.RandomPet>> nameArray;
+
+        private @Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap;
+
+        private Input<io.pulumi.random.RandomPet> requiredName;
+
+        private Input<List<io.pulumi.random.RandomPet>> requiredNameArray;
+
+        private Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap;
+
         public Builder setAge(@Nullable Input<Integer> age) {
             this.age = age;
             return this;
         }
+
         public Builder setAge(@Nullable Integer age) {
             this.age = Input.ofNullable(age);
             return this;
         }
-        private @Nullable Input<io.pulumi.random.RandomPet> name;
+
         public Builder setName(@Nullable Input<io.pulumi.random.RandomPet> name) {
             this.name = name;
             return this;
         }
+
         public Builder setName(@Nullable io.pulumi.random.RandomPet name) {
             this.name = Input.ofNullable(name);
             return this;
         }
-        private @Nullable Input<List<io.pulumi.random.RandomPet>> nameArray;
+
         public Builder setNameArray(@Nullable Input<List<io.pulumi.random.RandomPet>> nameArray) {
             this.nameArray = nameArray;
             return this;
         }
+
         public Builder setNameArray(@Nullable List<io.pulumi.random.RandomPet> nameArray) {
             this.nameArray = Input.ofNullable(nameArray);
             return this;
         }
-        private @Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap;
+
         public Builder setNameMap(@Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap) {
             this.nameMap = nameMap;
             return this;
         }
+
         public Builder setNameMap(@Nullable Map<String,io.pulumi.random.RandomPet> nameMap) {
             this.nameMap = Input.ofNullable(nameMap);
             return this;
         }
-        private Input<io.pulumi.random.RandomPet> requiredName;
+
         public Builder setRequiredName(Input<io.pulumi.random.RandomPet> requiredName) {
             this.requiredName = Objects.requireNonNull(requiredName);
             return this;
         }
+
         public Builder setRequiredName(io.pulumi.random.RandomPet requiredName) {
             this.requiredName = Input.of(Objects.requireNonNull(requiredName));
             return this;
         }
-        private Input<List<io.pulumi.random.RandomPet>> requiredNameArray;
+
         public Builder setRequiredNameArray(Input<List<io.pulumi.random.RandomPet>> requiredNameArray) {
             this.requiredNameArray = Objects.requireNonNull(requiredNameArray);
             return this;
         }
+
         public Builder setRequiredNameArray(List<io.pulumi.random.RandomPet> requiredNameArray) {
             this.requiredNameArray = Input.of(Objects.requireNonNull(requiredNameArray));
             return this;
         }
-        private Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap;
+
         public Builder setRequiredNameMap(Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap) {
             this.requiredNameMap = Objects.requireNonNull(requiredNameMap);
             return this;
         }
+
         public Builder setRequiredNameMap(Map<String,io.pulumi.random.RandomPet> requiredNameMap) {
             this.requiredNameMap = Input.of(Objects.requireNonNull(requiredNameMap));
             return this;
         }
+
         public PetArgs build() {
-            return new PetArgs(
-                this.age,
-                this.name,
-                this.nameArray,
-                this.nameMap,
-                this.requiredName,
-                this.requiredNameArray,
-                this.requiredNameMap
-            );
+            return new PetArgs(age, name, nameArray, nameMap, requiredName, requiredNameArray, requiredNameMap);
         }
     }
 }

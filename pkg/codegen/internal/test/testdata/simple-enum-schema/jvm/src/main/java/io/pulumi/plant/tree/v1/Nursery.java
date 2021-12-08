@@ -65,28 +65,31 @@ public class Nursery extends io.pulumi.resources.CustomResource {
 
         public static final class Builder {
             private @Nullable Input<Map<String,io.pulumi.plant.tree.v1.enums.TreeSize>> sizes;
+
+            private Input<List<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>> varieties;
+
             public Builder setSizes(@Nullable Input<Map<String,io.pulumi.plant.tree.v1.enums.TreeSize>> sizes) {
                 this.sizes = sizes;
                 return this;
             }
+
             public Builder setSizes(@Nullable Map<String,io.pulumi.plant.tree.v1.enums.TreeSize> sizes) {
                 this.sizes = Input.ofNullable(sizes);
                 return this;
             }
-            private Input<List<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>> varieties;
+
             public Builder setVarieties(Input<List<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>> varieties) {
                 this.varieties = Objects.requireNonNull(varieties);
                 return this;
             }
+
             public Builder setVarieties(List<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> varieties) {
                 this.varieties = Input.of(Objects.requireNonNull(varieties));
                 return this;
             }
+
             public Args build() {
-                return new Args(
-                    this.sizes,
-                    this.varieties
-                );
+                return new Args(sizes, varieties);
             }
         }
     }

@@ -72,28 +72,31 @@ public class Cat extends io.pulumi.resources.CustomResource {
 
         public static final class Builder {
             private @Nullable Input<Integer> age;
+
+            private @Nullable Input<io.pulumi.example.inputs.PetArgs> pet;
+
             public Builder setAge(@Nullable Input<Integer> age) {
                 this.age = age;
                 return this;
             }
+
             public Builder setAge(@Nullable Integer age) {
                 this.age = Input.ofNullable(age);
                 return this;
             }
-            private @Nullable Input<io.pulumi.example.inputs.PetArgs> pet;
+
             public Builder setPet(@Nullable Input<io.pulumi.example.inputs.PetArgs> pet) {
                 this.pet = pet;
                 return this;
             }
+
             public Builder setPet(@Nullable io.pulumi.example.inputs.PetArgs pet) {
                 this.pet = Input.ofNullable(pet);
                 return this;
             }
+
             public Args build() {
-                return new Args(
-                    this.age,
-                    this.pet
-                );
+                return new Args(age, pet);
             }
         }
     }
