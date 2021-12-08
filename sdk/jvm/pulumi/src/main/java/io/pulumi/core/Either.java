@@ -137,12 +137,17 @@ public abstract class Either<L, R> implements Serializable {
     public abstract Either<L, R> or(Either<? extends L, ? extends R> secondChoice);
 
     /**
+     * Returns this {@code Either} value if it has the right value present; {@code defaultValue} otherwise.
+     */
+    public abstract R or(R defaultValue);
+
+    /**
      * Returns the right instance if it is present; {@code throw leftFunction.apply(left())} otherwise.
      *
      * @param leftFunction the left mapping function
      * @param <E>          type of thrown exception mapped from right
      * @throws E                    if left is present, and is mapped with leftFunction
-     * @throws NullPointerException if right value is absent or the given function returns {@code null}
+     * @throws NullPointerException if right value is absent or the given function is {@code null}
      */
     public abstract <E extends Exception> R orThrow(Function<L, E> leftFunction) throws E;
 
@@ -155,7 +160,7 @@ public abstract class Either<L, R> implements Serializable {
      * @param <E>           type of thrown exception mapped from right
      * @return T if right is present, and is mapped with mapper
      * @throws E                    if left is present, and is mapped with leftFunction
-     * @throws NullPointerException if right value is absent or a given function returns {@code null}
+     * @throws NullPointerException if right value is absent or a given function is {@code null}
      */
     public abstract <T, E extends Exception> T mapOrThrow(Function<L, E> leftFunction, Function<R, T> rightFunction) throws E;
 
@@ -163,17 +168,25 @@ public abstract class Either<L, R> implements Serializable {
      * Applies {@code leftFunction} if this is a Left or {@code rightFunction} if this is a Right.
      *
      * @return the result of the {@code leftFunction} or {@code rightFunction}.
-     * @throws NullPointerException if any of the functions returns {@code null}
+     * @throws NullPointerException if any of the functions are {@code null}
      */
     public abstract <V> V either(Function<L, V> leftFunction, Function<R, V> rightFunction);
 
     /**
-     * Applies {@code leftFunction} if this is a Left or {@code rightFunction if this is a Right.
+     * Applies {@code leftFunction} if this is a Left or {@code rightFunction} if this is a Right.
      *
      * @return an Either after transformation by {@code leftFunction} or {@code rightFunction}.
-     * @throws NullPointerException if any of the functions returns {@code null}
+     * @throws NullPointerException if any of the functions are {@code null}
      */
     public abstract <A, B> Either<A, B> transform(Function<L, A> leftFunction, Function<R, B> rightFunction);
+
+    /**
+     * Applies {@code function} if this is a Right or returns Left.
+     *
+     * @return an Either after conditional transformation by {@code function}.
+     * @throws NullPointerException if {@code function} is {@code null}
+     */
+    public abstract <L1 extends L, R1> Either<L1, R1> flatMap(Function<R, Either<L1, R1>> function);
 
     /**
      * If this is a Left, then return the left value in Right or vice versa.

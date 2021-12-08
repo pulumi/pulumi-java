@@ -7,8 +7,9 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.Either;
 
 import javax.annotation.CheckReturnValue;
-import java.lang.annotation.*;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.*;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.*;
 import java.util.function.Function;
@@ -78,58 +79,6 @@ public class Reflection {
         ex.fillInStackTrace(); // pre-throw
         return Either.errorOf(ex);
     }
-
-    public static Either<IllegalArgumentException, Object> enumUnderlyingValue(Object object) {
-        var type = object.getClass();
-        return enumUnderlyingType(type, field -> {
-            try {
-                return field.get(object);
-            } catch (IllegalAccessException e) {
-                throw new IllegalArgumentException("Couldn't get the value", e);
-            }
-        });
-    }
-
-    // ----- experimental -----
-    // FIXME
-    @Retention(RetentionPolicy.RUNTIME)
-    @Target(ElementType.CONSTRUCTOR)
-    public @interface TypeAwareConstructor {
-    }
-
-    @SuppressWarnings("UnstableApiUsage")
-    public abstract static class TypeAware<T> {
-        private final TypeShape<T> typeShape;
-        private final TypeToken<T> typeToken;
-        private final Class<T> typeClass;
-        protected final T value;
-
-        protected TypeAware(T value) {
-            this.value = Objects.requireNonNull(value);
-            //noinspection unchecked
-            this.typeClass = (Class<T>) value.getClass();
-            var typeConstructor =
-                    TypeShape.of(getClass()).getAnnotatedConstructor(TypeAwareConstructor.class);
-            //noinspection unchecked
-            this.typeShape = (TypeShape<T>) TypeShape.extract(typeConstructor.getParameters()[0]);
-            this.typeToken = new TypeToken<>(getClass()) {
-                // Empty
-            };
-        }
-
-        public TypeShape<T> getTypeShape() {
-            return this.typeShape;
-        }
-
-        public TypeToken<T> getTypeToken() {
-            return this.typeToken;
-        }
-
-        public Class<T> getTypeClass() {
-            return typeClass;
-        }
-    }
-    // ----- experimental -----
 
     @SuppressWarnings("UnstableApiUsage")
     public final static class TypeShape<T> {

@@ -50,7 +50,8 @@ import java.util.logging.Logger;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
-import static io.pulumi.core.internal.Environment.*;
+import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
+import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
 import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
@@ -96,20 +97,25 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
      * @throws IllegalArgumentException if an environment variable is not found
      */
     private static DeploymentState fromEnvironment() {
+        var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
+        standardLogger.log(Level.FINEST, "ENV: " + System.getenv());
+
+        Function<Exception, RuntimeException> startErrorSupplier = (Exception e) ->
+                new IllegalArgumentException("Program run without the Pulumi engine available; re-run using the `pulumi` CLI", e);
+
         try {
-            var monitorTarget = requireEnvironmentVariable("PULUMI_MONITOR");
-            var engineTarget = requireEnvironmentVariable("PULUMI_ENGINE");
-            var project = requireEnvironmentVariable("PULUMI_PROJECT");
-            var stack = requireEnvironmentVariable("PULUMI_STACK");
-            var pwd = getEnvironmentVariable("PULUMI_PWD");
-            var dryRun = requireBooleanEnvironmentVariable("PULUMI_DRY_RUN");
-            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
-            var parallel = getBooleanEnvironmentVariable("PULUMI_PARALLEL");
-            var tracing = getEnvironmentVariable("PULUMI_TRACING");
+            var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
+            var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);;
+            var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);;
+            var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);;
+//            var pwd = getEnvironmentVariable("PULUMI_PWD");
+            var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
+//            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
+//            var parallel = getIntegerEnvironmentVariable("PULUMI_PARALLEL");
+//            var tracing = getEnvironmentVariable("PULUMI_TRACING");
             // TODO what to do with all the unused envvars?
 
             var config = Config.parse();
-            var standardLogger = Logger.getLogger(DeploymentImpl.class.getName());
             standardLogger.setLevel(GlobalLogging.GlobalLevel);
 
             standardLogger.log(Level.FINEST, "Creating deployment engine");
@@ -294,8 +300,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private static ImmutableMap<String, String> parseConfig() {
             var envConfig = Environment.getEnvironmentVariable(ConfigEnvKey);
-            if (envConfig.isPresent()) {
-                return parseConfig(envConfig.get());
+            if (envConfig.isValue()) {
+                return parseConfig(envConfig.value());
             }
             return ImmutableMap.of();
         }
@@ -316,8 +322,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         private static ImmutableSet<String> parseConfigSecretKeys() {
             var envConfigSecretKeys = Environment.getEnvironmentVariable(ConfigSecretKeysEnvKey);
-            if (envConfigSecretKeys.isPresent()) {
-                return parseConfigSecretKeys(envConfigSecretKeys.get());
+            if (envConfigSecretKeys.isValue()) {
+                return parseConfigSecretKeys(envConfigSecretKeys.value());
             }
 
             return ImmutableSet.of();
@@ -1271,7 +1277,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Internal
     @VisibleForTesting
     static class DeploymentState {
-        public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").orElse(false);
+        public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = false;
 
         public final DeploymentImpl.Config config;

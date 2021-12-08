@@ -45,6 +45,11 @@ final class Left<L, R> extends Either<L, R> {
         return (Either<L, R>) secondChoice;
     }
 
+    @Override
+    public R or(R defaultValue) {
+        Objects.requireNonNull(defaultValue, "Expected non-null defaultValue");
+        return defaultValue;
+    }
 
     @Override
     public <E extends Exception> R orThrow(Function<L, E> leftFunction) throws E {
@@ -73,6 +78,12 @@ final class Left<L, R> extends Either<L, R> {
     public <A, B> Either<A, B> transform(Function<L, A> leftFunction, Function<R, B> rightFunction) {
         Objects.requireNonNull(leftFunction, "Expected non-null leftFunction");
         return leftOf(leftFunction.apply(left()));
+    }
+
+    @Override
+    public <L1 extends L, R1> Either<L1, R1> flatMap(Function<R, Either<L1, R1>> function) {
+        Objects.requireNonNull(function, "Expected non-null function");
+        return (Either<L1, R1>) this; // TODO: is this correct?
     }
 
     @Override
