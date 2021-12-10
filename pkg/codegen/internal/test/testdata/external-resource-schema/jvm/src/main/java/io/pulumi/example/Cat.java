@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.example.Utilities;
+import io.pulumi.example.inputs.*;
 
 @ResourceType(type="example::Cat")
 public class Cat extends io.pulumi.resources.CustomResource {
@@ -22,8 +23,8 @@ public class Cat extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    public Cat(String name, @Nullable Cat.Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Cat", name, args == null ? Cat.Args.Empty : args, makeResourceOptions(options, Input.empty()));
+    public Cat(String name, @Nullable CatArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+        super("example::Cat", name, args == null ? CatArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
 
     private Cat(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
@@ -39,65 +40,5 @@ public class Cat extends io.pulumi.resources.CustomResource {
 
     public static Cat get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cat(name, id, options);
-    }
-
-    public static final class Args extends io.pulumi.resources.ResourceArgs {
-
-        public static final Args Empty = Args.builder().build();
-
-        @InputImport(name="age")
-        private final @Nullable Input<Integer> age;
-
-        public Input<Integer> getAge() {
-            return Input.ofNullable(this.age);
-        }
-
-        @InputImport(name="pet")
-        private final @Nullable Input<io.pulumi.example.inputs.PetArgs> pet;
-
-        public Input<io.pulumi.example.inputs.PetArgs> getPet() {
-            return Input.ofNullable(this.pet);
-        }
-
-        public Args(
-            @Nullable Input<Integer> age,
-            @Nullable Input<io.pulumi.example.inputs.PetArgs> pet) {
-            this.age = age;
-            this.pet = pet;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            private @Nullable Input<Integer> age;
-
-            private @Nullable Input<io.pulumi.example.inputs.PetArgs> pet;
-
-            public Builder setAge(@Nullable Input<Integer> age) {
-                this.age = age;
-                return this;
-            }
-
-            public Builder setAge(@Nullable Integer age) {
-                this.age = Input.ofNullable(age);
-                return this;
-            }
-
-            public Builder setPet(@Nullable Input<io.pulumi.example.inputs.PetArgs> pet) {
-                this.pet = pet;
-                return this;
-            }
-
-            public Builder setPet(@Nullable io.pulumi.example.inputs.PetArgs pet) {
-                this.pet = Input.ofNullable(pet);
-                return this;
-            }
-
-            public Args build() {
-                return new Args(age, pet);
-            }
-        }
     }
 }

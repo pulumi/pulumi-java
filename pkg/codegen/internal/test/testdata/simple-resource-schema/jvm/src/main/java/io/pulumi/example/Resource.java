@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.example.Utilities;
+import io.pulumi.example.inputs.*;
 
 @ResourceType(type="example::Resource")
 public class Resource extends io.pulumi.resources.CustomResource {
@@ -22,8 +23,8 @@ public class Resource extends io.pulumi.resources.CustomResource {
         return this.bar;
     }
 
-    public Resource(String name, @Nullable Resource.Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Resource", name, args == null ? Resource.Args.Empty : args, makeResourceOptions(options, Input.empty()));
+    public Resource(String name, @Nullable ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+        super("example::Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
 
     private Resource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
@@ -42,43 +43,5 @@ public class Resource extends io.pulumi.resources.CustomResource {
 
     public static Resource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Resource(name, id, options);
-    }
-
-    public static final class Args extends io.pulumi.resources.ResourceArgs {
-
-        public static final Args Empty = Args.builder().build();
-
-        @InputImport(name="bar")
-        private final @Nullable Input<String> bar;
-
-        public Input<String> getBar() {
-            return Input.ofNullable(this.bar);
-        }
-
-        public Args(@Nullable Input<String> bar) {
-            this.bar = bar;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            private @Nullable Input<String> bar;
-
-            public Builder setBar(@Nullable Input<String> bar) {
-                this.bar = Input.ofNullable(bar).asSecret();
-                return this;
-            }
-
-            public Builder setBar(@Nullable String bar) {
-                this.bar = Input.ofNullable(bar).asSecret();
-                return this;
-            }
-
-            public Args build() {
-                return new Args(bar);
-            }
-        }
     }
 }

@@ -88,20 +88,33 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
         return new Builder();
     }
 
+    public static Builder builder(PetArgs defaults) {
+        return new Builder(defaults);
+    }
+
     public static final class Builder {
         private @Nullable Input<Integer> age;
-
         private @Nullable Input<io.pulumi.random.RandomPet> name;
-
         private @Nullable Input<List<io.pulumi.random.RandomPet>> nameArray;
-
         private @Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap;
-
         private Input<io.pulumi.random.RandomPet> requiredName;
-
         private Input<List<io.pulumi.random.RandomPet>> requiredNameArray;
-
         private Input<Map<String,io.pulumi.random.RandomPet>> requiredNameMap;
+
+        public Builder() {
+    	      // Empty
+        }
+
+        public Builder(PetArgs defaults) {
+    	      Objects.requireNonNull(defaults);
+    	      this.age = defaults.age;
+    	      this.name = defaults.name;
+    	      this.nameArray = defaults.nameArray;
+    	      this.nameMap = defaults.nameMap;
+    	      this.requiredName = defaults.requiredName;
+    	      this.requiredNameArray = defaults.requiredNameArray;
+    	      this.requiredNameMap = defaults.requiredNameMap;
+        }
 
         public Builder setAge(@Nullable Input<Integer> age) {
             this.age = age;

@@ -156,6 +156,10 @@ dependencies {
     testImplementation("org.assertj:assertj-core:3.20.2")
 }
 
+test {
+  useJUnitPlatform()
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -211,16 +215,7 @@ type getterTemplateContext struct {
 	ReturnStatement string
 }
 
-const builderSetterTemplateText = `{{ .Indent }}public {{ .SetterType }} {{ .SetterName }}({{ .PropertyType }} {{ .PropertyName }}) {
-{{ .Indent }}    {{ .Assignment }};
-{{ .Indent }}    return this;
-{{ .Indent }}}`
-
-var builderSetterTemplate = Template("BuilderSetter", builderSetterTemplateText)
-
 type builderSetterTemplateContext struct {
-	Indent       string
-	SetterType   string
 	SetterName   string
 	PropertyType string
 	PropertyName string
@@ -233,14 +228,29 @@ type builderFieldTemplateContext struct {
 	Initialization string
 }
 
-const builderTemplateText = `{{ .Indent }}public static Builder builder() {
-{{ .Indent }}    return new Builder();
+const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
+{{ .Indent }}    return new {{ .Name }}();
+{{ .Indent }}}
+
+{{ .Indent }}public static {{ .Name }} builder({{ .ResultType }} defaults) {
+{{ .Indent }}    return new {{ .Name }}(defaults);
 {{ .Indent }}}
 
 {{ .Indent }}public static {{ if .IsFinal }}final {{ end }}class {{ .Name }} {
 {{- range $field := .Fields }}
 {{ $.Indent }}    private {{ $field.FieldType }} {{ $field.FieldName }}{{ $field.Initialization }};
-{{ end -}}
+{{- end }}
+
+{{ $.Indent }}    public {{ .Name }}() {
+{{ $.Indent }}	      // Empty
+{{ $.Indent }}    }
+
+{{ $.Indent }}    public {{ .Name }}({{ .ResultType }} defaults) {
+{{ $.Indent }}	      Objects.requireNonNull(defaults);
+{{- range $field := .Fields }}
+{{ $.Indent }}	      this.{{ $field.FieldName }} = defaults.{{ $field.FieldName }};
+{{- end }}
+{{ $.Indent }}    }
 {{ range $setter := .Setters }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
 {{ $.Indent }}        {{ $setter.Assignment }};

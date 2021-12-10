@@ -137,12 +137,6 @@ func (mod *modContext) tokenToPackage(tok string, qualifier string) string {
 	pkg := basePackage + packageName(mod.packages, components[0])
 	pkgName := mod.pkg.TokenToModule(tok)
 
-	if mod.isK8sCompatMode() { // TODO: do we need this?
-		if qualifier != "" {
-			return pkg + ".types." + qualifier + "." + packageName(mod.packages, pkgName)
-		}
-	}
-
 	typ := pkg
 	if pkgName != "" {
 		typ += "." + packageName(mod.packages, pkgName)
@@ -159,7 +153,7 @@ func (mod *modContext) typeName(t *schema.ObjectType, state, input, args bool) s
 	if state {
 		return name + "GetArgs"
 	}
-	if !mod.isTFCompatMode() && !mod.isK8sCompatMode() {
+	if !mod.isTFCompatMode() { // TODO: do we need this?
 		if args {
 			return name + "Args"
 		}
@@ -388,10 +382,9 @@ type plainType struct {
 	properties            []*schema.Property
 	args                  bool
 	state                 bool
-	nested                bool
 }
 
-func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level int) error {
+func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error {
 	isArgsType := pt.args && !prop.IsPlain
 	requireInitializers := !pt.args || prop.IsPlain
 
@@ -426,7 +419,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level 
 		}
 	}
 
-	indent := strings.Repeat("    ", level+1)
+	indent := strings.Repeat("    ", 1)
 
 	// TODO: add comment
 	_, _ = fmt.Fprintf(w, "%s@InputImport(name=\"%s\"%s)\n", indent, wireName, attributeArgs)
@@ -481,7 +474,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level 
 	}
 
 	if err := getterTemplate.Execute(w, getterTemplateContext{
-		Indent:          strings.Repeat("    ", level+1),
+		Indent:          strings.Repeat("    ", 1),
 		GetterType:      getterType.String(),
 		GetterName:      getterName,
 		ReturnStatement: returnStatement,
@@ -492,34 +485,19 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property, level 
 	return nil
 }
 
-// TODO
-
-func (pt *plainType) genInputType(w io.Writer, level int) error {
-	// TODO: k8s compat mode generated type counting logic
-
-	indent := strings.Repeat("    ", level)
-
+func (pt *plainType) genInputType(w io.Writer) error {
 	_, _ = fmt.Fprintf(w, "\n")
-
-	final := "final "
-	if pt.mod.isK8sCompatMode() && (pt.res == nil || !pt.res.IsProvider) {
-		final = ""
-	}
-	static := ""
-	if pt.nested {
-		static = "static "
-	}
 
 	// Open the class.
 	// TODO: add comment
-	_, _ = fmt.Fprintf(w, "%spublic %s%sclass %s extends %s {\n", indent, static, final, pt.name, pt.baseClass)
+	_, _ = fmt.Fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
 	_, _ = fmt.Fprintf(w, "\n")
-	_, _ = fmt.Fprintf(w, "%s    public static final %s Empty = %s.builder().build();\n", indent, pt.name, pt.name)
+	_, _ = fmt.Fprintf(w, "    public static final %s Empty = %s.builder().build();\n", pt.name, pt.name)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Declare each input property.
 	for _, p := range pt.properties {
-		if err := pt.genInputProperty(w, p, level); err != nil {
+		if err := pt.genInputProperty(w, p); err != nil {
 			return err
 		}
 		_, _ = fmt.Fprintf(w, "\n")
@@ -527,13 +505,12 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	}
 
 	// Generate the constructor.
-	_, _ = fmt.Fprintf(w, "%s    public %s(", indent, pt.name)
+	_, _ = fmt.Fprintf(w, "    public %s(", pt.name)
 
 	// Generate the constructor parameters.
 	for i, prop := range pt.properties {
 		// TODO: factor this out (with similar code in genOutputType)
 		paramName := javaIdentifier(prop.Name)
-		required := prop.IsRequired || pt.mod.isK8sCompatMode()
 		isArgsType := pt.args && !prop.IsPlain
 		requireInitializers := !pt.args || prop.IsPlain
 		paramType := pt.mod.typeString(
@@ -545,7 +522,7 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 			isArgsType,
 			requireInitializers,
 			false,
-			!required,
+			!prop.IsRequired,
 		)
 
 		if i == 0 && len(pt.properties) > 1 { // first param
@@ -559,7 +536,7 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 
 		paramDef := fmt.Sprintf("%s %s%s", paramType, paramName, terminator)
 		if len(pt.properties) > 1 {
-			paramDef = fmt.Sprintf("%s        %s", indent, paramDef)
+			paramDef = fmt.Sprintf("        %s", paramDef)
 		}
 		_, _ = fmt.Fprint(w, paramDef)
 	}
@@ -596,14 +573,13 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 			}
 			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValue)
 		}
-		required := prop.IsRequired || pt.mod.isK8sCompatMode()
-		if required {
-			_, _ = fmt.Fprintf(w, "%s        this.%s = %sObjects.requireNonNull(%s);\n", indent, fieldName, defaultValueCode, paramName)
+		if prop.IsRequired {
+			_, _ = fmt.Fprintf(w, "        this.%s = %sObjects.requireNonNull(%s);\n", fieldName, defaultValueCode, paramName)
 		} else {
-			_, _ = fmt.Fprintf(w, "%s        this.%s = %s%s;\n", indent, fieldName, defaultValueCode, paramName)
+			_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
 		}
 	}
-	_, _ = fmt.Fprintf(w, "%s    }\n", indent)
+	_, _ = fmt.Fprintf(w, "    }\n")
 
 	// Generate the builder
 	var builderFields []builderFieldTemplateContext
@@ -651,44 +627,44 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 			Assignment:   assignment(propertyName),
 		})
 
-		propertyTypeUnwrapped := pt.mod.typeString(
-			prop.Type,
-			pt.propertyTypeQualifier,
-			true,                // is input
-			pt.state,            // is state
-			false,               // don't wrap input
-			isArgsType,          // has args
-			requireInitializers, // requires initializers
-			false,               // is optional
-			!prop.IsRequired,    // is nullable
-		)
+		if isArgsType { // we have a wrapped field so we add an unwrapped helper setter
+			propertyTypeUnwrapped := pt.mod.typeString(
+				prop.Type,
+				pt.propertyTypeQualifier,
+				true,                // is input
+				pt.state,            // is state
+				false,               // don't wrap input
+				isArgsType,          // has args
+				requireInitializers, // requires initializers
+				false,               // is optional
+				!prop.IsRequired,    // is nullable
+			)
 
-		assignmentUnwrapped := func(propertyName string) string {
-			if prop.Secret {
-				return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
-			} else {
-				if prop.IsRequired {
-					return fmt.Sprintf("this.%s = Input.of(Objects.requireNonNull(%s))", propertyName, propertyName)
+			assignmentUnwrapped := func(propertyName string) string {
+				if prop.Secret {
+					return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
 				} else {
-					return fmt.Sprintf("this.%s = Input.ofNullable(%s)", propertyName, propertyName)
+					if prop.IsRequired {
+						return fmt.Sprintf("this.%s = Input.of(Objects.requireNonNull(%s))", propertyName, propertyName)
+					} else {
+						return fmt.Sprintf("this.%s = Input.ofNullable(%s)", propertyName, propertyName)
+					}
 				}
 			}
-		}
 
-		// add overloaded setter
-		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			Indent:       strings.Repeat("    ", level+2),
-			SetterType:   "Builder",
-			SetterName:   setterName,
-			PropertyType: propertyTypeUnwrapped.String(),
-			PropertyName: propertyName,
-			Assignment:   assignmentUnwrapped(propertyName),
-		})
+			// add overloaded setter
+			builderSetters = append(builderSetters, builderSetterTemplateContext{
+				SetterName:   setterName,
+				PropertyType: propertyTypeUnwrapped.String(),
+				PropertyName: propertyName,
+				Assignment:   assignmentUnwrapped(propertyName),
+			})
+		}
 	}
 
 	_, _ = fmt.Fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     strings.Repeat("    ", level+1),
+		Indent:     strings.Repeat("    ", 1),
 		Name:       "Builder",
 		IsFinal:    true,
 		Fields:     builderFields,
@@ -700,27 +676,22 @@ func (pt *plainType) genInputType(w io.Writer, level int) error {
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Close the class.
-	_, _ = fmt.Fprintf(w, "%s}\n", indent)
+	_, _ = fmt.Fprintf(w, "}\n")
 
 	return nil
 }
 
-func (pt *plainType) genOutputType(w io.Writer, level int) error {
-	indent := strings.Repeat("    ", level)
-	static := ""
-	if pt.nested {
-		static = "static "
-	}
+func (pt *plainType) genOutputType(w io.Writer) error {
+	indent := strings.Repeat("    ", 0)
 
 	// Open the class and annotate it appropriately.
 	_, _ = fmt.Fprintf(w, "%s@OutputCustomType\n", indent)
-	_, _ = fmt.Fprintf(w, "%spublic %sfinal class %s {\n", indent, static, pt.name)
+	_, _ = fmt.Fprintf(w, "%spublic final class %s {\n", indent, pt.name)
 
 	// Generate each output field.
 	for _, prop := range pt.properties {
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
-		required := prop.IsRequired || pt.mod.isK8sCompatMode()
-		fieldType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !required)
+		fieldType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !prop.IsRequired)
 		// TODO: add comment
 		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType, fieldName)
 	}
@@ -748,8 +719,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 	for i, prop := range pt.properties {
 		// TODO: factor this out (with similar code in genInputType)
 		paramName := javaIdentifier(prop.Name)
-		required := prop.IsRequired || pt.mod.isK8sCompatMode()
-		paramType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !required)
+		paramType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !prop.IsRequired)
 
 		if i == 0 && len(pt.properties) > 1 { // first param
 			_, _ = fmt.Fprint(w, "\n")
@@ -773,8 +743,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 	for _, prop := range pt.properties {
 		paramName := javaIdentifier(prop.Name)
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
-		required := prop.IsRequired || pt.mod.isK8sCompatMode()
-		if required {
+		if prop.IsRequired {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = Objects.requireNonNull(%s);\n", indent, fieldName, paramName)
 		} else {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
@@ -787,7 +756,6 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 	for _, prop := range pt.properties {
 		paramName := javaIdentifier(prop.Name)
 		getterName := javaIdentifier("get" + title(prop.Name))
-		required := prop.IsRequired || pt.mod.isK8sCompatMode()
 		getterType := pt.mod.typeString(
 			prop.Type,
 			pt.propertyTypeQualifier,
@@ -796,7 +764,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 			false,
 			false,
 			false,
-			!required,
+			!prop.IsRequired,
 			false,
 		)
 		getterTypeNonOptional := pt.mod.typeString(
@@ -813,7 +781,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 
 		// TODO: add comment
 		var returnStatement string
-		if required {
+		if prop.IsRequired {
 			returnStatement = fmt.Sprintf("this.%s", paramName)
 		} else {
 			switch prop.Type.(type) {
@@ -829,7 +797,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 		}
 
 		if err := getterTemplate.Execute(w, getterTemplateContext{
-			Indent:          strings.Repeat("    ", level+1),
+			Indent:          strings.Repeat("    ", 1),
 			GetterType:      getterType.String(),
 			GetterName:      getterName,
 			ReturnStatement: returnStatement,
@@ -883,7 +851,7 @@ func (pt *plainType) genOutputType(w io.Writer, level int) error {
 
 	_, _ = fmt.Fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     strings.Repeat("    ", level+1),
+		Indent:     strings.Repeat("    ", 1),
 		Name:       "Builder",
 		IsFinal:    true,
 		Fields:     builderFields,
@@ -1014,8 +982,6 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	switch {
 	case r.IsProvider:
 		baseType = "io.pulumi.resources.ProviderResource"
-	case mod.isK8sCompatMode():
-		baseType = "io.pulumi.resources.KubernetesResource"
 	case r.IsComponent:
 		baseType = "io.pulumi.resources.ComponentResource"
 		optionsType = "io.pulumi.resources.ComponentResourceOptions"
@@ -1033,8 +999,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		// Write the property attribute
 		wireName := prop.Name
 		propertyName := mod.propertyName(prop)
-		required := prop.IsRequired || mod.isK8sCompatMode()
-		propertyType := mod.typeString(prop.Type, "outputs", false, false, false, false, false, false, !required)
+		propertyType := mod.typeString(prop.Type, "outputs", false, false, false, false, false, false, !prop.IsRequired)
 		// TODO: C# has some kind of workaround here for strings
 
 		if prop.Secret {
@@ -1067,11 +1032,8 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		_, _ = fmt.Fprintf(w, "\n")
 	}
 
-	// Emit the class constructor.
-	argsClassName := className + ".Args"
-	if mod.isK8sCompatMode() && !r.IsProvider {
-		argsClassName = fmt.Sprintf("%s.%sArgs", mod.tokenToPackage(r.Token, "inputs"), className)
-	}
+	// Emit the class constructor
+	argsClassName := className + "Args"
 	argsType := argsClassName
 
 	allOptionalInputs := true
@@ -1080,7 +1042,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		allOptionalInputs = allOptionalInputs && !prop.IsRequired
 		hasConstInputs = hasConstInputs || prop.ConstValue != nil
 	}
-	if allOptionalInputs || mod.isK8sCompatMode() {
+	if allOptionalInputs {
 		// If the number of required input properties was zero, we can make the args object optional.
 		argsType = fmt.Sprintf("@Nullable %s", argsType)
 	}
@@ -1090,7 +1052,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		tok = mod.pkg.Name
 	}
 
-	argsOverride := fmt.Sprintf("args == null ? %s.Args.Empty : args", className)
+	argsOverride := fmt.Sprintf("args == null ? %sArgs.Empty : args", className)
 	if hasConstInputs {
 		argsOverride = "makeArgs(args)"
 	}
@@ -1109,7 +1071,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", "null"
 		if r.StateInputs != nil {
-			stateParam, stateRef = fmt.Sprintf("@Nullable %s.State state, ", className), "state"
+			stateParam, stateRef = fmt.Sprintf("@Nullable %sState state, ", className), "state"
 		}
 
 		_, _ = fmt.Fprintf(w, "\n")
@@ -1121,8 +1083,9 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	if hasConstInputs {
 		// Write the method that will calculate the resource arguments.
 		_, _ = fmt.Fprintf(w, "\n")
-		_, _ = fmt.Fprintf(w, "    private static %[1]s makeArgs(%[1]s args) {\n", argsType)
-		_, _ = fmt.Fprintf(w, "        return args != null ? args : %s.builder()\n", argsClassName)
+		_, _ = fmt.Fprintf(w, "    private static %s makeArgs(%s args) {\n", argsClassName, argsType)
+		_, _ = fmt.Fprintf(w, "        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", argsClassName)
+		_, _ = fmt.Fprintf(w, "        return builder\n")
 		for _, prop := range r.InputProperties {
 			if prop.ConstValue != nil {
 				v, err := primitiveValue(prop.ConstValue)
@@ -1182,7 +1145,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 
 		// TODO: add docs
 		if r.StateInputs != nil {
-			stateParam = fmt.Sprintf("@Nullable %s.State state, ", className)
+			stateParam = fmt.Sprintf("@Nullable %sState state, ", className)
 			stateRef = "state, "
 			// TODO: add docs param
 		}
@@ -1190,41 +1153,6 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		_, _ = fmt.Fprintf(w, "    public static %s get(String name, Input<String> id, %s@Nullable %s options) {\n", className, stateParam, optionsType)
 		_, _ = fmt.Fprintf(w, "        return new %s(name, id, %soptions);\n", className, stateRef)
 		_, _ = fmt.Fprintf(w, "    }\n")
-	}
-
-	// TODO: k8s compat mode?
-
-	// Generate the resource args type.
-	args := &plainType{
-		mod:                   mod,
-		res:                   r,
-		name:                  "Args",
-		baseClass:             "io.pulumi.resources.ResourceArgs",
-		propertyTypeQualifier: "inputs",
-		properties:            r.InputProperties,
-		args:                  true,
-		nested:                true,
-	}
-	if err := args.genInputType(w, 1); err != nil {
-		return err
-	}
-
-	// Generate the `get` args type, if any.
-	if r.StateInputs != nil {
-		state := &plainType{
-			mod:                   mod,
-			res:                   r,
-			name:                  "State",
-			baseClass:             "io.pulumi.resources.ResourceArgs",
-			propertyTypeQualifier: "inputs",
-			properties:            r.StateInputs.Properties,
-			args:                  true,
-			state:                 true,
-			nested:                true,
-		}
-		if err := state.genInputType(w, 1); err != nil {
-			return err
-		}
 	}
 
 	// Close the class.
@@ -1238,7 +1166,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 
 	var typeParameter string
 	if fun.Outputs != nil {
-		typeParameter = fmt.Sprintf("%s.Result", className)
+		typeParameter = fmt.Sprintf("%sResult", className)
 	}
 
 	var argsParamDef string
@@ -1256,8 +1184,8 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 			nullable = "@Nullable "
 		}
 
-		argsParamDef = fmt.Sprintf("%s%s.Args args, ", nullable, className)
-		argsParamRef = fmt.Sprintf("args == null ? %s.Args.Empty : args", className)
+		argsParamDef = fmt.Sprintf("%s%sArgs args, ", nullable, className)
+		argsParamRef = fmt.Sprintf("args == null ? %sArgs.Empty : args", className)
 	}
 
 	printObsoleteAttribute(w, fun.DeprecationMessage, "")
@@ -1272,35 +1200,6 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	_, _ = fmt.Fprintf(w, "        return io.pulumi.deployment.Deployment.getInstance().invokeAsync(\"%s\", io.pulumi.core.internal.Reflection.TypeShape.of(%s.class), %s, Utilities.withVersion(options));\n",
 		fun.Token, typeParameter, argsParamRef)
 	_, _ = fmt.Fprintf(w, "    }\n")
-
-	// Emit the args and result types, if any.
-	if fun.Inputs != nil {
-		_, _ = fmt.Fprintf(w, "\n")
-
-		args := &plainType{
-			mod:                   mod,
-			name:                  "Args",
-			baseClass:             "io.pulumi.resources.InvokeArgs",
-			propertyTypeQualifier: "inputs",
-			properties:            fun.Inputs.Properties,
-			nested:                true,
-		}
-		if err := args.genInputType(w, 1); err != nil {
-			return err
-		}
-	}
-	if fun.Outputs != nil {
-		_, _ = fmt.Fprintf(w, "\n")
-
-		res := &plainType{
-			mod:                   mod,
-			name:                  "Result",
-			propertyTypeQualifier: "outputs",
-			properties:            fun.Outputs.Properties,
-			nested:                true,
-		}
-		res.genOutputType(w, 1)
-	}
 
 	// Close the class.
 	_, _ = fmt.Fprintf(w, "}\n")
@@ -1408,7 +1307,7 @@ func visitObjectTypes(properties []*schema.Property, visitor func(*schema.Object
 	})
 }
 
-func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyTypeQualifier string, input, state, args bool, level int) error {
+func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyTypeQualifier string, input, state, args bool) error {
 	pt := &plainType{
 		mod:                   mod,
 		name:                  mod.typeName(obj, state, input, args),
@@ -1424,11 +1323,10 @@ func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyType
 		if !args && mod.details(obj).plainType {
 			pt.baseClass = "io.pulumi.resources.InvokeArgs"
 		}
-		return pt.genInputType(w, level)
+		return pt.genInputType(w)
 	}
 
-	pt.genOutputType(w, level)
-	return nil
+	return pt.genOutputType(w)
 }
 
 // pulumiImports is a slice of common imports that are used with the genHeader method.
@@ -1610,6 +1508,9 @@ func gradleProjectPath() string {
 	return path.Join("src", "main", "java")
 }
 
+// Set to avoid generating a file with the same name twice.
+var generatedPaths = codegen.Set{}
+
 func (mod *modContext) gen(fs fs) error {
 	pkgComponents := strings.Split(mod.packageName, ".")
 
@@ -1629,7 +1530,21 @@ func (mod *modContext) gen(fs fs) error {
 	addFile := func(name, contents string) {
 		p := path.Join(dir, name)
 		files = append(files, p)
-		fs.add(p, []byte(contents))
+
+		// TODO: how can we get rid of this?
+		// The way the legacy codegen for kubernetes is structured, inputs for a resource args type and resource args
+		// subtype could become a single class because of the name + namespace clash. We use a set of generated types
+		// to prevent generating classes with equal full names in multiple files. The check should be removed if we
+		// ever change the namespacing in the k8s SDK to the standard one.
+		if mod.isK8sCompatMode() {
+			if generatedPaths.Has(p) {
+				return
+			}
+			generatedPaths.Add(p)
+			fs.add(p, []byte(contents))
+		} else {
+			fs.add(p, []byte(contents))
+		}
 	}
 
 	// Utilities, config
@@ -1671,13 +1586,49 @@ func (mod *modContext) gen(fs fs) error {
 		sort.Strings(additionalImports)
 		importStrings := mod.getPulumiImports()
 		importStrings = append(importStrings, additionalImports...)
+		importStrings = append(importStrings, mod.packageName+".inputs.*")
 		mod.genHeader(buffer, importStrings, "")
-
 		if err := mod.genResource(buffer, r); err != nil {
 			return err
 		}
-
 		addFile(resourceName(r)+".java", buffer.String())
+
+		// Generate the resource args type.
+		args := &plainType{
+			mod:                   mod,
+			res:                   r,
+			name:                  resourceName(r) + "Args",
+			baseClass:             "io.pulumi.resources.ResourceArgs",
+			propertyTypeQualifier: "inputs",
+			properties:            r.InputProperties,
+			args:                  true,
+		}
+		argsBuffer := &bytes.Buffer{}
+		mod.genHeader(argsBuffer, mod.getPulumiImports(), "inputs")
+		if err := args.genInputType(argsBuffer); err != nil {
+			return err
+		}
+		addFile(path.Join("inputs", resourceName(r)+"Args.java"), argsBuffer.String())
+
+		// Generate the `get` args type, if any.
+		if r.StateInputs != nil {
+			state := &plainType{
+				mod:                   mod,
+				res:                   r,
+				name:                  resourceName(r) + "State",
+				baseClass:             "io.pulumi.resources.ResourceArgs",
+				propertyTypeQualifier: "inputs",
+				properties:            r.StateInputs.Properties,
+				args:                  true,
+				state:                 true,
+			}
+			stateBuffer := &bytes.Buffer{}
+			mod.genHeader(stateBuffer, mod.getPulumiImports(), "inputs")
+			if err := state.genInputType(stateBuffer); err != nil {
+				return err
+			}
+			addFile(path.Join("inputs", resourceName(r)+"State.java"), stateBuffer.String())
+		}
 	}
 
 	// Functions
@@ -1690,11 +1641,49 @@ func (mod *modContext) gen(fs fs) error {
 		for _, i := range imports {
 			importStrings = append(importStrings, i.SortedValues()...)
 		}
+		if f.Inputs != nil {
+			importStrings = append(importStrings, mod.packageName+".inputs.*")
+		}
+		if f.Outputs != nil {
+			importStrings = append(importStrings, mod.packageName+".outputs.*")
+		}
 		mod.genHeader(buffer, importStrings, "")
 		if err := mod.genFunction(buffer, f); err != nil {
 			return err
 		}
 		addFile(tokenToName(f.Token)+".java", buffer.String())
+
+		// Emit the args and result types, if any.
+		if f.Inputs != nil {
+			args := &plainType{
+				mod:                   mod,
+				name:                  tokenToName(f.Token) + "Args",
+				baseClass:             "io.pulumi.resources.InvokeArgs",
+				propertyTypeQualifier: "inputs",
+				properties:            f.Inputs.Properties,
+			}
+			argsBuffer := &bytes.Buffer{}
+			mod.genHeader(argsBuffer, importStrings, "inputs")
+			if err := args.genInputType(argsBuffer); err != nil {
+				return err
+			}
+			addFile(path.Join("inputs", tokenToName(f.Token)+"Args.java"), argsBuffer.String())
+		}
+
+		if f.Outputs != nil {
+			res := &plainType{
+				mod:                   mod,
+				name:                  tokenToName(f.Token) + "Result",
+				propertyTypeQualifier: "outputs",
+				properties:            f.Outputs.Properties,
+			}
+			resultBuffer := &bytes.Buffer{}
+			mod.genHeader(resultBuffer, importStrings, "outputs")
+			if err := res.genOutputType(resultBuffer); err != nil {
+				return err
+			}
+			addFile(path.Join("outputs", tokenToName(f.Token)+"Result.java"), resultBuffer.String())
+		}
 	}
 
 	// Input/Output types
@@ -1704,7 +1693,7 @@ func (mod *modContext) gen(fs fs) error {
 				if mod.details(t).argsType {
 					buffer := &bytes.Buffer{}
 					mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-					if err := mod.genType(buffer, t, "inputs", true, false, true, 0); err != nil {
+					if err := mod.genType(buffer, t, "inputs", true, false, true); err != nil {
 						return err
 					}
 					addFile(path.Join("inputs", tokenToName(t.Token)+"Args.java"), buffer.String())
@@ -1712,7 +1701,7 @@ func (mod *modContext) gen(fs fs) error {
 				if mod.details(t).plainType {
 					buffer := &bytes.Buffer{}
 					mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-					if err := mod.genType(buffer, t, "inputs", true, false, false, 0); err != nil {
+					if err := mod.genType(buffer, t, "inputs", true, false, false); err != nil {
 						return err
 					}
 					addFile(path.Join("inputs", tokenToName(t.Token)+".java"), buffer.String())
@@ -1722,7 +1711,7 @@ func (mod *modContext) gen(fs fs) error {
 			if mod.details(t).stateType {
 				buffer := &bytes.Buffer{}
 				mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-				if err := mod.genType(buffer, t, "inputs", true, true, true, 0); err != nil {
+				if err := mod.genType(buffer, t, "inputs", true, true, true); err != nil {
 					return err
 				}
 				addFile(path.Join("inputs", tokenToName(t.Token)+"State.java"), buffer.String())
@@ -1731,10 +1720,9 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).outputType {
 			buffer := &bytes.Buffer{}
 			mod.genHeader(buffer, mod.getPulumiImports(), "outputs")
-			if err := mod.genType(buffer, t, "outputs", false, false, false, 0); err != nil {
+			if err := mod.genType(buffer, t, "outputs", false, false, false); err != nil {
 				return err
 			}
-			// TODO: C# has a k8s compat mode here
 			addFile(path.Join("outputs", tokenToName(t.Token)+".java"), buffer.String())
 		}
 	}
@@ -1762,7 +1750,7 @@ func (mod *modContext) gen(fs fs) error {
 	return nil
 }
 
-// TODO
+// TODO: package metadata if needed
 
 func computePropertyNames(props []*schema.Property, names map[*schema.Property]string) {
 	for _, p := range props {
@@ -1772,7 +1760,7 @@ func computePropertyNames(props []*schema.Property, names map[*schema.Property]s
 	}
 }
 
-// TODO
+// TODO: LanguageResource
 
 func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*modContext, *JVMPackageInfo, error) {
 	// Decode Java-specific info for each package as we discover them.
@@ -1981,7 +1969,7 @@ func genBuildFile(pkg *schema.Package, packageName string, packageReferences map
 	return w.Bytes(), nil
 }
 
-// TODO
+// TODO: LanguageResources
 
 func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
 	modules, info, err := generateModuleContextMap(tool, pkg)

@@ -49,14 +49,27 @@ public final class Container {
         return new Builder();
     }
 
+    public static Builder builder(Container defaults) {
+        return new Builder(defaults);
+    }
+
     public static final class Builder {
         private @Nullable io.pulumi.plant.enums.ContainerBrightness brightness;
-
         private @Nullable String color;
-
         private @Nullable String material;
-
         private io.pulumi.plant.enums.ContainerSize size;
+
+        public Builder() {
+    	      // Empty
+        }
+
+        public Builder(Container defaults) {
+    	      Objects.requireNonNull(defaults);
+    	      this.brightness = defaults.brightness;
+    	      this.color = defaults.color;
+    	      this.material = defaults.material;
+    	      this.size = defaults.size;
+        }
 
         public Builder setBrightness(@Nullable io.pulumi.plant.enums.ContainerBrightness brightness) {
             this.brightness = brightness;

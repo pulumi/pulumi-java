@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.example.Utilities;
+import io.pulumi.example.inputs.*;
 
 @ResourceType(type="example::OtherResource")
 public class OtherResource extends io.pulumi.resources.ComponentResource {
@@ -22,8 +23,8 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         return this.foo;
     }
 
-    public OtherResource(String name, @Nullable OtherResource.Args args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("example::OtherResource", name, args == null ? OtherResource.Args.Empty : args, makeResourceOptions(options, Input.empty()), true);
+    public OtherResource(String name, @Nullable OtherResourceArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
+        super("example::OtherResource", name, args == null ? OtherResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Input<String> id) {
@@ -33,42 +34,4 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         return io.pulumi.resources.ComponentResourceOptions.merge(defaultOptions, options, id);
     }
 
-
-    public static final class Args extends io.pulumi.resources.ResourceArgs {
-
-        public static final Args Empty = Args.builder().build();
-
-        @InputImport(name="foo")
-        private final @Nullable Input<io.pulumi.example.Resource> foo;
-
-        public Input<io.pulumi.example.Resource> getFoo() {
-            return Input.ofNullable(this.foo);
-        }
-
-        public Args(@Nullable Input<io.pulumi.example.Resource> foo) {
-            this.foo = foo;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            private @Nullable Input<io.pulumi.example.Resource> foo;
-
-            public Builder setFoo(@Nullable Input<io.pulumi.example.Resource> foo) {
-                this.foo = foo;
-                return this;
-            }
-
-            public Builder setFoo(@Nullable io.pulumi.example.Resource foo) {
-                this.foo = Input.ofNullable(foo);
-                return this;
-            }
-
-            public Args build() {
-                return new Args(foo);
-            }
-        }
-    }
 }

@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.example.Utilities;
+import io.pulumi.example.inputs.*;
 
 @ResourceType(type="example::Workload")
 public class Workload extends io.pulumi.resources.CustomResource {
@@ -22,8 +23,8 @@ public class Workload extends io.pulumi.resources.CustomResource {
         return this.pod;
     }
 
-    public Workload(String name, @Nullable Workload.Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Workload", name, args == null ? Workload.Args.Empty : args, makeResourceOptions(options, Input.empty()));
+    public Workload(String name, @Nullable WorkloadArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+        super("example::Workload", name, args == null ? WorkloadArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
 
     private Workload(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
@@ -39,23 +40,5 @@ public class Workload extends io.pulumi.resources.CustomResource {
 
     public static Workload get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workload(name, id, options);
-    }
-
-    public static final class Args extends io.pulumi.resources.ResourceArgs {
-
-        public static final Args Empty = Args.builder().build();
-
-        public Args() {
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            public Args build() {
-                return new Args();
-            }
-        }
     }
 }

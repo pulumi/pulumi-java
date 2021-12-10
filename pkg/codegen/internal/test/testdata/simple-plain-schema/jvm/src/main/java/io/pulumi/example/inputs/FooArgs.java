@@ -79,26 +79,34 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
         return new Builder();
     }
 
+    public static Builder builder(FooArgs defaults) {
+        return new Builder(defaults);
+    }
+
     public static final class Builder {
         private Boolean a;
-
         private @Nullable Boolean b;
-
         private Integer c;
-
         private @Nullable Integer d;
-
         private String e;
-
         private @Nullable String f;
 
-        public Builder setA(Boolean a) {
-            this.a = Objects.requireNonNull(a);
-            return this;
+        public Builder() {
+    	      // Empty
+        }
+
+        public Builder(FooArgs defaults) {
+    	      Objects.requireNonNull(defaults);
+    	      this.a = defaults.a;
+    	      this.b = defaults.b;
+    	      this.c = defaults.c;
+    	      this.d = defaults.d;
+    	      this.e = defaults.e;
+    	      this.f = defaults.f;
         }
 
         public Builder setA(Boolean a) {
-            this.a = Input.of(Objects.requireNonNull(a));
+            this.a = Objects.requireNonNull(a);
             return this;
         }
 
@@ -107,18 +115,8 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
 
-        public Builder setB(@Nullable Boolean b) {
-            this.b = Input.ofNullable(b);
-            return this;
-        }
-
         public Builder setC(Integer c) {
             this.c = Objects.requireNonNull(c);
-            return this;
-        }
-
-        public Builder setC(Integer c) {
-            this.c = Input.of(Objects.requireNonNull(c));
             return this;
         }
 
@@ -127,28 +125,13 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
 
-        public Builder setD(@Nullable Integer d) {
-            this.d = Input.ofNullable(d);
-            return this;
-        }
-
         public Builder setE(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
 
-        public Builder setE(String e) {
-            this.e = Input.of(Objects.requireNonNull(e));
-            return this;
-        }
-
         public Builder setF(@Nullable String f) {
             this.f = f;
-            return this;
-        }
-
-        public Builder setF(@Nullable String f) {
-            this.f = Input.ofNullable(f);
             return this;
         }
 

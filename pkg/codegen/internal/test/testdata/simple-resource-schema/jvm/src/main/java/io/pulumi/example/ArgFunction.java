@@ -12,79 +12,11 @@ import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.example.Utilities;
+import io.pulumi.example.inputs.*;
+import io.pulumi.example.outputs.*;
 
 public class ArgFunction {
-    public static CompletableFuture<ArgFunction.Result> invokeAsync(@Nullable ArgFunction.Args args, @Nullable io.pulumi.deployment.InvokeOptions options) {
-        return io.pulumi.deployment.Deployment.getInstance().invokeAsync("example::argFunction", io.pulumi.core.internal.Reflection.TypeShape.of(ArgFunction.Result.class), args == null ? ArgFunction.Args.Empty : args, Utilities.withVersion(options));
-    }
-
-
-    public static final class Args extends io.pulumi.resources.InvokeArgs {
-
-        public static final Args Empty = Args.builder().build();
-
-        @InputImport(name="arg1")
-        private final @Nullable io.pulumi.example.Resource arg1;
-
-        public Optional<io.pulumi.example.Resource> getArg1() {
-            return Optional.ofNullable(this.arg1);
-        }
-
-        public Args(@Nullable io.pulumi.example.Resource arg1) {
-            this.arg1 = arg1;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            private @Nullable io.pulumi.example.Resource arg1;
-
-            public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
-                this.arg1 = arg1;
-                return this;
-            }
-
-            public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
-                this.arg1 = Input.ofNullable(arg1);
-                return this;
-            }
-
-            public Args build() {
-                return new Args(arg1);
-            }
-        }
-    }
-
-    @OutputCustomType
-    public static final class Result {
-        private final @Nullable io.pulumi.example.Resource result;
-
-        @OutputCustomType.Constructor({"result"})
-        private Result(@Nullable io.pulumi.example.Resource result) {
-            this.result = result;
-        }
-
-        public Optional<io.pulumi.example.Resource> getResult() {
-            return Optional.ofNullable(this.result);
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            private @Nullable io.pulumi.example.Resource result;
-
-            public Builder setResult(@Nullable io.pulumi.example.Resource result) {
-                this.result = result;
-                return this;
-            }
-
-            public Result build() {
-                return new Result(result);
-            }
-        }
+    public static CompletableFuture<ArgFunctionResult> invokeAsync(@Nullable ArgFunctionArgs args, @Nullable io.pulumi.deployment.InvokeOptions options) {
+        return io.pulumi.deployment.Deployment.getInstance().invokeAsync("example::argFunction", io.pulumi.core.internal.Reflection.TypeShape.of(ArgFunctionResult.class), args == null ? ArgFunctionArgs.Empty : args, Utilities.withVersion(options));
     }
 }

@@ -14,9 +14,9 @@ import io.pulumi.core.internal.annotations.*;
 import io.pulumi.example.Utilities;
 
 
-public final class Foo extends io.pulumi.resources.InvokeArgs {
+public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final Foo Empty = Foo.builder().build();
+    public static final ComponentArgs Empty = ComponentArgs.builder().build();
 
     @InputImport(name="a", required=true)
     private final Boolean a;
@@ -30,6 +30,27 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
 
     public Optional<Boolean> getB() {
         return Optional.ofNullable(this.b);
+    }
+
+    @InputImport(name="bar")
+    private final @Nullable io.pulumi.example.inputs.Foo bar;
+
+    public Optional<io.pulumi.example.inputs.Foo> getBar() {
+        return Optional.ofNullable(this.bar);
+    }
+
+    @InputImport(name="baz")
+    private final @Nullable List<io.pulumi.example.inputs.Foo> baz;
+
+    public List<io.pulumi.example.inputs.Foo> getBaz() {
+        return this.baz == null ? List.of() : this.baz;
+    }
+
+    @InputImport(name="bazMap")
+    private final @Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap;
+
+    public Map<String,io.pulumi.example.inputs.Foo> getBazMap() {
+        return this.bazMap == null ? Map.of() : this.bazMap;
     }
 
     @InputImport(name="c", required=true)
@@ -60,49 +81,72 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.f);
     }
 
-    public Foo(
+    @InputImport(name="foo")
+    private final @Nullable Input<io.pulumi.example.inputs.FooArgs> foo;
+
+    public Input<io.pulumi.example.inputs.FooArgs> getFoo() {
+        return Input.ofNullable(this.foo);
+    }
+
+    public ComponentArgs(
         Boolean a,
         @Nullable Boolean b,
+        @Nullable io.pulumi.example.inputs.Foo bar,
+        @Nullable List<io.pulumi.example.inputs.Foo> baz,
+        @Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap,
         Integer c,
         @Nullable Integer d,
         String e,
-        @Nullable String f) {
+        @Nullable String f,
+        @Nullable Input<io.pulumi.example.inputs.FooArgs> foo) {
         this.a = Objects.requireNonNull(a);
         this.b = b;
+        this.bar = bar;
+        this.baz = baz;
+        this.bazMap = bazMap;
         this.c = Objects.requireNonNull(c);
         this.d = d;
         this.e = Objects.requireNonNull(e);
         this.f = f;
+        this.foo = foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(Foo defaults) {
+    public static Builder builder(ComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
         private Boolean a;
         private @Nullable Boolean b;
+        private @Nullable io.pulumi.example.inputs.Foo bar;
+        private @Nullable List<io.pulumi.example.inputs.Foo> baz;
+        private @Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap;
         private Integer c;
         private @Nullable Integer d;
         private String e;
         private @Nullable String f;
+        private @Nullable Input<io.pulumi.example.inputs.FooArgs> foo;
 
         public Builder() {
     	      // Empty
         }
 
-        public Builder(Foo defaults) {
+        public Builder(ComponentArgs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.a = defaults.a;
     	      this.b = defaults.b;
+    	      this.bar = defaults.bar;
+    	      this.baz = defaults.baz;
+    	      this.bazMap = defaults.bazMap;
     	      this.c = defaults.c;
     	      this.d = defaults.d;
     	      this.e = defaults.e;
     	      this.f = defaults.f;
+    	      this.foo = defaults.foo;
         }
 
         public Builder setA(Boolean a) {
@@ -112,6 +156,21 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
 
         public Builder setB(@Nullable Boolean b) {
             this.b = b;
+            return this;
+        }
+
+        public Builder setBar(@Nullable io.pulumi.example.inputs.Foo bar) {
+            this.bar = bar;
+            return this;
+        }
+
+        public Builder setBaz(@Nullable List<io.pulumi.example.inputs.Foo> baz) {
+            this.baz = baz;
+            return this;
+        }
+
+        public Builder setBazMap(@Nullable Map<String,io.pulumi.example.inputs.Foo> bazMap) {
+            this.bazMap = bazMap;
             return this;
         }
 
@@ -135,8 +194,18 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
             return this;
         }
 
-        public Foo build() {
-            return new Foo(a, b, c, d, e, f);
+        public Builder setFoo(@Nullable Input<io.pulumi.example.inputs.FooArgs> foo) {
+            this.foo = foo;
+            return this;
+        }
+
+        public Builder setFoo(@Nullable io.pulumi.example.inputs.FooArgs foo) {
+            this.foo = Input.ofNullable(foo);
+            return this;
+        }
+
+        public ComponentArgs build() {
+            return new ComponentArgs(a, b, bar, baz, bazMap, c, d, e, f, foo);
         }
     }
 }

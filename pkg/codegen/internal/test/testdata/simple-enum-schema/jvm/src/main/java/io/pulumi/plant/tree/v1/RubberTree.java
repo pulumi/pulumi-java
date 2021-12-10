@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import io.pulumi.core.*;
 import io.pulumi.core.internal.annotations.*;
 import io.pulumi.plant.Utilities;
+import io.pulumi.plant.tree.v1.inputs.*;
 
 @ResourceType(type="plant:tree/v1:RubberTree")
 public class RubberTree extends io.pulumi.resources.CustomResource {
@@ -46,11 +47,11 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    public RubberTree(String name, RubberTree.Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:RubberTree", name, args == null ? RubberTree.Args.Empty : args, makeResourceOptions(options, Input.empty()));
+    public RubberTree(String name, RubberTreeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
 
-    private RubberTree(String name, Input<String> id, @Nullable RubberTree.State state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RubberTree(String name, Input<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("plant:tree/v1:RubberTree", name, state, makeResourceOptions(options, id));
     }
 
@@ -61,168 +62,7 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    public static RubberTree get(String name, Input<String> id, @Nullable RubberTree.State state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RubberTree get(String name, Input<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RubberTree(name, id, state, options);
-    }
-
-    public static final class Args extends io.pulumi.resources.ResourceArgs {
-
-        public static final Args Empty = Args.builder().build();
-
-        @InputImport(name="container")
-        private final @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container;
-
-        public Input<io.pulumi.plant.inputs.ContainerArgs> getContainer() {
-            return Input.ofNullable(this.container);
-        }
-
-        @InputImport(name="diameter", required=true)
-        private final Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter;
-
-        public Input<io.pulumi.plant.tree.v1.enums.Diameter> getDiameter() {
-            return this.diameter;
-        }
-
-        @InputImport(name="farm")
-        private final @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
-
-        public Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> getFarm() {
-            return Input.ofNullable(this.farm);
-        }
-
-        @InputImport(name="size")
-        private final @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size;
-
-        public Input<io.pulumi.plant.tree.v1.enums.TreeSize> getSize() {
-            return Input.ofNullable(this.size);
-        }
-
-        @InputImport(name="type", required=true)
-        private final Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type;
-
-        public Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> getType() {
-            return this.type;
-        }
-
-        public Args(
-            @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container,
-            Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter,
-            @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm,
-            @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size,
-            Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type) {
-            this.container = container;
-            this.diameter = diameter == null ? Input.of(io.pulumi.plant.tree.v1.enums.Diameter.Sixinch) : Objects.requireNonNull(diameter);
-            this.farm = farm == null ? Input.ofUnion("(unknown)", io.pulumi.plant.tree.v1.enums.Farm.class, String.class) : farm;
-            this.size = size == null ? Input.ofNullable(io.pulumi.plant.tree.v1.enums.TreeSize.Medium) : size;
-            this.type = type == null ? Input.of(io.pulumi.plant.tree.v1.enums.RubberTreeVariety.Burgundy) : Objects.requireNonNull(type);
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            private @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container;
-
-            private Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter;
-
-            private @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
-
-            private @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size;
-
-            private Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type;
-
-            public Builder setContainer(@Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container) {
-                this.container = container;
-                return this;
-            }
-
-            public Builder setContainer(@Nullable io.pulumi.plant.inputs.ContainerArgs container) {
-                this.container = Input.ofNullable(container);
-                return this;
-            }
-
-            public Builder setDiameter(Input<io.pulumi.plant.tree.v1.enums.Diameter> diameter) {
-                this.diameter = Objects.requireNonNull(diameter);
-                return this;
-            }
-
-            public Builder setDiameter(io.pulumi.plant.tree.v1.enums.Diameter diameter) {
-                this.diameter = Input.of(Objects.requireNonNull(diameter));
-                return this;
-            }
-
-            public Builder setFarm(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
-                this.farm = farm;
-                return this;
-            }
-
-            public Builder setFarm(@Nullable Either<io.pulumi.plant.tree.v1.enums.Farm,String> farm) {
-                this.farm = Input.ofNullable(farm);
-                return this;
-            }
-
-            public Builder setSize(@Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size) {
-                this.size = size;
-                return this;
-            }
-
-            public Builder setSize(@Nullable io.pulumi.plant.tree.v1.enums.TreeSize size) {
-                this.size = Input.ofNullable(size);
-                return this;
-            }
-
-            public Builder setType(Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type) {
-                this.type = Objects.requireNonNull(type);
-                return this;
-            }
-
-            public Builder setType(io.pulumi.plant.tree.v1.enums.RubberTreeVariety type) {
-                this.type = Input.of(Objects.requireNonNull(type));
-                return this;
-            }
-
-            public Args build() {
-                return new Args(container, diameter, farm, size, type);
-            }
-        }
-    }
-
-    public static final class State extends io.pulumi.resources.ResourceArgs {
-
-        public static final State Empty = State.builder().build();
-
-        @InputImport(name="farm")
-        private final @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
-
-        public Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> getFarm() {
-            return Input.ofNullable(this.farm);
-        }
-
-        public State(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
-            this.farm = farm == null ? Input.ofUnion("(unknown)", io.pulumi.plant.tree.v1.enums.Farm.class, String.class) : farm;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static final class Builder {
-            private @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
-
-            public Builder setFarm(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
-                this.farm = farm;
-                return this;
-            }
-
-            public Builder setFarm(@Nullable Either<io.pulumi.plant.tree.v1.enums.Farm,String> farm) {
-                this.farm = Input.ofNullable(farm);
-                return this;
-            }
-
-            public State build() {
-                return new State(farm);
-            }
-        }
     }
 }

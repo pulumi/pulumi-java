@@ -61,18 +61,31 @@ public final class Foo {
         return new Builder();
     }
 
+    public static Builder builder(Foo defaults) {
+        return new Builder(defaults);
+    }
+
     public static final class Builder {
         private Boolean a;
-
         private @Nullable Boolean b;
-
         private Integer c;
-
         private @Nullable Integer d;
-
         private String e;
-
         private @Nullable String f;
+
+        public Builder() {
+    	      // Empty
+        }
+
+        public Builder(Foo defaults) {
+    	      Objects.requireNonNull(defaults);
+    	      this.a = defaults.a;
+    	      this.b = defaults.b;
+    	      this.c = defaults.c;
+    	      this.d = defaults.d;
+    	      this.e = defaults.e;
+    	      this.f = defaults.f;
+        }
 
         public Builder setA(Boolean a) {
             this.a = Objects.requireNonNull(a);
