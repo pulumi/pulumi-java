@@ -74,9 +74,10 @@ final class Right<L, R> extends Either<L, R> {
     }
 
     @Override
-    public <L1 extends L, R1> Either<L1, R1> flatMap(Function<R, Either<L1, R1>> function) {
-        Objects.requireNonNull(function, "Expected non-null function");
-        return function.apply(this.right);
+    public <R1> Either<L, R1> flatMap(Function<? super R, ? extends Either<? extends L, ? extends R1>> mapper) {
+        Objects.requireNonNull(mapper, "Expected non-null mapper");
+        //noinspection unchecked
+        return (Either<L, R1>) mapper.apply(this.right);
     }
 
     @Override

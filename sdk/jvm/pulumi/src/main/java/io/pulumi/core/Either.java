@@ -186,7 +186,7 @@ public abstract class Either<L, R> implements Serializable {
      * @return an Either after conditional transformation by {@code function}.
      * @throws NullPointerException if {@code function} is {@code null}
      */
-    public abstract <L1 extends L, R1> Either<L1, R1> flatMap(Function<R, Either<L1, R1>> function);
+    public abstract <R1> Either<L, R1> flatMap(Function<? super R, ? extends Either<? extends L, ? extends R1>> mapper);
 
     /**
      * If this is a Left, then return the left value in Right or vice versa.
