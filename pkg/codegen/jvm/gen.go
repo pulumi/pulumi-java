@@ -982,6 +982,8 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	switch {
 	case r.IsProvider:
 		baseType = "io.pulumi.resources.ProviderResource"
+	case mod.isK8sCompatMode():
+		baseType = "io.pulumi.kubernetes.KubernetesResource"
 	case r.IsComponent:
 		baseType = "io.pulumi.resources.ComponentResource"
 		optionsType = "io.pulumi.resources.ComponentResourceOptions"
@@ -1760,8 +1762,6 @@ func computePropertyNames(props []*schema.Property, names map[*schema.Property]s
 	}
 }
 
-// TODO: LanguageResource
-
 func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*modContext, *JVMPackageInfo, error) {
 	// Decode Java-specific info for each package as we discover them.
 	infos := map[*schema.Package]*JVMPackageInfo{}
@@ -1930,6 +1930,40 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	return modules, infos[pkg], nil
 }
 
+// LanguageResource is derived from the schema and can be used by downstream codegen.
+type LanguageResource struct {
+	*schema.Resource
+
+	Name    string // The resource name (e.g. Deployment)
+	Package string // The package name (e.g. apps.v1)
+}
+
+// LanguageResources returns a map of resources that can be used by downstream codegen. The map
+// key is the resource schema token.
+func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageResource, error) {
+	modules, info, err := generateModuleContextMap(tool, pkg)
+	if err != nil {
+		return nil, err
+	}
+
+	resources := map[string]LanguageResource{}
+	for modName, mod := range modules {
+		if modName == "" {
+			continue
+		}
+		for _, r := range mod.resources {
+			lr := LanguageResource{
+				Resource: r,
+				Package:  packageName(info.Packages, modName),
+				Name:     tokenToName(r.Token),
+			}
+			resources[r.Token] = lr
+		}
+	}
+
+	return resources, nil
+}
+
 // genGradleProject generates gradle files
 func genGradleProject(pkg *schema.Package, packageName string, packageReferences map[string]string, files fs) error {
 	genSettingsFile, err := genSettingsFile(pkg, packageName, packageReferences)
@@ -1968,8 +2002,6 @@ func genBuildFile(pkg *schema.Package, packageName string, packageReferences map
 	}
 	return w.Bytes(), nil
 }
-
-// TODO: LanguageResources
 
 func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
 	modules, info, err := generateModuleContextMap(tool, pkg)
