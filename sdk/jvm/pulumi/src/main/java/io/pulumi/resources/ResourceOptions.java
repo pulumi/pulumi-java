@@ -78,6 +78,11 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
+        public B setId(@Nullable String id) {
+            options.id = Input.ofNullable(id);
+            return (B) this;
+        }
+
         public B setParent(@Nullable Resource parent) {
             options.parent = parent;
             return (B) this;
@@ -85,6 +90,11 @@ public abstract class ResourceOptions {
 
         public B setDependsOn(@Nullable Input<List<Resource>> dependsOn) {
             options.dependsOn = dependsOn;
+            return (B) this;
+        }
+
+        public B setDependsOn(@Nullable List<Resource> dependsOn) {
+            options.dependsOn = Input.ofNullable(dependsOn);
             return (B) this;
         }
 
