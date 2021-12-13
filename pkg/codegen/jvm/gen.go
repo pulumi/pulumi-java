@@ -18,8 +18,6 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
-const basePackage = "io.pulumi."
-
 type stringSet map[string]struct{}
 
 func (ss stringSet) add(s string) {
@@ -78,6 +76,7 @@ type modContext struct {
 	children               []*modContext
 	tool                   string
 	packageName            string
+	rootPackageName        string
 	basePackageName        string
 	packages               map[string]string
 	compatibility          string
@@ -134,7 +133,7 @@ func (mod *modContext) tokenToPackage(tok string, qualifier string) string {
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
 
-	pkg := basePackage + packageName(mod.packages, components[0])
+	pkg := mod.basePackageName + packageName(mod.packages, components[0])
 	pkgName := mod.pkg.TokenToModule(tok)
 
 	typ := pkg
@@ -240,7 +239,7 @@ func (mod *modContext) typeStringInner(
 		namingCtx := mod
 		if t.Package != mod.pkg {
 			// If object type belongs to another package, we apply naming conventions from that package,
-			// including namespace naming and compatibility mode.
+			// including package naming and compatibility mode.
 			extPkg := t.Package
 			var info JVMPackageInfo
 			contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"jvm": Importer}))
@@ -248,9 +247,10 @@ func (mod *modContext) typeStringInner(
 				info = v
 			}
 			namingCtx = &modContext{
-				pkg:           extPkg,
-				packages:      info.Packages,
-				compatibility: info.Compatibility,
+				pkg:             extPkg,
+				packages:        info.Packages,
+				compatibility:   info.Compatibility,
+				basePackageName: info.BasePackageOrDefault(),
 			}
 		}
 		objectType := namingCtx.tokenToPackage(t.Token, qualifier)
@@ -266,12 +266,12 @@ func (mod *modContext) typeStringInner(
 		var resourceType string
 		if strings.HasPrefix(t.Token, "pulumi:providers:") {
 			pkgName := strings.TrimPrefix(t.Token, "pulumi:providers:")
-			resourceType = fmt.Sprintf("%s%s.Provider", basePackage, packageName(mod.packages, pkgName))
+			resourceType = fmt.Sprintf("%s%s.Provider", mod.basePackageName, packageName(mod.packages, pkgName))
 		} else {
 			namingCtx := mod
 			if t.Resource != nil && t.Resource.Package != mod.pkg {
 				// If resource type belongs to another package, we apply naming conventions from that package,
-				// including namespace naming and compatibility mode.
+				// including package naming and compatibility mode.
 				extPkg := t.Resource.Package
 				var info JVMPackageInfo
 				contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"jvm": Importer}))
@@ -279,9 +279,10 @@ func (mod *modContext) typeStringInner(
 					info = v
 				}
 				namingCtx = &modContext{
-					pkg:           extPkg,
-					packages:      info.Packages,
-					compatibility: info.Compatibility,
+					pkg:             extPkg,
+					packages:        info.Packages,
+					compatibility:   info.Compatibility,
+					basePackageName: info.BasePackageOrDefault(),
 				}
 			}
 			resourceType = namingCtx.tokenToPackage(t.Token, "")
@@ -1344,7 +1345,7 @@ var pulumiImports = []string{
 }
 
 func (mod *modContext) getUtilitiesImport() string {
-	return mod.basePackageName + ".Utilities"
+	return mod.rootPackageName + ".Utilities"
 }
 
 func (mod *modContext) getPulumiImports() []string {
@@ -1496,6 +1497,7 @@ func (mod *modContext) genUtilities() (string, error) {
 	err := jvmUtilitiesTemplate.Execute(w, jvmUtilitiesTemplateContext{
 		Name:        packageName(mod.packages, mod.pkg.Name),
 		PackageName: mod.packageName,
+		PackagePath: strings.ReplaceAll(mod.packageName, ".", "/"),
 		ClassName:   "Utilities",
 		Tool:        mod.tool,
 	})
@@ -1698,7 +1700,7 @@ func (mod *modContext) gen(fs fs) error {
 					if err := mod.genType(buffer, t, "inputs", true, false, true); err != nil {
 						return err
 					}
-					addFile(path.Join("inputs", tokenToName(t.Token)+"Args.java"), buffer.String())
+					addFile(path.Join("inputs", mod.typeName(t, false, true, true)+".java"), buffer.String())
 				}
 				if mod.details(t).plainType {
 					buffer := &bytes.Buffer{}
@@ -1706,7 +1708,7 @@ func (mod *modContext) gen(fs fs) error {
 					if err := mod.genType(buffer, t, "inputs", true, false, false); err != nil {
 						return err
 					}
-					addFile(path.Join("inputs", tokenToName(t.Token)+".java"), buffer.String())
+					addFile(path.Join("inputs", mod.typeName(t, false, true, false)+".java"), buffer.String())
 				}
 			}
 
@@ -1716,7 +1718,7 @@ func (mod *modContext) gen(fs fs) error {
 				if err := mod.genType(buffer, t, "inputs", true, true, true); err != nil {
 					return err
 				}
-				addFile(path.Join("inputs", tokenToName(t.Token)+"State.java"), buffer.String())
+				addFile(path.Join("inputs", mod.typeName(t, true, true, true)+".java"), buffer.String())
 			}
 		}
 		if mod.details(t).outputType {
@@ -1725,7 +1727,7 @@ func (mod *modContext) gen(fs fs) error {
 			if err := mod.genType(buffer, t, "outputs", false, false, false); err != nil {
 				return err
 			}
-			addFile(path.Join("outputs", tokenToName(t.Token)+".java"), buffer.String())
+			addFile(path.Join("outputs", mod.typeName(t, false, false, false)+".java"), buffer.String())
 		}
 	}
 
@@ -1812,8 +1814,9 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		mod, ok := modules[modName]
 		if !ok {
 			info := getPackageInfo(p)
-			basePkgName := basePackage + packageName(info.Packages, pkg.Name)
-			pkgName := basePkgName
+			basePackage := info.BasePackageOrDefault()
+			rootPackage := basePackage + packageName(info.Packages, pkg.Name)
+			pkgName := rootPackage
 			if modName != "" {
 				pkgName += "." + packageName(info.Packages, modName)
 			}
@@ -1822,7 +1825,8 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				mod:                    modName,
 				tool:                   tool,
 				packageName:            pkgName,
-				basePackageName:        basePkgName,
+				rootPackageName:        rootPackage,
+				basePackageName:        basePackage,
 				packages:               info.Packages,
 				typeDetails:            details,
 				propertyNames:          propertyNames,
@@ -1855,7 +1859,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	// Create the config module if necessary.
 	if len(pkg.Config) > 0 {
 		cfg := getMod("config", pkg)
-		cfg.packageName = basePackage + packageName(infos[pkg].Packages, pkg.Name)
+		cfg.packageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
 	}
 
 	visitObjectTypes(pkg.Config, func(t *schema.ObjectType, _ bool) {
@@ -1965,13 +1969,13 @@ func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageRes
 }
 
 // genGradleProject generates gradle files
-func genGradleProject(pkg *schema.Package, packageName string, packageReferences map[string]string, files fs) error {
-	genSettingsFile, err := genSettingsFile(pkg, packageName, packageReferences)
+func genGradleProject(pkg *schema.Package, basePackageName string, packageName string, packageReferences map[string]string, files fs) error {
+	genSettingsFile, err := genSettingsFile(basePackageName + packageName)
 	if err != nil {
 		return err
 	}
 	files.add("settings.gradle", genSettingsFile)
-	genBuildFile, err := genBuildFile(pkg, packageName, packageReferences)
+	genBuildFile, err := genBuildFile(pkg.Name, basePackageName)
 	if err != nil {
 		return err
 	}
@@ -1980,7 +1984,7 @@ func genGradleProject(pkg *schema.Package, packageName string, packageReferences
 }
 
 // genSettingsFile emits settings.gradle
-func genSettingsFile(pkg *schema.Package, packageName string, packageReferences map[string]string) ([]byte, error) {
+func genSettingsFile(packageName string) ([]byte, error) {
 	w := &bytes.Buffer{}
 	err := jvmSettingsTemplate.Execute(w, jvmSettingsTemplateContext{
 		PackageName: packageName,
@@ -1992,10 +1996,11 @@ func genSettingsFile(pkg *schema.Package, packageName string, packageReferences 
 }
 
 // genBuildFile emits build.gradle
-func genBuildFile(pkg *schema.Package, packageName string, packageReferences map[string]string) ([]byte, error) {
+func genBuildFile(name string, basePackageName string) ([]byte, error) {
 	w := &bytes.Buffer{}
 	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{
-		Name: pkg.Name,
+		Name:            name,
+		BasePackageName: strings.TrimSuffix(basePackageName, "."),
 	})
 	if err != nil {
 		return nil, err
@@ -2008,8 +2013,6 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 	if err != nil {
 		return nil, err
 	}
-
-	className := basePackage + packageName(info.Packages, pkg.Name)
 
 	// Generate each module.
 	files := fs{}
@@ -2024,7 +2027,13 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 	}
 
 	// Finally emit the package metadata.
-	if err := genGradleProject(pkg, className, info.PackageReferences, files); err != nil {
+	if err := genGradleProject(
+		pkg,
+		info.BasePackageOrDefault(),
+		packageName(info.Packages, pkg.Name),
+		info.PackageReferences,
+		files,
+	); err != nil {
 		return nil, err
 	}
 	return files, nil

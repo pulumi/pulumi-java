@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
 import io.pulumi.core.internal.Environment;
 import io.pulumi.deployment.InvokeOptions;
 
-public class {{.ClassName}} {
+public class {{ .ClassName }} {
 
 	public static Optional<String> getEnv(String... names) {
         for (var n : names) {
@@ -96,7 +96,7 @@ public class {{.ClassName}} {
     }
 
     static {
-        var resourceName = "io/pulumi/{{ .Name }}/version.txt";
+        var resourceName = "{{ .PackagePath }}/version.txt";
         var versionFile = Utilities.class.getClassLoader().getResourceAsStream(resourceName);
         if (versionFile == null) {
             throw new IllegalStateException(
@@ -116,6 +116,7 @@ var jvmUtilitiesTemplate = Template("JavaUtilities", jvmUtilitiesTemplateText)
 type jvmUtilitiesTemplateContext struct {
 	Name        string
 	PackageName string
+	PackagePath string
 	ClassName   string
 	Tool        string
 }
@@ -163,7 +164,7 @@ test {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'io.pulumi'
+            groupId = '{{ .BasePackageName }}'
             artifactId = '{{ .Name }}'
             version = project.version
 
@@ -177,7 +178,8 @@ publishing {
 var jvmBuildTemplate = Template("JavaBuild", jvmBuildTemplateText)
 
 type jvmBuildTemplateContext struct {
-	Name string
+	Name            string
+	BasePackageName string
 }
 
 // nolint:lll

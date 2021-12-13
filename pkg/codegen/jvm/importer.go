@@ -2,9 +2,12 @@ package jvm
 
 import (
 	"encoding/json"
+	"strings"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
+
+const defaultBasePackage = "io.pulumi."
 
 // JVMPropertyInfo represents the a JVM language-specific info for a property.
 type JVMPropertyInfo struct {
@@ -17,6 +20,23 @@ type JVMPackageInfo struct {
 	Packages               map[string]string `json:"packages,omitempty"`
 	Compatibility          string            `json:"compatibility,omitempty"`
 	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
+	BasePackage            string            `json:"basePackage"`
+}
+
+func (i JVMPackageInfo) BasePackageOrDefault() string {
+	if len(i.BasePackage) > 0 {
+		return ensureEndsWithDot(i.BasePackage)
+	} else {
+		return ensureEndsWithDot(defaultBasePackage)
+	}
+}
+
+func ensureEndsWithDot(s string) string {
+	if strings.HasSuffix(s, ".") {
+		return s
+	} else {
+		return s + "."
+	}
 }
 
 // Importer implements schema.Language for JVM
