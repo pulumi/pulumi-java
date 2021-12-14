@@ -59,12 +59,13 @@ public class Converter {
         var deserializer = new Deserializer();
         var data = deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
-        //       but the Deserializer will wrap it in an InputOutputData, and we get them as an Optional here
-        var converted = convertObjectUntyped(context, data.getValueOptional(), targetType);
+        //       but the Deserializer will wrap it in an InputOutputData, and we get them as a null here
+        @Nullable
+        var converted = convertObjectUntyped(context, data.getValueNullable(), targetType);
 
         // conversion methods check nested types of the value against the given type shape,
         // so the cast below should be safe in normal circumstances
-        if (!targetType.getType().isAssignableFrom(converted.getClass())) {
+        if (converted != null && !targetType.getType().isAssignableFrom(converted.getClass())) {
             //noinspection ConstantConditions
             throw new IllegalStateException(String.format(
                     "Expected actual type: '%s' to be cast-able to type: '%s'",
@@ -76,7 +77,8 @@ public class Converter {
         return InputOutputData.ofNullable(resources, (T) converted, data.isKnown(), data.isSecret());
     }
 
-    private static Object convertObjectUntyped(String context, Object value, TypeShape<?> targetType) {
+    @Nullable
+    private static Object convertObjectUntyped(String context, @Nullable Object value, TypeShape<?> targetType) {
         try {
             return tryConvertObjectInner(context, value, targetType);
         } catch (UnsupportedOperationException ex) {
@@ -85,37 +87,34 @@ public class Converter {
             throw new UnsupportedOperationException(String.format(
                     "Convert [%s]: Error converting '%s' to '%s'. %s",
                     context,
-                    value.getClass().getTypeName(),
+                    value == null ? "null" : value.getClass().getTypeName(),
                     targetType,
                     ex.getMessage()
             ), ex);
         }
     }
 
+    @Nullable
     private static Object tryConvertObjectInner(
-            String context, Object value, TypeShape<?> targetType
+            String context, @Nullable Object value, TypeShape<?> targetType
     ) {
-        Objects.requireNonNull(value);
         var targetIsOptional = Optional.class.isAssignableFrom(targetType.getType());
-        var valueIsOptional = Optional.class.isAssignableFrom(value.getClass());
 
-        // Note: nulls (wrapped in Optional.empty) can enter the system as the representation of an 'unknown' value.
+        // Note: null's  can enter the system as the representation of an 'unknown' value.
         // Before calling 'convert' we will have already lifted the 'isKnown' bit out, but we
-        // will be passing null (wrapped in Optional.empty) around as an Optional.empty value.
-        //noinspection rawtypes
-        if (valueIsOptional && ((Optional) value).isEmpty()) {
+        // will be passing null around as a value.
+        if (value == null) {
             if (targetIsOptional) {
-                // A null (wrapped in Optional.empty) value coerces to a Optional.empty.
-                // Return the Optional as is, because the target type expects this and there is nothing nested.
+                // A null value coerces to a Optional.empty.
                 return tryEnsureType(
                         String.format("%s %s", context, targetType.getTypeName()),
-                        value,
+                        Optional.empty(),
                         targetType
                 );
             }
 
-            // We're null (wrapped in Optional.empty) and we're NOT converting to an Optional
-            // TODO: C# has a check for a 'IsValueType' here, not sure how this translates to Java
+            // We're null and we're NOT converting to an Optional
+            // We check for primitives and primitives wrappers here
             if (boolean.class.isAssignableFrom(targetType.getType())
                     || Boolean.class.isAssignableFrom(targetType.getType())) {
                 return false;
@@ -135,31 +134,29 @@ public class Converter {
                 return JsonNull.INSTANCE;
             }
 
-            // we don not allow naked, unwrapped nulls, so we throw
-            throw new IllegalArgumentException("Unexpected null for a non-Optional target. " +
-                    "If a null is a legal value, the the target shape type needs to be adjusted to wrap it in Optional.empty."
-            );
+            // for all other types, can just return the null value right back out as a legal
+            // reference type value.
+            return null;
         }
 
-        // We're Optional.present
+        // We're Optional
+        var valueIsOptional = Optional.class.isAssignableFrom(value.getClass());
         if (valueIsOptional) {
-            // We're Optional.present and we're converting to Optional<T>, just cast
+            // We're Optional and we're converting to Optional<T>, just map the value
             if (targetIsOptional) {
                 var valueType = targetType.getParameter(0)
-                        .orElseThrow(() -> new IllegalArgumentException("Expected a parameter type for the Optional, got none"));
+                        .orElseThrow(() -> new IllegalArgumentException("Expected the parameter type of the Optional, got none"));
                 return ((Optional<?>) value).map(v ->
                         tryConvertObjectInner(
                                 String.format("%s %s", context, targetType.getTypeName()),
-                                v, // we are present at this point
+                                v, // we are guaranteed present at this point
                                 valueType
                         ));
             }
 
-            // We're Optional.present and we're NOT converting to Optional<T>, so unwrap
+            // We're Optional and we're NOT converting to Optional<T>, so unwrap
             //noinspection unchecked
-            var unwrapped = ((Optional<Object>) value).orElseThrow(
-                    () -> new IllegalStateException("Unexpected null/empty instead of non-null/non-empty.")
-            );
+            var unwrapped = ((Optional<Object>) value).orElse(null);
             return tryConvertObjectInner(
                     String.format("%s %s", context, targetType.getTypeName()),
                     unwrapped,
@@ -283,9 +280,8 @@ public class Converter {
             var expectedParameterNames = Set.of(constructorAnnotation.value());
             for (var argumentName : argumentsMap.keySet()) {
                 if (!expectedParameterNames.contains(argumentName)) {
-                    // FIXME: breaks when schema is not implemented fully
                     System.out.printf("can't deserialize: '%s'\n", argumentName);
-                    /*throw new IllegalStateException(String.format(
+                    throw new IllegalStateException(String.format(
                             "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
                                     "and the parameter names in the annotation matching the parameters being deserialized. " +
                                     "Constructor '%s' expects parameter names of: '%s', " +
@@ -296,7 +292,7 @@ public class Converter {
                             constructor,
                             String.join(",", expectedParameterNames),
                             argumentName
-                    ));*/
+                    ));
                 }
             }
             for (int i = 0, n = constructorParameters.length; i < n; i++) {
