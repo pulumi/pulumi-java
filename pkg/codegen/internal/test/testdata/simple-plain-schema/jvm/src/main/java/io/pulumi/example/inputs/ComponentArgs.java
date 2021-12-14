@@ -99,14 +99,14 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         String e,
         @Nullable String f,
         @Nullable Input<io.pulumi.example.inputs.FooArgs> foo) {
-        this.a = Objects.requireNonNull(a);
+        this.a = a;
         this.b = b;
         this.bar = bar;
         this.baz = baz;
         this.bazMap = bazMap;
-        this.c = Objects.requireNonNull(c);
+        this.c = c;
         this.d = d;
-        this.e = Objects.requireNonNull(e);
+        this.e = e;
         this.f = f;
         this.foo = foo;
     }

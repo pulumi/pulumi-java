@@ -60,10 +60,10 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size,
         Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type) {
         this.container = container;
-        this.diameter = diameter == null ? Input.of(io.pulumi.plant.tree.v1.enums.Diameter.Sixinch) : Objects.requireNonNull(diameter);
+        this.diameter = diameter == null ? Input.of(io.pulumi.plant.tree.v1.enums.Diameter.Sixinch) : diameter;
         this.farm = farm == null ? Input.ofUnion("(unknown)", io.pulumi.plant.tree.v1.enums.Farm.class, String.class) : farm;
         this.size = size == null ? Input.ofNullable(io.pulumi.plant.tree.v1.enums.TreeSize.Medium) : size;
-        this.type = type == null ? Input.of(io.pulumi.plant.tree.v1.enums.RubberTreeVariety.Burgundy) : Objects.requireNonNull(type);
+        this.type = type == null ? Input.of(io.pulumi.plant.tree.v1.enums.RubberTreeVariety.Burgundy) : type;
     }
 
     public static Builder builder() {

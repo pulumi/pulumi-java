@@ -67,11 +67,11 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Integer d,
         String e,
         @Nullable String f) {
-        this.a = Objects.requireNonNull(a);
+        this.a = a;
         this.b = b;
-        this.c = Objects.requireNonNull(c);
+        this.c = c;
         this.d = d;
-        this.e = Objects.requireNonNull(e);
+        this.e = e;
         this.f = f;
     }
 

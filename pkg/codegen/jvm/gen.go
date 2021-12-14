@@ -574,11 +574,12 @@ func (pt *plainType) genInputType(w io.Writer) error {
 			}
 			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValue)
 		}
-		if prop.IsRequired {
-			_, _ = fmt.Fprintf(w, "        this.%s = %sObjects.requireNonNull(%s);\n", fieldName, defaultValueCode, paramName)
-		} else {
-			_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
-		}
+		// FIXME: this will be error prone to let construct an uninitialized object, but this is exactly what C# does...
+		//if prop.IsRequired {
+		//	_, _ = fmt.Fprintf(w, "        this.%s = %sObjects.requireNonNull(%s);\n", fieldName, defaultValueCode, paramName)
+		//} else {
+		_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
+		//}
 	}
 	_, _ = fmt.Fprintf(w, "    }\n")
 

@@ -70,9 +70,9 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         this.metadata = metadata;
         this.metadataArray = metadataArray;
         this.metadataMap = metadataMap;
-        this.requiredMetadata = Objects.requireNonNull(requiredMetadata);
-        this.requiredMetadataArray = Objects.requireNonNull(requiredMetadataArray);
-        this.requiredMetadataMap = Objects.requireNonNull(requiredMetadataMap);
+        this.requiredMetadata = requiredMetadata;
+        this.requiredMetadataArray = requiredMetadataArray;
+        this.requiredMetadataMap = requiredMetadataMap;
     }
 
     public static Builder builder() {

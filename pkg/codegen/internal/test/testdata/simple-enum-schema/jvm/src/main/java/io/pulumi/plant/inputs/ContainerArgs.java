@@ -54,7 +54,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         this.brightness = brightness == null ? Input.ofNullable(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
         this.color = color;
         this.material = material;
-        this.size = Objects.requireNonNull(size);
+        this.size = size;
     }
 
     public static Builder builder() {
