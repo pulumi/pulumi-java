@@ -16,13 +16,6 @@ public class Maps {
         throw new UnsupportedOperationException("static class");
     }
 
-    public static <K, V> Map<Object, /* @Nullable */ Object> typedOptionalMapToUntypedNullableMap(Map<K, Optional<V>> map) {
-        Objects.requireNonNull(map);
-        return map.entrySet()
-                .stream()
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-    }
-
     public static <K, V> Map<K, Optional<V>> untypedNullableMapToTypedOptionalMap(
             Map<Object, /* @Nullable */ Object> map,
             Function<Object, K> typedKey,

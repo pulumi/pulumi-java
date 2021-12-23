@@ -425,7 +425,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Log.debug(label);
 
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = args.internalTypedOptionalToMapAsync()
+            var serializedFuture = args.internalToOptionalMapAsync()
                     .thenCompose(argsDict ->
                             this.featureSupport.monitorSupportsResourceReferences()
                                     .thenCompose(supportsResourceReferences ->
@@ -507,7 +507,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         // Serialize out all our props to their final values. In doing so, we'll also collect all
                         // the Resources pointed to by any Dependency objects we encounter, adding them to 'propertyDependencies'.
                         logExcessive("Serializing properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
-                        return args.internalTypedOptionalToMapAsync().thenCompose(
+                        return args.internalToOptionalMapAsync().thenCompose(
                                 map -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
                                         supportsResourceReferences -> Serialization.serializeResourcePropertiesAsync(label, map, supportsResourceReferences).thenCompose(
                                                 serializationResult -> {

@@ -140,29 +140,29 @@ public class InputsTest {
     void testInputMapEitherInitializer() {
         var sample = SampleArgs.builder()
                 .add(Map.of(
-                        "left", Either.leftOf("testValue"),
-                        "right", Either.rightOf(123)
+                        "left", Either.ofLeft("testValue"),
+                        "right", Either.ofRight(123)
                 ))
                 .build();
 
         var data = InputOutputTests.waitFor(sample.dict);
         assertThat(data.getValueNullable()).hasSize(2);
-        assertThat(data.getValueNullable()).containsValue(Either.leftOf("testValue"));
-        assertThat(data.getValueNullable()).containsValue(Either.rightOf(123));
+        assertThat(data.getValueNullable()).containsValue(Either.ofLeft("testValue"));
+        assertThat(data.getValueNullable()).containsValue(Either.ofRight(123));
     }
 
     @Test
     void testInputListEitherInitializer() {
         var sample = SampleArgs.builder()
                 .add(List.of(
-                        Either.leftOf("testValue"),
-                        Either.rightOf(123)
+                        Either.ofLeft("testValue"),
+                        Either.ofRight(123)
                 ))
                 .build();
         var data = InputOutputTests.waitFor(sample.list);
         assertThat(data.getValueNullable()).hasSize(2);
-        assertThat(data.getValueNullable()).containsOnlyOnce(Either.leftOf("testValue"));
-        assertThat(data.getValueNullable()).containsOnlyOnce(Either.rightOf(123));
+        assertThat(data.getValueNullable()).containsOnlyOnce(Either.ofLeft("testValue"));
+        assertThat(data.getValueNullable()).containsOnlyOnce(Either.ofRight(123));
     }
 
     private static final class SampleArgs {

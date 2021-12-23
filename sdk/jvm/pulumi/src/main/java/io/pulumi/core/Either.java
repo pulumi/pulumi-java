@@ -41,17 +41,17 @@ public abstract class Either<L, R> implements Serializable {
     }
 
     /**
-     * Same as {@link #rightOf}, a convenience method for Value/Error use case.
+     * Same as {@link #ofRight}, a convenience method for Value/Error use case.
      */
     public static <L, R> Either<L, R> valueOf(R reference) {
-        return rightOf(reference);
+        return ofRight(reference);
     }
 
     /**
-     * Same as {@link #leftOf}, a convenience method for Value/Error use case.
+     * Same as {@link #ofLeft}, a convenience method for Value/Error use case.
      */
     public static <L, R> Either<L, R> errorOf(L reference) {
-        return leftOf(reference);
+        return ofLeft(reference);
     }
 
     /**
@@ -59,7 +59,7 @@ public abstract class Either<L, R> implements Serializable {
      *
      * @throws NullPointerException if {@code reference} is null
      */
-    public static <L, R> Either<L, R> leftOf(L reference) {
+    public static <L, R> Either<L, R> ofLeft(L reference) {
         Objects.requireNonNull(reference, "Expected non-null reference");
         return new Left<>(reference);
     }
@@ -69,7 +69,7 @@ public abstract class Either<L, R> implements Serializable {
      *
      * @throws NullPointerException if {@code reference} is null
      */
-    public static <L, R> Either<L, R> rightOf(R reference) {
+    public static <L, R> Either<L, R> ofRight(R reference) {
         Objects.requireNonNull(reference, "Expected non-null reference");
         return new Right<>(reference);
     }

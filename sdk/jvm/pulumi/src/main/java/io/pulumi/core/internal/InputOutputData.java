@@ -42,7 +42,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     @Internal
     private InputOutputData(ImmutableSet<Resource> resources, boolean isKnown, boolean isSecret) {
-        this.resources = resources;
+        this.resources = Objects.requireNonNull(resources);
         this.value = null;
         this.known = isKnown;
         this.secret = isSecret;
@@ -168,6 +168,22 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     public boolean isEmpty() {
         return this.value == null;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        InputOutputData<?> that = (InputOutputData<?>) o;
+        return known == that.known
+                && secret == that.secret
+                && resources.equals(that.resources)
+                && Objects.equals(value, that.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(resources, value, known, secret);
     }
 
     @Override

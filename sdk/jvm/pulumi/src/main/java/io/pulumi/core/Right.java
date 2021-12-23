@@ -70,7 +70,7 @@ final class Right<L, R> extends Either<L, R> {
     @Override
     public <A, B> Either<A, B> transform(Function<L, A> leftFunction, Function<R, B> rightFunction) {
         Objects.requireNonNull(rightFunction, "Expected non-null rightFunction");
-        return rightOf(rightFunction.apply(right()));
+        return ofRight(rightFunction.apply(right()));
     }
 
     @Override
@@ -82,7 +82,7 @@ final class Right<L, R> extends Either<L, R> {
 
     @Override
     public Either<R, L> swap() {
-        return leftOf(right());
+        return ofLeft(right());
     }
 
     @Override

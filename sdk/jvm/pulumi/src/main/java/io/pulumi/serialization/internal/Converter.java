@@ -426,7 +426,7 @@ public class Converter {
                 .orElseThrow(() -> new IllegalStateException("Expected a left parameter type for the Either, got none"));
 
         try {
-            return Either.leftOf(
+            return Either.ofLeft(
                     tryConvertObjectInner(
                             String.format("%s.left", context),
                             value,
@@ -435,7 +435,7 @@ public class Converter {
             );
         } catch (Exception leftException) {
             try {
-                return Either.rightOf(
+                return Either.ofRight(
                         tryConvertObjectInner(
                                 String.format("%s.right", context),
                                 value,

@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.grpc.Internal;
 import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.core.internal.annotations.InputMetadata;
 import io.pulumi.serialization.internal.JsonFormatter;
@@ -17,6 +16,7 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 
@@ -34,14 +34,17 @@ public abstract class InputArgs {
 
     protected abstract void validateMember(Class<?> memberType, String fullName);
 
-    @Internal
-    public CompletableFuture<Map<Object, /* @Nullable */ Object>> internalUntypedNullableToMapAsync() {
-        return internalTypedOptionalToMapAsync()
-                .thenApply(Maps::typedOptionalMapToUntypedNullableMap);
+    // TODO: try to remove, this only casts the type
+    public CompletableFuture<Map<Object, /* @Nullable */ Object>> internalToNullableMapAsync() {
+        return internalToOptionalMapAsync()
+                .thenApply(map -> map.entrySet()
+                    .stream()
+                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue))
+                );
     }
 
     @Internal
-    public CompletableFuture<Map<String, Optional<Object>>> internalTypedOptionalToMapAsync() {
+    public CompletableFuture<Map<String, Optional<Object>>> internalToOptionalMapAsync() {
         BiFunction<String, Object, CompletableFuture<Optional<Object>>> convertToJson = (context, input) -> {
             Objects.requireNonNull(context);
             Objects.requireNonNull(input);

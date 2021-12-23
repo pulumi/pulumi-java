@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import static io.pulumi.core.InputOutputTests.waitFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceArgsTest {
@@ -33,13 +34,32 @@ class ResourceArgsTest {
     @Test
     void testComplexResourceArgs1_emptyValues() {
         var args = new ComplexResourceArgs1();
-        var map = args.internalTypedOptionalToMapAsync().join();
+        var map = args.internalToOptionalMapAsync().join();
 
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
 
         assertThat(map).containsEntry("s", Optional.empty());
         assertThat(map).containsEntry("array", Optional.empty());
+    }
+
+    @Test
+    void testComplexResourceArgs1_simpleValues() {
+        var args = new ComplexResourceArgs1();
+        args.s = Input.of("s");
+        args.array = Input.of(List.of(true, false));
+        var map = args.internalToOptionalMapAsync().join();
+
+        assertThat(map).containsKey("s");
+        assertThat(map).containsKey("array");
+
+        var s = map.get("s").get();
+        assertThat(s).isInstanceOf(Input.class);
+        assertThat(waitFor((Input) s)).isEqualTo(waitFor(Input.of("s")));
+
+        var array = map.get("array").get();
+        assertThat(array).isInstanceOf(Input.class);
+        assertThat(waitFor((Input) array)).isEqualTo(waitFor(Input.of(List.of(true, false))));
     }
 
     public static class JsonResourceArgs1 extends ResourceArgs {
@@ -73,7 +93,7 @@ class ResourceArgsTest {
         var args = new JsonResourceArgs1();
         args.setArray(Input.ofList(true, false));
         args.setMap(Input.ofMap("k1", 1, "k2", 2));
-        var map = args.internalTypedOptionalToMapAsync().join();
+        var map = args.internalToOptionalMapAsync().join();
 
         assertThat(map).containsKey("array");
         assertThat(map).containsKey("map");

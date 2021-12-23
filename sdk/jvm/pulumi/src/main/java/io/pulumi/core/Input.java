@@ -101,6 +101,10 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
 
     // Static section -----
 
+    static <T> Input<T> of() {
+        return Input.empty();
+    }
+
     static <T> Input<T> of(T value) {
         return new InputDefault<>(value);
     }
@@ -148,51 +152,31 @@ public interface Input<T> extends InputOutput<T, Input<T>> {
      * For example, it might potentially be an "Integer" some of the time
      * or a "String" in other cases.
      */
-    static <L, R, V> Input<Either<L, R>> ofUnion(V value, Class<L> leftType, Class<R> rightType) {
-        if (leftType.isAssignableFrom(value.getClass())) {
-            //noinspection unchecked
-            return leftOf((L) value);
-        }
-        if (rightType.isAssignableFrom(value.getClass())) {
-            //noinspection unchecked
-            return rightOf((R) value);
-        }
-        throw new IllegalArgumentException(String.format(
-                "Expected union type: %s or %s, got: %s",
-                leftType.getTypeName(),
-                rightType.getTypeName(),
-                value.getClass().getTypeName()
-        ));
+    static <L, R> Input<Either<L, R>> ofLeft(L value) {
+        return Input.of(Either.ofLeft(value));
     }
 
     /**
-     * @see #ofUnion(Object, Class, Class)
+     * @see #ofLeft(Object)
      */
-    static <L, R> Input<Either<L, R>> leftOf(L value) {
-        return Input.of(Either.leftOf(value));
+    static <L, R> Input<Either<L, R>> ofRight(R value) {
+        return Input.of(Either.ofRight(value));
     }
 
     /**
-     * @see #ofUnion(Object, Class, Class)
+     * @see #ofLeft(Object)
      */
-    static <L, R> Input<Either<L, R>> rightOf(R value) {
-        return Input.of(Either.rightOf(value));
-    }
-
-    /**
-     * @see #ofUnion(Object, Class, Class)
-     */
-    static <L, R> Input<Either<L, R>> leftOf(Output<L> value) {
+    static <L, R> Input<Either<L, R>> ofLeft(Output<L> value) {
         return new InputDefault<>(TypedInputOutput.cast(value).internalGetDataAsync()
-                .thenApply(ioData -> ioData.apply(Either::<L, R>leftOf)));
+                .thenApply(ioData -> ioData.apply(Either::<L, R>ofLeft)));
     }
 
     /**
-     * @see #ofUnion(Object, Class, Class)
+     * @see #ofLeft(Object)
      */
-    static <L, R> Input<Either<L, R>> rightOf(Output<R> value) {
+    static <L, R> Input<Either<L, R>> ofRight(Output<R> value) {
         return new InputDefault<>(TypedInputOutput.cast(value).internalGetDataAsync()
-                .thenApply(ioData -> ioData.apply(Either::rightOf)));
+                .thenApply(ioData -> ioData.apply(Either::ofRight)));
     }
 
     // Convenience methods for JSON

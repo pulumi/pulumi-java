@@ -15,10 +15,10 @@ class InputOutputMetadataTest {
     private static class Tester {
 
         @OutputExport(name = "complex1", type = Either.class, parameters = {Integer.class, String.class})
-        private final Output<Either<Integer, String>> complex1 = Output.of(Either.leftOf(1));
+        private final Output<Either<Integer, String>> complex1 = Output.of(Either.ofLeft(1));
 
         @OutputExport(name = "complex2", type = Either.class, parameters = {Integer.class, String.class})
-        private final Output<Either<Integer, String>> complex2 = Output.of(Either.rightOf("1"));
+        private final Output<Either<Integer, String>> complex2 = Output.of(Either.ofRight("1"));
 
         @OutputExport(name = "foo", type = String.class)
         private final Output<String> explicitFoo = Output.of("");

@@ -363,7 +363,7 @@ public class Serializer {
             Log.debug(String.format("Serialize property[%s]: Recursion into ResourceArgs", ctx));
         }
 
-        return args.internalUntypedNullableToMapAsync().thenCompose(
+        return args.internalToNullableMapAsync().thenCompose(
                 map -> serializeMapAsync(ctx, map, keepResources)
         );
     }
