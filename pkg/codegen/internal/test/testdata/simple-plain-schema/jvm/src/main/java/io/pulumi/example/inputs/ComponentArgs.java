@@ -16,7 +16,7 @@ import io.pulumi.example.Utilities;
 
 public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final ComponentArgs Empty = ComponentArgs.builder().build();
+    public static final ComponentArgs Empty = new ComponentArgs();
 
     @InputImport(name="a", required=true)
     private final Boolean a;
@@ -29,14 +29,14 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable Boolean b;
 
     public Optional<Boolean> getB() {
-        return Optional.ofNullable(this.b);
+        return this.b == null ? Optional.empty() : Optional.of(this.b);
     }
 
     @InputImport(name="bar")
     private final @Nullable io.pulumi.example.inputs.Foo bar;
 
     public Optional<io.pulumi.example.inputs.Foo> getBar() {
-        return Optional.ofNullable(this.bar);
+        return this.bar == null ? Optional.empty() : Optional.of(this.bar);
     }
 
     @InputImport(name="baz")
@@ -64,7 +64,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable Integer d;
 
     public Optional<Integer> getD() {
-        return Optional.ofNullable(this.d);
+        return this.d == null ? Optional.empty() : Optional.of(this.d);
     }
 
     @InputImport(name="e", required=true)
@@ -78,14 +78,14 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable String f;
 
     public Optional<String> getF() {
-        return Optional.ofNullable(this.f);
+        return this.f == null ? Optional.empty() : Optional.of(this.f);
     }
 
     @InputImport(name="foo")
     private final @Nullable Input<io.pulumi.example.inputs.FooArgs> foo;
 
     public Input<io.pulumi.example.inputs.FooArgs> getFoo() {
-        return Input.ofNullable(this.foo);
+        return this.foo == null ? Input.empty() : this.foo;
     }
 
     public ComponentArgs(
@@ -99,16 +99,29 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         String e,
         @Nullable String f,
         @Nullable Input<io.pulumi.example.inputs.FooArgs> foo) {
-        this.a = a;
+        this.a = Objects.requireNonNull(a);
         this.b = b;
         this.bar = bar;
         this.baz = baz;
         this.bazMap = bazMap;
-        this.c = c;
+        this.c = Objects.requireNonNull(c);
         this.d = d;
-        this.e = e;
+        this.e = Objects.requireNonNull(e);
         this.f = f;
         this.foo = foo;
+    }
+
+    private ComponentArgs() {
+        this.a = null;
+        this.b = null;
+        this.bar = null;
+        this.baz = List.of();
+        this.bazMap = Map.of();
+        this.c = null;
+        this.d = null;
+        this.e = null;
+        this.f = null;
+        this.foo = Input.empty();
     }
 
     public static Builder builder() {

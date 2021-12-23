@@ -16,27 +16,27 @@ import io.pulumi.plant.Utilities;
 
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final ContainerArgs Empty = ContainerArgs.builder().build();
+    public static final ContainerArgs Empty = new ContainerArgs();
 
     @InputImport(name="brightness")
     private final @Nullable Input<io.pulumi.plant.enums.ContainerBrightness> brightness;
 
     public Input<io.pulumi.plant.enums.ContainerBrightness> getBrightness() {
-        return Input.ofNullable(this.brightness);
+        return this.brightness == null ? Input.empty() : this.brightness;
     }
 
     @InputImport(name="color")
     private final @Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color;
 
     public Input<Either<io.pulumi.plant.enums.ContainerColor,String>> getColor() {
-        return Input.ofNullable(this.color);
+        return this.color == null ? Input.empty() : this.color;
     }
 
     @InputImport(name="material")
     private final @Nullable Input<String> material;
 
     public Input<String> getMaterial() {
-        return Input.ofNullable(this.material);
+        return this.material == null ? Input.empty() : this.material;
     }
 
     @InputImport(name="size", required=true)
@@ -51,10 +51,17 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color,
         @Nullable Input<String> material,
         Input<io.pulumi.plant.enums.ContainerSize> size) {
-        this.brightness = brightness == null ? Input.ofNullable(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
+        this.brightness = brightness == null ? Input.of(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
         this.color = color;
         this.material = material;
-        this.size = size;
+        this.size = Objects.requireNonNull(size);
+    }
+
+    private ContainerArgs() {
+        this.brightness = Input.empty();
+        this.color = Input.empty();
+        this.material = Input.empty();
+        this.size = Input.empty();
     }
 
     public static Builder builder() {

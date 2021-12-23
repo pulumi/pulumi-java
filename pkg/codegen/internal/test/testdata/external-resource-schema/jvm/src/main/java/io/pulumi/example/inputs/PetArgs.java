@@ -16,34 +16,34 @@ import io.pulumi.example.Utilities;
 
 public final class PetArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final PetArgs Empty = PetArgs.builder().build();
+    public static final PetArgs Empty = new PetArgs();
 
     @InputImport(name="age")
     private final @Nullable Input<Integer> age;
 
     public Input<Integer> getAge() {
-        return Input.ofNullable(this.age);
+        return this.age == null ? Input.empty() : this.age;
     }
 
     @InputImport(name="name")
     private final @Nullable Input<io.pulumi.random.RandomPet> name;
 
     public Input<io.pulumi.random.RandomPet> getName() {
-        return Input.ofNullable(this.name);
+        return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="nameArray")
     private final @Nullable Input<List<io.pulumi.random.RandomPet>> nameArray;
 
     public Input<List<io.pulumi.random.RandomPet>> getNameArray() {
-        return Input.ofNullable(this.nameArray);
+        return this.nameArray == null ? Input.empty() : this.nameArray;
     }
 
     @InputImport(name="nameMap")
     private final @Nullable Input<Map<String,io.pulumi.random.RandomPet>> nameMap;
 
     public Input<Map<String,io.pulumi.random.RandomPet>> getNameMap() {
-        return Input.ofNullable(this.nameMap);
+        return this.nameMap == null ? Input.empty() : this.nameMap;
     }
 
     @InputImport(name="requiredName", required=true)
@@ -79,9 +79,19 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
         this.name = name;
         this.nameArray = nameArray;
         this.nameMap = nameMap;
-        this.requiredName = requiredName;
-        this.requiredNameArray = requiredNameArray;
-        this.requiredNameMap = requiredNameMap;
+        this.requiredName = Objects.requireNonNull(requiredName);
+        this.requiredNameArray = Objects.requireNonNull(requiredNameArray);
+        this.requiredNameMap = Objects.requireNonNull(requiredNameMap);
+    }
+
+    private PetArgs() {
+        this.age = Input.empty();
+        this.name = Input.empty();
+        this.nameArray = Input.empty();
+        this.nameMap = Input.empty();
+        this.requiredName = Input.empty();
+        this.requiredNameArray = Input.empty();
+        this.requiredNameMap = Input.empty();
     }
 
     public static Builder builder() {

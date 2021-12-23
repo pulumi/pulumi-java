@@ -11,15 +11,16 @@ type TypeShape struct {
 	Annotations []string
 }
 
-type StringOptions struct {
+type TypeShapeStringOptions struct {
 	CommentOutAnnotations bool // useful for type parameters e.g. (most) annotations are not allowed on a generic parameter type
+	GenericErasure        bool // useful for .class to skip the generic part of the type
 }
 
 func (ts TypeShape) String() string {
-	return ts.StringWithOptions(StringOptions{})
+	return ts.StringWithOptions(TypeShapeStringOptions{})
 }
 
-func (ts TypeShape) StringWithOptions(opts StringOptions) string {
+func (ts TypeShape) StringWithOptions(opts TypeShapeStringOptions) string {
 	annotationsString := strings.Join(ts.Annotations, " ")
 	if len(ts.Annotations) > 0 {
 		if opts.CommentOutAnnotations {
@@ -29,10 +30,10 @@ func (ts TypeShape) StringWithOptions(opts StringOptions) string {
 	}
 
 	var parametersString string
-	if len(ts.Parameters) > 0 {
+	if !opts.GenericErasure && len(ts.Parameters) > 0 {
 		parametersStrings := make([]string, len(ts.Parameters))
 		for i, parameter := range ts.Parameters {
-			parameterString := parameter.StringWithOptions(StringOptions{CommentOutAnnotations: true})
+			parameterString := parameter.StringWithOptions(TypeShapeStringOptions{CommentOutAnnotations: true})
 			if len(parameterString) > 0 {
 				parametersStrings[i] = parameterString
 			}

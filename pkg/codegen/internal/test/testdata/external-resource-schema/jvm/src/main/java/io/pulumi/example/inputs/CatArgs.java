@@ -16,20 +16,20 @@ import io.pulumi.example.Utilities;
 
 public final class CatArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final CatArgs Empty = CatArgs.builder().build();
+    public static final CatArgs Empty = new CatArgs();
 
     @InputImport(name="age")
     private final @Nullable Input<Integer> age;
 
     public Input<Integer> getAge() {
-        return Input.ofNullable(this.age);
+        return this.age == null ? Input.empty() : this.age;
     }
 
     @InputImport(name="pet")
     private final @Nullable Input<io.pulumi.example.inputs.PetArgs> pet;
 
     public Input<io.pulumi.example.inputs.PetArgs> getPet() {
-        return Input.ofNullable(this.pet);
+        return this.pet == null ? Input.empty() : this.pet;
     }
 
     public CatArgs(
@@ -37,6 +37,11 @@ public final class CatArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Input<io.pulumi.example.inputs.PetArgs> pet) {
         this.age = age;
         this.pet = pet;
+    }
+
+    private CatArgs() {
+        this.age = Input.empty();
+        this.pet = Input.empty();
     }
 
     public static Builder builder() {

@@ -54,8 +54,6 @@ func javaIdentifier(s string) string {
 	return makeValidIdentifier(s)
 }
 
-// TODO
-
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
 		return pkg
@@ -371,7 +369,87 @@ func (mod *modContext) typeStringInner(
 	return typ
 }
 
-// TODO
+func emptyTypeInitializer(
+	t schema.Type,
+	wrapInput bool,
+	wrapOptional bool,
+) string {
+	if wrapInput {
+		return "Input.empty()"
+	}
+	if wrapOptional {
+		return "Optional.empty()"
+	}
+	switch t.(type) {
+	case *schema.ArrayType:
+		return "List.of()"
+	case *schema.MapType:
+		return "Map.of()"
+	case *schema.UnionType:
+		return "null" // TODO: should we return an "empty Either" (not sure what that means exactly)
+	default:
+		return "null"
+	}
+}
+
+func typeInitializer(
+	t schema.Type,
+	wrapInput bool,
+	wrapOptional bool,
+	nested string,
+	nestedType string,
+) string {
+	switch t.(type) {
+	case *schema.ArrayType:
+		if wrapInput {
+			return fmt.Sprintf("Input.ofList(%s)", nested)
+		}
+		if wrapOptional {
+			return fmt.Sprintf("Optional.of(List.of(%s))", nested)
+		}
+		return fmt.Sprintf("List.of(%s)", nested)
+	case *schema.MapType:
+		if wrapInput {
+			return fmt.Sprintf("Input.ofMap(%s)", nested)
+		}
+		if wrapOptional {
+			return fmt.Sprintf("Optional.of(Map.of(%s))", nested)
+		}
+		return fmt.Sprintf("Map.of(%s)", nested)
+	case *schema.UnionType:
+		if t.(*schema.UnionType).ElementTypes[0].String() == nestedType {
+			if wrapInput {
+				return fmt.Sprintf("Input.ofLeft(%s)", nested)
+			}
+			if wrapOptional {
+				return fmt.Sprintf("Optional.of(Either.leftOf(%s))", nested)
+			}
+			return fmt.Sprintf("Either.leftOf(%s)", nested)
+		}
+		if t.(*schema.UnionType).ElementTypes[1].String() == nestedType {
+			if wrapInput {
+				return fmt.Sprintf("Input.ofRight(%s)", nested)
+			}
+			if wrapOptional {
+				return fmt.Sprintf("Optional.of(Either.rightOf(%s))", nested)
+			}
+			return fmt.Sprintf("Either.rightOf(%s)", nested)
+		}
+		panic(fmt.Sprintf("this should never happen: '%s' does not match either '%s' or '%s', for nested of: '%s'",
+			nestedType, t.(*schema.UnionType).ElementTypes[0], t.(*schema.UnionType).ElementTypes[1], nested,
+		))
+	default:
+		if wrapInput {
+			return fmt.Sprintf("Input.ofNullable(%s)", nested)
+		}
+		if wrapOptional {
+			return fmt.Sprintf("Optional.ofNullable(%s)", nested)
+		}
+		return nested
+	}
+}
+
+// TODO: documentation comments
 
 type plainType struct {
 	mod                   *modContext
@@ -422,7 +500,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 
 	indent := strings.Repeat("    ", 1)
 
-	// TODO: add comment
+	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "%s@InputImport(name=\"%s\"%s)\n", indent, wireName, attributeArgs)
 	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType, propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
@@ -448,30 +526,23 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 		isArgsType,          // has args
 		requireInitializers, // FIXME: should not require initializers, make it immutable
 		false,               // is a list or map
-		false,               // is nullable
+		false,               // is non-nullable
 	)
 	getterName := javaIdentifier("get" + title(prop.Name))
-	// TODO: add comment
+	// TODO: add docs comment
 	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
 	required := prop.IsRequired
-	var returnStatement string
-	if required {
-		returnStatement = fmt.Sprintf("this.%s", propertyName)
-	} else {
-		if isArgsType {
-			returnStatement = fmt.Sprintf("Input.ofNullable(this.%s)", propertyName)
-		} else {
-			switch prop.Type.(type) {
-			case *schema.ArrayType:
-				getterType = getterTypeNonOptional
-				returnStatement = fmt.Sprintf("this.%s == null ? List.of() : this.%s", propertyName, propertyName)
-			case *schema.MapType:
-				getterType = getterTypeNonOptional
-				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", propertyName, propertyName)
-			default:
-				returnStatement = fmt.Sprintf("Optional.ofNullable(this.%s)", propertyName)
-			}
+	returnStatement := fmt.Sprintf("this.%s", propertyName)
+	if !required {
+		emptyStatement := emptyTypeInitializer(prop.Type, isArgsType, false)
+		switch prop.Type.(type) {
+		case *schema.ArrayType, *schema.MapType, *schema.UnionType: // the most common case actually
+			getterType = getterTypeNonOptional
+		default:
+			emptyStatement = emptyTypeInitializer(prop.Type, isArgsType, true)
+			returnStatement = typeInitializer(prop.Type, false, !isArgsType, returnStatement, prop.Type.String())
 		}
+		returnStatement = fmt.Sprintf("this.%s == null ? %s : %s", propertyName, emptyStatement, returnStatement)
 	}
 
 	if err := getterTemplate.Execute(w, getterTemplateContext{
@@ -490,10 +561,10 @@ func (pt *plainType) genInputType(w io.Writer) error {
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Open the class.
-	// TODO: add comment
+	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "public final class %s extends %s {\n", pt.name, pt.baseClass)
 	_, _ = fmt.Fprintf(w, "\n")
-	_, _ = fmt.Fprintf(w, "    public static final %s Empty = %s.builder().build();\n", pt.name, pt.name)
+	_, _ = fmt.Fprintf(w, "    public static final %s Empty = new %s();\n", pt.name, pt.name)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Declare each input property.
@@ -546,42 +617,41 @@ func (pt *plainType) genInputType(w io.Writer) error {
 
 	// Generate the constructor body
 	for _, prop := range pt.properties {
-		// set default values or assign given values
 		paramName := javaIdentifier(prop.Name)
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
+		isArgsType := pt.args && !prop.IsPlain
+		// set default values or assign given values
 		hasDefaultValue := prop.DefaultValue != nil
 		var defaultValueCode string
 		if hasDefaultValue {
-			defaultValue, err := pt.mod.getDefaultValue(prop.DefaultValue, prop.Type)
+			defaultValueString, defaultValueTypeString, err := pt.mod.getDefaultValue(prop.DefaultValue, prop.Type)
 			if err != nil {
 				return err
 			}
-			switch prop.Type.(type) {
-			case *schema.UnionType:
-				leftType := pt.mod.typeString(prop.Type.(*schema.UnionType).ElementTypes[0], "", false, false, false, false, false, false, false)
-				rightType := pt.mod.typeString(prop.Type.(*schema.UnionType).ElementTypes[1], "", false, false, false, false, false, false, false)
-				defaultValue = fmt.Sprintf("Input.ofUnion(%s, %s.class, %s.class)",
-					defaultValue,
-					leftType,
-					rightType,
-				)
-			default:
-				if prop.IsRequired {
-					defaultValue = fmt.Sprintf("Input.of(%s)", defaultValue)
-				} else {
-					defaultValue = fmt.Sprintf("Input.ofNullable(%s)", defaultValue)
-				}
-			}
-			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValue)
+			defaultValueInitializer := typeInitializer(prop.Type, isArgsType, false, defaultValueString, defaultValueTypeString)
+			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValueInitializer)
 		}
-		// FIXME: this will be error prone to let construct an uninitialized object, but this is exactly what C# does...
-		//if prop.IsRequired {
-		//	_, _ = fmt.Fprintf(w, "        this.%s = %sObjects.requireNonNull(%s);\n", fieldName, defaultValueCode, paramName)
-		//} else {
-		_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
-		//}
+		if prop.IsRequired {
+			_, _ = fmt.Fprintf(w, "        this.%[1]s = %[2]sObjects.requireNonNull(%[3]s, \"expected parameter '%[3]s' to be non-null\");\n", fieldName, defaultValueCode, paramName)
+		} else {
+			_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
+		}
 	}
 	_, _ = fmt.Fprintf(w, "    }\n")
+
+	// Generate empty constructor, not that the instance created
+	// with this constructor may not be valid if there are 'required' fields.
+	if len(pt.properties) > 0 {
+		_, _ = fmt.Fprintf(w, "\n")
+		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
+		for _, prop := range pt.properties {
+			fieldName := javaIdentifier(pt.mod.propertyName(prop))
+			isArgsType := pt.args && !prop.IsPlain
+			emptyValue := emptyTypeInitializer(prop.Type, isArgsType, false)
+			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
+		}
+		_, _ = fmt.Fprintf(w, "    }\n")
+	}
 
 	// Generate the builder
 	var builderFields []builderFieldTemplateContext
@@ -694,7 +764,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 	for _, prop := range pt.properties {
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
 		fieldType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !prop.IsRequired)
-		// TODO: add comment
+		// TODO: add docs comment
 		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType, fieldName)
 	}
 	if len(pt.properties) > 0 {
@@ -781,7 +851,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 			false,
 		)
 
-		// TODO: add comment
+		// TODO: add docs comment
 		var returnStatement string
 		if prop.IsRequired {
 			returnStatement = fmt.Sprintf("this.%s", paramName)
@@ -869,7 +939,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 	return nil
 }
 
-func primitiveValue(value interface{}) (string, error) {
+func primitiveValue(value interface{}) (string, string, error) {
 	v := reflect.ValueOf(value)
 	if v.Kind() == reflect.Interface {
 		v = v.Elem()
@@ -878,29 +948,30 @@ func primitiveValue(value interface{}) (string, error) {
 	switch v.Kind() {
 	case reflect.Bool:
 		if v.Bool() {
-			return "true", nil
+			return "true", "boolean", nil
 		}
-		return "false", nil
+		return "false", "boolean", nil
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32:
-		return strconv.FormatInt(v.Int(), 10), nil
+		return strconv.FormatInt(v.Int(), 10), "integer", nil
 	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32:
-		return strconv.FormatUint(v.Uint(), 10), nil
+		return strconv.FormatUint(v.Uint(), 10), "integer", nil
 	case reflect.Float32, reflect.Float64:
-		return strconv.FormatFloat(v.Float(), 'f', -1, 64), nil
+		return strconv.FormatFloat(v.Float(), 'f', -1, 64), "number", nil
 	case reflect.String:
-		return fmt.Sprintf("%q", v.String()), nil
+		return fmt.Sprintf("%q", v.String()), "string", nil
 	default:
-		return "", errors.Errorf("unsupported default value of type %T", value)
+		return "", "", errors.Errorf("unsupported default value of type %T", value)
 	}
 }
 
-func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (string, error) {
+func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (string, string, error) {
 	var val string
+	schemaType := t.String()
 	if dv.Value != nil {
-		switch enum := t.(type) {
+		switch enumOrUnion := t.(type) {
 		case *schema.EnumType:
-			enumName := tokenToName(enum.Token)
-			for _, e := range enum.Elements {
+			enumName := tokenToName(enumOrUnion.Token)
+			for _, e := range enumOrUnion.Elements {
 				if e.Value != dv.Value {
 					continue
 				}
@@ -911,20 +982,21 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 				}
 				safeName, err := makeSafeEnumName(elName, enumName)
 				if err != nil {
-					return "", err
+					return "", "", err
 				}
 				val = fmt.Sprintf("%s.enums.%s.%s", mod.packageName, enumName, safeName)
 				break
 			}
 			if val == "" {
-				return "", errors.Errorf("default value '%v' not found in enum '%s'", dv.Value, enumName)
+				return "", "", errors.Errorf("default value '%v' not found in enum '%s'", dv.Value, enumName)
 			}
 		default:
-			v, err := primitiveValue(dv.Value)
+			v, st, err := primitiveValue(dv.Value)
 			if err != nil {
-				return "", err
+				return "", "", err
 			}
 			val = v
+			schemaType = st
 		}
 	}
 
@@ -952,7 +1024,7 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 		}
 	}
 
-	return val, nil
+	return val, schemaType, nil
 }
 
 func genAlias(w io.Writer, alias *schema.Alias) {
@@ -975,7 +1047,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	// Create a resource module file into which all of this resource's types will go.
 	name := resourceName(r)
 
-	// TODO: add comment
+	// TODO: add docs comment
 
 	// Open the class.
 	className := name
@@ -1010,7 +1082,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 			secretProps = append(secretProps, prop.Name)
 		}
 
-		// TODO: add comment
+		// TODO: add docs comment
 		appendDotClass := func(s string) string {
 			return s + ".class"
 		}
@@ -1019,7 +1091,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 			", ",
 		)
 		outputExportType := appendDotClass(propertyType.Type)
-		outputParameterType := propertyType.StringWithOptions(StringOptions{CommentOutAnnotations: true})
+		outputParameterType := propertyType.StringWithOptions(TypeShapeStringOptions{CommentOutAnnotations: true})
 		_, _ = fmt.Fprintf(w, "    @OutputExport(name=\"%s\", type=%s, parameters={%s})\n", wireName, outputExportType, outputExportParameters)
 		_, _ = fmt.Fprintf(w, "    private Output<%s> %s;\n", outputParameterType, propertyName)
 		_, _ = fmt.Fprintf(w, "\n")
@@ -1061,7 +1133,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		argsOverride = "makeArgs(args)"
 	}
 
-	// TODO: add docs
+	// TODO: add docs comment
 
 	_, _ = fmt.Fprintf(w, "    public %s(String name, %s args, @Nullable %s options) {\n", className, argsType, optionsType)
 	if r.IsComponent {
@@ -1092,7 +1164,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		_, _ = fmt.Fprintf(w, "        return builder\n")
 		for _, prop := range r.InputProperties {
 			if prop.ConstValue != nil {
-				v, err := primitiveValue(prop.ConstValue)
+				v, _, err := primitiveValue(prop.ConstValue)
 				if err != nil {
 					return err
 				}
@@ -1147,7 +1219,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", ""
 
-		// TODO: add docs
+		// TODO: add docs comments
 		if r.StateInputs != nil {
 			stateParam = fmt.Sprintf("@Nullable %sState state, ", className)
 			stateRef = "state, "
@@ -1196,7 +1268,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	// Open the class we'll use for datasources.
 	_, _ = fmt.Fprintf(w, "public class %s {\n", className)
 
-	// TODO: add comment
+	// TODO: add docs comment
 
 	// Emit the datasource method.
 	_, _ = fmt.Fprintf(w, "    public static CompletableFuture<%s> invokeAsync(%s@Nullable io.pulumi.deployment.InvokeOptions options) {\n",
@@ -1247,7 +1319,7 @@ func (mod *modContext) genEnum(w io.Writer, qualifier string, enum *schema.EnumT
 
 		// Enum values
 		for i, e := range enum.Elements {
-			// TODO: add comment
+			// TODO: add docs comment
 			printObsoleteAttribute(w, e.DeprecationMessage, indent)
 			var separator string
 			if i == len(enum.Elements)-1 { // last element
@@ -1462,7 +1534,7 @@ func (mod *modContext) genHeader(w io.Writer, imports []string, qualifier string
 	}
 }
 
-// TODO
+// TODO: finish the config generation
 
 func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 	w := &bytes.Buffer{}
@@ -1476,7 +1548,7 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 	_, _ = fmt.Fprintf(w, "    private static final io.pulumi.Config config = io.pulumi.Config.of(\"%v\");", mod.pkg.Name)
 	_, _ = fmt.Fprintf(w, "\n")
 
-	// TODO
+	// TODO: finish the config generation
 
 	// Close the config class and namespace.
 	_, _ = fmt.Fprintf(w, "}\n")

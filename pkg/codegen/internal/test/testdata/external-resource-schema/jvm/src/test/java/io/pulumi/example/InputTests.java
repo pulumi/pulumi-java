@@ -14,7 +14,7 @@ class InputTests {
     void testPetArgs_nullValues() {
         var args = PetArgs.Empty;
 
-        var map = args.internalTypedOptionalToMapAsync().join();
+        var map = args.internalToOptionalMapAsync().join();
 
         assertThat(map).containsKey("age");
         assertThat(map).containsKey("name");
@@ -45,7 +45,7 @@ class InputTests {
                 .setRequiredNameMap()
                 .build();
 
-        var map = args.internalTypedOptionalToMapAsync().join();
+        var map = args.internalToOptionalMapAsync().join();
 
         assertThat(map).containsKey("age");
         assertThat(map).containsKey("name");

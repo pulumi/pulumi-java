@@ -16,63 +16,72 @@ import io.pulumi.example.Utilities;
 
 public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final ComponentArgs Empty = ComponentArgs.builder().build();
+    public static final ComponentArgs Empty = new ComponentArgs();
 
     @InputImport(name="metadata")
-    private final @Nullable Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> metadata;
+    private final @Nullable Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> metadata;
 
-    public Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> getMetadata() {
-        return Input.ofNullable(this.metadata);
+    public Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Input.empty() : this.metadata;
     }
 
     @InputImport(name="metadataArray")
-    private final @Nullable Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataArray;
+    private final @Nullable Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataArray;
 
-    public Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> getMetadataArray() {
-        return Input.ofNullable(this.metadataArray);
+    public Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> getMetadataArray() {
+        return this.metadataArray == null ? Input.empty() : this.metadataArray;
     }
 
     @InputImport(name="metadataMap")
-    private final @Nullable Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataMap;
+    private final @Nullable Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataMap;
 
-    public Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> getMetadataMap() {
-        return Input.ofNullable(this.metadataMap);
+    public Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> getMetadataMap() {
+        return this.metadataMap == null ? Input.empty() : this.metadataMap;
     }
 
     @InputImport(name="requiredMetadata", required=true)
-    private final Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> requiredMetadata;
+    private final Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> requiredMetadata;
 
-    public Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> getRequiredMetadata() {
+    public Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> getRequiredMetadata() {
         return this.requiredMetadata;
     }
 
     @InputImport(name="requiredMetadataArray", required=true)
-    private final Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataArray;
+    private final Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataArray;
 
-    public Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> getRequiredMetadataArray() {
+    public Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> getRequiredMetadataArray() {
         return this.requiredMetadataArray;
     }
 
     @InputImport(name="requiredMetadataMap", required=true)
-    private final Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataMap;
+    private final Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataMap;
 
-    public Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> getRequiredMetadataMap() {
+    public Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> getRequiredMetadataMap() {
         return this.requiredMetadataMap;
     }
 
     public ComponentArgs(
-        @Nullable Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> metadata,
-        @Nullable Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataArray,
-        @Nullable Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataMap,
-        Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> requiredMetadata,
-        Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataArray,
-        Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataMap) {
+        @Nullable Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> metadata,
+        @Nullable Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataArray,
+        @Nullable Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataMap,
+        Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> requiredMetadata,
+        Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataArray,
+        Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataMap) {
         this.metadata = metadata;
         this.metadataArray = metadataArray;
         this.metadataMap = metadataMap;
-        this.requiredMetadata = requiredMetadata;
-        this.requiredMetadataArray = requiredMetadataArray;
-        this.requiredMetadataMap = requiredMetadataMap;
+        this.requiredMetadata = Objects.requireNonNull(requiredMetadata);
+        this.requiredMetadataArray = Objects.requireNonNull(requiredMetadataArray);
+        this.requiredMetadataMap = Objects.requireNonNull(requiredMetadataMap);
+    }
+
+    private ComponentArgs() {
+        this.metadata = Input.empty();
+        this.metadataArray = Input.empty();
+        this.metadataMap = Input.empty();
+        this.requiredMetadata = Input.empty();
+        this.requiredMetadataArray = Input.empty();
+        this.requiredMetadataMap = Input.empty();
     }
 
     public static Builder builder() {
@@ -84,12 +93,12 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> metadata;
-        private @Nullable Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataArray;
-        private @Nullable Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataMap;
-        private Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> requiredMetadata;
-        private Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataArray;
-        private Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataMap;
+        private @Nullable Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> metadata;
+        private @Nullable Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataArray;
+        private @Nullable Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataMap;
+        private Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> requiredMetadata;
+        private Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataArray;
+        private Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataMap;
 
         public Builder() {
     	      // Empty
@@ -105,62 +114,62 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requiredMetadataMap = defaults.requiredMetadataMap;
         }
 
-        public Builder setMetadata(@Nullable Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> metadata) {
+        public Builder setMetadata(@Nullable Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs metadata) {
+        public Builder setMetadata(@Nullable io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMetadataArray(@Nullable Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataArray) {
+        public Builder setMetadataArray(@Nullable Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataArray) {
             this.metadataArray = metadataArray;
             return this;
         }
 
-        public Builder setMetadataArray(@Nullable List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> metadataArray) {
+        public Builder setMetadataArray(@Nullable List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> metadataArray) {
             this.metadataArray = Input.ofNullable(metadataArray);
             return this;
         }
 
-        public Builder setMetadataMap(@Nullable Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> metadataMap) {
+        public Builder setMetadataMap(@Nullable Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> metadataMap) {
             this.metadataMap = metadataMap;
             return this;
         }
 
-        public Builder setMetadataMap(@Nullable Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> metadataMap) {
+        public Builder setMetadataMap(@Nullable Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> metadataMap) {
             this.metadataMap = Input.ofNullable(metadataMap);
             return this;
         }
 
-        public Builder setRequiredMetadata(Input<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> requiredMetadata) {
+        public Builder setRequiredMetadata(Input<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> requiredMetadata) {
             this.requiredMetadata = Objects.requireNonNull(requiredMetadata);
             return this;
         }
 
-        public Builder setRequiredMetadata(io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs requiredMetadata) {
+        public Builder setRequiredMetadata(io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs requiredMetadata) {
             this.requiredMetadata = Input.of(Objects.requireNonNull(requiredMetadata));
             return this;
         }
 
-        public Builder setRequiredMetadataArray(Input<List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataArray) {
+        public Builder setRequiredMetadataArray(Input<List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataArray) {
             this.requiredMetadataArray = Objects.requireNonNull(requiredMetadataArray);
             return this;
         }
 
-        public Builder setRequiredMetadataArray(List<io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> requiredMetadataArray) {
+        public Builder setRequiredMetadataArray(List<io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> requiredMetadataArray) {
             this.requiredMetadataArray = Input.of(Objects.requireNonNull(requiredMetadataArray));
             return this;
         }
 
-        public Builder setRequiredMetadataMap(Input<Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs>> requiredMetadataMap) {
+        public Builder setRequiredMetadataMap(Input<Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs>> requiredMetadataMap) {
             this.requiredMetadataMap = Objects.requireNonNull(requiredMetadataMap);
             return this;
         }
 
-        public Builder setRequiredMetadataMap(Map<String,io.pulumi.kubernetes.meta/v1.inputs.ObjectMetaArgs> requiredMetadataMap) {
+        public Builder setRequiredMetadataMap(Map<String,io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs> requiredMetadataMap) {
             this.requiredMetadataMap = Input.of(Objects.requireNonNull(requiredMetadataMap));
             return this;
         }

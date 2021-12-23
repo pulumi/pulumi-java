@@ -28,10 +28,10 @@ public class Component extends io.pulumi.resources.CustomResource {
     public Output<io.pulumi.aws.ec2.SecurityGroup> getSecurityGroup() {
         return this.securityGroup;
     }
-    @OutputExport(name="storageClasses", type=Map.class, parameters={String.class, io.pulumi.kubernetes.storage.k8s.io/v1.StorageClass.class})
-    private Output</* @Nullable */ Map<String,io.pulumi.kubernetes.storage.k8s.io/v1.StorageClass>> storageClasses;
+    @OutputExport(name="storageClasses", type=Map.class, parameters={String.class, io.pulumi.kubernetes.storage.v1.StorageClass.class})
+    private Output</* @Nullable */ Map<String,io.pulumi.kubernetes.storage.v1.StorageClass>> storageClasses;
 
-    public Output</* @Nullable */ Map<String,io.pulumi.kubernetes.storage.k8s.io/v1.StorageClass>> getStorageClasses() {
+    public Output</* @Nullable */ Map<String,io.pulumi.kubernetes.storage.v1.StorageClass>> getStorageClasses() {
         return this.storageClasses;
     }
 

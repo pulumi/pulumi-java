@@ -16,17 +16,21 @@ import io.pulumi.plant.Utilities;
 
 public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
 
-    public static final RubberTreeState Empty = RubberTreeState.builder().build();
+    public static final RubberTreeState Empty = new RubberTreeState();
 
     @InputImport(name="farm")
     private final @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
 
     public Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> getFarm() {
-        return Input.ofNullable(this.farm);
+        return this.farm == null ? Input.empty() : this.farm;
     }
 
     public RubberTreeState(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
-        this.farm = farm == null ? Input.ofUnion("(unknown)", io.pulumi.plant.tree.v1.enums.Farm.class, String.class) : farm;
+        this.farm = farm == null ? Input.ofRight("(unknown)") : farm;
+    }
+
+    private RubberTreeState() {
+        this.farm = Input.empty();
     }
 
     public static Builder builder() {

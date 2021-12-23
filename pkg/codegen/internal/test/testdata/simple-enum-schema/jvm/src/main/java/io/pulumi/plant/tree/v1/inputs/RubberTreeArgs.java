@@ -16,13 +16,13 @@ import io.pulumi.plant.Utilities;
 
 public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final RubberTreeArgs Empty = RubberTreeArgs.builder().build();
+    public static final RubberTreeArgs Empty = new RubberTreeArgs();
 
     @InputImport(name="container")
     private final @Nullable Input<io.pulumi.plant.inputs.ContainerArgs> container;
 
     public Input<io.pulumi.plant.inputs.ContainerArgs> getContainer() {
-        return Input.ofNullable(this.container);
+        return this.container == null ? Input.empty() : this.container;
     }
 
     @InputImport(name="diameter", required=true)
@@ -36,14 +36,14 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
 
     public Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> getFarm() {
-        return Input.ofNullable(this.farm);
+        return this.farm == null ? Input.empty() : this.farm;
     }
 
     @InputImport(name="size")
     private final @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size;
 
     public Input<io.pulumi.plant.tree.v1.enums.TreeSize> getSize() {
-        return Input.ofNullable(this.size);
+        return this.size == null ? Input.empty() : this.size;
     }
 
     @InputImport(name="type", required=true)
@@ -60,10 +60,18 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Input<io.pulumi.plant.tree.v1.enums.TreeSize> size,
         Input<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type) {
         this.container = container;
-        this.diameter = diameter == null ? Input.of(io.pulumi.plant.tree.v1.enums.Diameter.Sixinch) : diameter;
-        this.farm = farm == null ? Input.ofUnion("(unknown)", io.pulumi.plant.tree.v1.enums.Farm.class, String.class) : farm;
-        this.size = size == null ? Input.ofNullable(io.pulumi.plant.tree.v1.enums.TreeSize.Medium) : size;
-        this.type = type == null ? Input.of(io.pulumi.plant.tree.v1.enums.RubberTreeVariety.Burgundy) : type;
+        this.diameter = diameter == null ? Input.of(io.pulumi.plant.tree.v1.enums.Diameter.Sixinch) : Objects.requireNonNull(diameter);
+        this.farm = farm == null ? Input.ofRight("(unknown)") : farm;
+        this.size = size == null ? Input.of(io.pulumi.plant.tree.v1.enums.TreeSize.Medium) : size;
+        this.type = type == null ? Input.of(io.pulumi.plant.tree.v1.enums.RubberTreeVariety.Burgundy) : Objects.requireNonNull(type);
+    }
+
+    private RubberTreeArgs() {
+        this.container = Input.empty();
+        this.diameter = Input.empty();
+        this.farm = Input.empty();
+        this.size = Input.empty();
+        this.type = Input.empty();
     }
 
     public static Builder builder() {

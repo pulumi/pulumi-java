@@ -16,7 +16,7 @@ import io.pulumi.example.Utilities;
 
 public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final WorkloadArgs Empty = WorkloadArgs.builder().build();
+    public static final WorkloadArgs Empty = new WorkloadArgs();
 
     public WorkloadArgs() {
     }

@@ -16,13 +16,13 @@ import io.pulumi.plant.Utilities;
 
 public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final NurseryArgs Empty = NurseryArgs.builder().build();
+    public static final NurseryArgs Empty = new NurseryArgs();
 
     @InputImport(name="sizes")
     private final @Nullable Input<Map<String,io.pulumi.plant.tree.v1.enums.TreeSize>> sizes;
 
     public Input<Map<String,io.pulumi.plant.tree.v1.enums.TreeSize>> getSizes() {
-        return Input.ofNullable(this.sizes);
+        return this.sizes == null ? Input.empty() : this.sizes;
     }
 
     @InputImport(name="varieties", required=true)
@@ -36,7 +36,12 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Input<Map<String,io.pulumi.plant.tree.v1.enums.TreeSize>> sizes,
         Input<List<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>> varieties) {
         this.sizes = sizes;
-        this.varieties = varieties;
+        this.varieties = Objects.requireNonNull(varieties);
+    }
+
+    private NurseryArgs() {
+        this.sizes = Input.empty();
+        this.varieties = Input.empty();
     }
 
     public static Builder builder() {

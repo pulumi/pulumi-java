@@ -16,7 +16,7 @@ import io.pulumi.example.Utilities;
 
 public final class FooArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final FooArgs Empty = FooArgs.builder().build();
+    public static final FooArgs Empty = new FooArgs();
 
     @InputImport(name="a", required=true)
     private final Boolean a;
@@ -29,7 +29,7 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable Boolean b;
 
     public Optional<Boolean> getB() {
-        return Optional.ofNullable(this.b);
+        return this.b == null ? Optional.empty() : Optional.of(this.b);
     }
 
     @InputImport(name="c", required=true)
@@ -43,7 +43,7 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable Integer d;
 
     public Optional<Integer> getD() {
-        return Optional.ofNullable(this.d);
+        return this.d == null ? Optional.empty() : Optional.of(this.d);
     }
 
     @InputImport(name="e", required=true)
@@ -57,7 +57,7 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable String f;
 
     public Optional<String> getF() {
-        return Optional.ofNullable(this.f);
+        return this.f == null ? Optional.empty() : Optional.of(this.f);
     }
 
     public FooArgs(
@@ -67,12 +67,21 @@ public final class FooArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Integer d,
         String e,
         @Nullable String f) {
-        this.a = a;
+        this.a = Objects.requireNonNull(a);
         this.b = b;
-        this.c = c;
+        this.c = Objects.requireNonNull(c);
         this.d = d;
-        this.e = e;
+        this.e = Objects.requireNonNull(e);
         this.f = f;
+    }
+
+    private FooArgs() {
+        this.a = null;
+        this.b = null;
+        this.c = null;
+        this.d = null;
+        this.e = null;
+        this.f = null;
     }
 
     public static Builder builder() {

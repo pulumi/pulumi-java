@@ -16,17 +16,21 @@ import io.pulumi.example.Utilities;
 
 public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
-    public static final ResourceArgs Empty = ResourceArgs.builder().build();
+    public static final ResourceArgs Empty = new ResourceArgs();
 
     @InputImport(name="bar")
     private final @Nullable Input<String> bar;
 
     public Input<String> getBar() {
-        return Input.ofNullable(this.bar);
+        return this.bar == null ? Input.empty() : this.bar;
     }
 
     public ResourceArgs(@Nullable Input<String> bar) {
         this.bar = bar;
+    }
+
+    private ResourceArgs() {
+        this.bar = Input.empty();
     }
 
     public static Builder builder() {

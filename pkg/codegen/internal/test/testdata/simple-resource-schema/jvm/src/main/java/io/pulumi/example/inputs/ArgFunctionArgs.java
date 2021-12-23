@@ -18,17 +18,21 @@ import io.pulumi.example.outputs.*;
 
 public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
 
-    public static final ArgFunctionArgs Empty = ArgFunctionArgs.builder().build();
+    public static final ArgFunctionArgs Empty = new ArgFunctionArgs();
 
     @InputImport(name="arg1")
     private final @Nullable io.pulumi.example.Resource arg1;
 
     public Optional<io.pulumi.example.Resource> getArg1() {
-        return Optional.ofNullable(this.arg1);
+        return this.arg1 == null ? Optional.empty() : Optional.of(this.arg1);
     }
 
     public ArgFunctionArgs(@Nullable io.pulumi.example.Resource arg1) {
         this.arg1 = arg1;
+    }
+
+    private ArgFunctionArgs() {
+        this.arg1 = null;
     }
 
     public static Builder builder() {
