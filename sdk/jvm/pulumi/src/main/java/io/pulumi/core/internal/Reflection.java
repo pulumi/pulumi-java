@@ -4,6 +4,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.reflect.TypeToken;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import io.grpc.Internal;
 import io.pulumi.core.Either;
 
 import javax.annotation.CheckReturnValue;
@@ -189,6 +190,14 @@ public class Reflection {
                 builder.addParameter(extract(token.getRawType(), token));
             }
             return builder.build();
+        }
+
+        @Internal
+        public com.google.gson.reflect.TypeToken<?> toGSON() {
+            var paramTokens = this.parameters.stream()
+                    .map(ts -> ts.toGSON().getType())
+                    .toArray(Type[]::new);
+            return com.google.gson.reflect.TypeToken.getParameterized(this.type, paramTokens);
         }
 
         public static <T> TypeShape<T> of(Class<T> type) {

@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import io.grpc.Internal;
 import io.pulumi.core.Output;
+import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.RunException;
@@ -128,8 +129,9 @@ public class Config {
     }
 
     /**
-     * Loads an optional configuration value, as an object, by its key, or null if it doesn't
-     * exist. This works by taking the value associated with {@code key} and passing
+     * Loads an optional configuration value as a JSON string and deserializes it
+     * as an object, by its key, or null if it doesn't exist.
+     * This works by taking the value associated with {@code key} and passing
      * it to @see {@link Gson#fromJson(Reader, Class)}.
      */
     public <T> Optional<T> getObject(String key, Class<T> classOfT) {
@@ -143,12 +145,33 @@ public class Config {
     }
 
     /**
-     * Loads an optional configuration value, as an object, by its key, marking it as a secret
-     * or null if it doesn't exist. This works by taking the value associated with {@code key}
+     * Loads an optional configuration value as a JSON string and deserializes it
+     * as an object, by its key, marking it as a secret or null (empty) if it doesn't exist.
+     * This works by taking the value associated with {@code key}
      * and passing it to @see {@link Gson#fromJson(Reader, Class)}.
      */
     public <T> Output<Optional<T>> getSecretObject(String key, Class<T> classOfT) {
         return Output.ofSecret(getObject(key, classOfT));
+    }
+
+    /**
+     * @see #getObject(String, Class)
+     */
+    public <T> Optional<T> getObject(String key, TypeShape<T> shapeOfT) {
+        var v = get(key);
+        try {
+            var gson = new Gson();
+            return v.map(string -> gson.fromJson(string, shapeOfT.toGSON().getType()));
+        } catch (JsonParseException ex) {
+            throw new ConfigTypeException(fullKey(key), v, shapeOfT.getTypeName(), ex);
+        }
+    }
+
+    /**
+     * @see #getSecretObject(String, Class)
+     */
+    public <T> Output<Optional<T>> getSecretObject(String key, TypeShape<T> shapeOfT) {
+        return Output.ofSecret(getObject(key, shapeOfT));
     }
 
     /**
@@ -199,8 +222,8 @@ public class Config {
     }
 
     /**
-     * Loads a configuration value as a JSON string and deserializes the JSON into an object.
-     * object. If it doesn't exist, or the configuration value cannot be converted
+     * Loads a configuration value as a JSON string and deserializes it into an object.
+     * If it doesn't exist, or the configuration value cannot be converted
      * using @see {@link Gson#fromJson(Reader, Class)}, an error is thrown.
      */
     public <T> T requireObject(String key, Class<T> classOfT) {
@@ -208,10 +231,10 @@ public class Config {
     }
 
     /**
-     * Loads a configuration value as a JSON string and deserializes the JSON into a JavaScript
-     * object, marking it as a secret. If it doesn't exist, or the configuration value cannot
-     * be converted using @see {@link Gson#fromJson(Reader, Class)},
-     * an error is thrown.
+     * Loads a configuration value as a JSON string and deserializes it into an object,
+     * marking it as a secret.
+     * If it doesn't exist, or the configuration value cannot be converted
+     * using @see {@link Gson#fromJson(Reader, Class)}, an error is thrown.
      */
     public <T> Output<T> requireSecretObject(String key, Class<T> classOfT) {
         return Output.ofSecret(requireObject(key, classOfT));
