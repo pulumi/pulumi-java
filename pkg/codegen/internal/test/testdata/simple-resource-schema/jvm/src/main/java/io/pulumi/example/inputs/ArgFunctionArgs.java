@@ -24,7 +24,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     private final @Nullable io.pulumi.example.Resource arg1;
 
     public Optional<io.pulumi.example.Resource> getArg1() {
-        return this.arg1 == null ? Optional.empty() : Optional.of(this.arg1);
+        return this.arg1 == null ? Optional.empty() : Optional.ofNullable(this.arg1);
     }
 
     public ArgFunctionArgs(@Nullable io.pulumi.example.Resource arg1) {

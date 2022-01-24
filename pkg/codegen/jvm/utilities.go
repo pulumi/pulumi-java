@@ -97,11 +97,3 @@ func makeSafeEnumName(name, typeName string) (string, error) {
 
 	return safeName, nil
 }
-
-func mapStrings(vs []string, f func(string) string) []string {
-	vsm := make([]string, len(vs))
-	for i, v := range vs {
-		vsm[i] = f(v)
-	}
-	return vsm
-}

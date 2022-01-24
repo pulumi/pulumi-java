@@ -70,9 +70,9 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         this.metadata = metadata;
         this.metadataArray = metadataArray;
         this.metadataMap = metadataMap;
-        this.requiredMetadata = Objects.requireNonNull(requiredMetadata);
-        this.requiredMetadataArray = Objects.requireNonNull(requiredMetadataArray);
-        this.requiredMetadataMap = Objects.requireNonNull(requiredMetadataMap);
+        this.requiredMetadata = Objects.requireNonNull(requiredMetadata, "expected parameter 'requiredMetadata' to be non-null");
+        this.requiredMetadataArray = Objects.requireNonNull(requiredMetadataArray, "expected parameter 'requiredMetadataArray' to be non-null");
+        this.requiredMetadataMap = Objects.requireNonNull(requiredMetadataMap, "expected parameter 'requiredMetadataMap' to be non-null");
     }
 
     private ComponentArgs() {

@@ -36,7 +36,7 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Input<Map<String,io.pulumi.plant.tree.v1.enums.TreeSize>> sizes,
         Input<List<io.pulumi.plant.tree.v1.enums.RubberTreeVariety>> varieties) {
         this.sizes = sizes;
-        this.varieties = Objects.requireNonNull(varieties);
+        this.varieties = Objects.requireNonNull(varieties, "expected parameter 'varieties' to be non-null");
     }
 
     private NurseryArgs() {

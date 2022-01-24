@@ -51,10 +51,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color,
         @Nullable Input<String> material,
         Input<io.pulumi.plant.enums.ContainerSize> size) {
-        this.brightness = brightness == null ? Input.of(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
+        this.brightness = brightness == null ? Input.ofNullable(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
         this.color = color;
         this.material = material;
-        this.size = Objects.requireNonNull(size);
+        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
     }
 
     private ContainerArgs() {

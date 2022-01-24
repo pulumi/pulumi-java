@@ -24,7 +24,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     private final @Nullable io.pulumi.random.RandomPet name;
 
     public Optional<io.pulumi.random.RandomPet> getName() {
-        return this.name == null ? Optional.empty() : Optional.of(this.name);
+        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     public ArgFunctionArgs(@Nullable io.pulumi.random.RandomPet name) {

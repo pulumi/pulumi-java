@@ -79,9 +79,9 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
         this.name = name;
         this.nameArray = nameArray;
         this.nameMap = nameMap;
-        this.requiredName = Objects.requireNonNull(requiredName);
-        this.requiredNameArray = Objects.requireNonNull(requiredNameArray);
-        this.requiredNameMap = Objects.requireNonNull(requiredNameMap);
+        this.requiredName = Objects.requireNonNull(requiredName, "expected parameter 'requiredName' to be non-null");
+        this.requiredNameArray = Objects.requireNonNull(requiredNameArray, "expected parameter 'requiredNameArray' to be non-null");
+        this.requiredNameMap = Objects.requireNonNull(requiredNameMap, "expected parameter 'requiredNameMap' to be non-null");
     }
 
     private PetArgs() {

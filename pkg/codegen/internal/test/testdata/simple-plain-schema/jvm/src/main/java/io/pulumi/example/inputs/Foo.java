@@ -29,7 +29,7 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
     private final @Nullable Boolean b;
 
     public Optional<Boolean> getB() {
-        return this.b == null ? Optional.empty() : Optional.of(this.b);
+        return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
     }
 
     @InputImport(name="c", required=true)
@@ -43,7 +43,7 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
     private final @Nullable Integer d;
 
     public Optional<Integer> getD() {
-        return this.d == null ? Optional.empty() : Optional.of(this.d);
+        return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
     }
 
     @InputImport(name="e", required=true)
@@ -57,7 +57,7 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
     private final @Nullable String f;
 
     public Optional<String> getF() {
-        return this.f == null ? Optional.empty() : Optional.of(this.f);
+        return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
     }
 
     public Foo(
@@ -67,11 +67,11 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
         @Nullable Integer d,
         String e,
         @Nullable String f) {
-        this.a = Objects.requireNonNull(a);
+        this.a = Objects.requireNonNull(a, "expected parameter 'a' to be non-null");
         this.b = b;
-        this.c = Objects.requireNonNull(c);
+        this.c = Objects.requireNonNull(c, "expected parameter 'c' to be non-null");
         this.d = d;
-        this.e = Objects.requireNonNull(e);
+        this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
         this.f = f;
     }
 

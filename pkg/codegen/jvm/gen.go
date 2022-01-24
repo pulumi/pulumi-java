@@ -1083,15 +1083,24 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		}
 
 		// TODO: add docs comment
-		appendDotClass := func(s string) string {
-			return s + ".class"
-		}
 		outputExportParameters := strings.Join(
-			mapStrings(propertyType.ParameterTypes(), appendDotClass),
+			propertyType.ParameterTypesTransformed(func(ts TypeShape) string {
+				return ts.StringWithOptions(TypeShapeStringOptions{
+					CommentOutAnnotations: true,
+					GenericErasure:        true,
+					AppendClassLiteral:    true,
+				})
+			}),
 			", ",
 		)
-		outputExportType := appendDotClass(propertyType.Type)
-		outputParameterType := propertyType.StringWithOptions(TypeShapeStringOptions{CommentOutAnnotations: true})
+		outputExportType := propertyType.StringWithOptions(TypeShapeStringOptions{
+			SkipAnnotations:    true,
+			GenericErasure:     true,
+			AppendClassLiteral: true,
+		})
+		outputParameterType := propertyType.StringWithOptions(TypeShapeStringOptions{
+			CommentOutAnnotations: true,
+		})
 		_, _ = fmt.Fprintf(w, "    @OutputExport(name=\"%s\", type=%s, parameters={%s})\n", wireName, outputExportType, outputExportParameters)
 		_, _ = fmt.Fprintf(w, "    private Output<%s> %s;\n", outputParameterType, propertyName)
 		_, _ = fmt.Fprintf(w, "\n")
@@ -1534,21 +1543,92 @@ func (mod *modContext) genHeader(w io.Writer, imports []string, qualifier string
 	}
 }
 
-// TODO: finish the config generation
+func (mod *modContext) getConfigProperty(schemaType schema.Type, key string) (TypeShape, MethodCall) {
+	propertyType := mod.typeString(
+		schemaType,
+		"types",
+		false,
+		false,
+		false,
+		false, /*args*/
+		false,
+		true, // all config's 'get*' methods return an Optional
+		false,
+	)
+
+	getFunc := MethodCall{
+		This: "config",
+		Args: []string{fmt.Sprintf("%q", key)},
+	}
+	switch schemaType {
+	case schema.StringType:
+		getFunc.Method = "get"
+	case schema.BoolType:
+		getFunc.Method = "getBoolean"
+	case schema.IntType:
+		getFunc.Method = "getInteger"
+	case schema.NumberType:
+		getFunc.Method = "getDouble"
+	default:
+		switch t := schemaType.(type) {
+		case *schema.TokenType:
+			if t.UnderlyingType != nil {
+				return mod.getConfigProperty(t.UnderlyingType, key)
+			}
+		}
+		// TODO: C# has a special case for Arrays here, should we port it?
+
+		getFunc.Method = "getObject"
+		getFunc.Args = append(getFunc.Args, propertyType.StringJavaTypeShape())
+	}
+
+	return propertyType, getFunc
+}
 
 func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 	w := &bytes.Buffer{}
 
-	mod.genHeader(w, []string{}, "")
+	mod.genHeader(w, []string{
+		"java.util.Optional",
+	}, "")
 
 	// Open the config class.
 	_, _ = fmt.Fprintf(w, "public final class Config {\n")
 	_, _ = fmt.Fprintf(w, "\n")
 	// Create a config bag for the variables to pull from.
-	_, _ = fmt.Fprintf(w, "    private static final io.pulumi.Config config = io.pulumi.Config.of(\"%v\");", mod.pkg.Name)
+	_, _ = fmt.Fprintf(w, "    private static final io.pulumi.Config config = io.pulumi.Config.of(%q);", mod.pkg.Name)
 	_, _ = fmt.Fprintf(w, "\n")
 
-	// TODO: finish the config generation
+	// Emit an entry for all config variables.
+	for _, p := range variables {
+		propertyType, getFunc := mod.getConfigProperty(p.Type, p.Name)
+		propertyName := javaIdentifier(mod.propertyName(p))
+
+		returnStatement := getFunc.String()
+
+		hasDefaultValue := p.DefaultValue != nil
+		if hasDefaultValue {
+			defaultValueString, defaultValueTypeString, err := mod.getDefaultValue(p.DefaultValue, p.Type)
+			if err != nil {
+				return "", err
+			}
+			defaultValueInitializer := typeInitializer(p.Type, false, false, defaultValueString, defaultValueTypeString)
+			returnStatement += ".orElse(" + defaultValueInitializer + ")"
+		}
+
+		// TODO: printComment(w, p.Comment, "        ")
+		if err := getterTemplate.Execute(w, getterTemplateContext{
+			Indent:          strings.Repeat("    ", 1),
+			GetterType:      propertyType.String(),
+			GetterName:      propertyName,
+			ReturnStatement: returnStatement,
+		}); err != nil {
+			return "", err
+		}
+		_, _ = fmt.Fprintf(w, "\n")
+	}
+
+	// TODO: finish the config generation, emit any nested types.
 
 	// Close the config class and namespace.
 	_, _ = fmt.Fprintf(w, "}\n")

@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import io.pulumi.core.Input;
+import io.pulumi.core.Either;
 import io.pulumi.plant.inputs.*;
 import io.pulumi.plant.enums.*;
 import io.pulumi.core.InputOutput;
@@ -40,7 +41,7 @@ class InputTests {
     void testContainerArgs_simpleValues() {
         var args = ContainerArgs.builder()
                 .setBrightness(ContainerBrightness.ZeroPointOne)
-                .setColor(Input.ofUnion(ContainerColor.Red, ContainerColor.class, String.class)) // TODO: add sugar for Either
+                .setColor(Input.of(Either.ofLeft(ContainerColor.Red)))
                 .setMaterial("glass")
                 .setSize(ContainerSize.FourInch)
                 .build();

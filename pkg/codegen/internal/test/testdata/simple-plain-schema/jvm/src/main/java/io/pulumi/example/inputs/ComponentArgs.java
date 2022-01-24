@@ -29,14 +29,14 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable Boolean b;
 
     public Optional<Boolean> getB() {
-        return this.b == null ? Optional.empty() : Optional.of(this.b);
+        return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
     }
 
     @InputImport(name="bar")
     private final @Nullable io.pulumi.example.inputs.Foo bar;
 
     public Optional<io.pulumi.example.inputs.Foo> getBar() {
-        return this.bar == null ? Optional.empty() : Optional.of(this.bar);
+        return this.bar == null ? Optional.empty() : Optional.ofNullable(this.bar);
     }
 
     @InputImport(name="baz")
@@ -64,7 +64,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable Integer d;
 
     public Optional<Integer> getD() {
-        return this.d == null ? Optional.empty() : Optional.of(this.d);
+        return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
     }
 
     @InputImport(name="e", required=true)
@@ -78,7 +78,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     private final @Nullable String f;
 
     public Optional<String> getF() {
-        return this.f == null ? Optional.empty() : Optional.of(this.f);
+        return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
     }
 
     @InputImport(name="foo")
@@ -99,14 +99,14 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         String e,
         @Nullable String f,
         @Nullable Input<io.pulumi.example.inputs.FooArgs> foo) {
-        this.a = Objects.requireNonNull(a);
+        this.a = Objects.requireNonNull(a, "expected parameter 'a' to be non-null");
         this.b = b;
         this.bar = bar;
         this.baz = baz;
         this.bazMap = bazMap;
-        this.c = Objects.requireNonNull(c);
+        this.c = Objects.requireNonNull(c, "expected parameter 'c' to be non-null");
         this.d = d;
-        this.e = Objects.requireNonNull(e);
+        this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
         this.f = f;
         this.foo = foo;
     }
