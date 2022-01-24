@@ -435,7 +435,7 @@ func TestConstructGo(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.componentDir, func(t *testing.T) {
-			pathEnv := componentPathEnv(t, "construct_component", test.componentDir)
+			pathEnv := pathEnv(t, filepath.Join("construct_component", test.componentDir))
 			integration.ProgramTest(t, optsForConstructGo(t, test.expectedResourceCount, append(test.env, pathEnv)...))
 		})
 	}
@@ -447,6 +447,9 @@ func optsForConstructGo(t *testing.T, expectedResourceCount int, env ...string) 
 		Dir: filepath.Join("construct_component", "go"),
 		Dependencies: []string{
 			"github.com/pulumi/pulumi/sdk/v3",
+		},
+		Secrets: map[string]string{
+			"secret": "this super secret is encrypted",
 		},
 		Quick:      true,
 		NoParallel: true, // avoid contention for Dir
@@ -475,6 +478,10 @@ func optsForConstructGo(t *testing.T, expectedResourceCount int, env ...string) 
 					case "child-c":
 						assert.ElementsMatch(t, []resource.URN{urns["child-a"], urns["a"]},
 							res.PropertyDependencies["echo"])
+					case "a", "b", "c":
+						secretPropValue, ok := res.Outputs["secret"].(map[string]interface{})
+						assert.Truef(t, ok, "secret output was not serialized as a secret")
+						assert.Equal(t, resource.SecretSig, secretPropValue[resource.SigKey].(string))
 					}
 				}
 			}
@@ -545,7 +552,7 @@ func TestConstructPlainGo(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.componentDir, func(t *testing.T) {
-			pathEnv := componentPathEnv(t, "construct_component_plain", test.componentDir)
+			pathEnv := pathEnv(t, filepath.Join("construct_component_plain", test.componentDir))
 			integration.ProgramTest(t,
 				optsForConstructPlainGo(t, test.expectedResourceCount, append(test.env, pathEnv)...))
 		})
@@ -566,6 +573,11 @@ func optsForConstructPlainGo(t *testing.T, expectedResourceCount int, env ...str
 			assert.Equal(t, expectedResourceCount, len(stackInfo.Deployment.Resources))
 		},
 	}
+}
+
+// Test remote component inputs properly handle unknowns.
+func TestConstructUnknownGo(t *testing.T) {
+	testConstructUnknown(t, "go", "github.com/pulumi/pulumi/sdk/v3")
 }
 
 func TestGetResourceGo(t *testing.T) {
