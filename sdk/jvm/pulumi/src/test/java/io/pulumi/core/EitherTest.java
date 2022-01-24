@@ -15,6 +15,11 @@ class EitherTest {
     }
 
     @Test
+    void testDeliberateFailingTests() {
+        assertThat(1).isNull();
+    }
+
+    @Test
     void testFlatMap() {
         assertThat(
                 Either.valueOf("1").flatMap(s -> Either.valueOf(Integer.parseInt(s))).right()
