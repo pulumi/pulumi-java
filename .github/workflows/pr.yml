@@ -45,10 +45,11 @@ jobs:
       - name: Build and install pulumi-language-jvm
         run: |
           BIN="${{ github.workspace }}/bin"
+          mkdir "$BIN"
           cd sdk/jvm/cmd/pulumi-language-jvm
           go build
-          cp pulumi-language-jvm $BIN/
-          echo $BIN >> $GITHUB_PATH
+          cp pulumi-language-jvm "$BIN/"
+          echo "$BIN" >> $GITHUB_PATH
       - name: Run tests/examples
         run: |
           cd tests/examples
