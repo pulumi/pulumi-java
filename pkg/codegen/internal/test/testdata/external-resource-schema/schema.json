@@ -62,7 +62,7 @@
     "example::Workload": {
       "properties": {
         "pod": {
-          "$ref": "/kubernetes/v2.6.3/schema.json#/types/kubernetes:core%2Fv1:Pod"
+          "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/types/kubernetes:core%2Fv1:Pod"
         }
       },
       "type": "object"
@@ -70,7 +70,7 @@
     "example::Component": {
       "properties": {
         "provider": {
-          "$ref": "/kubernetes/v2.6.3/schema.json#/provider"
+          "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/provider"
         },
         "securityGroup": {
           "$ref": "/aws/v3.14.0/schema.json#/resources/aws:ec2%2FsecurityGroup:SecurityGroup"
@@ -78,39 +78,39 @@
         "storageClasses": {
           "type": "object",
           "additionalProperties": {
-            "$ref": "/kubernetes/v2.7.3/schema.json#/resources/kubernetes:storage.k8s.io%2Fv1:StorageClass"
+            "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/resources/kubernetes:storage.k8s.io%2Fv1:StorageClass"
           }
         }
       },
       "inputProperties": {
         "metadata": {
-          "$ref": "/kubernetes/v2.6.3/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
+          "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
         },
         "requiredMetadata": {
-          "$ref": "/kubernetes/v2.6.3/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
+          "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
         },
         "metadataArray": {
           "type": "array",
           "items": {
-            "$ref": "/kubernetes/v2.6.3/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
+            "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
           }
         },
         "requiredMetadataArray": {
           "type": "array",
           "items": {
-            "$ref": "/kubernetes/v2.6.3/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
+            "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
           }
         },
         "metadataMap": {
           "type": "object",
           "additionalProperties": {
-            "$ref": "/kubernetes/v2.6.3/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
+            "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
           }
         },
         "requiredMetadataMap": {
           "type": "object",
           "additionalProperties": {
-            "$ref": "/kubernetes/v2.6.3/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
+            "$ref": "/kubernetes/v3.6.0-alpha.1639426868+e637e82b.dirty/schema.json#/types/kubernetes:meta%2Fv1:ObjectMeta"
           }
         }
       },

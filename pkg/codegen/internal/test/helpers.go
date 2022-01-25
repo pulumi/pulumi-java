@@ -79,8 +79,12 @@ func ValidateFileEquality(t *testing.T, actual, expected map[string][]byte) {
 func RewriteFilesWhenPulumiAccept(t *testing.T, dir, lang string, actual map[string][]byte) {
 	if os.Getenv("PULUMI_ACCEPT") != "" {
 		for file, bytes := range actual {
-			err := ioutil.WriteFile(filepath.Join(dir, lang, file), bytes, 0600)
-			if err != nil {
+			fullPath := filepath.Join(dir, lang, file)
+			dir := filepath.Dir(fullPath)
+			if err := os.MkdirAll(dir, 0777); err != nil {
+				t.Errorf("can't create dir: '%s': %s", dir, err)
+			}
+			if err := ioutil.WriteFile(fullPath, bytes, 0600); err != nil {
 				t.Fatal(err)
 			}
 		}
