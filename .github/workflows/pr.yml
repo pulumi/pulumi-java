@@ -16,8 +16,40 @@ jobs:
           distribution: 'adopt'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Build with Gradle
+      - name: Build and unit-test with Gradle
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: build
           build-root-directory: sdk/jvm
+      - name: Publish SDK to Local Maven repo
+        run: |
+          cd sdk/jvm
+          gradle -Pversion=1.0.0 publishToMavenLocal
+      - name: Set up Go 1.17.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.
+      - name: Configure Go cache
+        id: go-cache-paths
+        run: |
+          echo "::set-output name=go-build::$(go env GOCACHE)"
+          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+      - name: Set up Go cache
+        uses: actions/cache@v2
+        id: go-cache
+        with:
+          path: |
+              ${{ steps.go-cache-paths.outputs.go-build }}
+              ${{ steps.go-cache-paths.outputs.go-mod }}
+          key: go-cache-${{ hashFiles('**/go.sum') }}
+      - name: Build and install pulumi-language-jvm
+        run: |
+          BIN="${{ github.workspace }}/bin"
+          cd sdk/jvm/cmd/pulumi-language-jvm
+          go build
+          cp pulumi-language-jvm $BIN/
+          echo $BIN >> $GITHUB_PATH
+      - name: Run tests/examples
+        run: |
+          cd tests/examples
+          go test -run TestJava -test.v
