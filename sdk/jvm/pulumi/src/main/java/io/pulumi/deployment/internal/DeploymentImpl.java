@@ -1366,8 +1366,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             }
             return runAsync(() -> {
                 try {
-                    return stackType.getDeclaredConstructor().newInstance();
-                } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                    return stackType.newInstance();
+                } catch (InstantiationException | IllegalAccessException e) {
                     throw new IllegalArgumentException(String.format(
                             "Couldn't create an instance of the stack type: '%s', error: %s",
                             stackType.getTypeName(), e
