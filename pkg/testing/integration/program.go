@@ -490,6 +490,9 @@ func (opts ProgramTestOptions) With(overrides ProgramTestOptions) ProgramTestOpt
 	if overrides.UsePipenv {
 		opts.UsePipenv = overrides.UsePipenv
 	}
+	if overrides.PrepareProject != nil {
+		opts.PrepareProject = overrides.PrepareProject
+	}
 	return opts
 }
 
