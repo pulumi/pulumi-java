@@ -4,9 +4,10 @@ on:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
 
-# TODO protect the token from crypto mining PR attacks before making
-# the repo public.
+# TODO[pulumi/java#10] protect jobs from crypto mining PR attacks
+# before making the repo public.
 env:
+  PULUMI_API: https://api.pulumi-staging.io
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 
 jobs:
