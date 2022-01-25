@@ -276,6 +276,12 @@ type ProgramTestOptions struct {
 
 	// If set, this hook is called after the `pulumi preview` command has completed.
 	PreviewCompletedHook func(dir string) error
+
+	// If not nil, specifies the logic of preparing a project by
+	// ensuring dependencies. If left as nil, runs default
+	// preparation logic by dispatching on whether the project
+	// uses Node, Python, .NET or Go.
+	PrepareProject func(*engine.Projinfo) error
 }
 
 func (opts *ProgramTestOptions) GetDebugLogLevel() int {
@@ -1634,19 +1640,10 @@ func (pt *ProgramTester) getProjinfo(projectDir string) (*engine.Projinfo, error
 
 // prepareProject runs setup necessary to get the project ready for `pulumi` commands.
 func (pt *ProgramTester) prepareProject(projinfo *engine.Projinfo) error {
-	// Based on the language, invoke the right routine to prepare the target directory.
-	switch rt := projinfo.Proj.Runtime.Name(); rt {
-	case NodeJSRuntime:
-		return pt.prepareNodeJSProject(projinfo)
-	case PythonRuntime:
-		return pt.preparePythonProject(projinfo)
-	case GoRuntime:
-		return pt.prepareGoProject(projinfo)
-	case DotNetRuntime:
-		return pt.prepareDotNetProject(projinfo)
-	default:
-		return errors.Errorf("unrecognized project runtime: %s", rt)
+	if pt.opts.PrepareProject != nil {
+		return pt.opts.PrepareProject(projinfo)
 	}
+	return pt.defaultPrepareProject(projinfo)
 }
 
 // prepareProjectDir runs setup necessary to get the project ready for `pulumi` commands.
@@ -2014,4 +2011,20 @@ func (pt *ProgramTester) prepareDotNetProject(projinfo *engine.Projinfo) error {
 	}
 
 	return nil
+}
+
+func (pt *ProgramTester) defaultPrepareProject(projinfo *engine.Projinfo) error {
+	// Based on the language, invoke the right routine to prepare the target directory.
+	switch rt := projinfo.Proj.Runtime.Name(); rt {
+	case NodeJSRuntime:
+		return pt.prepareNodeJSProject(projinfo)
+	case PythonRuntime:
+		return pt.preparePythonProject(projinfo)
+	case GoRuntime:
+		return pt.prepareGoProject(projinfo)
+	case DotNetRuntime:
+		return pt.prepareDotNetProject(projinfo)
+	default:
+		return errors.Errorf("unrecognized project runtime: %s", rt)
+	}
 }
