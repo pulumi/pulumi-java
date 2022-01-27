@@ -2,11 +2,7 @@ module github.com/pulumi/pulumi-java/tests
 
 go 1.17
 
-replace (
-	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
-	github.com/pulumi/pulumi/pkg/v3 => ../pkg
-	github.com/pulumi/pulumi/sdk/v3 => ../sdk
-)
+replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
