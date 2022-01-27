@@ -2,16 +2,11 @@ module github.com/pulumi/pulumi/pkg/v3
 
 go 1.16
 
-replace (
-	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
-	github.com/pulumi/pulumi/sdk/v3 => ../sdk
-)
+replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 
 require (
 	cloud.google.com/go/logging v1.0.0
 	cloud.google.com/go/storage v1.15.0
-	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
-	github.com/Sirupsen/logrus v1.0.5 // indirect
 	github.com/aws/aws-sdk-go v1.38.35
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/djherbis/times v1.2.0
