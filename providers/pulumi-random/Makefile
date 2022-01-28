@@ -1,12 +1,16 @@
 export PATH:=./bin:$(PATH)
 
 # build the java sdk
-build_java:: ensure bin/pulumi-tfgen-random
+build_java:: ensure bin/pulumi-tfgen-random bin/pulumi-tfgen-external-language-java
 	which pulumi-tfgen-random
 	pulumi-tfgen-random external:java --out sdk/java
 
 ensure::
 	go mod tidy
+
+bin/pulumi-tfgen-external-language-java:
+	mkdir -p bin
+	cd ../../pkg/cmd/pulumi-tfgen-external-language-java && go build -o ../../../providers/pulumi-random/bin
 
 # Using the trick to rebuild `pulumi-tfgen-random` from source.
 # Consider in the future publishing the binary from
