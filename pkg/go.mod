@@ -7,7 +7,6 @@ replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 require (
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/hashicorp/hcl/v2 v2.3.0
-	github.com/pgavlin/goldmark v1.1.33-0.20200616210433-b5eb04559386
 	github.com/pkg/errors v0.9.1
 	github.com/pulumi/pulumi/pkg/v3 v3.5.1
 	github.com/pulumi/pulumi/sdk/v3 v3.5.1
@@ -42,6 +41,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/opentracing/basictracer-go v1.0.0 // indirect
 	github.com/opentracing/opentracing-go v1.1.0 // indirect
+	github.com/pgavlin/goldmark v1.1.33-0.20200616210433-b5eb04559386 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sabhiram/go-gitignore v0.0.0-20180611051255-d3107576ba94 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
