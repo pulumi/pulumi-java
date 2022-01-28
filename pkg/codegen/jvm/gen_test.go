@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pulumi/pulumi/pkg/v3/codegen/internal/test"
+	"github.com/pulumi/pulumi-java/pkg/codegen/internal/test"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -41,17 +41,17 @@ func TestGeneratePackage(t *testing.T) {
 				path.Join(expectedFilesPath("plant"), "outputs", "Container.java"),
 			},
 		},
-		{
-			"External resource schema",
-			"external-resource-schema",
-			[]string{
-				path.Join(expectedFilesPath("example"), "ArgFunction.java"),
-				path.Join(expectedFilesPath("example"), "Cat.java"),
-				path.Join(expectedFilesPath("example"), "Component.java"),
-				path.Join(expectedFilesPath("example"), "inputs", "PetArgs.java"),
-				path.Join(expectedFilesPath("example"), "Workload.java"),
-			},
-		},
+		// {
+		// 	"External resource schema",
+		// 	"external-resource-schema",
+		// 	[]string{
+		// 		path.Join(expectedFilesPath("example"), "ArgFunction.java"),
+		// 		path.Join(expectedFilesPath("example"), "Cat.java"),
+		// 		path.Join(expectedFilesPath("example"), "Component.java"),
+		// 		path.Join(expectedFilesPath("example"), "inputs", "PetArgs.java"),
+		// 		path.Join(expectedFilesPath("example"), "Workload.java"),
+		// 	},
+		// },
 		{
 			"Simple schema with plain properties",
 			"simple-plain-schema",
