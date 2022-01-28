@@ -166,41 +166,20 @@ func (mod *modContext) typeString(
 	var typ TypeShape
 	switch t := t.(type) {
 	case *schema.EnumType:
-		typ.Type = mod.tokenToPackage(t.Token, "")
-		typ.Type += "."
-		typ.Type += "enums" // TODO: try to replace with 'qualifier'
-		typ.Type += "."
-		typ.Type += tokenToName(t.Token)
+		typ.Type = fmt.Sprintf("%s.enums.%s", mod.tokenToPackage(t.Token, ""), tokenToName(t.Token))
 	case *schema.ArrayType:
-		var listType string
-		switch {
-		case requireInitializers:
-			listType = "List"
-		default: // TODO: decide weather or not to use ImmutableList
-			listType, optional = "List", false
+		if !requireInitializers {
+			optional = false
 		}
-
-		typ.Type = listType
+		typ.Type = "List"
 		typ.Parameters = append(
 			typ.Parameters,
 			mod.typeString(t.ElementType, qualifier, state, false, args, false, false),
 		)
 	case *schema.MapType:
-		var mapType string
-		switch {
-		case requireInitializers:
-			mapType = "Map"
-			typ.Parameters = append(
-				typ.Parameters, TypeShape{Type: "String"},
-			)
-		default:
-			mapType = "Map" // TODO: decide weather or not to use ImmutableMap
-			typ.Parameters = append(
-				typ.Parameters, TypeShape{Type: "String"},
-			)
-		}
+		typ.Parameters = append(typ.Parameters, TypeShape{Type: "String"})
 
-		typ.Type = mapType
+		typ.Type = "Map"
 		typ.Parameters = append(
 			typ.Parameters,
 			mod.typeString(t.ElementType, qualifier, state, false, args, false, false),
@@ -1768,6 +1747,7 @@ func (mod *modContext) gen(fs fs) error {
 				baseClass:             "io.pulumi.resources.InvokeArgs",
 				propertyTypeQualifier: "inputs",
 				properties:            f.Inputs.Properties,
+				args:                  false,
 			}
 			argsBuffer := &bytes.Buffer{}
 			mod.genHeader(argsBuffer, importStrings, "inputs")
@@ -1783,6 +1763,7 @@ func (mod *modContext) gen(fs fs) error {
 				name:                  tokenToName(f.Token) + "Result",
 				propertyTypeQualifier: "outputs",
 				properties:            f.Outputs.Properties,
+				args:                  false,
 			}
 			resultBuffer := &bytes.Buffer{}
 			mod.genHeader(resultBuffer, importStrings, "outputs")
