@@ -1,9 +1,19 @@
+# TODO this needs a decision on how we version the JVM SDK for
+# pulumi-random, and likely needs to take into account the version of
+# the pulumi-random provider itself, which is currently implied in
+# go.mod refs and not synced with the number here.
+VERSION := 4.0.0
+
 export PATH:=./bin:$(PATH)
 
 # build the java sdk
 build_java:: ensure bin/pulumi-tfgen-random bin/pulumi-tfgen-external-language-java
 	which pulumi-tfgen-random
 	pulumi-tfgen-random external:java --out sdk/java
+	cd sdk/java && gradle build
+
+install_java::	build_java
+	cd sdk/java && gradle -Pversion=${VERSION} publishToMavenLocal
 
 ensure::
 	go mod tidy
