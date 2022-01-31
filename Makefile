@@ -32,6 +32,17 @@ build_sdk::
 ensure_sdk::
 	cd sdk/jvm && make ensure
 
+# pulumi-random provider Java SDKs built from providers/pulumi-random:
+
+ensure_random::
+	cd providers/pulumi-random && make ensure
+
+build_random::
+	cd providers/pulumi-random && make build
+
+install_random::
+	cd providers/pulumi-random && make install
+
 # Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
 # stacks in Pulumi service.
 integration_tests::	bin/pulumi-language-jvm

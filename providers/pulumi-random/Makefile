@@ -7,14 +7,14 @@ VERSION := 4.0.0
 export PATH:=./bin:$(PATH)
 
 # build the java sdk
-build_java:: ensure bin/pulumi-tfgen-random bin/pulumi-tfgen-external-language-java
+build:: ensure bin/pulumi-tfgen-random bin/pulumi-tfgen-external-language-java
 	which pulumi-tfgen-random
 	pulumi-tfgen-random external:java --out sdk/java
 	mkdir -p sdk/java/src/main/resources/io/pulumi/random
 	echo ${VERSION} > sdk/java/src/main/resources/io/pulumi/random/version.txt
 	cd sdk/java && gradle build
 
-install_java::	build_java
+install::	build
 	cd sdk/java && gradle -Pversion=${VERSION} publishToMavenLocal
 
 ensure::
