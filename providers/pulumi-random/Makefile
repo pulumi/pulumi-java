@@ -10,6 +10,8 @@ export PATH:=./bin:$(PATH)
 build_java:: ensure bin/pulumi-tfgen-random bin/pulumi-tfgen-external-language-java
 	which pulumi-tfgen-random
 	pulumi-tfgen-random external:java --out sdk/java
+	mkdir -p sdk/java/src/main/resources/io/pulumi/random
+	echo ${VERSION} > sdk/java/src/main/resources/io/pulumi/random/version.txt
 	cd sdk/java && gradle build
 
 install_java::	build_java
