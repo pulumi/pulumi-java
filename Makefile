@@ -17,6 +17,9 @@ test_go:: build_go
 ensure_go::
 	cd pkg && go mod tidy
 
+bin/pulumi-language-jvm:	pkg
+	mkdir -p bin
+	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-jvm
 
 # Java SDK is a gradle project rooted at `sdk/jvm`
 
@@ -28,3 +31,8 @@ build_sdk::
 
 ensure_sdk::
 	cd sdk/jvm && make ensure
+
+# Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
+# stacks in Pulumi service.
+integration_tests::	bin/pulumi-language-jvm
+	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestJava -test.v
