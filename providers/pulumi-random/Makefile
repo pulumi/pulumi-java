@@ -19,6 +19,7 @@ install::	build
 
 ensure::
 	go mod tidy
+	pulumi plugin install resource random v4.0.0
 
 bin/pulumi-tfgen-external-language-java:
 	mkdir -p bin
