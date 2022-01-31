@@ -48,6 +48,12 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
+      - name: Build Java Go packages
+        run: |
+          cd pkg && go build -v all
+      - name: Test Java Go packages
+        run: |
+          cd pkg && go test -test.v ./...
       - name: Build and install pulumi-language-jvm
         run: |
           BIN="${{ github.workspace }}/bin"
