@@ -1,19 +1,20 @@
 # Composite targets simplify local dev scenarios
 
-build::	ensure build_codegen build_sdk
+build::	ensure build_go build_sdk
 
-ensure::	ensure_codegen ensure_sdk
+ensure::	ensure_go ensure_sdk
 
 
-# Java codegen is a Go project rooted at `pkg/`.
+# Go project rooted at `pkg/` implements Pulumi JVM language plugin
+# and Java go as a Go library.
 
-build_codegen::	ensure_codegen
+build_go::	ensure_go
 	cd pkg && go build -v all
 
-test_codegen:: build_codegen
+test_go:: build_go
 	cd pkg && go test -test.v ./...
 
-ensure_codegen::
+ensure_go::
 	cd pkg && go mod tidy
 
 
