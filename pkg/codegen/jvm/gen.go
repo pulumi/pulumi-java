@@ -169,6 +169,7 @@ func (mod *modContext) typeStringInner(
 	case *schema.OptionalType:
 		inner := mod.typeStringInner(t.ElementType, qualifier, input, state, requireInitializers)
 		if ignoreOptional(t, requireInitializers) {
+			inner.Annotations = append(inner.Annotations, "@Nullable")
 			return inner
 		}
 		return TypeShape{
@@ -338,11 +339,11 @@ func (mod *modContext) typeStringInner(
 	}
 }
 
-func emptyTypeInitializer(t schema.Type) string {
+func emptyTypeInitializer(t schema.Type, optionalAsNull bool) string {
 	if isInputType(t) {
 		return "Input.empty()"
 	}
-	if _, ok := t.(*schema.OptionalType); ok {
+	if _, ok := t.(*schema.OptionalType); ok && !optionalAsNull {
 		return "Optional.empty()"
 	}
 	switch t.(type) {
@@ -485,7 +486,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
 	if !prop.IsRequired() {
-		emptyStatement := emptyTypeInitializer(prop.Type)
+		emptyStatement := emptyTypeInitializer(prop.Type, true)
 		req := prop.Type
 		if okt, ok := prop.Type.(*schema.OptionalType); ok {
 			req = okt.ElementType
@@ -502,7 +503,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 			)
 			getterType = getterTypeNonOptional
 		default:
-			emptyStatement = emptyTypeInitializer(prop.Type)
+			emptyStatement = emptyTypeInitializer(prop.Type, false)
 			// nested type is only used when prop.Type is a union
 			returnStatement = typeInitializer(prop.Type, returnStatement, "")
 		}
@@ -603,7 +604,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
 		for _, prop := range pt.properties {
 			fieldName := javaIdentifier(pt.mod.propertyName(prop))
-			emptyValue := emptyTypeInitializer(prop.Type)
+			emptyValue := emptyTypeInitializer(prop.Type, true)
 			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
 		}
 		_, _ = fmt.Fprintf(w, "    }\n")
@@ -653,7 +654,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
 			propertyTypeUnwrapped := pt.mod.typeString(
-				codegen.UnwrapType(prop.Type),
+				&schema.OptionalType{ElementType: codegen.UnwrapType(prop.Type)},
 				pt.propertyTypeQualifier,
 				true,                // is input
 				pt.state,            // is state
