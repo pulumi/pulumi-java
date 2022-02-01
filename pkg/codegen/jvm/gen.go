@@ -140,6 +140,22 @@ func (mod *modContext) typeString(
 	state bool,
 	requireInitializers bool,
 ) TypeShape {
+	inner := mod.typeStringInner(t, qualifier, input, state, requireInitializers)
+	if inner.Type == "Optional" {
+		contract.Assert(len(inner.Parameters) == 1)
+		inner = inner.Parameters[0]
+		inner.Annotations = append(inner.Annotations, "@Nullable")
+	}
+	return inner
+}
+func (mod *modContext) typeStringInner(
+	t schema.Type,
+	qualifier string,
+	input bool,
+	state bool,
+	requireInitializers bool,
+) TypeShape {
+
 	switch t := t.(type) {
 	case *schema.InputType:
 		inner := mod.typeString(t.ElementType, qualifier, true, state, requireInitializers)
@@ -154,9 +170,8 @@ func (mod *modContext) typeString(
 			return inner
 		}
 		return TypeShape{
-			Type:        "Optional",
-			Parameters:  []TypeShape{inner},
-			Annotations: append(inner.Annotations, "@Nullable"),
+			Type:       "Optional",
+			Parameters: []TypeShape{inner},
 		}
 
 	case *schema.EnumType:
