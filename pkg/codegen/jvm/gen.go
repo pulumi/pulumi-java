@@ -433,8 +433,12 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 
 	wireName := prop.Name
 	propertyName := javaIdentifier(pt.mod.propertyName(prop))
+	typ := prop.Type
+	if !prop.IsRequired() {
+		typ = codegen.OptionalType(prop)
+	}
 	propertyType := pt.mod.typeString(
-		prop.Type,
+		typ,
 		pt.propertyTypeQualifier,
 		true,                // is input
 		pt.state,            // is state
@@ -475,14 +479,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 		requireInitializers, // FIXME: should not require initializers, make it immutable
 		true,                // outer optional
 	)
-	getterTypeNonOptional := pt.mod.typeString(
-		prop.Type,
-		pt.propertyTypeQualifier,
-		true,                // is input
-		pt.state,            // is state
-		requireInitializers, // FIXME: should not require initializers, make it immutable
-		false,               // outer optional
-	)
+
 	getterName := javaIdentifier("get" + title(prop.Name))
 	// TODO: add docs comment
 	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
@@ -495,6 +492,14 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 		}
 		switch req.(type) {
 		case *schema.ArrayType, *schema.MapType, *schema.UnionType, *schema.InputType: // the most common case actually
+			getterTypeNonOptional := pt.mod.typeString(
+				req,
+				pt.propertyTypeQualifier,
+				true,                // is input
+				pt.state,            // is state
+				requireInitializers, // FIXME: should not require initializers, make it immutable
+				false,               // outer optional
+			)
 			getterType = getterTypeNonOptional
 		default:
 			emptyStatement = emptyTypeInitializer(prop.Type)
@@ -505,7 +510,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 	}
 
 	if err := getterTemplate.Execute(w, getterTemplateContext{
-		Indent:          strings.Repeat("    ", 1),
+		Indent:          strings.Repeat(" ", 4),
 		GetterType:      getterType.String(),
 		GetterName:      getterName,
 		ReturnStatement: returnStatement,
@@ -2133,8 +2138,6 @@ func isInputType(t schema.Type) bool {
 
 func ignoreOptional(t *schema.OptionalType, requireInitializers bool) bool {
 	switch t.ElementType.(type) {
-	case *schema.InputType:
-		return true
 	case *schema.ArrayType, *schema.MapType:
 		return !requireInitializers
 	}
