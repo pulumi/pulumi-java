@@ -74,6 +74,10 @@ sourceSets {
 
 test {
     useJUnitPlatform()
+    testLogging.showStandardStreams = true
+    testLogging.exceptionFormat = 'full'
+
+    systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
 }
 
 publishing {
