@@ -18,7 +18,6 @@ type JVMPropertyInfo struct {
 type JVMPackageInfo struct {
 	PackageReferences      map[string]string `json:"packageReferences,omitempty"`
 	Packages               map[string]string `json:"packages,omitempty"`
-	Compatibility          string            `json:"compatibility,omitempty"`
 	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
 	BasePackage            string            `json:"basePackage"`
 }
