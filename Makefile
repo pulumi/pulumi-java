@@ -1,71 +1,49 @@
-PROJECT_NAME := Pulumi SDK
-SUB_PROJECTS := sdk/jvm sdk/dotnet sdk/nodejs sdk/python sdk/go
-include build/common.mk
+# Composite targets simplify local dev scenarios
+
+build::	ensure build_go build_sdk
+
+ensure::	ensure_go ensure_sdk
 
 
-PROJECT         := github.com/pulumi/pulumi/pkg/v3/cmd/pulumi
-PROJECT_PKGS    := $(shell cd ./pkg && go list ./... | grep -v /vendor/)
-TESTS_PKGS      := $(shell cd ./tests && go list ./... | grep -v tests/templates | grep -v /vendor/)
-VERSION         := $(shell pulumictl get version)
+# Go project rooted at `pkg/` implements Pulumi JVM language plugin
+# and Java go as a Go library.
 
-TESTPARALLELISM := 10
+build_go::	ensure_go
+	cd pkg && go build -v all
 
-ensure::
-	$(call STEP_MESSAGE)
-	@echo "cd sdk && go mod download"; cd sdk && go mod download
-	@echo "cd pkg && go mod download"; cd pkg && go mod download
-	@echo "cd tests && go mod download"; cd tests && go mod download
+test_go:: build_go
+	cd pkg && go test -test.v ./...
 
-build-proto::
-	cd sdk/proto && ./generate.sh
+ensure_go::
+	cd pkg && go mod tidy
 
-.PHONY: generate
-generate::
-	$(call STEP_MESSAGE)
-	echo "Generate static assets bundle for docs generator"
-	cd pkg && go generate ./codegen/docs/gen.go
+bin/pulumi-language-jvm:	pkg
+	mkdir -p bin
+	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-jvm
 
-build:: generate
-	cd pkg && go install -ldflags "-X github.com/pulumi/pulumi/pkg/v3/version.Version=${VERSION}" ${PROJECT}
+# Java SDK is a gradle project rooted at `sdk/jvm`
 
-build_debug:: generate
-	cd pkg && go install -gcflags="all=-N -l" -ldflags "-X github.com/pulumi/pulumi/pkg/v3/version.Version=${VERSION}" ${PROJECT}
+install_sdk::
+	cd sdk/jvm && make install
 
-install:: generate
-	cd pkg && GOBIN=$(PULUMI_BIN) go install -ldflags "-X github.com/pulumi/pulumi/pkg/v3/version.Version=${VERSION}" ${PROJECT}
+build_sdk::
+	cd sdk/jvm && make build
 
-install_all:: install
+ensure_sdk::
+	cd sdk/jvm && make ensure
 
-dist:: build
-	cd pkg && go install -ldflags "-X github.com/pulumi/pulumi/pkg/v3/version.Version=${VERSION}" ${PROJECT}
+# pulumi-random provider Java SDKs built from providers/pulumi-random:
 
-# NOTE: the brew target intentionally avoids the dependency on `build`, as it does not require the language SDKs.
-brew:: BREW_VERSION := $(shell scripts/get-version HEAD)
-brew::
-	cd pkg && go install -ldflags "-X github.com/pulumi/pulumi/pkg/v3/version.Version=${BREW_VERSION}" ${PROJECT}
+ensure_random::
+	cd providers/pulumi-random && make ensure
 
-lint::
-	for DIR in "pkg" "sdk" "tests" ; do \
-		pushd $$DIR ; golangci-lint run -c ../.golangci.yml --timeout 5m ; popd ; \
-	done
+build_random::
+	cd providers/pulumi-random && make build
 
-test_fast:: build
-	cd pkg && $(GO_TEST_FAST) ${PROJECT_PKGS}
+install_random::
+	cd providers/pulumi-random && make install
 
-test_build:: $(SUB_PROJECTS:%=%_install)
-	cd tests/integration/construct_component/testcomponent && yarn install && yarn link @pulumi/pulumi && yarn run tsc
-	cd tests/integration/construct_component/testcomponent-go && go build -o pulumi-resource-testcomponent
-	cd tests/integration/construct_component_slow/testcomponent && yarn install && yarn link @pulumi/pulumi && yarn run tsc
-	cd tests/integration/construct_component_plain/testcomponent && yarn install && yarn link @pulumi/pulumi && yarn run tsc
-	cd tests/integration/construct_component_plain/testcomponent-go && go build -o pulumi-resource-testcomponent
-	cd tests/integration/component_provider_schema/testcomponent && yarn install && yarn link @pulumi/pulumi && yarn run tsc
-	cd tests/integration/component_provider_schema/testcomponent-go && go build -o pulumi-resource-testcomponent
-
-test_all:: build test_build $(SUB_PROJECTS:%=%_install)
-	cd pkg && $(GO_TEST) ${PROJECT_PKGS}
-	cd tests && $(GO_TEST) -p=1 ${TESTS_PKGS}
-
-.PHONY: test_containers
-test_containers:
-	$(call STEP_MESSAGE)
-	./scripts/test-containers.sh ${VERSION}
+# Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
+# stacks in Pulumi service.
+integration_tests::	bin/pulumi-language-jvm
+	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestJava -test.v
