@@ -22,15 +22,6 @@ jobs:
           distribution: 'adopt'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Build and unit-test with Gradle
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
-      - name: Publish SDK to Local Maven repo
-        run: |
-          cd sdk/jvm
-          gradle -Pversion=1.0.0 publishToMavenLocal
       - name: Set up Go 1.17.x
         uses: actions/setup-go@v2
         with:
@@ -48,21 +39,24 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
-      - name: Build Java Go packages
-        run: |
-          cd pkg && go build -v all
-      - name: Test Java Go packages
-        run: |
-          cd pkg && go test -test.v ./...
-      - name: Build and install pulumi-language-jvm
-        run: |
-          BIN="${{ github.workspace }}/bin"
-          mkdir "$BIN"
-          cd sdk/jvm/cmd/pulumi-language-jvm
-          go build
-          cp pulumi-language-jvm "$BIN/"
-          echo "$BIN" >> $GITHUB_PATH
-      - name: Run tests/examples
-        run: |
-          cd tests/examples
-          go test -run TestJava -test.v
+      - name: Ensure dependencies
+        run: make ensure
+      - name: Build and unit-test Pulumi Java SDK
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        with:
+          arguments: build
+          build-root-directory: sdk/jvm
+      - name: Publish Pulumi Java SDK to a local Maven repo
+        run: make install_sdk
+      - name: Build Pulumi JVM Language Provider and Codegen
+        run: make build_go
+      - name: Test Pulumi JVM Language Provider and Codegen
+        run: make test_go
+      - name: Ensure dependencies for pulumi-random JVM SDK
+        run: make ensure_random
+      - name: Build pulumi-random JVM SDK
+        run: make build_random
+      - name: Install pulumi-random JVM SDK to a local Maven repo
+        run: make install_random
+      - name: Integration tests
+        run: make integration_tests

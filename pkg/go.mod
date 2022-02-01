@@ -6,11 +6,13 @@ replace github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.5.0
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
+	github.com/golang/protobuf v1.5.2
 	github.com/hashicorp/hcl/v2 v2.3.0
 	github.com/pkg/errors v0.9.1
 	github.com/pulumi/pulumi/pkg/v3 v3.5.1
 	github.com/pulumi/pulumi/sdk/v3 v3.5.1
 	github.com/stretchr/testify v1.6.1
+	google.golang.org/grpc v1.37.0
 )
 
 require (
@@ -25,7 +27,6 @@ require (
 	github.com/gofrs/uuid v3.3.0+incompatible // indirect
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
@@ -61,7 +62,6 @@ require (
 	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
 	golang.org/x/text v0.3.6 // indirect
 	google.golang.org/genproto v0.0.0-20210506142907-4a47615972c2 // indirect
-	google.golang.org/grpc v1.37.0 // indirect
 	google.golang.org/protobuf v1.26.0 // indirect
 	gopkg.in/src-d/go-billy.v4 v4.3.2 // indirect
 	gopkg.in/src-d/go-git.v4 v4.13.1 // indirect
