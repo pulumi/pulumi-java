@@ -145,6 +145,7 @@ func (mod *modContext) typeString(
 	inner := mod.typeStringInner(t, qualifier, input, state, requireInitializers)
 	if inner.Type == "Optional" && !outerOptional {
 		contract.Assert(len(inner.Parameters) == 1)
+		contract.Assert(len(inner.Annotations) == 0)
 		inner = inner.Parameters[0]
 		inner.Annotations = append(inner.Annotations, "@Nullable")
 	}
@@ -184,11 +185,8 @@ func (mod *modContext) typeStringInner(
 		}
 
 	case *schema.ArrayType:
-		var listType string
-		switch {
-		case requireInitializers:
-			listType = "List"
-		default: // TODO: decide weather or not to use ImmutableList
+		listType := "List" // TODO: decide weather or not to use ImmutableList
+		if requireInitializers {
 			listType = "List"
 		}
 
@@ -202,12 +200,9 @@ func (mod *modContext) typeStringInner(
 		}
 
 	case *schema.MapType:
-		var mapType string
-		switch {
-		case requireInitializers:
+		mapType := "Map" // TODO: decide weather or not to use ImmutableMap
+		if requireInitializers {
 			mapType = "Map"
-		default:
-			mapType = "Map" // TODO: decide weather or not to use ImmutableMap
 		}
 
 		return TypeShape{
@@ -553,7 +548,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 			pt.propertyTypeQualifier,
 			true,
 			pt.state,
-			false,
+			false, // requireInitializers
 			false, // outer optional
 		)
 
@@ -582,7 +577,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		// set default values or assign given values
 		var defaultValueCode string
 		if prop.DefaultValue != nil {
-			defaultValueString, defType, err := pt.mod.getDefaultValue(prop.DefaultValue, prop.Type)
+			defaultValueString, defType, err := pt.mod.getDefaultValue(prop.DefaultValue, codegen.UnwrapType(prop.Type))
 			if err != nil {
 				return err
 			}
@@ -1414,6 +1409,12 @@ func (mod *modContext) getTypeImports(t schema.Type, recurse bool, imports map[s
 	seen.Add(t)
 
 	switch t := t.(type) {
+	case *schema.OptionalType:
+		mod.getTypeImports(t.ElementType, recurse, imports, seen)
+		return
+	case *schema.InputType:
+		mod.getTypeImports(t.ElementType, recurse, imports, seen)
+		return
 	case *schema.ArrayType:
 		mod.getTypeImports(t.ElementType, recurse, imports, seen)
 		return
@@ -2010,7 +2011,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 
 	// Find nested types.
 	for _, t := range pkg.Types {
-		switch typ := t.(type) {
+		switch typ := codegen.UnwrapType(t).(type) {
 		case *schema.ObjectType:
 			mod := getModFromToken(typ.Token, pkg)
 			mod.types = append(mod.types, typ)
@@ -2134,12 +2135,17 @@ func isInputType(t schema.Type) bool {
 	if optional, ok := t.(*schema.OptionalType); ok {
 		t = optional.ElementType
 	}
+
+	_, stillOption := t.(*schema.OptionalType)
+	contract.Assert(!stillOption)
 	_, isInputType := t.(*schema.InputType)
 	return isInputType
 }
 
 func ignoreOptional(t *schema.OptionalType, requireInitializers bool) bool {
 	switch t.ElementType.(type) {
+	case *schema.InputType:
+		return true
 	case *schema.ArrayType, *schema.MapType:
 		return !requireInitializers
 	}
