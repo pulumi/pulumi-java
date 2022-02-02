@@ -653,8 +653,12 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		})
 
 		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
+			var typ schema.Type = &schema.OptionalType{ElementType: codegen.UnwrapType(prop.Type)}
+			if prop.IsRequired() {
+				typ = codegen.UnwrapType(typ)
+			}
 			propertyTypeUnwrapped := pt.mod.typeString(
-				&schema.OptionalType{ElementType: codegen.UnwrapType(prop.Type)},
+				typ,
 				pt.propertyTypeQualifier,
 				true,                // is input
 				pt.state,            // is state
@@ -1629,9 +1633,6 @@ func (mod *modContext) genUtilities() (string, error) {
 func gradleProjectPath() string {
 	return path.Join("src", "main", "java")
 }
-
-// Set to avoid generating a file with the same name twice.
-var generatedPaths = codegen.Set{}
 
 func (mod *modContext) gen(fs fs) error {
 	pkgComponents := strings.Split(mod.packageName, ".")
