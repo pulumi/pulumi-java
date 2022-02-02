@@ -341,7 +341,7 @@ func emptyTypeInitializer(t schema.Type, optionalAsNull bool) string {
 	if _, ok := t.(*schema.OptionalType); ok && !optionalAsNull {
 		return "Optional.empty()"
 	}
-	switch t.(type) {
+	switch codegen.UnwrapType(t).(type) {
 	case *schema.ArrayType:
 		return "List.of()"
 	case *schema.MapType:
@@ -480,12 +480,9 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 	// TODO: add docs comment
 	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
-	if !prop.IsRequired() {
-		emptyStatement := emptyTypeInitializer(prop.Type, true)
-		req := prop.Type
-		if okt, ok := prop.Type.(*schema.OptionalType); ok {
-			req = okt.ElementType
-		}
+	if opt, ok := prop.Type.(*schema.OptionalType); ok {
+		req := opt.ElementType
+		emptyStatement := emptyTypeInitializer(prop.Type, false)
 		switch req.(type) {
 		case *schema.ArrayType, *schema.MapType, *schema.UnionType, *schema.InputType: // the most common case actually
 			getterTypeNonOptional := pt.mod.typeString(
@@ -497,8 +494,8 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 				false,               // outer optional
 			)
 			getterType = getterTypeNonOptional
+			emptyStatement = emptyTypeInitializer(req, true)
 		default:
-			emptyStatement = emptyTypeInitializer(prop.Type, false)
 			// nested type is only used when prop.Type is a union
 			returnStatement = typeInitializer(prop.Type, returnStatement, "")
 		}
