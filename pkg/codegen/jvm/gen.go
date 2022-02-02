@@ -16,6 +16,8 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+
+	reasons "github.com/pulumi/pulumi-java/pkg/codegen/jvm/reason"
 )
 
 type stringSet map[string]struct{}
@@ -1636,12 +1638,19 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 	return w.String(), nil
 }
 
-type fs map[string][]byte
+type addedFile struct {
+	bytes  []byte
+	reason reasons.FileGenReason
+}
 
-func (fs fs) add(path string, contents []byte) {
-	_, has := fs[path]
-	contract.Assertf(!has, "duplicate file: %s", path)
-	fs[path] = contents
+type fs map[string]addedFile
+
+func (fs fs) add(reason reasons.FileGenReason, path string, contents []byte) {
+	old, has := fs[path]
+	if has {
+		contract.Assertf(!has, "duplicate file at %s: conflict between %v and %v", path, old.reason, reason)
+	}
+	fs[path] = addedFile{contents, reason}
 }
 
 func (mod *modContext) genUtilities() (string, error) {
@@ -1684,7 +1693,7 @@ func (mod *modContext) gen(fs fs) error {
 		}
 	}
 
-	addFile := func(name, contents string) {
+	addFile := func(reason reasons.FileGenReason, name, contents string) {
 		p := path.Join(dir, name)
 		files = append(files, p)
 
@@ -1698,9 +1707,9 @@ func (mod *modContext) gen(fs fs) error {
 				return
 			}
 			generatedPaths.Add(p)
-			fs.add(p, []byte(contents))
+			fs.add(reason, p, []byte(contents))
 		} else {
-			fs.add(p, []byte(contents))
+			fs.add(reason, p, []byte(contents))
 		}
 	}
 
@@ -1711,21 +1720,21 @@ func (mod *modContext) gen(fs fs) error {
 		if err != nil {
 			return err
 		}
-		fs.add(filepath.Join(dir, "Utilities.java"), []byte(utilities))
+		fs.add(reasons.Utilities(), filepath.Join(dir, "Utilities.java"), []byte(utilities))
 
 		// Ensure that the target module directory contains a README.md file.
 		readme := mod.pkg.Description
 		if readme != "" && readme[len(readme)-1] != '\n' {
 			readme += "\n"
 		}
-		fs.add("README.md", []byte(readme))
+		fs.add(reasons.Readme(), "README.md", []byte(readme))
 	case "config":
 		if len(mod.pkg.Config) > 0 {
 			config, err := mod.genConfig(mod.pkg.Config)
 			if err != nil {
 				return err
 			}
-			addFile("Config.java", config)
+			addFile(reasons.Config(), "Config.java", config)
 			return nil
 		}
 	}
@@ -1748,7 +1757,9 @@ func (mod *modContext) gen(fs fs) error {
 		if err := mod.genResource(buffer, r); err != nil {
 			return err
 		}
-		addFile(resourceName(r)+".java", buffer.String())
+		addFile(reasons.Resource(r.Token).ToFileGenReason(),
+			resourceName(r)+".java",
+			buffer.String())
 
 		// Generate the resource args type.
 		args := &plainType{
@@ -1765,7 +1776,10 @@ func (mod *modContext) gen(fs fs) error {
 		if err := args.genInputType(argsBuffer); err != nil {
 			return err
 		}
-		addFile(path.Join("inputs", resourceName(r)+"Args.java"), argsBuffer.String())
+
+		addFile(reasons.ResourceArgs(r.Token).ToFileGenReason(),
+			path.Join("inputs", resourceName(r)+"Args.java"),
+			argsBuffer.String())
 
 		// Generate the `get` args type, if any.
 		if r.StateInputs != nil {
@@ -1784,7 +1798,9 @@ func (mod *modContext) gen(fs fs) error {
 			if err := state.genInputType(stateBuffer); err != nil {
 				return err
 			}
-			addFile(path.Join("inputs", resourceName(r)+"State.java"), stateBuffer.String())
+			addFile(reasons.ResourceGetArgs(r.Token).ToFileGenReason(),
+				path.Join("inputs", resourceName(r)+"State.java"),
+				stateBuffer.String())
 		}
 	}
 
@@ -1808,7 +1824,9 @@ func (mod *modContext) gen(fs fs) error {
 		if err := mod.genFunction(buffer, f); err != nil {
 			return err
 		}
-		addFile(tokenToName(f.Token)+".java", buffer.String())
+		addFile(reasons.Function(f.Token).ToFileGenReason(),
+			tokenToName(f.Token)+".java",
+			buffer.String())
 
 		// Emit the args and result types, if any.
 		if f.Inputs != nil {
@@ -1824,7 +1842,9 @@ func (mod *modContext) gen(fs fs) error {
 			if err := args.genInputType(argsBuffer); err != nil {
 				return err
 			}
-			addFile(path.Join("inputs", tokenToName(f.Token)+"Args.java"), argsBuffer.String())
+			addFile(reasons.FunctionArgs(f.Token).ToFileGenReason(),
+				path.Join("inputs", tokenToName(f.Token)+"Args.java"),
+				argsBuffer.String())
 		}
 
 		if f.Outputs != nil {
@@ -1839,7 +1859,9 @@ func (mod *modContext) gen(fs fs) error {
 			if err := res.genOutputType(resultBuffer); err != nil {
 				return err
 			}
-			addFile(path.Join("outputs", tokenToName(f.Token)+"Result.java"), resultBuffer.String())
+			addFile(reasons.FunctionResult(f.Token).ToFileGenReason(),
+				path.Join("outputs", tokenToName(f.Token)+"Result.java"),
+				resultBuffer.String())
 		}
 	}
 
@@ -1853,7 +1875,9 @@ func (mod *modContext) gen(fs fs) error {
 					if err := mod.genType(buffer, t, "inputs", true, false, true); err != nil {
 						return err
 					}
-					addFile(path.Join("inputs", mod.typeName(t, false, true, true)+".java"), buffer.String())
+					addFile(reasons.Type(t.Token, reasons.ArgsVersion).ToFileGenReason(),
+						path.Join("inputs", mod.typeName(t, false, true, true)+".java"),
+						buffer.String())
 				}
 				if mod.details(t).plainType {
 					buffer := &bytes.Buffer{}
@@ -1861,7 +1885,9 @@ func (mod *modContext) gen(fs fs) error {
 					if err := mod.genType(buffer, t, "inputs", true, false, false); err != nil {
 						return err
 					}
-					addFile(path.Join("inputs", mod.typeName(t, false, true, false)+".java"), buffer.String())
+					addFile(reasons.Type(t.Token, reasons.PlainVersion).ToFileGenReason(),
+						path.Join("inputs", mod.typeName(t, false, true, false)+".java"),
+						buffer.String())
 				}
 			}
 
@@ -1871,7 +1897,9 @@ func (mod *modContext) gen(fs fs) error {
 				if err := mod.genType(buffer, t, "inputs", true, true, true); err != nil {
 					return err
 				}
-				addFile(path.Join("inputs", mod.typeName(t, true, true, true)+".java"), buffer.String())
+				addFile(reasons.Type(t.Token, reasons.StateVersion).ToFileGenReason(),
+					path.Join("inputs", mod.typeName(t, true, true, true)+".java"),
+					buffer.String())
 			}
 		}
 		if mod.details(t).outputType {
@@ -1880,7 +1908,9 @@ func (mod *modContext) gen(fs fs) error {
 			if err := mod.genType(buffer, t, "outputs", false, false, false); err != nil {
 				return err
 			}
-			addFile(path.Join("outputs", mod.typeName(t, false, false, false)+".java"), buffer.String())
+			addFile(reasons.Type(t.Token, reasons.OutputVersion).ToFileGenReason(),
+				path.Join("outputs", mod.typeName(t, false, false, false)+".java"),
+				buffer.String())
 		}
 	}
 
@@ -1900,7 +1930,9 @@ func (mod *modContext) gen(fs fs) error {
 			if i != len(mod.enums)-1 {
 				_, _ = fmt.Fprintf(buffer, "\n")
 			}
-			addFile(path.Join("enums", tokenToName(enum.Token)+".java"), buffer.String())
+			addFile(reasons.Enum(enum.Token).ToFileGenReason(),
+				path.Join("enums", tokenToName(enum.Token)+".java"),
+				buffer.String())
 		}
 	}
 
@@ -2127,12 +2159,12 @@ func genGradleProject(pkg *schema.Package, basePackageName string, packageName s
 	if err != nil {
 		return err
 	}
-	files.add("settings.gradle", genSettingsFile)
+	files.add(reasons.Gradle(), "settings.gradle", genSettingsFile)
 	genBuildFile, err := genBuildFile(pkg.Name, basePackageName)
 	if err != nil {
 		return err
 	}
-	files.add("build.gradle", genBuildFile)
+	files.add(reasons.Gradle(), "build.gradle", genBuildFile)
 	return nil
 }
 
@@ -2170,7 +2202,7 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 	// Generate each module.
 	files := fs{}
 	for p, f := range extraFiles {
-		files.add(p, f)
+		files.add(reasons.ExtraFiles(), p, f)
 	}
 
 	for _, mod := range modules {
@@ -2189,5 +2221,10 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 	); err != nil {
 		return nil, err
 	}
-	return files, nil
+
+	result := map[string][]byte{}
+	for k, v := range files {
+		result[k] = v.bytes
+	}
+	return result, nil
 }
