@@ -99,9 +99,9 @@ func makeSafeEnumName(name, typeName string) (string, error) {
 	return safeName, nil
 }
 
-// The following 3 functions are taken directly from pkg/codegen utils. The only
-// distinction made is that `visitPlainObjectTypes` does not drill into Input
-// types.
+// The following 3 functions are copied from pkg/codegen utils with one change.
+// `visitPlainObjectTypes` does not drill into Input types, while
+// `codegen.visitObjectTypes` does.
 func visitPlainObjectTypes(properties []*schema.Property, visitor func(*schema.ObjectType)) {
 	VisitPlainTypeClosure(properties, func(t schema.Type) {
 		if o, ok := t.(*schema.ObjectType); ok {
