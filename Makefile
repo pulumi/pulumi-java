@@ -21,6 +21,11 @@ bin/pulumi-language-jvm:	pkg
 	mkdir -p bin
 	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-jvm
 
+bin/pulumi-java-gen:	pkg
+	mkdir -p bin
+	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
+
+
 # Java SDK is a gradle project rooted at `sdk/jvm`
 
 install_sdk::
@@ -34,10 +39,7 @@ ensure_sdk::
 
 # pulumi-random provider Java SDKs built from providers/pulumi-random:
 
-ensure_random::
-	cd providers/pulumi-random && make ensure
-
-build_random::
+build_random::	bin/pulumi-java-gen
 	cd providers/pulumi-random && make build
 
 install_random::
