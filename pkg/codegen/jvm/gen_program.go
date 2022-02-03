@@ -6,24 +6,24 @@ import (
 	"io"
 
 	"github.com/hashicorp/hcl/v2"
-	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model/format"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 )
 
 type generator struct {
 	// The formatter to use when generating code.
 	*format.Formatter
-	program *hcl2.Program
+	program *pcl.Program
 	// Whether awaits are needed, and therefore an async Initialize method should be declared.
 	asyncInit bool
 	// TODO
 	diagnostics hcl.Diagnostics
 }
 
-func GenerateProgram(program *hcl2.Program) (map[string][]byte, hcl.Diagnostics, error) {
+func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, error) {
 	// Linearize the nodes into an order appropriate for procedural code generation.
-	nodes := hcl2.Linearize(program)
+	nodes := pcl.Linearize(program)
 
 	// Import Java-specific schema info.
 	// FIXME
@@ -34,7 +34,7 @@ func GenerateProgram(program *hcl2.Program) (map[string][]byte, hcl.Diagnostics,
 	g.Formatter = format.NewFormatter(g)
 
 	for _, n := range nodes {
-		if r, ok := n.(*hcl2.Resource); ok && requiresAsyncInit(r) {
+		if r, ok := n.(*pcl.Resource); ok && requiresAsyncInit(r) {
 			g.asyncInit = true
 			break
 		}
@@ -66,7 +66,7 @@ func GenerateProgram(program *hcl2.Program) (map[string][]byte, hcl.Diagnostics,
 // TODO
 
 // genPreamble generates using statements, class definition and constructor.
-func (g *generator) genPreamble(w io.Writer, program *hcl2.Program) {
+func (g *generator) genPreamble(w io.Writer, program *pcl.Program) {
 	// TODO
 
 	g.Fprint(w, "\n")
@@ -80,23 +80,23 @@ func (g *generator) genPreamble(w io.Writer, program *hcl2.Program) {
 
 // genInitialize generates the declaration and the call to the async Initialize method, and also fills stack
 // outputs from the initialization result.
-func (g *generator) genInitialize(w io.Writer, nodes []hcl2.Node) {
+func (g *generator) genInitialize(w io.Writer, nodes []pcl.Node) {
 	// TODO
 }
 
 // genPostamble closes the method and the class and declares stack output statements.
-func (g *generator) genPostamble(w io.Writer, nodes []hcl2.Node) {
+func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 	// TODO
 	g.Fprint(w, "}\n")
 }
 
-func (g *generator) genNode(w io.Writer, n hcl2.Node) {
+func (g *generator) genNode(w io.Writer, n pcl.Node) {
 	// TODO
 }
 
 // requiresAsyncInit returns true if the program requires awaits in the code, and therefore an asynchronous
 // method must be declared.
-func requiresAsyncInit(r *hcl2.Resource) bool {
+func requiresAsyncInit(r *pcl.Resource) bool {
 	if r.Options == nil || r.Options.Range == nil {
 		return false
 	}
