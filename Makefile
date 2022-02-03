@@ -49,5 +49,8 @@ install_random::
 
 # Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
 # stacks in Pulumi service.
-integration_tests::	bin/pulumi-language-jvm
+integration_tests::	bin/pulumi-language-jvm ensure_tests install_random
 	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestJava -test.v
+
+ensure_tests::
+	pulumi plugin install resource random v4.3.1

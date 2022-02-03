@@ -2,7 +2,7 @@
 # pulumi-random, and likely needs to take into account the version of
 # the pulumi-random provider itself, which is currently implied in
 # go.mod refs and not synced with the number here.
-VERSION := 4.0.0
+VERSION := 4.3.1
 
 SCHEMA_VERSION := 4.3.1
 
