@@ -39,6 +39,8 @@ ensure_sdk::
 
 # pulumi-random provider Java SDKs built from providers/pulumi-random:
 
+ensure_random::
+
 build_random::	bin/pulumi-java-gen
 	cd providers/pulumi-random && make build
 
