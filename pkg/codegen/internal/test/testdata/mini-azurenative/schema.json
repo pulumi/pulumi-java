@@ -1,4 +1,6 @@
 {
+  "version": "0.0.1",
+  "name": "azure-native",
   "resources": {
     "azure-native:machinelearningservices:BatchDeployment": {
       "properties": {

@@ -3,18 +3,15 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
-import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
-import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.ComponentArgs;
-import io.pulumi.example.outputs.Foo;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.String;
-import java.util.List;
 import javax.annotation.Nullable;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Map;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import io.pulumi.core.*;
+import io.pulumi.core.internal.annotations.*;
+import io.pulumi.example.Utilities;
 
 @ResourceType(type="example::Component")
 public class Component extends io.pulumi.resources.ComponentResource {
@@ -30,16 +27,16 @@ public class Component extends io.pulumi.resources.ComponentResource {
     public Output</* @Nullable */ Boolean> getB() {
         return this.b;
     }
-    @OutputExport(name="bar", type=Foo.class, parameters={})
-    private Output</* @Nullable */ Foo> bar;
+    @OutputExport(name="bar", type=io.pulumi.example.outputs.Foo.class, parameters={})
+    private Output</* @Nullable */ io.pulumi.example.outputs.Foo> bar;
 
-    public Output</* @Nullable */ Foo> getBar() {
+    public Output</* @Nullable */ io.pulumi.example.outputs.Foo> getBar() {
         return this.bar;
     }
-    @OutputExport(name="baz", type=List.class, parameters={Foo.class})
-    private Output</* @Nullable */ List<Foo>> baz;
+    @OutputExport(name="baz", type=List.class, parameters={io.pulumi.example.outputs.Foo.class})
+    private Output</* @Nullable */ List<io.pulumi.example.outputs.Foo>> baz;
 
-    public Output</* @Nullable */ List<Foo>> getBaz() {
+    public Output</* @Nullable */ List<io.pulumi.example.outputs.Foo>> getBaz() {
         return this.baz;
     }
     @OutputExport(name="c", type=Integer.class, parameters={})
@@ -66,10 +63,10 @@ public class Component extends io.pulumi.resources.ComponentResource {
     public Output</* @Nullable */ String> getF() {
         return this.f;
     }
-    @OutputExport(name="foo", type=Foo.class, parameters={})
-    private Output</* @Nullable */ Foo> foo;
+    @OutputExport(name="foo", type=io.pulumi.example.outputs.Foo.class, parameters={})
+    private Output</* @Nullable */ io.pulumi.example.outputs.Foo> foo;
 
-    public Output</* @Nullable */ Foo> getFoo() {
+    public Output</* @Nullable */ io.pulumi.example.outputs.Foo> getFoo() {
         return this.foo;
     }
 
