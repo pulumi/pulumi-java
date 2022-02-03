@@ -144,7 +144,7 @@ func (mod *modContext) typeString(
 	// Called in the context of an overload without an `Input<T>` wrapper.
 	unputlessOverload bool,
 ) TypeShape {
-	inner := mod.typeStringInner(t, qualifier, input, state, requireInitializers, unputlessOverload)
+	inner := mod.typeStringRecHelper(t, qualifier, input, state, requireInitializers, unputlessOverload)
 	if inner.Type == "Optional" && !outerOptional {
 		contract.Assert(len(inner.Parameters) == 1)
 		contract.Assert(len(inner.Annotations) == 0)
@@ -153,7 +153,9 @@ func (mod *modContext) typeString(
 	}
 	return inner
 }
-func (mod *modContext) typeStringInner(
+
+// A facilitator function for the inener recursion of `typeString`.
+func (mod *modContext) typeStringRecHelper(
 	t schema.Type,
 	qualifier string,
 	input bool,
@@ -170,14 +172,14 @@ func (mod *modContext) typeStringInner(
 			elem = codegen.PlainType(t.ElementType)
 
 		}
-		inner := mod.typeStringInner(elem, qualifier, true, state, requireInitializers, true)
+		inner := mod.typeStringRecHelper(elem, qualifier, true, state, requireInitializers, true)
 		return TypeShape{
 			Type:       "Input",
 			Parameters: []TypeShape{inner},
 		}
 
 	case *schema.OptionalType:
-		inner := mod.typeStringInner(t.ElementType, qualifier, input, state, requireInitializers, insideInput)
+		inner := mod.typeStringRecHelper(t.ElementType, qualifier, input, state, requireInitializers, insideInput)
 		if ignoreOptional(t, requireInitializers) {
 			inner.Annotations = append(inner.Annotations, "@Nullable")
 			return inner
@@ -202,7 +204,7 @@ func (mod *modContext) typeStringInner(
 		return TypeShape{
 			Type: listType,
 			Parameters: []TypeShape{
-				mod.typeStringInner(
+				mod.typeStringRecHelper(
 					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
 				),
 			},
@@ -218,7 +220,7 @@ func (mod *modContext) typeStringInner(
 			Type: mapType,
 			Parameters: []TypeShape{
 				TypeShape{Type: "String"},
-				mod.typeStringInner(
+				mod.typeStringRecHelper(
 					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
 				),
 			},
@@ -282,7 +284,7 @@ func (mod *modContext) typeStringInner(
 	case *schema.TokenType:
 		// Use the underlying type for now.
 		if t.UnderlyingType != nil {
-			return mod.typeStringInner(t.UnderlyingType, qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(t.UnderlyingType, qualifier, input, state, requireInitializers, insideInput)
 		}
 
 		tokenType := tokenToName(t.Token)
@@ -298,10 +300,10 @@ func (mod *modContext) typeStringInner(
 			// If this is an output and a "relaxed" enum, emit the type as the underlying primitive type rather than the union.
 			// Eg. Output<String> rather than Output<Either<EnumType, String>>
 			if typ, ok := e.(*schema.EnumType); ok && !input {
-				return mod.typeStringInner(typ.ElementType, qualifier, input, state, requireInitializers, insideInput)
+				return mod.typeStringRecHelper(typ.ElementType, qualifier, input, state, requireInitializers, insideInput)
 			}
 
-			et := mod.typeStringInner(e, qualifier, input, state, false, insideInput)
+			et := mod.typeStringRecHelper(e, qualifier, input, state, false, insideInput)
 			if !elementTypeSet.Has(et.String()) {
 				elementTypeSet.Add(et.String())
 				elementTypes = append(elementTypes, et)
@@ -310,7 +312,7 @@ func (mod *modContext) typeStringInner(
 
 		switch len(elementTypes) {
 		case 1:
-			return mod.typeStringInner(t.ElementTypes[0], qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(t.ElementTypes[0], qualifier, input, state, requireInitializers, insideInput)
 		case 2:
 			return TypeShape{
 				Type:       "Either",
@@ -1398,7 +1400,7 @@ func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyType
 
 	if input {
 		pt.baseClass = "io.pulumi.resources.ResourceArgs"
-		if !args && mod.details(obj).plainType {
+		if !args {
 			pt.baseClass = "io.pulumi.resources.InvokeArgs"
 		}
 		return pt.genInputType(w)
