@@ -1386,21 +1386,19 @@ func visitObjectTypes(properties []*schema.Property, visitor func(*schema.Object
 }
 
 func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyTypeQualifier string, input, state bool) error {
-	args := obj.IsInputShape()
-
 	pt := &plainType{
 		mod:                   mod,
-		name:                  mod.typeName(obj, state, args),
+		name:                  mod.typeName(obj, state, obj.IsInputShape()),
 		comment:               obj.Comment,
 		propertyTypeQualifier: propertyTypeQualifier,
 		properties:            obj.Properties,
 		state:                 state,
-		args:                  args,
+		args:                  obj.IsInputShape(),
 	}
 
 	if input {
 		pt.baseClass = "io.pulumi.resources.ResourceArgs"
-		if !args {
+		if !obj.IsInputShape() {
 			pt.baseClass = "io.pulumi.resources.InvokeArgs"
 		}
 		return pt.genInputType(w)
@@ -2009,6 +2007,12 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				getModFromToken(t.Token, t.Package).details(t).outputType = true
 			}
 			getModFromToken(t.Token, t.Package).details(t).inputType = true
+		})
+
+		// We don't generate plain input types unless we use them. To always
+		// generate them, we can move the following line to the above function.
+		// It looks like the C# codegen always generates them.
+		visitPlainObjectTypes(r.InputProperties, func(t *schema.ObjectType) {
 			getModFromToken(t.Token, t.Package).details(t).plainType = true
 		})
 		if r.StateInputs != nil {
