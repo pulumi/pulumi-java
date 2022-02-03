@@ -138,13 +138,15 @@ func (mod *modContext) typeString(
 	qualifier string,
 	input bool,
 	state bool,
+	// Influences how Map and Array types are generated.
 	requireInitializers bool,
 	// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
 	outerOptional bool,
-	// Called in the context of an overload without an `Input<T>` wrapper.
-	unputlessOverload bool,
+	// Called in the context of an overload without an `Input<T>` wrapper. We
+	// should act like we are inside an Input<T>.
+	inputlessOverload bool,
 ) TypeShape {
-	inner := mod.typeStringRecHelper(t, qualifier, input, state, requireInitializers, unputlessOverload)
+	inner := mod.typeStringRecHelper(t, qualifier, input, state, requireInitializers, inputlessOverload)
 	if inner.Type == "Optional" && !outerOptional {
 		contract.Assert(len(inner.Parameters) == 1)
 		contract.Assert(len(inner.Annotations) == 0)
@@ -154,7 +156,7 @@ func (mod *modContext) typeString(
 	return inner
 }
 
-// A facilitator function for the inener recursion of `typeString`.
+// A facilitator function for the inner recursion of `typeString`.
 func (mod *modContext) typeStringRecHelper(
 	t schema.Type,
 	qualifier string,
@@ -170,7 +172,6 @@ func (mod *modContext) typeStringRecHelper(
 		switch t.ElementType.(type) {
 		case *schema.ArrayType, *schema.MapType:
 			elem = codegen.PlainType(t.ElementType)
-
 		}
 		inner := mod.typeStringRecHelper(elem, qualifier, true, state, requireInitializers, true)
 		return TypeShape{
@@ -345,6 +346,11 @@ func (mod *modContext) typeStringRecHelper(
 	}
 }
 
+// Returns a constructor for an empty instance of type `t`.
+//
+// optionalAsNull is used in conjunction with the `typeString` parameter
+// `outerOptional` to ensure types line up.
+// In general, `outerOptional` <=> `!optionalAsNull`.
 func emptyTypeInitializer(t schema.Type, optionalAsNull bool) string {
 	if isInputType(t) {
 		return "Input.empty()"
@@ -555,13 +561,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		// TODO: factor this out (with similar code in genOutputType)
 		paramName := javaIdentifier(prop.Name)
 		paramType := pt.mod.typeString(
-			// TODO: remove mapInner
-			mapInner(prop.Type, func(t schema.Type) schema.Type {
-				// if obj, ok := t.(*schema.ObjectType); ok && obj.IsInputShape() {
-				// 	return obj.PlainShape
-				// }
-				return t
-			}),
+			prop.Type,
 			pt.propertyTypeQualifier,
 			true,
 			pt.state,
@@ -2189,33 +2189,4 @@ func ignoreOptional(t *schema.OptionalType, requireInitializers bool) bool {
 		return !requireInitializers
 	}
 	return false
-}
-
-func mapInner(t schema.Type, f func(t schema.Type) schema.Type) schema.Type {
-	wrap := []schema.Type{}
-loop:
-	for {
-		switch typ := t.(type) {
-		case *schema.InputType:
-			t = typ.ElementType
-			wrap = append(wrap, &schema.InputType{})
-		case *schema.OptionalType:
-			t = typ.ElementType
-			wrap = append(wrap, &schema.OptionalType{})
-		default:
-			break loop
-		}
-	}
-	t = f(t)
-	for i := len(wrap) - 1; i >= 0; i-- {
-		switch wrap[i].(type) {
-		case *schema.InputType:
-			t = &schema.InputType{ElementType: t}
-		case *schema.OptionalType:
-			t = &schema.OptionalType{ElementType: t}
-		default:
-			panic("Should not happen")
-		}
-	}
-	return t
 }
