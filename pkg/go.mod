@@ -9,8 +9,8 @@ require (
 	github.com/golang/protobuf v1.5.2
 	github.com/hashicorp/hcl/v2 v2.3.0
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.5.1
-	github.com/pulumi/pulumi/sdk/v3 v3.5.1
+	github.com/pulumi/pulumi/pkg/v3 v3.6.0
+	github.com/pulumi/pulumi/sdk/v3 v3.6.0
 	github.com/stretchr/testify v1.6.1
 	google.golang.org/grpc v1.37.0
 )

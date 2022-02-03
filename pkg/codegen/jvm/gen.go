@@ -18,22 +18,10 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
-type stringSet map[string]struct{}
-
-func (ss stringSet) add(s string) {
-	ss[s] = struct{}{}
-}
-
-func (ss stringSet) has(s string) bool {
-	_, ok := ss[s]
-	return ok
-}
-
 type typeDetails struct {
 	outputType bool
 	inputType  bool
 	stateType  bool
-	argsType   bool
 	plainType  bool
 }
 
@@ -77,7 +65,6 @@ type modContext struct {
 	rootPackageName        string
 	basePackageName        string
 	packages               map[string]string
-	compatibility          string
 	dictionaryConstructors bool
 }
 
@@ -117,16 +104,6 @@ func tokenToFunctionName(tok string) string {
 	return tokenToName(tok)
 }
 
-// TODO: can we get rid of this?
-func (mod *modContext) isK8sCompatMode() bool {
-	return mod.compatibility == "kubernetes20"
-}
-
-// TODO: can we get rid of this?
-func (mod *modContext) isTFCompatMode() bool {
-	return mod.compatibility == "tfbridge20"
-}
-
 func (mod *modContext) tokenToPackage(tok string, qualifier string) string {
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
@@ -145,23 +122,13 @@ func (mod *modContext) tokenToPackage(tok string, qualifier string) string {
 	return typ
 }
 
-func (mod *modContext) typeName(t *schema.ObjectType, state, input, args bool) string {
+func (mod *modContext) typeName(t *schema.ObjectType, state, args bool) string {
 	name := tokenToName(t.Token)
 	if state {
 		return name + "GetArgs"
 	}
-	if !mod.isTFCompatMode() { // TODO: do we need this?
-		if args {
-			return name + "Args"
-		}
-		return name
-	}
-
-	switch {
-	case input:
+	if args {
 		return name + "Args"
-	case mod.details(t).plainType:
-		return name + "Result"
 	}
 	return name
 }
@@ -171,68 +138,95 @@ func (mod *modContext) typeString(
 	qualifier string,
 	input bool,
 	state bool,
-	wrapInput bool, // wrap the type in Input
-	args bool,
+	// Influences how Map and Array types are generated.
 	requireInitializers bool,
-	optional bool,
-	nullable bool,
+	// Allow returning `Optional<T>` directly. Otherwise `@Nullable T` will be returned at the outer scope.
+	outerOptional bool,
+	// Called in the context of an overload without an `Input<T>` wrapper. We
+	// should act like we are inside an Input<T>.
+	inputlessOverload bool,
 ) TypeShape {
-	return mod.typeStringInner(t, qualifier, input, state, wrapInput, args, requireInitializers, optional, nullable)
+	inner := mod.typeStringRecHelper(t, qualifier, input, state, requireInitializers, inputlessOverload)
+	if inner.Type == "Optional" && !outerOptional {
+		contract.Assert(len(inner.Parameters) == 1)
+		contract.Assert(len(inner.Annotations) == 0)
+		inner = inner.Parameters[0]
+		inner.Annotations = append(inner.Annotations, "@Nullable")
+	}
+	return inner
 }
 
-func (mod *modContext) typeStringInner(
+// A facilitator function for the inner recursion of `typeString`.
+func (mod *modContext) typeStringRecHelper(
 	t schema.Type,
 	qualifier string,
 	input bool,
 	state bool,
-	wrapInput bool,
-	args bool,
 	requireInitializers bool,
-	optional bool,
-	nullable bool,
+	insideInput bool,
 ) TypeShape {
-	var typ TypeShape
+
 	switch t := t.(type) {
+	case *schema.InputType:
+		elem := t.ElementType
+		switch t.ElementType.(type) {
+		case *schema.ArrayType, *schema.MapType:
+			elem = codegen.PlainType(t.ElementType)
+		}
+		inner := mod.typeStringRecHelper(elem, qualifier, true, state, requireInitializers, true)
+		return TypeShape{
+			Type:       "Input",
+			Parameters: []TypeShape{inner},
+		}
+
+	case *schema.OptionalType:
+		inner := mod.typeStringRecHelper(t.ElementType, qualifier, input, state, requireInitializers, insideInput)
+		if ignoreOptional(t, requireInitializers) {
+			inner.Annotations = append(inner.Annotations, "@Nullable")
+			return inner
+		}
+		return TypeShape{
+			Type:       "Optional",
+			Parameters: []TypeShape{inner},
+		}
+
 	case *schema.EnumType:
-		typ.Type = mod.tokenToPackage(t.Token, "")
-		typ.Type += "."
-		typ.Type += "enums" // TODO: try to replace with 'qualifier'
-		typ.Type += "."
-		typ.Type += tokenToName(t.Token)
+		// TODO: try to replace with 'qualifier'
+		return TypeShape{
+			Type: fmt.Sprintf("%s.enums.%s", mod.tokenToPackage(t.Token, ""), tokenToName(t.Token)),
+		}
+
 	case *schema.ArrayType:
-		var listType string
-		switch {
-		case requireInitializers:
+		listType := "List" // TODO: decide weather or not to use ImmutableList
+		if requireInitializers {
 			listType = "List"
-		default: // TODO: decide weather or not to use ImmutableList
-			listType, optional = "List", false
 		}
 
-		typ.Type = listType
-		typ.Parameters = append(
-			typ.Parameters,
-			mod.typeStringInner(t.ElementType, qualifier, input, state, false, args, false, false, false),
-		)
+		return TypeShape{
+			Type: listType,
+			Parameters: []TypeShape{
+				mod.typeStringRecHelper(
+					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
+				),
+			},
+		}
+
 	case *schema.MapType:
-		var mapType string
-		switch {
-		case requireInitializers:
+		mapType := "Map" // TODO: decide weather or not to use ImmutableMap
+		if requireInitializers {
 			mapType = "Map"
-			typ.Parameters = append(
-				typ.Parameters, TypeShape{Type: "String"},
-			)
-		default:
-			mapType = "Map" // TODO: decide weather or not to use ImmutableMap
-			typ.Parameters = append(
-				typ.Parameters, TypeShape{Type: "String"},
-			)
 		}
 
-		typ.Type = mapType
-		typ.Parameters = append(
-			typ.Parameters,
-			mod.typeStringInner(t.ElementType, qualifier, input, state, false, args, false, false, false),
-		)
+		return TypeShape{
+			Type: mapType,
+			Parameters: []TypeShape{
+				TypeShape{Type: "String"},
+				mod.typeStringRecHelper(
+					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
+				),
+			},
+		}
+
 	case *schema.ObjectType:
 		namingCtx := mod
 		if t.Package != mod.pkg {
@@ -247,7 +241,6 @@ func (mod *modContext) typeStringInner(
 			namingCtx = &modContext{
 				pkg:             extPkg,
 				packages:        info.Packages,
-				compatibility:   info.Compatibility,
 				basePackageName: info.BasePackageOrDefault(),
 			}
 		}
@@ -258,8 +251,8 @@ func (mod *modContext) typeStringInner(
 		if objectType != "" {
 			objectType += "."
 		}
-		objectType += mod.typeName(t, state, input, args)
-		typ.Type = objectType
+		objectType += mod.typeName(t, state, insideInput)
+		return TypeShape{Type: objectType}
 	case *schema.ResourceType:
 		var resourceType string
 		if strings.HasPrefix(t.Token, "pulumi:providers:") {
@@ -279,7 +272,6 @@ func (mod *modContext) typeStringInner(
 				namingCtx = &modContext{
 					pkg:             extPkg,
 					packages:        info.Packages,
-					compatibility:   info.Compatibility,
 					basePackageName: info.BasePackageOrDefault(),
 				}
 			}
@@ -289,98 +281,84 @@ func (mod *modContext) typeStringInner(
 			}
 			resourceType += tokenToName(t.Token)
 		}
-		typ.Type = resourceType
+		return TypeShape{Type: resourceType}
 	case *schema.TokenType:
 		// Use the underlying type for now.
 		if t.UnderlyingType != nil {
-			return mod.typeStringInner(t.UnderlyingType, qualifier, input, state, wrapInput, args, requireInitializers, optional, nullable)
+			return mod.typeStringRecHelper(t.UnderlyingType, qualifier, input, state, requireInitializers, insideInput)
 		}
 
 		tokenType := tokenToName(t.Token)
 		if ns := mod.tokenToPackage(t.Token, qualifier); ns != mod.packageName {
 			tokenType = ns + "." + tokenType
 		}
-		typ.Type = tokenType
+		return TypeShape{Type: tokenType}
 	case *schema.UnionType:
-		elementTypeSet := stringSet{}
+		elementTypeSet := codegen.NewStringSet()
 		var elementTypes []TypeShape
 		for _, e := range t.ElementTypes {
+			e = codegen.UnwrapType(e)
 			// If this is an output and a "relaxed" enum, emit the type as the underlying primitive type rather than the union.
 			// Eg. Output<String> rather than Output<Either<EnumType, String>>
 			if typ, ok := e.(*schema.EnumType); ok && !input {
-				return mod.typeStringInner(typ.ElementType, qualifier, input, state, wrapInput, args, requireInitializers, optional, nullable)
+				return mod.typeStringRecHelper(typ.ElementType, qualifier, input, state, requireInitializers, insideInput)
 			}
 
-			et := mod.typeStringInner(e, qualifier, input, state, false, args, false, false, false)
-			if !elementTypeSet.has(et.Type) {
-				elementTypeSet.add(et.Type)
+			et := mod.typeStringRecHelper(e, qualifier, input, state, false, insideInput)
+			if !elementTypeSet.Has(et.String()) {
+				elementTypeSet.Add(et.String())
 				elementTypes = append(elementTypes, et)
 			}
 		}
 
 		switch len(elementTypes) {
 		case 1:
-			return mod.typeStringInner(t.ElementTypes[0], qualifier, input, state, wrapInput, args, requireInitializers, optional, nullable)
+			return mod.typeStringRecHelper(t.ElementTypes[0], qualifier, input, state, requireInitializers, insideInput)
 		case 2:
-			unionType := "Either"
-			typ.Type = unionType
-			typ.Parameters = append(typ.Parameters, elementTypes...)
+			return TypeShape{
+				Type:       "Either",
+				Parameters: elementTypes,
+			}
 		default:
-			typ.Type = "Object"
+			return TypeShape{Type: "Object", Annotations: elementTypeSet.SortedValues()}
 		}
 	default:
 		switch t {
 		case schema.BoolType:
-			typ.Type = "Boolean"
+			return TypeShape{Type: "Boolean"}
 		case schema.IntType:
-			typ.Type = "Integer"
+			return TypeShape{Type: "Integer"}
 		case schema.NumberType:
-			typ.Type = "Double"
+			return TypeShape{Type: "Double"}
 		case schema.StringType:
-			typ.Type = "String"
+			return TypeShape{Type: "String"}
 		case schema.ArchiveType:
-			typ.Type = "Archive"
+			return TypeShape{Type: "Archive"}
 		case schema.AssetType:
-			typ.Type = "AssetOrArchive"
+			return TypeShape{Type: "AssetOrArchive"}
 		case schema.JSONType:
-			typ.Type = "com.google.gson.JsonElement"
+			return TypeShape{Type: "com.google.gson.JsonElement"}
 		case schema.AnyType:
-			typ.Type = "Object"
+			return TypeShape{Type: "Object"}
+		default:
+			panic(fmt.Sprintf("Unknown primitive: %#v", t))
 		}
 	}
-
-	if wrapInput {
-		var wrapTyp = TypeShape{
-			Type:       "Input",
-			Parameters: []TypeShape{typ},
-		}
-		typ = wrapTyp
-	}
-	if optional {
-		var optionalTyp = TypeShape{
-			Type:       "Optional",
-			Parameters: []TypeShape{typ},
-		}
-		typ = optionalTyp
-	}
-	if nullable {
-		typ.Annotations = append(typ.Annotations, "@Nullable")
-	}
-	return typ
 }
 
-func emptyTypeInitializer(
-	t schema.Type,
-	wrapInput bool,
-	wrapOptional bool,
-) string {
-	if wrapInput {
+// Returns a constructor for an empty instance of type `t`.
+//
+// optionalAsNull is used in conjunction with the `typeString` parameter
+// `outerOptional` to ensure types line up.
+// In general, `outerOptional` <=> `!optionalAsNull`.
+func emptyTypeInitializer(t schema.Type, optionalAsNull bool) string {
+	if isInputType(t) {
 		return "Input.empty()"
 	}
-	if wrapOptional {
+	if _, ok := t.(*schema.OptionalType); ok && !optionalAsNull {
 		return "Optional.empty()"
 	}
-	switch t.(type) {
+	switch codegen.UnwrapType(t).(type) {
 	case *schema.ArrayType:
 		return "List.of()"
 	case *schema.MapType:
@@ -392,59 +370,59 @@ func emptyTypeInitializer(
 	}
 }
 
-func typeInitializer(
-	t schema.Type,
-	wrapInput bool,
-	wrapOptional bool,
-	nested string,
-	nestedType string,
-) string {
-	switch t.(type) {
-	case *schema.ArrayType:
-		if wrapInput {
+func typeInitializer(t schema.Type, nested string, nestedType string) string {
+	handleUnion := func(t *schema.UnionType, left, right string) string {
+		var m string
+		switch nestedType {
+		case codegen.UnwrapType(t.ElementTypes[0]).String():
+			m = left
+		case codegen.UnwrapType(t.ElementTypes[1]).String():
+			m = right
+		default:
+			panic(fmt.Sprintf("this should never happen: '%s' does not match either '%s' or '%s', for nested of: '%s'",
+				nestedType, t.ElementTypes[0], t.ElementTypes[1], nested,
+			))
+		}
+		return fmt.Sprintf("%s(%s)", m, nested)
+	}
+
+	switch t := t.(type) {
+	case *schema.OptionalType:
+		inner := typeInitializer(t.ElementType, nested, nestedType)
+		if ignoreOptional(t, true) {
+			return inner
+		}
+		var method string
+		switch t.ElementType.(type) {
+		case *schema.ArrayType, *schema.MapType, *schema.UnionType:
+			method = "of"
+		default:
+			method = "ofNullable"
+		}
+		return fmt.Sprintf("Optional.%s(%s)", method, inner)
+
+	case *schema.InputType:
+		switch t := t.ElementType.(type) {
+		case *schema.ArrayType:
 			return fmt.Sprintf("Input.ofList(%s)", nested)
-		}
-		if wrapOptional {
-			return fmt.Sprintf("Optional.of(List.of(%s))", nested)
-		}
-		return fmt.Sprintf("List.of(%s)", nested)
-	case *schema.MapType:
-		if wrapInput {
+		case *schema.MapType:
 			return fmt.Sprintf("Input.ofMap(%s)", nested)
-		}
-		if wrapOptional {
-			return fmt.Sprintf("Optional.of(Map.of(%s))", nested)
-		}
-		return fmt.Sprintf("Map.of(%s)", nested)
-	case *schema.UnionType:
-		if t.(*schema.UnionType).ElementTypes[0].String() == nestedType {
-			if wrapInput {
-				return fmt.Sprintf("Input.ofLeft(%s)", nested)
-			}
-			if wrapOptional {
-				return fmt.Sprintf("Optional.of(Either.leftOf(%s))", nested)
-			}
-			return fmt.Sprintf("Either.leftOf(%s)", nested)
-		}
-		if t.(*schema.UnionType).ElementTypes[1].String() == nestedType {
-			if wrapInput {
-				return fmt.Sprintf("Input.ofRight(%s)", nested)
-			}
-			if wrapOptional {
-				return fmt.Sprintf("Optional.of(Either.rightOf(%s))", nested)
-			}
-			return fmt.Sprintf("Either.rightOf(%s)", nested)
-		}
-		panic(fmt.Sprintf("this should never happen: '%s' does not match either '%s' or '%s', for nested of: '%s'",
-			nestedType, t.(*schema.UnionType).ElementTypes[0], t.(*schema.UnionType).ElementTypes[1], nested,
-		))
-	default:
-		if wrapInput {
+		case *schema.UnionType:
+			return handleUnion(t, "Input.ofLeft", "Input.ofRight")
+		default:
 			return fmt.Sprintf("Input.ofNullable(%s)", nested)
 		}
-		if wrapOptional {
-			return fmt.Sprintf("Optional.ofNullable(%s)", nested)
-		}
+
+	case *schema.ArrayType:
+		return fmt.Sprintf("List.of(%s)", nested)
+
+	case *schema.MapType:
+		return fmt.Sprintf("Map.of(%s)", nested)
+
+	case *schema.UnionType:
+		return handleUnion(t, "Either.leftOf", "Either.rightOf")
+
+	default:
 		return nested
 	}
 }
@@ -464,26 +442,27 @@ type plainType struct {
 }
 
 func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error {
-	isArgsType := pt.args && !prop.IsPlain
-	requireInitializers := !pt.args || prop.IsPlain
+	requireInitializers := !pt.args || isInputType(prop.Type)
 
 	wireName := prop.Name
 	propertyName := javaIdentifier(pt.mod.propertyName(prop))
+	typ := prop.Type
+	if !prop.IsRequired() {
+		typ = codegen.OptionalType(prop)
+	}
 	propertyType := pt.mod.typeString(
-		prop.Type,
+		typ,
 		pt.propertyTypeQualifier,
 		true,                // is input
 		pt.state,            // is state
-		isArgsType,          // wrap input
-		isArgsType,          // has args
 		requireInitializers, // requires initializers
-		false,               // is optional
-		!prop.IsRequired,    // is nullable
+		false,               // outer optional
+		false,               // inputless overload
 	)
 
 	// First generate the input annotation.
 	attributeArgs := ""
-	if prop.IsRequired {
+	if prop.IsRequired() {
 		attributeArgs = ", required=true"
 	}
 	if pt.res != nil && pt.res.IsProvider {
@@ -509,44 +488,42 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 	getterType := pt.mod.typeString(
 		prop.Type,
 		pt.propertyTypeQualifier,
-		true,                            // is input
-		pt.state,                        // is state
-		isArgsType,                      // wrap input
-		isArgsType,                      // has args
-		requireInitializers,             // FIXME: should not require initializers, make it immutable
-		!prop.IsRequired && !isArgsType, // is optional or an Input
-		false,                           // is nullable
-	)
-	getterTypeNonOptional := pt.mod.typeString(
-		prop.Type,
-		pt.propertyTypeQualifier,
 		true,                // is input
 		pt.state,            // is state
-		isArgsType,          // wrap input
-		isArgsType,          // has args
 		requireInitializers, // FIXME: should not require initializers, make it immutable
-		false,               // is a list or map
-		false,               // is non-nullable
+		true,                // outer optional
+		false,               // inputless overload
 	)
+
 	getterName := javaIdentifier("get" + title(prop.Name))
 	// TODO: add docs comment
 	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
-	required := prop.IsRequired
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
-	if !required {
-		emptyStatement := emptyTypeInitializer(prop.Type, isArgsType, false)
-		switch prop.Type.(type) {
-		case *schema.ArrayType, *schema.MapType, *schema.UnionType: // the most common case actually
+	if opt, ok := prop.Type.(*schema.OptionalType); ok {
+		req := opt.ElementType
+		emptyStatement := emptyTypeInitializer(prop.Type, false)
+		switch req.(type) {
+		case *schema.ArrayType, *schema.MapType, *schema.UnionType, *schema.InputType: // the most common case actually
+			getterTypeNonOptional := pt.mod.typeString(
+				req,
+				pt.propertyTypeQualifier,
+				true,                // is input
+				pt.state,            // is state
+				requireInitializers, // FIXME: should not require initializers, make it immutable
+				false,               // outer optional
+				false,               // inputless overload
+			)
 			getterType = getterTypeNonOptional
+			emptyStatement = emptyTypeInitializer(req, true)
 		default:
-			emptyStatement = emptyTypeInitializer(prop.Type, isArgsType, true)
-			returnStatement = typeInitializer(prop.Type, false, !isArgsType, returnStatement, prop.Type.String())
+			// nested type is only used when prop.Type is a union
+			returnStatement = typeInitializer(prop.Type, returnStatement, "")
 		}
 		returnStatement = fmt.Sprintf("this.%s == null ? %s : %s", propertyName, emptyStatement, returnStatement)
 	}
 
 	if err := getterTemplate.Execute(w, getterTemplateContext{
-		Indent:          strings.Repeat("    ", 1),
+		Indent:          strings.Repeat(" ", 4),
 		GetterType:      getterType.String(),
 		GetterName:      getterName,
 		ReturnStatement: returnStatement,
@@ -583,18 +560,14 @@ func (pt *plainType) genInputType(w io.Writer) error {
 	for i, prop := range pt.properties {
 		// TODO: factor this out (with similar code in genOutputType)
 		paramName := javaIdentifier(prop.Name)
-		isArgsType := pt.args && !prop.IsPlain
-		requireInitializers := !pt.args || prop.IsPlain
 		paramType := pt.mod.typeString(
 			prop.Type,
 			pt.propertyTypeQualifier,
 			true,
 			pt.state,
-			isArgsType,
-			isArgsType,
-			requireInitializers,
-			false,
-			!prop.IsRequired,
+			false, // requireInitializers
+			false, // outer optional
+			false, // inputless overload
 		)
 
 		if i == 0 && len(pt.properties) > 1 { // first param
@@ -619,19 +592,17 @@ func (pt *plainType) genInputType(w io.Writer) error {
 	for _, prop := range pt.properties {
 		paramName := javaIdentifier(prop.Name)
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
-		isArgsType := pt.args && !prop.IsPlain
 		// set default values or assign given values
-		hasDefaultValue := prop.DefaultValue != nil
 		var defaultValueCode string
-		if hasDefaultValue {
-			defaultValueString, defaultValueTypeString, err := pt.mod.getDefaultValue(prop.DefaultValue, prop.Type)
+		if prop.DefaultValue != nil {
+			defaultValueString, defType, err := pt.mod.getDefaultValue(prop.DefaultValue, codegen.UnwrapType(prop.Type))
 			if err != nil {
 				return err
 			}
-			defaultValueInitializer := typeInitializer(prop.Type, isArgsType, false, defaultValueString, defaultValueTypeString)
+			defaultValueInitializer := typeInitializer(prop.Type, defaultValueString, defType)
 			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValueInitializer)
 		}
-		if prop.IsRequired {
+		if prop.IsRequired() {
 			_, _ = fmt.Fprintf(w, "        this.%[1]s = %[2]sObjects.requireNonNull(%[3]s, \"expected parameter '%[3]s' to be non-null\");\n", fieldName, defaultValueCode, paramName)
 		} else {
 			_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
@@ -646,8 +617,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
 		for _, prop := range pt.properties {
 			fieldName := javaIdentifier(pt.mod.propertyName(prop))
-			isArgsType := pt.args && !prop.IsPlain
-			emptyValue := emptyTypeInitializer(prop.Type, isArgsType, false)
+			emptyValue := emptyTypeInitializer(prop.Type, true)
 			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
 		}
 		_, _ = fmt.Fprintf(w, "    }\n")
@@ -657,19 +627,16 @@ func (pt *plainType) genInputType(w io.Writer) error {
 	var builderFields []builderFieldTemplateContext
 	var builderSetters []builderSetterTemplateContext
 	for _, prop := range pt.properties {
-		isArgsType := pt.args && !prop.IsPlain
-		requireInitializers := !pt.args || prop.IsPlain
+		requireInitializers := !pt.args || isInputType(prop.Type)
 		propertyName := javaIdentifier(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
 			prop.Type,
 			pt.propertyTypeQualifier,
 			true,                // is input
 			pt.state,            // is state
-			isArgsType,          // wrap input
-			isArgsType,          // has args
 			requireInitializers, // requires initializers
-			false,               // is optional
-			!prop.IsRequired,    // is nullable
+			false,               // outer optional
+			false,               // inputless overload
 		)
 
 		// add field
@@ -683,7 +650,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 			if prop.Secret {
 				return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
 			} else {
-				if prop.IsRequired {
+				if prop.IsRequired() {
 					return fmt.Sprintf("this.%s = Objects.requireNonNull(%s)", propertyName, propertyName)
 				} else {
 					return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
@@ -699,24 +666,26 @@ func (pt *plainType) genInputType(w io.Writer) error {
 			Assignment:   assignment(propertyName),
 		})
 
-		if isArgsType { // we have a wrapped field so we add an unwrapped helper setter
+		if isInputType(prop.Type) { // we have a wrapped field so we add an unwrapped helper setter
+			var typ schema.Type = &schema.OptionalType{ElementType: codegen.UnwrapType(prop.Type)}
+			if prop.IsRequired() {
+				typ = codegen.UnwrapType(typ)
+			}
 			propertyTypeUnwrapped := pt.mod.typeString(
-				prop.Type,
+				typ,
 				pt.propertyTypeQualifier,
 				true,                // is input
 				pt.state,            // is state
-				false,               // don't wrap input
-				isArgsType,          // has args
 				requireInitializers, // requires initializers
-				false,               // is optional
-				!prop.IsRequired,    // is nullable
+				false,               // outer optional
+				true,                // inputless overload
 			)
 
 			assignmentUnwrapped := func(propertyName string) string {
 				if prop.Secret {
 					return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
 				} else {
-					if prop.IsRequired {
+					if prop.IsRequired() {
 						return fmt.Sprintf("this.%s = Input.of(Objects.requireNonNull(%s))", propertyName, propertyName)
 					} else {
 						return fmt.Sprintf("this.%s = Input.ofNullable(%s)", propertyName, propertyName)
@@ -763,7 +732,15 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 	// Generate each output field.
 	for _, prop := range pt.properties {
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
-		fieldType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !prop.IsRequired)
+		fieldType := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false,
+			false,
+			false,
+			false, // outer optional
+			false, // inputless overload
+		)
 		// TODO: add docs comment
 		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType, fieldName)
 	}
@@ -791,7 +768,15 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 	for i, prop := range pt.properties {
 		// TODO: factor this out (with similar code in genInputType)
 		paramName := javaIdentifier(prop.Name)
-		paramType := pt.mod.typeString(prop.Type, pt.propertyTypeQualifier, false, false, false, false, false, false, !prop.IsRequired)
+		paramType := pt.mod.typeString(
+			prop.Type,
+			pt.propertyTypeQualifier,
+			false,
+			false,
+			false,
+			false, // outer optional
+			false, // inputless overload
+		)
 
 		if i == 0 && len(pt.properties) > 1 { // first param
 			_, _ = fmt.Fprint(w, "\n")
@@ -815,7 +800,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 	for _, prop := range pt.properties {
 		paramName := javaIdentifier(prop.Name)
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
-		if prop.IsRequired {
+		if prop.IsRequired() {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = Objects.requireNonNull(%s);\n", indent, fieldName, paramName)
 		} else {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
@@ -834,26 +819,22 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 			false,
 			false,
 			false,
-			false,
-			false,
-			!prop.IsRequired,
-			false,
+			true,  // outer optional
+			false, // inputless overload
 		)
 		getterTypeNonOptional := pt.mod.typeString(
-			prop.Type,
+			codegen.UnwrapType(prop.Type),
 			pt.propertyTypeQualifier,
 			false,
 			false,
 			false,
-			false,
-			false,
-			false,
-			false,
+			false, // outer optional (irrelevant)
+			false, // inputless overload
 		)
 
 		// TODO: add docs comment
 		var returnStatement string
-		if prop.IsRequired {
+		if prop.IsRequired() {
 			returnStatement = fmt.Sprintf("this.%s", paramName)
 		} else {
 			switch prop.Type.(type) {
@@ -888,13 +869,11 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 		propertyType := pt.mod.typeString(
 			prop.Type,
 			pt.propertyTypeQualifier,
-			false,            // is input
-			false,            // is state
-			false,            // wrap input
-			false,            // has args
-			false,            // requires initializers
-			false,            // is optional
-			!prop.IsRequired, // is nullable
+			false, // is input
+			false, // is state
+			false, // requires initializers
+			false, // outer optional
+			false, // inputless overload
 		)
 
 		// add field
@@ -905,7 +884,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 
 		setterName := javaIdentifier("set" + title(prop.Name))
 		assignment := func(propertyName string) string {
-			if prop.IsRequired {
+			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = Objects.requireNonNull(%s)", propertyName, propertyName)
 			} else {
 				return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
@@ -1056,8 +1035,6 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	switch {
 	case r.IsProvider:
 		baseType = "io.pulumi.resources.ProviderResource"
-	case mod.isK8sCompatMode():
-		baseType = "io.pulumi.kubernetes.KubernetesResource"
 	case r.IsComponent:
 		baseType = "io.pulumi.resources.ComponentResource"
 		optionsType = "io.pulumi.resources.ComponentResourceOptions"
@@ -1075,7 +1052,15 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		// Write the property attribute
 		wireName := prop.Name
 		propertyName := mod.propertyName(prop)
-		propertyType := mod.typeString(prop.Type, "outputs", false, false, false, false, false, false, !prop.IsRequired)
+		propertyType := mod.typeString(
+			prop.Type,
+			"outputs",
+			false,
+			false,
+			false,
+			false, // outer optional
+			false, // inputless overload
+		)
 		// TODO: C# has some kind of workaround here for strings
 
 		if prop.Secret {
@@ -1124,7 +1109,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 	allOptionalInputs := true
 	hasConstInputs := false
 	for _, prop := range r.InputProperties {
-		allOptionalInputs = allOptionalInputs && !prop.IsRequired
+		allOptionalInputs = allOptionalInputs && !prop.IsRequired()
 		hasConstInputs = hasConstInputs || prop.ConstValue != nil
 	}
 	if allOptionalInputs {
@@ -1260,7 +1245,7 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	if fun.Inputs != nil {
 		allOptionalInputs := true
 		for _, prop := range fun.Inputs.Properties {
-			allOptionalInputs = allOptionalInputs && !prop.IsRequired
+			allOptionalInputs = allOptionalInputs && !prop.IsRequired()
 		}
 
 		var nullable string
@@ -1318,7 +1303,15 @@ func (mod *modContext) genEnum(w io.Writer, qualifier string, enum *schema.EnumT
 
 	// TODO: add docs comment
 
-	underlyingType := mod.typeString(enum.ElementType, qualifier, false, false, false, false, false, false, false)
+	underlyingType := mod.typeString(
+		enum.ElementType,
+		qualifier,
+		false,
+		false,
+		false,
+		false, // outer optional
+		false, // inputless overload
+	)
 	switch enum.ElementType {
 	case schema.IntType, schema.StringType, schema.NumberType:
 		// Open the enum and annotate it appropriately.
@@ -1384,28 +1377,28 @@ func (mod *modContext) genEnum(w io.Writer, qualifier string, enum *schema.EnumT
 	return nil
 }
 
-func visitObjectTypes(properties []*schema.Property, visitor func(*schema.ObjectType, bool)) {
-	codegen.VisitTypeClosure(properties, func(t codegen.Type) {
-		if o, ok := t.Type.(*schema.ObjectType); ok {
-			visitor(o, t.Plain)
+func visitObjectTypes(properties []*schema.Property, visitor func(*schema.ObjectType)) {
+	codegen.VisitTypeClosure(properties, func(t schema.Type) {
+		if o, ok := t.(*schema.ObjectType); ok {
+			visitor(o)
 		}
 	})
 }
 
-func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyTypeQualifier string, input, state, args bool) error {
+func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyTypeQualifier string, input, state bool) error {
 	pt := &plainType{
 		mod:                   mod,
-		name:                  mod.typeName(obj, state, input, args),
+		name:                  mod.typeName(obj, state, obj.IsInputShape()),
 		comment:               obj.Comment,
 		propertyTypeQualifier: propertyTypeQualifier,
 		properties:            obj.Properties,
 		state:                 state,
-		args:                  args,
+		args:                  obj.IsInputShape(),
 	}
 
 	if input {
 		pt.baseClass = "io.pulumi.resources.ResourceArgs"
-		if !args && mod.details(obj).plainType {
+		if !obj.IsInputShape() {
 			pt.baseClass = "io.pulumi.resources.InvokeArgs"
 		}
 		return pt.genInputType(w)
@@ -1441,6 +1434,12 @@ func (mod *modContext) getTypeImports(t schema.Type, recurse bool, imports map[s
 	seen.Add(t)
 
 	switch t := t.(type) {
+	case *schema.OptionalType:
+		mod.getTypeImports(t.ElementType, recurse, imports, seen)
+		return
+	case *schema.InputType:
+		mod.getTypeImports(t.ElementType, recurse, imports, seen)
+		return
 	case *schema.ArrayType:
 		mod.getTypeImports(t.ElementType, recurse, imports, seen)
 		return
@@ -1550,10 +1549,8 @@ func (mod *modContext) getConfigProperty(schemaType schema.Type, key string) (Ty
 		false,
 		false,
 		false,
-		false, /*args*/
-		false,
-		true, // all config's 'get*' methods return an Optional
-		false,
+		false, // outer optional
+		false, // inputless overload
 	)
 
 	getFunc := MethodCall{
@@ -1606,13 +1603,12 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 
 		returnStatement := getFunc.String()
 
-		hasDefaultValue := p.DefaultValue != nil
-		if hasDefaultValue {
-			defaultValueString, defaultValueTypeString, err := mod.getDefaultValue(p.DefaultValue, p.Type)
+		if p.DefaultValue != nil {
+			defaultValueString, defType, err := mod.getDefaultValue(p.DefaultValue, p.Type)
 			if err != nil {
 				return "", err
 			}
-			defaultValueInitializer := typeInitializer(p.Type, false, false, defaultValueString, defaultValueTypeString)
+			defaultValueInitializer := typeInitializer(p.Type, defaultValueString, defType)
 			returnStatement += ".orElse(" + defaultValueInitializer + ")"
 		}
 
@@ -1665,9 +1661,6 @@ func gradleProjectPath() string {
 	return path.Join("src", "main", "java")
 }
 
-// Set to avoid generating a file with the same name twice.
-var generatedPaths = codegen.Set{}
-
 func (mod *modContext) gen(fs fs) error {
 	pkgComponents := strings.Split(mod.packageName, ".")
 
@@ -1688,20 +1681,7 @@ func (mod *modContext) gen(fs fs) error {
 		p := path.Join(dir, name)
 		files = append(files, p)
 
-		// TODO: how can we get rid of this?
-		// The way the legacy codegen for kubernetes is structured, inputs for a resource args type and resource args
-		// subtype could become a single class because of the name + namespace clash. We use a set of generated types
-		// to prevent generating classes with equal full names in multiple files. The check should be removed if we
-		// ever change the namespacing in the k8s SDK to the standard one.
-		if mod.isK8sCompatMode() {
-			if generatedPaths.Has(p) {
-				return
-			}
-			generatedPaths.Add(p)
-			fs.add(p, []byte(contents))
-		} else {
-			fs.add(p, []byte(contents))
-		}
+		fs.add(p, []byte(contents))
 	}
 
 	// Utilities, config
@@ -1711,7 +1691,7 @@ func (mod *modContext) gen(fs fs) error {
 		if err != nil {
 			return err
 		}
-		fs.add(filepath.Join(dir, "Utilities.java"), []byte(utilities))
+		addFile("Utilities.java", utilities)
 
 		// Ensure that the target module directory contains a README.md file.
 		readme := mod.pkg.Description
@@ -1761,6 +1741,7 @@ func (mod *modContext) gen(fs fs) error {
 			args:                  true,
 		}
 		argsBuffer := &bytes.Buffer{}
+
 		mod.genHeader(argsBuffer, mod.getPulumiImports(), "inputs")
 		if err := args.genInputType(argsBuffer); err != nil {
 			return err
@@ -1845,42 +1826,38 @@ func (mod *modContext) gen(fs fs) error {
 
 	// Input/Output types
 	for _, t := range mod.types {
-		if mod.details(t).inputType || mod.details(t).stateType {
-			if mod.details(t).inputType {
-				if mod.details(t).argsType {
-					buffer := &bytes.Buffer{}
-					mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-					if err := mod.genType(buffer, t, "inputs", true, false, true); err != nil {
-						return err
-					}
-					addFile(path.Join("inputs", mod.typeName(t, false, true, true)+".java"), buffer.String())
-				}
-				if mod.details(t).plainType {
-					buffer := &bytes.Buffer{}
-					mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-					if err := mod.genType(buffer, t, "inputs", true, false, false); err != nil {
-						return err
-					}
-					addFile(path.Join("inputs", mod.typeName(t, false, true, false)+".java"), buffer.String())
-				}
+		if mod.details(t).plainType {
+			t := t.PlainShape
+			buffer := &bytes.Buffer{}
+			mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
+			if err := mod.genType(buffer, t, "inputs", true, false); err != nil {
+				return err
 			}
-
-			if mod.details(t).stateType {
-				buffer := &bytes.Buffer{}
-				mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-				if err := mod.genType(buffer, t, "inputs", true, true, true); err != nil {
-					return err
-				}
-				addFile(path.Join("inputs", mod.typeName(t, true, true, true)+".java"), buffer.String())
+			addFile(path.Join("inputs", mod.typeName(t, false, t.IsInputShape())+".java"), buffer.String())
+		}
+		if mod.details(t).inputType {
+			buffer := &bytes.Buffer{}
+			mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
+			if err := mod.genType(buffer, t, "inputs", true, false); err != nil {
+				return err
 			}
+			addFile(path.Join("inputs", mod.typeName(t, false, t.IsInputShape())+".java"), buffer.String())
+		}
+		if mod.details(t).stateType {
+			buffer := &bytes.Buffer{}
+			mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
+			if err := mod.genType(buffer, t, "inputs", true, true); err != nil {
+				return err
+			}
+			addFile(path.Join("inputs", mod.typeName(t, true, true)+".java"), buffer.String())
 		}
 		if mod.details(t).outputType {
 			buffer := &bytes.Buffer{}
 			mod.genHeader(buffer, mod.getPulumiImports(), "outputs")
-			if err := mod.genType(buffer, t, "outputs", false, false, false); err != nil {
+			if err := mod.genType(buffer, t, "outputs", false, false); err != nil {
 				return err
 			}
-			addFile(path.Join("outputs", mod.typeName(t, false, false, false)+".java"), buffer.String())
+			addFile(path.Join("outputs", mod.typeName(t, false, false)+".java"), buffer.String())
 		}
 	}
 
@@ -1983,7 +1960,6 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				packages:               info.Packages,
 				typeDetails:            details,
 				propertyNames:          propertyNames,
-				compatibility:          info.Compatibility,
 				dictionaryConstructors: info.DictionaryConstructors,
 			}
 
@@ -2015,7 +1991,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		cfg.packageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
 	}
 
-	visitObjectTypes(pkg.Config, func(t *schema.ObjectType, _ bool) {
+	visitObjectTypes(pkg.Config, func(t *schema.ObjectType) {
 		getModFromToken(t.Token, pkg).details(t).outputType = true
 	})
 
@@ -2023,22 +1999,24 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	scanResource := func(r *schema.Resource) {
 		mod := getModFromToken(r.Token, pkg)
 		mod.resources = append(mod.resources, r)
-		visitObjectTypes(r.Properties, func(t *schema.ObjectType, _ bool) {
+		visitObjectTypes(r.Properties, func(t *schema.ObjectType) {
 			getModFromToken(t.Token, t.Package).details(t).outputType = true
 		})
-		visitObjectTypes(r.InputProperties, func(t *schema.ObjectType, plain bool) {
+		visitObjectTypes(r.InputProperties, func(t *schema.ObjectType) {
 			if r.IsProvider {
 				getModFromToken(t.Token, t.Package).details(t).outputType = true
 			}
 			getModFromToken(t.Token, t.Package).details(t).inputType = true
-			if plain {
-				getModFromToken(t.Token, t.Package).details(t).plainType = true
-			} else {
-				getModFromToken(t.Token, t.Package).details(t).argsType = true
-			}
+		})
+
+		// We don't generate plain input types unless we use them. To always
+		// generate them, we can move the following line to the above function.
+		// It looks like the C# codegen always generates them.
+		visitPlainObjectTypes(r.InputProperties, func(t *schema.ObjectType) {
+			getModFromToken(t.Token, t.Package).details(t).plainType = true
 		})
 		if r.StateInputs != nil {
-			visitObjectTypes(r.StateInputs.Properties, func(t *schema.ObjectType, _ bool) {
+			visitObjectTypes(r.StateInputs.Properties, func(t *schema.ObjectType) {
 				getModFromToken(t.Token, t.Package).details(t).inputType = true
 				getModFromToken(t.Token, t.Package).details(t).stateType = true
 			})
@@ -2055,14 +2033,14 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		mod := getModFromToken(f.Token, pkg)
 		mod.functions = append(mod.functions, f)
 		if f.Inputs != nil {
-			visitObjectTypes(f.Inputs.Properties, func(t *schema.ObjectType, _ bool) {
+			visitObjectTypes(f.Inputs.Properties, func(t *schema.ObjectType) {
 				details := getModFromToken(t.Token, t.Package).details(t)
 				details.inputType = true
 				details.plainType = true
 			})
 		}
 		if f.Outputs != nil {
-			visitObjectTypes(f.Outputs.Properties, func(t *schema.ObjectType, _ bool) {
+			visitObjectTypes(f.Outputs.Properties, func(t *schema.ObjectType) {
 				details := getModFromToken(t.Token, t.Package).details(t)
 				details.outputType = true
 				details.plainType = true
@@ -2072,7 +2050,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 
 	// Find nested types.
 	for _, t := range pkg.Types {
-		switch typ := t.(type) {
+		switch typ := codegen.UnwrapType(t).(type) {
 		case *schema.ObjectType:
 			mod := getModFromToken(typ.Token, pkg)
 			mod.types = append(mod.types, typ)
@@ -2190,4 +2168,25 @@ func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		return nil, err
 	}
 	return files, nil
+}
+
+func isInputType(t schema.Type) bool {
+	if optional, ok := t.(*schema.OptionalType); ok {
+		t = optional.ElementType
+	}
+
+	_, stillOption := t.(*schema.OptionalType)
+	contract.Assert(!stillOption)
+	_, isInputType := t.(*schema.InputType)
+	return isInputType
+}
+
+func ignoreOptional(t *schema.OptionalType, requireInitializers bool) bool {
+	switch t.ElementType.(type) {
+	case *schema.InputType:
+		return true
+	case *schema.ArrayType, *schema.MapType:
+		return !requireInitializers
+	}
+	return false
 }
