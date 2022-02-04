@@ -68,12 +68,6 @@ azure-native: bin/pulumi-java-gen
 google-native: bin/pulumi-java-gen
 	-$(call generate_sdk,google-native,https://raw.githubusercontent.com/pulumi/pulumi-google-native/master/provider/cmd/pulumi-resource-google-native/schema.json)
 
-bin/pulumi-java-gen: bin
-	cd pkg && go build -o ../bin/ github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
-
-bin:
-	mkdir -p bin
-
 # Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
 # stacks in Pulumi service.
 integration_tests::	bin/pulumi-language-jvm ensure_tests install_random
