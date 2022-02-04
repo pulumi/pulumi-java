@@ -67,6 +67,9 @@ func (i *Imports) PackageCode() string {
 func (i *Imports) ImportCode() string {
 	lines := []string{}
 	for _, fqn := range i.imports {
+		if fqn.Equal(i.pkg.Dot(i.pubClass)) {
+			continue // do not import self
+		}
 		lines = append(lines, fmt.Sprintf("import %s;", fqn.ToString()))
 	}
 	sort.Strings(lines)

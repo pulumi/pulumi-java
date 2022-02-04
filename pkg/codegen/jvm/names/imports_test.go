@@ -26,8 +26,7 @@ func TestImports(t *testing.T) {
 	assert.Equal(t, "org.confound.Map", i.Ref(confoundingMapType))
 	assert.Equal(t, "RandomString", i.Ref(pkg.Dot(cls)))
 
-	assert.Equal(t, `import io.pulumi.random.RandomString;
-import java.util.Map;`, i.ImportCode())
+	assert.Equal(t, `import java.util.Map;`, i.ImportCode())
 
 	assert.Equal(t, `package io.pulumi.random;`, i.PackageCode())
 }
