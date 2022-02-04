@@ -21,7 +21,7 @@ class ResourceOptionsTest {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
                         null, null, Input.empty(), false, null,
-                        null, null, null, null, null, null
+                        null, null, null, null, null, null, null
                 )),
                 arguments(new TestResourceOptions(
                                 null,
@@ -29,6 +29,7 @@ class ResourceOptionsTest {
                                 null,
                                 false,
                                 List.of("a"),
+                                null,
                                 null,
                                 null,
                                 null,
@@ -47,7 +48,8 @@ class ResourceOptionsTest {
                                 new CustomTimeouts(null, null, null),
                                 List.of(),
                                 List.of(),
-                                "urn"
+                                "urn",
+                                List.of()
                         ),
                         new TestResourceOptions(
                                 Input.of("id"),
@@ -60,7 +62,8 @@ class ResourceOptionsTest {
                                 new CustomTimeouts(null, null, null),
                                 List.of(),
                                 List.of(),
-                                "urn"
+                                "urn",
+                                List.of()
                         )
                 ) // FIXME
         );
@@ -93,8 +96,21 @@ class ResourceOptionsTest {
 
         protected TestResourceOptions() { /* empty */ }
 
-        public TestResourceOptions(@Nullable Input<String> id, @Nullable Resource parent, @Nullable Input<List<Resource>> dependsOn, boolean protect, @Nullable List<String> ignoreChanges, @Nullable String version, @Nullable ProviderResource provider, @Nullable CustomTimeouts customTimeouts, @Nullable List<ResourceTransformation> resourceTransformations, @Nullable List<Input<Alias>> aliases, @Nullable String urn) {
-            super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts, resourceTransformations, aliases, urn);
+        public TestResourceOptions(
+                @Nullable Input<String> id,
+                @Nullable Resource parent,
+                @Nullable Input<List<Resource>> dependsOn,
+                boolean protect,
+                @Nullable List<String> ignoreChanges,
+                @Nullable String version,
+                @Nullable ProviderResource provider,
+                @Nullable CustomTimeouts customTimeouts,
+                @Nullable List<ResourceTransformation> resourceTransformations,
+                @Nullable List<Input<Alias>> aliases,
+                @Nullable String urn,
+                @Nullable List<String> replaceOnChanges
+        ) {
+            super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts, resourceTransformations, aliases, urn, replaceOnChanges);
         }
     }
 

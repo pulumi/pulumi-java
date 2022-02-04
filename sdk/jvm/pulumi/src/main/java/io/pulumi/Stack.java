@@ -173,6 +173,7 @@ public class Stack extends ComponentResource {
                 options.getResourceTransformations(),
                 null,
                 null,
+                null,
                 null
         );
     }
