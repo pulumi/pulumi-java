@@ -1346,9 +1346,15 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
 
+        private final List<Exception> swallowedExceptions = new ArrayList<>();
+
         public DefaultRunner(DeploymentState deployment, Logger standardLogger) {
             this.engineLogger = Objects.requireNonNull(Objects.requireNonNull(deployment).logger);
             this.standardLogger = Objects.requireNonNull(standardLogger);
+        }
+
+        public List<Exception> getSwallowedExceptions() {
+            return ImmutableList.copyOf(this.swallowedExceptions);
         }
 
         /**
@@ -1488,6 +1494,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private CompletableFuture<Integer> handleExceptionAsync(Exception exception) {
+            this.swallowedExceptions.add(exception);
+
             Function<Void, Integer> exitMessageAndCode = unused -> {
                 standardLogger.log(Level.FINE, "Returning from program after last error");
                 return ProcessExitedAfterLoggingUserActionableMessage;
