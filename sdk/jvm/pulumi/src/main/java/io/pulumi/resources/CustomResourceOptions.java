@@ -39,10 +39,11 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable String urn,
             boolean deleteBeforeReplace,
             @Nullable List<String> additionalSecretOutputs,
-            @Nullable String importId
+            @Nullable String importId,
+            @Nullable List<String> replaceOnChanges
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, provider, customTimeouts,
-                resourceTransformations, aliases, urn);
+                resourceTransformations, aliases, urn, replaceOnChanges);
         this.deleteBeforeReplace = deleteBeforeReplace;
         this.additionalSecretOutputs = additionalSecretOutputs;
         this.importId = importId;
@@ -121,7 +122,8 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
                 this.urn,
                 this.deleteBeforeReplace,
                 copyNullableList(this.additionalSecretOutputs),
-                this.importId
+                this.importId,
+                copyNullableList(this.replaceOnChanges)
         );
     }
 
@@ -154,6 +156,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
         options2 = options2 != null ? options2.copy() : Empty;
 
         // first, merge all the normal option values over
+        //noinspection ConstantConditions
         options1 = mergeSharedOptions(options1, options2, id);
 
         options1.deleteBeforeReplace = options1.deleteBeforeReplace || options2.deleteBeforeReplace;
