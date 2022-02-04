@@ -5,9 +5,7 @@ import (
 	"fmt"
 	"io"
 	"path"
-	"path/filepath"
 	"reflect"
-	"sort"
 	"strconv"
 	"strings"
 	"unicode"
@@ -16,6 +14,8 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
 )
 
 type typeDetails struct {
@@ -1407,123 +1407,6 @@ func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyType
 	return pt.genOutputType(w)
 }
 
-// pulumiImports is a slice of common imports that are used with the genHeader method.
-var pulumiImports = []string{
-	"javax.annotation.Nullable",
-	"java.util.Objects",
-	"java.util.Optional",
-	"java.util.Map",
-	"java.util.List",
-	"java.util.concurrent.CompletableFuture",
-	"io.pulumi.core.*",
-	"io.pulumi.core.internal.annotations.*",
-}
-
-func (mod *modContext) getUtilitiesImport() string {
-	return mod.rootPackageName + ".Utilities"
-}
-
-func (mod *modContext) getPulumiImports() []string {
-	return append(pulumiImports, mod.getUtilitiesImport())
-}
-
-func (mod *modContext) getTypeImports(t schema.Type, recurse bool, imports map[string]codegen.StringSet, seen codegen.Set) {
-	if seen.Has(t) {
-		return
-	}
-	seen.Add(t)
-
-	switch t := t.(type) {
-	case *schema.OptionalType:
-		mod.getTypeImports(t.ElementType, recurse, imports, seen)
-		return
-	case *schema.InputType:
-		mod.getTypeImports(t.ElementType, recurse, imports, seen)
-		return
-	case *schema.ArrayType:
-		mod.getTypeImports(t.ElementType, recurse, imports, seen)
-		return
-	case *schema.MapType:
-		mod.getTypeImports(t.ElementType, recurse, imports, seen)
-		return
-	case *schema.ObjectType:
-		for _, p := range t.Properties {
-			mod.getTypeImports(p.Type, recurse, imports, seen)
-		}
-		return
-	case *schema.ResourceType:
-		// If it's an external resource, we'll be using fully-qualified type names,
-		// so there's no need for an import.
-		if t.Resource != nil && t.Resource.Package != mod.pkg {
-			return
-		}
-
-		modName, name, modPath := mod.pkg.TokenToModule(t.Token), tokenToName(t.Token), ""
-		if modName != mod.mod {
-			mp, err := filepath.Rel(mod.mod, modName)
-			contract.Assert(err == nil)
-			if path.Base(mp) == "." {
-				mp = path.Dir(mp)
-			}
-			modPath = filepath.ToSlash(mp)
-		}
-		if len(modPath) == 0 {
-			return
-		}
-		if imports[modPath] == nil {
-			imports[modPath] = codegen.NewStringSet()
-		}
-		imports[modPath].Add(name)
-		return
-	case *schema.TokenType:
-		return
-	case *schema.UnionType:
-		for _, e := range t.ElementTypes {
-			mod.getTypeImports(e, recurse, imports, seen)
-		}
-		return
-	default:
-		return
-	}
-}
-
-func (mod *modContext) getImports(member interface{}, imports map[string]codegen.StringSet) {
-	seen := codegen.Set{}
-	switch member := member.(type) {
-	case *schema.ObjectType:
-		for _, p := range member.Properties {
-			mod.getTypeImports(p.Type, true, imports, seen)
-		}
-		return
-	case *schema.ResourceType:
-		mod.getTypeImports(member, true, imports, seen)
-		return
-	case *schema.Resource:
-		for _, p := range member.Properties {
-			mod.getTypeImports(p.Type, false, imports, seen)
-		}
-		for _, p := range member.InputProperties {
-			mod.getTypeImports(p.Type, false, imports, seen)
-		}
-		return
-	case *schema.Function:
-		if member.Inputs != nil {
-			mod.getTypeImports(member.Inputs, false, imports, seen)
-		}
-		if member.Outputs != nil {
-			mod.getTypeImports(member.Outputs, false, imports, seen)
-		}
-		return
-	case []*schema.Property:
-		for _, p := range member {
-			mod.getTypeImports(p.Type, false, imports, seen)
-		}
-		return
-	default:
-		return
-	}
-}
-
 func (mod *modContext) genHeader(w io.Writer, imports []string, qualifier string) {
 	if len(qualifier) > 0 {
 		qualifier = "." + qualifier
@@ -1684,6 +1567,23 @@ func (mod *modContext) gen(fs fs) error {
 		fs.add(p, []byte(contents))
 	}
 
+	addClassFile := func(pkg names.FQN, className names.Ident, contents string) {
+		fqn := pkg.Dot(className)
+		relPath := path.Join(strings.Split(fqn.ToString(), ".")...)
+		path := path.Join(gradleProjectPath(), relPath) + ".java"
+		files = append(files, path)
+		fs.add(path, []byte(contents))
+	}
+
+	addClass := func(javaPkg names.FQN, javaClass names.Ident, gen func(*classFileContext) error) error {
+		javaCode, err := genClassFile(javaPkg, javaClass, gen)
+		if err != nil {
+			return err
+		}
+		addClassFile(javaPkg, javaClass, javaCode)
+		return nil
+	}
+
 	// Utilities, config
 	switch mod.mod {
 	case "":
@@ -1710,6 +1610,11 @@ func (mod *modContext) gen(fs fs) error {
 		}
 	}
 
+	javaPkg, err := parsePackageName(mod.packageName)
+	if err != nil {
+		return err
+	}
+
 	// Resources
 	for _, r := range mod.resources {
 		if r.IsOverlay {
@@ -1717,60 +1622,47 @@ func (mod *modContext) gen(fs fs) error {
 			continue
 		}
 
-		imports := map[string]codegen.StringSet{}
-		mod.getImports(r, imports)
-
-		buffer := &bytes.Buffer{}
-		var additionalImports []string
-		for _, i := range imports {
-			additionalImports = append(additionalImports, i.SortedValues()...)
-		}
-		sort.Strings(additionalImports)
-		importStrings := mod.getPulumiImports()
-		importStrings = append(importStrings, additionalImports...)
-		importStrings = append(importStrings, mod.packageName+".inputs.*")
-		mod.genHeader(buffer, importStrings, "")
-		if err := mod.genResource(buffer, r); err != nil {
+		// Generate Resource class
+		if err := addClass(javaPkg, names.Ident(resourceName(r)), func(ctx *classFileContext) error {
+			return mod.genResource(ctx.writer, r)
+		}); err != nil {
 			return err
 		}
-		addFile(resourceName(r)+".java", buffer.String())
 
-		// Generate the resource args type.
-		args := &plainType{
-			mod:                   mod,
-			res:                   r,
-			name:                  resourceName(r) + "Args",
-			baseClass:             "io.pulumi.resources.ResourceArgs",
-			propertyTypeQualifier: "inputs",
-			properties:            r.InputProperties,
-			args:                  true,
-		}
-		argsBuffer := &bytes.Buffer{}
-
-		mod.genHeader(argsBuffer, mod.getPulumiImports(), "inputs")
-		if err := args.genInputType(argsBuffer); err != nil {
+		// Generate ResourceArgs class
+		if err := addClass(javaPkg, names.Ident(resourceName(r)+"Args"), func(ctx *classFileContext) error {
+			args := &plainType{
+				mod:                   mod,
+				res:                   r,
+				name:                  string(ctx.className),
+				baseClass:             "io.pulumi.resources.ResourceArgs",
+				propertyTypeQualifier: "inputs",
+				properties:            r.InputProperties,
+				args:                  true,
+			}
+			return args.genInputType(ctx.writer)
+		}); err != nil {
 			return err
 		}
-		addFile(path.Join("inputs", resourceName(r)+"Args.java"), argsBuffer.String())
 
 		// Generate the `get` args type, if any.
 		if r.StateInputs != nil {
-			state := &plainType{
-				mod:                   mod,
-				res:                   r,
-				name:                  resourceName(r) + "State",
-				baseClass:             "io.pulumi.resources.ResourceArgs",
-				propertyTypeQualifier: "inputs",
-				properties:            r.StateInputs.Properties,
-				args:                  true,
-				state:                 true,
-			}
-			stateBuffer := &bytes.Buffer{}
-			mod.genHeader(stateBuffer, mod.getPulumiImports(), "inputs")
-			if err := state.genInputType(stateBuffer); err != nil {
+			className := names.Ident(resourceName(r) + "State")
+			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
+				state := &plainType{
+					mod:                   mod,
+					res:                   r,
+					name:                  string(ctx.className),
+					baseClass:             "io.pulumi.resources.ResourceArgs",
+					propertyTypeQualifier: "inputs",
+					properties:            r.StateInputs.Properties,
+					args:                  true,
+					state:                 true,
+				}
+				return state.genInputType(ctx.writer)
+			}); err != nil {
 				return err
 			}
-			addFile(path.Join("inputs", resourceName(r)+"State.java"), stateBuffer.String())
 		}
 	}
 
@@ -1781,56 +1673,44 @@ func (mod *modContext) gen(fs fs) error {
 			continue
 		}
 
-		imports := map[string]codegen.StringSet{}
-		mod.getImports(f, imports)
-
-		buffer := &bytes.Buffer{}
-		importStrings := mod.getPulumiImports()
-		for _, i := range imports {
-			importStrings = append(importStrings, i.SortedValues()...)
-		}
-		if f.Inputs != nil {
-			importStrings = append(importStrings, mod.packageName+".inputs.*")
-		}
-		if f.Outputs != nil {
-			importStrings = append(importStrings, mod.packageName+".outputs.*")
-		}
-		mod.genHeader(buffer, importStrings, "")
-		if err := mod.genFunction(buffer, f); err != nil {
+		if err := addClass(javaPkg, names.Ident(tokenToName(f.Token)), func(ctx *classFileContext) error {
+			return mod.genFunction(ctx.writer, f)
+		}); err != nil {
 			return err
 		}
-		addFile(tokenToName(f.Token)+".java", buffer.String())
 
 		// Emit the args and result types, if any.
 		if f.Inputs != nil {
-			args := &plainType{
-				mod:                   mod,
-				name:                  tokenToName(f.Token) + "Args",
-				baseClass:             "io.pulumi.resources.InvokeArgs",
-				propertyTypeQualifier: "inputs",
-				properties:            f.Inputs.Properties,
-			}
-			argsBuffer := &bytes.Buffer{}
-			mod.genHeader(argsBuffer, importStrings, "inputs")
-			if err := args.genInputType(argsBuffer); err != nil {
+			inputsPkg := javaPkg.Dot(names.Ident("inputs"))
+			argsClass := names.Ident(tokenToName(f.Token) + "Args")
+			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
+				args := &plainType{
+					mod:                   mod,
+					name:                  string(ctx.className),
+					baseClass:             "io.pulumi.resources.InvokeArgs",
+					propertyTypeQualifier: "inputs",
+					properties:            f.Inputs.Properties,
+				}
+				return args.genInputType(ctx.writer)
+			}); err != nil {
 				return err
 			}
-			addFile(path.Join("inputs", tokenToName(f.Token)+"Args.java"), argsBuffer.String())
 		}
 
 		if f.Outputs != nil {
-			res := &plainType{
-				mod:                   mod,
-				name:                  tokenToName(f.Token) + "Result",
-				propertyTypeQualifier: "outputs",
-				properties:            f.Outputs.Properties,
-			}
-			resultBuffer := &bytes.Buffer{}
-			mod.genHeader(resultBuffer, importStrings, "outputs")
-			if err := res.genOutputType(resultBuffer); err != nil {
+			outputsPkg := javaPkg.Dot(names.Ident("outputs"))
+			resultClass := names.Ident(tokenToName(f.Token) + "Result")
+			if err := addClass(outputsPkg, resultClass, func(ctx *classFileContext) error {
+				res := &plainType{
+					mod:                   mod,
+					name:                  string(ctx.className),
+					propertyTypeQualifier: "outputs",
+					properties:            f.Outputs.Properties,
+				}
+				return res.genOutputType(ctx.writer)
+			}); err != nil {
 				return err
 			}
-			addFile(path.Join("outputs", tokenToName(f.Token)+"Result.java"), resultBuffer.String())
 		}
 	}
 
@@ -1840,62 +1720,52 @@ func (mod *modContext) gen(fs fs) error {
 			// This type is generated by the provider, so no further action is required.
 			continue
 		}
-
 		if mod.details(t).plainType {
 			t := t.PlainShape
-			buffer := &bytes.Buffer{}
-			mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-			if err := mod.genType(buffer, t, "inputs", true, false); err != nil {
+			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
+			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
+				return mod.genType(ctx.writer, t, "inputs", true, false)
+			}); err != nil {
 				return err
 			}
-			addFile(path.Join("inputs", mod.typeName(t, false, t.IsInputShape())+".java"), buffer.String())
 		}
 		if mod.details(t).inputType {
-			buffer := &bytes.Buffer{}
-			mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-			if err := mod.genType(buffer, t, "inputs", true, false); err != nil {
+			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
+			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
+				return mod.genType(ctx.writer, t, "inputs", true, false)
+			}); err != nil {
 				return err
 			}
-			addFile(path.Join("inputs", mod.typeName(t, false, t.IsInputShape())+".java"), buffer.String())
 		}
 		if mod.details(t).stateType {
-			buffer := &bytes.Buffer{}
-			mod.genHeader(buffer, mod.getPulumiImports(), "inputs")
-			if err := mod.genType(buffer, t, "inputs", true, true); err != nil {
+			className := names.Ident(mod.typeName(t, true, true))
+			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
+				return mod.genType(ctx.writer, t, "inputs", true, true)
+			}); err != nil {
 				return err
 			}
-			addFile(path.Join("inputs", mod.typeName(t, true, true)+".java"), buffer.String())
 		}
 		if mod.details(t).outputType {
-			buffer := &bytes.Buffer{}
-			mod.genHeader(buffer, mod.getPulumiImports(), "outputs")
-			if err := mod.genType(buffer, t, "outputs", false, false); err != nil {
+			className := names.Ident(mod.typeName(t, false, false))
+			if err := addClass(javaPkg.Dot(names.Ident("outputs")), className, func(ctx *classFileContext) error {
+				return mod.genType(ctx.writer, t, "outputs", false, false)
+			}); err != nil {
 				return err
 			}
-			addFile(path.Join("outputs", mod.typeName(t, false, false)+".java"), buffer.String())
 		}
 	}
 
 	// Enums
 	if len(mod.enums) > 0 {
-		importStrings := mod.getPulumiImports()
-		importStrings = append(importStrings, []string{
-			"java.util.StringJoiner",
-		}...)
-
-		for i, enum := range mod.enums {
-			buffer := &bytes.Buffer{}
-			mod.genHeader(buffer, importStrings, "enums")
-			if err := mod.genEnum(buffer, "enums", enum); err != nil {
+		for _, enum := range mod.enums {
+			enumClassName := names.Ident(tokenToName(enum.Token))
+			if err := addClass(javaPkg.Dot(names.Ident("enums")), enumClassName, func(ctx *classFileContext) error {
+				return mod.genEnum(ctx.writer, "enums", enum)
+			}); err != nil {
 				return err
 			}
-			if i != len(mod.enums)-1 {
-				_, _ = fmt.Fprintf(buffer, "\n")
-			}
-			addFile(path.Join("enums", tokenToName(enum.Token)+".java"), buffer.String())
 		}
 	}
-
 	return nil
 }
 
@@ -2220,4 +2090,17 @@ func ignoreOptional(t *schema.OptionalType, requireInitializers bool) bool {
 		return !requireInitializers
 	}
 	return false
+}
+
+// TODO ignores identifier parse errors for the moment.
+func parsePackageName(packageName string) (names.FQN, error) {
+	parts := strings.Split(packageName, ".")
+	if len(parts) < 1 {
+		return names.FQN{}, fmt.Errorf("empty package name: %s", packageName)
+	}
+	result := names.Ident(parts[0]).FQN()
+	for _, p := range parts[1:] {
+		result = result.Dot(names.Ident(p))
+	}
+	return result, nil
 }
