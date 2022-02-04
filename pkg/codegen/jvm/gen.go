@@ -1040,7 +1040,7 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	w := ctx.writer
 	_, _ = fmt.Fprintf(w, "%s.of(", ctx.ref(names.Input))
-	_, _ = fmt.Fprintf(w, "Alias.builder()", ctx.ref(names.Alias))
+	_, _ = fmt.Fprintf(w, "%s.builder()", ctx.ref(names.Alias))
 	if alias.Name != nil {
 		_, _ = fmt.Fprintf(w, ".setName(\"%v\")", *alias.Name)
 	}
