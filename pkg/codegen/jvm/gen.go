@@ -152,7 +152,7 @@ func (mod *modContext) typeString(
 		contract.Assert(len(inner.Parameters) == 1)
 		contract.Assert(len(inner.Annotations) == 0)
 		inner = inner.Parameters[0]
-		inner.Annotations = append(inner.Annotations, "@Nullable")
+		inner.Annotations = append(inner.Annotations, fmt.Sprintf("@%s", ctx.ref(names.Nullable)))
 	}
 	return inner
 }
@@ -184,7 +184,7 @@ func (mod *modContext) typeStringRecHelper(
 	case *schema.OptionalType:
 		inner := mod.typeStringRecHelper(ctx, t.ElementType, qualifier, input, state, requireInitializers, insideInput)
 		if ignoreOptional(t, requireInitializers) {
-			inner.Annotations = append(inner.Annotations, "@Nullable")
+			inner.Annotations = append(inner.Annotations, fmt.Sprintf("@%s", ctx.ref(names.Nullable)))
 			return inner
 		}
 		return TypeShape{
@@ -226,7 +226,7 @@ func (mod *modContext) typeStringRecHelper(
 		return TypeShape{
 			Type: mapType,
 			Parameters: []TypeShape{
-				TypeShape{Type: names.String},
+				{Type: names.String},
 				mod.typeStringRecHelper(ctx,
 					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
 				),
@@ -361,18 +361,18 @@ func (mod *modContext) typeStringRecHelper(
 // optionalAsNull is used in conjunction with the `typeString` parameter
 // `outerOptional` to ensure types line up.
 // In general, `outerOptional` <=> `!optionalAsNull`.
-func emptyTypeInitializer(t schema.Type, optionalAsNull bool) string {
+func emptyTypeInitializer(ctx *classFileContext, t schema.Type, optionalAsNull bool) string {
 	if isInputType(t) {
-		return "Input.empty()"
+		return fmt.Sprintf("%s.empty()", ctx.ref(names.Input))
 	}
 	if _, ok := t.(*schema.OptionalType); ok && !optionalAsNull {
-		return "Optional.empty()"
+		return fmt.Sprintf("%s.empty()", ctx.ref(names.Optional))
 	}
 	switch codegen.UnwrapType(t).(type) {
 	case *schema.ArrayType:
-		return "List.of()"
+		return fmt.Sprintf("%s.of()", ctx.ref(names.List))
 	case *schema.MapType:
-		return "Map.of()"
+		return fmt.Sprintf("%s.of()", ctx.ref(names.Map))
 	case *schema.UnionType:
 		return "null" // TODO: should we return an "empty Either" (not sure what that means exactly)
 	default:
@@ -380,7 +380,7 @@ func emptyTypeInitializer(t schema.Type, optionalAsNull bool) string {
 	}
 }
 
-func typeInitializer(t schema.Type, nested string, nestedType string) string {
+func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nestedType string) string {
 	handleUnion := func(t *schema.UnionType, left, right string) string {
 		var m string
 		switch nestedType {
@@ -398,7 +398,7 @@ func typeInitializer(t schema.Type, nested string, nestedType string) string {
 
 	switch t := t.(type) {
 	case *schema.OptionalType:
-		inner := typeInitializer(t.ElementType, nested, nestedType)
+		inner := typeInitializer(ctx, t.ElementType, nested, nestedType)
 		if ignoreOptional(t, true) {
 			return inner
 		}
@@ -414,23 +414,27 @@ func typeInitializer(t schema.Type, nested string, nestedType string) string {
 	case *schema.InputType:
 		switch t := t.ElementType.(type) {
 		case *schema.ArrayType:
-			return fmt.Sprintf("Input.ofList(%s)", nested)
+			return fmt.Sprintf("%s.ofList(%s)", ctx.ref(names.Input), nested)
 		case *schema.MapType:
-			return fmt.Sprintf("Input.ofMap(%s)", nested)
+			return fmt.Sprintf("%s.ofMap(%s)", ctx.ref(names.Input), nested)
 		case *schema.UnionType:
-			return handleUnion(t, "Input.ofLeft", "Input.ofRight")
+			return handleUnion(t,
+				fmt.Sprintf("%s.ofLeft", ctx.ref(names.Input)),
+				fmt.Sprintf("%s.ofRight", ctx.ref(names.Input)))
 		default:
-			return fmt.Sprintf("Input.ofNullable(%s)", nested)
+			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Input), nested)
 		}
 
 	case *schema.ArrayType:
-		return fmt.Sprintf("List.of(%s)", nested)
+		return fmt.Sprintf("%s.of(%s)", ctx.ref(names.List), nested)
 
 	case *schema.MapType:
-		return fmt.Sprintf("Map.of(%s)", nested)
+		return fmt.Sprintf("%s.of(%s)", ctx.ref(names.Map), nested)
 
 	case *schema.UnionType:
-		return handleUnion(t, "Either.leftOf", "Either.rightOf")
+		return handleUnion(t,
+			fmt.Sprintf("%s.leftOf", ctx.ref(names.Either)),
+			fmt.Sprintf("%s.rightOf", ctx.ref(names.Either)))
 
 	default:
 		return nested
@@ -492,7 +496,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	indent := strings.Repeat("    ", 1)
 
 	// TODO: add docs comment
-	_, _ = fmt.Fprintf(w, "%s@InputImport(name=\"%s\"%s)\n", indent, wireName, attributeArgs)
+	_, _ = fmt.Fprintf(w, "%s@%s(name=\"%s\"%s)\n", indent, ctx.ref(names.InputImport), wireName, attributeArgs)
 	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
 
@@ -510,11 +514,11 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	getterName := javaIdentifier("get" + title(prop.Name))
 	// TODO: add docs comment
-	printObsoleteAttribute(w, prop.DeprecationMessage, indent)
+	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
 	if opt, ok := prop.Type.(*schema.OptionalType); ok {
 		req := opt.ElementType
-		emptyStatement := emptyTypeInitializer(prop.Type, false)
+		emptyStatement := emptyTypeInitializer(ctx, prop.Type, false)
 		switch req.(type) {
 		case *schema.ArrayType, *schema.MapType, *schema.UnionType, *schema.InputType: // the most common case actually
 			getterTypeNonOptional := pt.mod.typeString(
@@ -528,10 +532,10 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 				false,               // inputless overload
 			)
 			getterType = getterTypeNonOptional
-			emptyStatement = emptyTypeInitializer(req, true)
+			emptyStatement = emptyTypeInitializer(ctx, req, true)
 		default:
 			// nested type is only used when prop.Type is a union
-			returnStatement = typeInitializer(prop.Type, returnStatement, "")
+			returnStatement = typeInitializer(ctx, prop.Type, returnStatement, "")
 		}
 		returnStatement = fmt.Sprintf("this.%s == null ? %s : %s", propertyName, emptyStatement, returnStatement)
 	}
@@ -615,11 +619,12 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			if err != nil {
 				return err
 			}
-			defaultValueInitializer := typeInitializer(prop.Type, defaultValueString, defType)
+			defaultValueInitializer := typeInitializer(ctx, prop.Type, defaultValueString, defType)
 			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValueInitializer)
 		}
 		if prop.IsRequired() {
-			_, _ = fmt.Fprintf(w, "        this.%[1]s = %[2]sObjects.requireNonNull(%[3]s, \"expected parameter '%[3]s' to be non-null\");\n", fieldName, defaultValueCode, paramName)
+			_, _ = fmt.Fprintf(w, "        this.%[1]s = %[2]s%[4]s.requireNonNull(%[3]s, \"expected parameter '%[3]s' to be non-null\");\n",
+				fieldName, defaultValueCode, paramName, ctx.ref(names.Objects))
 		} else {
 			_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
 		}
@@ -633,7 +638,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
 		for _, prop := range pt.properties {
 			fieldName := javaIdentifier(pt.mod.propertyName(prop))
-			emptyValue := emptyTypeInitializer(prop.Type, true)
+			emptyValue := emptyTypeInitializer(ctx, prop.Type, true)
 			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
 		}
 		_, _ = fmt.Fprintf(w, "    }\n")
@@ -665,10 +670,10 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		setterName := javaIdentifier("set" + title(prop.Name))
 		assignment := func(propertyName string) string {
 			if prop.Secret {
-				return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
 			} else {
 				if prop.IsRequired() {
-					return fmt.Sprintf("this.%s = Objects.requireNonNull(%s)", propertyName, propertyName)
+					return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
 				} else {
 					return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
 				}
@@ -701,12 +706,13 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 			assignmentUnwrapped := func(propertyName string) string {
 				if prop.Secret {
-					return fmt.Sprintf("this.%s = Input.ofNullable(%s).asSecret()", propertyName, propertyName)
+					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
 				} else {
 					if prop.IsRequired() {
-						return fmt.Sprintf("this.%s = Input.of(Objects.requireNonNull(%s))", propertyName, propertyName)
+						return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
+							propertyName, ctx.ref(names.Input), ctx.ref(names.Objects), propertyName)
 					} else {
-						return fmt.Sprintf("this.%s = Input.ofNullable(%s)", propertyName, propertyName)
+						return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Input), propertyName)
 					}
 				}
 			}
@@ -729,6 +735,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		Fields:     builderFields,
 		Setters:    builderSetters,
 		ResultType: pt.name,
+		Objects:    ctx.ref(names.Objects),
 	}); err != nil {
 		return err
 	}
@@ -745,7 +752,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	indent := strings.Repeat("    ", 0)
 
 	// Open the class and annotate it appropriately.
-	_, _ = fmt.Fprintf(w, "%s@OutputCustomType\n", indent)
+	_, _ = fmt.Fprintf(w, "%s@%s\n", indent, ctx.ref(names.OutputCustomType))
 	_, _ = fmt.Fprintf(w, "%spublic final class %s {\n", indent, pt.name)
 
 	// Generate each output field.
@@ -781,7 +788,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	paramNamesStringBuilder.WriteString("}")
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	_, _ = fmt.Fprintf(w, "%s    @OutputCustomType.Constructor(%s)\n", indent, paramNamesStringBuilder.String())
+	_, _ = fmt.Fprintf(w, "%s    @%s.Constructor(%s)\n", indent, ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
 	_, _ = fmt.Fprintf(w, "%s    private %s(", indent, pt.name)
 
 	// Generate the constructor parameters.
@@ -822,7 +829,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		paramName := javaIdentifier(prop.Name)
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
 		if prop.IsRequired() {
-			_, _ = fmt.Fprintf(w, "%s        this.%s = Objects.requireNonNull(%s);\n", indent, fieldName, paramName)
+			_, _ = fmt.Fprintf(w, "%s        this.%s = %s.requireNonNull(%s);\n", indent, ctx.ref(names.Objects), fieldName, paramName)
 		} else {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
 		}
@@ -868,7 +875,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 				getterType = getterTypeNonOptional
 				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", paramName, paramName)
 			default:
-				returnStatement = fmt.Sprintf("Optional.ofNullable(this.%s)", paramName)
+				returnStatement = fmt.Sprintf("%s.ofNullable(this.%s)", ctx.ref(names.Optional), paramName)
 			}
 		}
 
@@ -909,7 +916,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		setterName := javaIdentifier("set" + title(prop.Name))
 		assignment := func(propertyName string) string {
 			if prop.IsRequired() {
-				return fmt.Sprintf("this.%s = Objects.requireNonNull(%s)", propertyName, propertyName)
+				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
 			} else {
 				return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
 			}
@@ -932,6 +939,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		Fields:     builderFields,
 		Setters:    builderSetters,
 		ResultType: pt.name,
+		Objects:    ctx.ref(names.Objects),
 	}); err != nil {
 		return err
 	}
@@ -1032,8 +1040,8 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 
 func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	w := ctx.writer
-	_, _ = fmt.Fprintf(w, "Input.of(")
-	_, _ = fmt.Fprintf(w, "Alias.builder()")
+	_, _ = fmt.Fprintf(w, "%s.of(", ctx.ref(names.Input))
+	_, _ = fmt.Fprintf(w, "Alias.builder()", ctx.ref(names.Alias))
 	if alias.Name != nil {
 		_, _ = fmt.Fprintf(w, ".setName(\"%v\")", *alias.Name)
 	}
@@ -1047,7 +1055,7 @@ func genAlias(ctx *classFileContext, alias *schema.Alias) {
 	_, _ = fmt.Fprintf(w, ")")
 }
 
-func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) error {
+func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, argsFQN, stateFQN names.FQN) error {
 	w := ctx.writer
 	// Create a resource module file into which all of this resource's types will go.
 	name := resourceName(r)
@@ -1068,7 +1076,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 		baseType = "io.pulumi.resources.CustomResource"
 	}
 
-	printObsoleteAttribute(w, r.DeprecationMessage, "")
+	printObsoleteAttribute(ctx, r.DeprecationMessage, "")
 	_, _ = fmt.Fprintf(w, "@%s(type=\"%s\")\n",
 		ctx.imports.Ref(names.ResourceType),
 		r.Token)
@@ -1115,7 +1123,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 		outputParameterType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
 		})
-		_, _ = fmt.Fprintf(w, "    @OutputExport(name=\"%s\", type=%s, parameters={%s})\n", wireName, outputExportType, outputExportParameters)
+		_, _ = fmt.Fprintf(w, "    @%s(name=\"%s\", type=%s, parameters={%s})\n", ctx.ref(names.OutputExport), wireName, outputExportType, outputExportParameters)
 		_, _ = fmt.Fprintf(w, "    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
 		_, _ = fmt.Fprintf(w, "\n")
 
@@ -1132,8 +1140,6 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 	}
 
 	// Emit the class constructor
-	argsClassName := className + "Args"
-	argsType := argsClassName
 
 	allOptionalInputs := true
 	hasConstInputs := false
@@ -1141,9 +1147,11 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 		allOptionalInputs = allOptionalInputs && !prop.IsRequired()
 		hasConstInputs = hasConstInputs || prop.ConstValue != nil
 	}
+
+	argsType := ctx.ref(argsFQN)
 	if allOptionalInputs {
 		// If the number of required input properties was zero, we can make the args object optional.
-		argsType = fmt.Sprintf("@Nullable %s", argsType)
+		argsType = fmt.Sprintf("@%s %s", ctx.ref(names.Nullable), argsType)
 	}
 
 	tok := r.Token
@@ -1151,14 +1159,14 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 		tok = mod.pkg.Name
 	}
 
-	argsOverride := fmt.Sprintf("args == null ? %sArgs.Empty : args", className)
+	argsOverride := fmt.Sprintf("args == null ? %s.Empty : args", ctx.ref(argsFQN))
 	if hasConstInputs {
 		argsOverride = "makeArgs(args)"
 	}
 
 	// TODO: add docs comment
 
-	_, _ = fmt.Fprintf(w, "    public %s(String name, %s args, @Nullable %s options) {\n", className, argsType, optionsType)
+	_, _ = fmt.Fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n", className, argsType, ctx.ref(names.Nullable), optionsType)
 	if r.IsComponent {
 		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty()), true);\n", tok, argsOverride, ctx.imports.Ref(names.Input))
 	} else {
@@ -1170,11 +1178,12 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", "null"
 		if r.StateInputs != nil {
-			stateParam, stateRef = fmt.Sprintf("@Nullable %sState state, ", className), "state"
+			stateParam, stateRef = fmt.Sprintf("@%s %s state, ", ctx.ref(names.Nullable), ctx.ref(stateFQN)), "state"
 		}
 
 		_, _ = fmt.Fprintf(w, "\n")
-		_, _ = fmt.Fprintf(w, "    private %s(String name, Input<String> id, %s@Nullable %s options) {\n", className, stateParam, optionsType)
+		_, _ = fmt.Fprintf(w, "    private %s(String name, %s<String> id, %s@%s %s options) {\n",
+			className, ctx.ref(names.Input), stateParam, ctx.ref(names.Nullable), optionsType)
 		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, id));\n", tok, stateRef)
 		_, _ = fmt.Fprintf(w, "    }\n")
 	}
@@ -1182,8 +1191,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 	if hasConstInputs {
 		// Write the method that will calculate the resource arguments.
 		_, _ = fmt.Fprintf(w, "\n")
-		_, _ = fmt.Fprintf(w, "    private static %s makeArgs(%s args) {\n", argsClassName, argsType)
-		_, _ = fmt.Fprintf(w, "        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", argsClassName)
+		_, _ = fmt.Fprintf(w, "    private static %s makeArgs(%s args) {\n", ctx.ref(argsFQN), argsType)
+		_, _ = fmt.Fprintf(w, "        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", ctx.ref(argsFQN))
 		_, _ = fmt.Fprintf(w, "        return builder\n")
 		for _, prop := range r.InputProperties {
 			if prop.ConstValue != nil {
@@ -1201,12 +1210,13 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 
 	// Write the method that will calculate the resource options.
 	_, _ = fmt.Fprintf(w, "\n")
-	_, _ = fmt.Fprintf(w, "    private static %[1]s makeResourceOptions(@Nullable %[1]s options, @Nullable Input<String> id) {\n", optionsType)
+	_, _ = fmt.Fprintf(w, "    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
+		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Input))
 	_, _ = fmt.Fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	_, _ = fmt.Fprintf(w, "            .setVersion(Utilities.getVersion())\n")
 
 	if len(r.Aliases) > 0 {
-		_, _ = fmt.Fprintf(w, "            .setAliases(List.of(\n")
+		_, _ = fmt.Fprintf(w, "            .setAliases(%s.of(\n", ctx.ref(names.List))
 		for i, alias := range r.Aliases {
 			_, _ = fmt.Fprintf(w, "                ")
 			genAlias(ctx, alias)
@@ -1220,7 +1230,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 		_, _ = fmt.Fprintf(w, "            ))\n")
 	}
 	if len(secretProps) > 0 {
-		_, _ = fmt.Fprintf(w, "            .setAdditionalSecretOutputs(List.of(\n")
+		_, _ = fmt.Fprintf(w, "            .setAdditionalSecretOutputs(%s.of(\n", ctx.ref(names.List))
 		for i, sp := range secretProps {
 			_, _ = fmt.Fprintf(w, "                ")
 			_, _ = fmt.Fprintf(w, "%q", sp)
@@ -1244,12 +1254,13 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 
 		// TODO: add docs comments
 		if r.StateInputs != nil {
-			stateParam = fmt.Sprintf("@Nullable %sState state, ", className)
+			stateParam = fmt.Sprintf("@%s %sState state, ", ctx.ref(names.Nullable), className)
 			stateRef = "state, "
 			// TODO: add docs param
 		}
 
-		_, _ = fmt.Fprintf(w, "    public static %s get(String name, Input<String> id, %s@Nullable %s options) {\n", className, stateParam, optionsType)
+		_, _ = fmt.Fprintf(w, "    public static %s get(String name, %s<String> id, %s@%s %s options) {\n",
+			className, ctx.ref(names.Input), stateParam, ctx.ref(names.Nullable), optionsType)
 		_, _ = fmt.Fprintf(w, "        return new %s(name, id, %soptions);\n", className, stateRef)
 		_, _ = fmt.Fprintf(w, "    }\n")
 	}
@@ -1260,7 +1271,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 	return nil
 }
 
-func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
+func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function) error {
+	w := ctx.writer
 	className := tokenToFunctionName(fun.Token)
 
 	var typeParameter string
@@ -1280,24 +1292,24 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 		var nullable string
 		if allOptionalInputs {
 			// If the number of required input properties was zero, we can make the args object optional.
-			nullable = "@Nullable "
+			nullable = fmt.Sprintf("@%s ", ctx.ref(names.Nullable))
 		}
 
 		argsParamDef = fmt.Sprintf("%s%sArgs args, ", nullable, className)
 		argsParamRef = fmt.Sprintf("args == null ? %sArgs.Empty : args", className)
 	}
 
-	printObsoleteAttribute(w, fun.DeprecationMessage, "")
+	printObsoleteAttribute(ctx, fun.DeprecationMessage, "")
 	// Open the class we'll use for datasources.
 	_, _ = fmt.Fprintf(w, "public class %s {\n", className)
 
 	// TODO: add docs comment
 
 	// Emit the datasource method.
-	_, _ = fmt.Fprintf(w, "    public static CompletableFuture<%s> invokeAsync(%s@Nullable io.pulumi.deployment.InvokeOptions options) {\n",
-		typeParameter, argsParamDef)
-	_, _ = fmt.Fprintf(w, "        return io.pulumi.deployment.Deployment.getInstance().invokeAsync(\"%s\", io.pulumi.core.internal.Reflection.TypeShape.of(%s.class), %s, Utilities.withVersion(options));\n",
-		fun.Token, typeParameter, argsParamRef)
+	_, _ = fmt.Fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
+		ctx.ref(names.CompletableFuture), typeParameter, argsParamDef, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
+	_, _ = fmt.Fprintf(w, "        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, Utilities.withVersion(options));\n",
+		ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), typeParameter, argsParamRef)
 	_, _ = fmt.Fprintf(w, "    }\n")
 
 	// Close the class.
@@ -1306,9 +1318,12 @@ func (mod *modContext) genFunction(w io.Writer, fun *schema.Function) error {
 	return nil
 }
 
-func printObsoleteAttribute(w io.Writer, deprecationMessage, indent string) {
+func printObsoleteAttribute(ctx *classFileContext, deprecationMessage, indent string) {
+	w := ctx.writer
 	if deprecationMessage != "" {
-		_, _ = fmt.Fprintf(w, "%s@Deprecated /* %s */\n", indent, strings.Replace(deprecationMessage, `"`, `""`, -1))
+		_, _ = fmt.Fprintf(w, "%s@Deprecated /* %s */\n",
+			indent,
+			strings.Replace(deprecationMessage, `"`, `""`, -1))
 	}
 }
 
@@ -1346,14 +1361,14 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 	switch enum.ElementType {
 	case schema.IntType, schema.StringType, schema.NumberType:
 		// Open the enum and annotate it appropriately.
-		_, _ = fmt.Fprintf(w, "%s@EnumType\n", indent)
+		_, _ = fmt.Fprintf(w, "%s@%s\n", indent, ctx.ref(names.EnumType))
 		_, _ = fmt.Fprintf(w, "%spublic enum %s {\n", indent, enumName)
 		indent := strings.Repeat(indent, 2)
 
 		// Enum values
 		for i, e := range enum.Elements {
 			// TODO: add docs comment
-			printObsoleteAttribute(w, e.DeprecationMessage, indent)
+			printObsoleteAttribute(ctx, e.DeprecationMessage, indent)
 			var separator string
 			if i == len(enum.Elements)-1 { // last element
 				separator = ";"
@@ -1376,7 +1391,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 		// Constructor
 		_, _ = fmt.Fprintf(w, "%s%s(%s value) {\n", indent, enumName, underlyingType)
 		if enum.ElementType == schema.StringType {
-			_, _ = fmt.Fprintf(w, "%s    this.value = Objects.requireNonNull(value);\n", indent)
+			_, _ = fmt.Fprintf(w, "%s    this.value = %s.requireNonNull(value);\n", indent, ctx.ref(names.Objects))
 		} else {
 			_, _ = fmt.Fprintf(w, "%s    this.value = value;\n", indent)
 		}
@@ -1384,7 +1399,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 		_, _ = fmt.Fprintf(w, "\n")
 
 		// Explicit conversion operator
-		_, _ = fmt.Fprintf(w, "%[1]s@EnumType.Converter\n", indent)
+		_, _ = fmt.Fprintf(w, "%[1]s@%s.Converter\n", indent, ctx.ref(names.EnumType))
 		_, _ = fmt.Fprintf(w, "%[1]spublic %s getValue() {\n", indent, underlyingType)
 		_, _ = fmt.Fprintf(w, "%s    return this.value;\n", indent)
 		_, _ = fmt.Fprintf(w, "%s}\n", indent)
@@ -1393,7 +1408,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 		// toString override
 		_, _ = fmt.Fprintf(w, "%s@Override\n", indent)
 		_, _ = fmt.Fprintf(w, "%spublic String toString() {\n", indent)
-		_, _ = fmt.Fprintf(w, "%s    return new StringJoiner(\", \", \"%s[\", \"]\")\n", indent, enumName)
+		_, _ = fmt.Fprintf(w, "%s    return new %s(\", \", \"%s[\", \"]\")\n", indent, ctx.ref(names.StringJoiner), enumName)
 		_, _ = fmt.Fprintf(w, "%s        .add(\"value='\" + this.value + \"'\")\n", indent)
 		_, _ = fmt.Fprintf(w, "%s        .toString();\n", indent)
 		_, _ = fmt.Fprintf(w, "%s}\n", indent)
@@ -1519,7 +1534,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 			if err != nil {
 				return err
 			}
-			defaultValueInitializer := typeInitializer(p.Type, defaultValueString, defType)
+			defaultValueInitializer := typeInitializer(ctx, p.Type, defaultValueString, defType)
 			returnStatement += ".orElse(" + defaultValueInitializer + ")"
 		}
 
@@ -1650,15 +1665,25 @@ func (mod *modContext) gen(fs fs) error {
 			continue
 		}
 
+		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
+		argsClassName := names.Ident(resourceName(r) + "Args")
+		argsFQN := inputsPkg.Dot(argsClassName)
+
+		var stateFQN names.FQN
+		stateClassName := names.Ident(resourceName(r) + "State")
+		if r.StateInputs != nil {
+			stateFQN = inputsPkg.Dot(stateClassName)
+		}
+
 		// Generate Resource class
 		if err := addClass(javaPkg, names.Ident(resourceName(r)), func(ctx *classFileContext) error {
-			return mod.genResource(ctx, r)
+			return mod.genResource(ctx, r, argsFQN, stateFQN)
 		}); err != nil {
 			return err
 		}
 
 		// Generate ResourceArgs class
-		if err := addClass(javaPkg, names.Ident(resourceName(r)+"Args"), func(ctx *classFileContext) error {
+		if err := addClass(inputsPkg, argsClassName, func(ctx *classFileContext) error {
 			args := &plainType{
 				mod:                   mod,
 				res:                   r,
@@ -1675,8 +1700,7 @@ func (mod *modContext) gen(fs fs) error {
 
 		// Generate the `get` args type, if any.
 		if r.StateInputs != nil {
-			className := names.Ident(resourceName(r) + "State")
-			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
+			if err := addClass(inputsPkg, stateClassName, func(ctx *classFileContext) error {
 				state := &plainType{
 					mod:                   mod,
 					res:                   r,
@@ -1702,7 +1726,7 @@ func (mod *modContext) gen(fs fs) error {
 		}
 
 		if err := addClass(javaPkg, names.Ident(tokenToName(f.Token)), func(ctx *classFileContext) error {
-			return mod.genFunction(ctx.writer, f)
+			return mod.genFunction(ctx, f)
 		}); err != nil {
 			return err
 		}

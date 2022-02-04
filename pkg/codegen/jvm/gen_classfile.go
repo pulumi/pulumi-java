@@ -19,6 +19,10 @@ func (ctx *classFileContext) classFQN() names.FQN {
 	return ctx.pkg.Dot(ctx.className)
 }
 
+func (ctx *classFileContext) ref(name names.FQN) string {
+	return ctx.imports.Ref(name)
+}
+
 func genClassFile(
 	pkg names.FQN,
 	className names.Ident,

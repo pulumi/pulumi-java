@@ -10,7 +10,9 @@ var Pulumi = Ident("io").FQN().Dot("pulumi")
 
 var PulumiCore = Pulumi.Dot("core")
 
-var PulumiAnnotations = PulumiCore.Dot("internal").Dot("annotations")
+var PulumiInternal = PulumiCore.Dot("internal")
+
+var PulumiAnnotations = PulumiInternal.Dot("annotations")
 
 var ResourceType = PulumiAnnotations.Dot("ResourceType")
 
@@ -41,3 +43,29 @@ var Archive = PulumiCore.Dot("Archive")
 var AssetOrArchive = PulumiCore.Dot("AssetOrArchive")
 
 var Either = PulumiCore.Dot("Either")
+
+var Nullable = Ident("javax").FQN().Dot("annotation").Dot("Nullable")
+
+var Objects = JavaUtil.Dot("Objects")
+
+var OutputCustomType = PulumiAnnotations.Dot("OutputCustomType")
+
+var InputImport = PulumiAnnotations.Dot("InputImport")
+
+var OutputExport = PulumiAnnotations.Dot("OutputExport")
+
+var EnumType = PulumiAnnotations.Dot("EnumType")
+
+var Alias = PulumiCore.Dot("Alias")
+
+var PulumiDeployment = Pulumi.Dot("deployment")
+
+var Deployment = PulumiDeployment.Dot("Deployment")
+
+var InvokeOptions = PulumiDeployment.Dot("InvokeOptions")
+
+var CompletableFuture = JavaUtil.Dot("concurrent").Dot("CompletableFuture")
+
+var TypeShape = PulumiInternal.Dot("Reflection").Dot("TypeShape")
+
+var StringJoiner = JavaUtil.Dot("StringJoiner")
