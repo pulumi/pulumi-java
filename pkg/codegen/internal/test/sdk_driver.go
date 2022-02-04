@@ -1,3 +1,5 @@
+// Copyright 2022, Pulumi Corporation.  All rights reserved.
+
 // The file is taken from pulumi/pulumi sdk_driver.go which cannot yet
 // be cross-referenced as it is internal.
 
