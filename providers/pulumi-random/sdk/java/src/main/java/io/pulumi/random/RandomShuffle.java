@@ -3,16 +3,18 @@
 
 package io.pulumi.random;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.random.inputs.RandomShuffleArgs;
+import io.pulumi.random.inputs.RandomShuffleState;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.String;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.random.Utilities;
-import io.pulumi.random.inputs.*;
+import java.util.Map;
+import javax.annotation.Nullable;
 
 @ResourceType(type="random:index/randomShuffle:RandomShuffle")
 public class RandomShuffle extends io.pulumi.resources.CustomResource {

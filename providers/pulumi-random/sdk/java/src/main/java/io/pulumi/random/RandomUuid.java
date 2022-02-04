@@ -3,16 +3,16 @@
 
 package io.pulumi.random;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.random.inputs.RandomUuidArgs;
+import io.pulumi.random.inputs.RandomUuidState;
+import java.lang.Object;
+import java.lang.String;
 import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.random.Utilities;
-import io.pulumi.random.inputs.*;
+import javax.annotation.Nullable;
 
 @ResourceType(type="random:index/randomUuid:RandomUuid")
 public class RandomUuid extends io.pulumi.resources.CustomResource {
