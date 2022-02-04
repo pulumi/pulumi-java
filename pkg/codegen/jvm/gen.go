@@ -134,6 +134,7 @@ func (mod *modContext) typeName(t *schema.ObjectType, state, args bool) string {
 }
 
 func (mod *modContext) typeString(
+	ctx *classFileContext,
 	t schema.Type,
 	qualifier string,
 	input bool,
@@ -146,8 +147,8 @@ func (mod *modContext) typeString(
 	// should act like we are inside an Input<T>.
 	inputlessOverload bool,
 ) TypeShape {
-	inner := mod.typeStringRecHelper(t, qualifier, input, state, requireInitializers, inputlessOverload)
-	if inner.Type == "Optional" && !outerOptional {
+	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, state, requireInitializers, inputlessOverload)
+	if inner.Type.Equal(names.Optional) && !outerOptional {
 		contract.Assert(len(inner.Parameters) == 1)
 		contract.Assert(len(inner.Annotations) == 0)
 		inner = inner.Parameters[0]
@@ -158,6 +159,7 @@ func (mod *modContext) typeString(
 
 // A facilitator function for the inner recursion of `typeString`.
 func (mod *modContext) typeStringRecHelper(
+	ctx *classFileContext,
 	t schema.Type,
 	qualifier string,
 	input bool,
@@ -173,55 +175,59 @@ func (mod *modContext) typeStringRecHelper(
 		case *schema.ArrayType, *schema.MapType:
 			elem = codegen.PlainType(t.ElementType)
 		}
-		inner := mod.typeStringRecHelper(elem, qualifier, true, state, requireInitializers, true)
+		inner := mod.typeStringRecHelper(ctx, elem, qualifier, true, state, requireInitializers, true)
 		return TypeShape{
-			Type:       "Input",
+			Type:       names.Input,
 			Parameters: []TypeShape{inner},
 		}
 
 	case *schema.OptionalType:
-		inner := mod.typeStringRecHelper(t.ElementType, qualifier, input, state, requireInitializers, insideInput)
+		inner := mod.typeStringRecHelper(ctx, t.ElementType, qualifier, input, state, requireInitializers, insideInput)
 		if ignoreOptional(t, requireInitializers) {
 			inner.Annotations = append(inner.Annotations, "@Nullable")
 			return inner
 		}
 		return TypeShape{
-			Type:       "Optional",
+			Type:       names.Optional,
 			Parameters: []TypeShape{inner},
 		}
 
 	case *schema.EnumType:
 		// TODO: try to replace with 'qualifier'
+		pkg, err := parsePackageName(mod.tokenToPackage(t.Token, ""))
+		if err != nil {
+			panic(err)
+		}
 		return TypeShape{
-			Type: fmt.Sprintf("%s.enums.%s", mod.tokenToPackage(t.Token, ""), tokenToName(t.Token)),
+			Type: pkg.Dot("enums").Dot(names.Ident(tokenToName(t.Token))),
 		}
 
 	case *schema.ArrayType:
-		listType := "List" // TODO: decide weather or not to use ImmutableList
+		listType := names.List // TODO: decide weather or not to use ImmutableList
 		if requireInitializers {
-			listType = "List"
+			listType = names.List
 		}
 
 		return TypeShape{
 			Type: listType,
 			Parameters: []TypeShape{
-				mod.typeStringRecHelper(
+				mod.typeStringRecHelper(ctx,
 					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
 				),
 			},
 		}
 
 	case *schema.MapType:
-		mapType := "Map" // TODO: decide weather or not to use ImmutableMap
+		mapType := names.Map // TODO: decide weather or not to use ImmutableMap
 		if requireInitializers {
-			mapType = "Map"
+			mapType = names.Map
 		}
 
 		return TypeShape{
 			Type: mapType,
 			Parameters: []TypeShape{
-				TypeShape{Type: "String"},
-				mod.typeStringRecHelper(
+				TypeShape{Type: names.String},
+				mod.typeStringRecHelper(ctx,
 					codegen.PlainType(t.ElementType), qualifier, input, state, false, insideInput,
 				),
 			},
@@ -244,20 +250,22 @@ func (mod *modContext) typeStringRecHelper(
 				basePackageName: info.BasePackageOrDefault(),
 			}
 		}
-		objectType := namingCtx.tokenToPackage(t.Token, qualifier)
-		if objectType == namingCtx.packageName && qualifier == "" {
-			objectType = qualifier
+		pkg, err := parsePackageName(namingCtx.tokenToPackage(t.Token, qualifier))
+		if err != nil {
+			panic(err)
 		}
-		if objectType != "" {
-			objectType += "."
-		}
-		objectType += mod.typeName(t, state, insideInput)
-		return TypeShape{Type: objectType}
+		typ := pkg.Dot(names.Ident(mod.typeName(t, state, insideInput)))
+		return TypeShape{Type: typ}
 	case *schema.ResourceType:
-		var resourceType string
+		var resourceType names.FQN
 		if strings.HasPrefix(t.Token, "pulumi:providers:") {
 			pkgName := strings.TrimPrefix(t.Token, "pulumi:providers:")
-			resourceType = fmt.Sprintf("%s%s.Provider", mod.basePackageName, packageName(mod.packages, pkgName))
+			rawPkg := fmt.Sprintf("%s%s", mod.basePackageName, packageName(mod.packages, pkgName))
+			pkg, err := parsePackageName(rawPkg)
+			if err != nil {
+				panic(err)
+			}
+			resourceType = pkg.Dot(names.Ident("Provider"))
 		} else {
 			namingCtx := mod
 			if t.Resource != nil && t.Resource.Package != mod.pkg {
@@ -275,23 +283,24 @@ func (mod *modContext) typeStringRecHelper(
 					basePackageName: info.BasePackageOrDefault(),
 				}
 			}
-			resourceType = namingCtx.tokenToPackage(t.Token, "")
-			if resourceType != "" {
-				resourceType += "."
+			pkg, err := parsePackageName(namingCtx.tokenToPackage(t.Token, ""))
+			if err != nil {
+				panic(err)
 			}
-			resourceType += tokenToName(t.Token)
+			resourceType = pkg.Dot(names.Ident(tokenToName(t.Token)))
 		}
 		return TypeShape{Type: resourceType}
 	case *schema.TokenType:
 		// Use the underlying type for now.
 		if t.UnderlyingType != nil {
-			return mod.typeStringRecHelper(t.UnderlyingType, qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(ctx, t.UnderlyingType, qualifier, input, state, requireInitializers, insideInput)
 		}
 
-		tokenType := tokenToName(t.Token)
-		if ns := mod.tokenToPackage(t.Token, qualifier); ns != mod.packageName {
-			tokenType = ns + "." + tokenType
+		pkg, err := parsePackageName(mod.tokenToPackage(t.Token, qualifier))
+		if err != nil {
+			panic(err)
 		}
+		tokenType := pkg.Dot(names.Ident(tokenToName(t.Token)))
 		return TypeShape{Type: tokenType}
 	case *schema.UnionType:
 		elementTypeSet := codegen.NewStringSet()
@@ -301,45 +310,46 @@ func (mod *modContext) typeStringRecHelper(
 			// If this is an output and a "relaxed" enum, emit the type as the underlying primitive type rather than the union.
 			// Eg. Output<String> rather than Output<Either<EnumType, String>>
 			if typ, ok := e.(*schema.EnumType); ok && !input {
-				return mod.typeStringRecHelper(typ.ElementType, qualifier, input, state, requireInitializers, insideInput)
+				return mod.typeStringRecHelper(ctx, typ.ElementType, qualifier, input, state, requireInitializers, insideInput)
 			}
 
-			et := mod.typeStringRecHelper(e, qualifier, input, state, false, insideInput)
-			if !elementTypeSet.Has(et.String()) {
-				elementTypeSet.Add(et.String())
+			et := mod.typeStringRecHelper(ctx, e, qualifier, input, state, false, insideInput)
+			etc := et.ToCode(ctx.imports)
+			if !elementTypeSet.Has(etc) {
+				elementTypeSet.Add(etc)
 				elementTypes = append(elementTypes, et)
 			}
 		}
 
 		switch len(elementTypes) {
 		case 1:
-			return mod.typeStringRecHelper(t.ElementTypes[0], qualifier, input, state, requireInitializers, insideInput)
+			return mod.typeStringRecHelper(ctx, t.ElementTypes[0], qualifier, input, state, requireInitializers, insideInput)
 		case 2:
 			return TypeShape{
-				Type:       "Either",
+				Type:       names.Either,
 				Parameters: elementTypes,
 			}
 		default:
-			return TypeShape{Type: "Object", Annotations: elementTypeSet.SortedValues()}
+			return TypeShape{Type: names.Object, Annotations: elementTypeSet.SortedValues()}
 		}
 	default:
 		switch t {
 		case schema.BoolType:
-			return TypeShape{Type: "Boolean"}
+			return TypeShape{Type: names.Boolean}
 		case schema.IntType:
-			return TypeShape{Type: "Integer"}
+			return TypeShape{Type: names.Integer}
 		case schema.NumberType:
-			return TypeShape{Type: "Double"}
+			return TypeShape{Type: names.Double}
 		case schema.StringType:
-			return TypeShape{Type: "String"}
+			return TypeShape{Type: names.String}
 		case schema.ArchiveType:
-			return TypeShape{Type: "Archive"}
+			return TypeShape{Type: names.Archive}
 		case schema.AssetType:
-			return TypeShape{Type: "AssetOrArchive"}
+			return TypeShape{Type: names.AssetOrArchive}
 		case schema.JSONType:
-			return TypeShape{Type: "com.google.gson.JsonElement"}
+			return TypeShape{Type: names.JsonElement}
 		case schema.AnyType:
-			return TypeShape{Type: "Object"}
+			return TypeShape{Type: names.Object}
 		default:
 			panic(fmt.Sprintf("Unknown primitive: %#v", t))
 		}
@@ -441,7 +451,8 @@ type plainType struct {
 	state                 bool
 }
 
-func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error {
+func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property) error {
+	w := ctx.writer
 	requireInitializers := !pt.args || isInputType(prop.Type)
 
 	wireName := prop.Name
@@ -451,6 +462,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 		typ = codegen.OptionalType(prop)
 	}
 	propertyType := pt.mod.typeString(
+		ctx,
 		typ,
 		pt.propertyTypeQualifier,
 		true,                // is input
@@ -486,6 +498,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 
 	// Add getter
 	getterType := pt.mod.typeString(
+		ctx,
 		prop.Type,
 		pt.propertyTypeQualifier,
 		true,                // is input
@@ -505,6 +518,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 		switch req.(type) {
 		case *schema.ArrayType, *schema.MapType, *schema.UnionType, *schema.InputType: // the most common case actually
 			getterTypeNonOptional := pt.mod.typeString(
+				ctx,
 				req,
 				pt.propertyTypeQualifier,
 				true,                // is input
@@ -524,7 +538,7 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 
 	if err := getterTemplate.Execute(w, getterTemplateContext{
 		Indent:          strings.Repeat(" ", 4),
-		GetterType:      getterType.String(),
+		GetterType:      getterType.ToCode(ctx.imports),
 		GetterName:      getterName,
 		ReturnStatement: returnStatement,
 	}); err != nil {
@@ -534,7 +548,8 @@ func (pt *plainType) genInputProperty(w io.Writer, prop *schema.Property) error 
 	return nil
 }
 
-func (pt *plainType) genInputType(w io.Writer) error {
+func (pt *plainType) genInputType(ctx *classFileContext) error {
+	w := ctx.writer
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Open the class.
@@ -546,7 +561,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 
 	// Declare each input property.
 	for _, p := range pt.properties {
-		if err := pt.genInputProperty(w, p); err != nil {
+		if err := pt.genInputProperty(ctx, p); err != nil {
 			return err
 		}
 		_, _ = fmt.Fprintf(w, "\n")
@@ -561,6 +576,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		// TODO: factor this out (with similar code in genOutputType)
 		paramName := javaIdentifier(prop.Name)
 		paramType := pt.mod.typeString(
+			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
 			true,
@@ -630,6 +646,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		requireInitializers := !pt.args || isInputType(prop.Type)
 		propertyName := javaIdentifier(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
+			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
 			true,                // is input
@@ -641,7 +658,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
-			FieldType: propertyType.String(),
+			FieldType: propertyType.ToCode(ctx.imports),
 			FieldName: propertyName,
 		})
 
@@ -661,7 +678,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 		// add main setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
 			SetterName:   setterName,
-			PropertyType: propertyType.String(),
+			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName,
 			Assignment:   assignment(propertyName),
 		})
@@ -672,6 +689,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 				typ = codegen.UnwrapType(typ)
 			}
 			propertyTypeUnwrapped := pt.mod.typeString(
+				ctx,
 				typ,
 				pt.propertyTypeQualifier,
 				true,                // is input
@@ -696,7 +714,7 @@ func (pt *plainType) genInputType(w io.Writer) error {
 			// add overloaded setter
 			builderSetters = append(builderSetters, builderSetterTemplateContext{
 				SetterName:   setterName,
-				PropertyType: propertyTypeUnwrapped.String(),
+				PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 				PropertyName: propertyName,
 				Assignment:   assignmentUnwrapped(propertyName),
 			})
@@ -722,7 +740,8 @@ func (pt *plainType) genInputType(w io.Writer) error {
 	return nil
 }
 
-func (pt *plainType) genOutputType(w io.Writer) error {
+func (pt *plainType) genOutputType(ctx *classFileContext) error {
+	w := ctx.writer
 	indent := strings.Repeat("    ", 0)
 
 	// Open the class and annotate it appropriately.
@@ -733,6 +752,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 	for _, prop := range pt.properties {
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
 		fieldType := pt.mod.typeString(
+			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false,
@@ -769,6 +789,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 		// TODO: factor this out (with similar code in genInputType)
 		paramName := javaIdentifier(prop.Name)
 		paramType := pt.mod.typeString(
+			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false,
@@ -814,6 +835,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 		paramName := javaIdentifier(prop.Name)
 		getterName := javaIdentifier("get" + title(prop.Name))
 		getterType := pt.mod.typeString(
+			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false,
@@ -823,6 +845,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 			false, // inputless overload
 		)
 		getterTypeNonOptional := pt.mod.typeString(
+			ctx,
 			codegen.UnwrapType(prop.Type),
 			pt.propertyTypeQualifier,
 			false,
@@ -851,7 +874,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
-			GetterType:      getterType.String(),
+			GetterType:      getterType.ToCode(ctx.imports),
 			GetterName:      getterName,
 			ReturnStatement: returnStatement,
 		}); err != nil {
@@ -867,6 +890,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 	for _, prop := range pt.properties {
 		propertyName := javaIdentifier(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
+			ctx,
 			prop.Type,
 			pt.propertyTypeQualifier,
 			false, // is input
@@ -878,7 +902,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
-			FieldType: propertyType.String(),
+			FieldType: propertyType.ToCode(ctx.imports),
 			FieldName: propertyName,
 		})
 
@@ -894,7 +918,7 @@ func (pt *plainType) genOutputType(w io.Writer) error {
 		// add setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
 			SetterName:   setterName,
-			PropertyType: propertyType.String(),
+			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName,
 			Assignment:   assignment(propertyName),
 		})
@@ -1006,7 +1030,8 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 	return val, schemaType, nil
 }
 
-func genAlias(w io.Writer, alias *schema.Alias) {
+func genAlias(ctx *classFileContext, alias *schema.Alias) {
+	w := ctx.writer
 	_, _ = fmt.Fprintf(w, "Input.of(")
 	_, _ = fmt.Fprintf(w, "Alias.builder()")
 	if alias.Name != nil {
@@ -1022,7 +1047,8 @@ func genAlias(w io.Writer, alias *schema.Alias) {
 	_, _ = fmt.Fprintf(w, ")")
 }
 
-func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
+func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) error {
+	w := ctx.writer
 	// Create a resource module file into which all of this resource's types will go.
 	name := resourceName(r)
 
@@ -1053,6 +1079,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		wireName := prop.Name
 		propertyName := mod.propertyName(prop)
 		propertyType := mod.typeString(
+			ctx,
 			prop.Type,
 			"outputs",
 			false,
@@ -1070,7 +1097,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		// TODO: add docs comment
 		outputExportParameters := strings.Join(
 			propertyType.ParameterTypesTransformed(func(ts TypeShape) string {
-				return ts.StringWithOptions(TypeShapeStringOptions{
+				return ts.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
 					CommentOutAnnotations: true,
 					GenericErasure:        true,
 					AppendClassLiteral:    true,
@@ -1078,12 +1105,12 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 			}),
 			", ",
 		)
-		outputExportType := propertyType.StringWithOptions(TypeShapeStringOptions{
+		outputExportType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
 			SkipAnnotations:    true,
 			GenericErasure:     true,
 			AppendClassLiteral: true,
 		})
-		outputParameterType := propertyType.StringWithOptions(TypeShapeStringOptions{
+		outputParameterType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
 		})
 		_, _ = fmt.Fprintf(w, "    @OutputExport(name=\"%s\", type=%s, parameters={%s})\n", wireName, outputExportType, outputExportParameters)
@@ -1180,7 +1207,7 @@ func (mod *modContext) genResource(w io.Writer, r *schema.Resource) error {
 		_, _ = fmt.Fprintf(w, "            .setAliases(List.of(\n")
 		for i, alias := range r.Aliases {
 			_, _ = fmt.Fprintf(w, "                ")
-			genAlias(w, alias)
+			genAlias(ctx, alias)
 			isLastElement := i == len(r.Aliases)-1
 			if isLastElement {
 				_, _ = fmt.Fprintf(w, "\n")
@@ -1283,7 +1310,8 @@ func printObsoleteAttribute(w io.Writer, deprecationMessage, indent string) {
 	}
 }
 
-func (mod *modContext) genEnum(w io.Writer, qualifier string, enum *schema.EnumType) error {
+func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *schema.EnumType) error {
+	w := ctx.writer
 	indent := "    "
 	enumName := tokenToName(enum.Token)
 
@@ -1304,6 +1332,7 @@ func (mod *modContext) genEnum(w io.Writer, qualifier string, enum *schema.EnumT
 	// TODO: add docs comment
 
 	underlyingType := mod.typeString(
+		ctx,
 		enum.ElementType,
 		qualifier,
 		false,
@@ -1385,7 +1414,7 @@ func visitObjectTypes(properties []*schema.Property, visitor func(*schema.Object
 	})
 }
 
-func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyTypeQualifier string, input, state bool) error {
+func (mod *modContext) genType(ctx *classFileContext, obj *schema.ObjectType, propertyTypeQualifier string, input, state bool) error {
 	pt := &plainType{
 		mod:                   mod,
 		name:                  mod.typeName(obj, state, obj.IsInputShape()),
@@ -1401,10 +1430,10 @@ func (mod *modContext) genType(w io.Writer, obj *schema.ObjectType, propertyType
 		if !obj.IsInputShape() {
 			pt.baseClass = "io.pulumi.resources.InvokeArgs"
 		}
-		return pt.genInputType(w)
+		return pt.genInputType(ctx)
 	}
 
-	return pt.genOutputType(w)
+	return pt.genOutputType(ctx)
 }
 
 func (mod *modContext) genHeader(w io.Writer, imports []string, qualifier string) {
@@ -1425,8 +1454,9 @@ func (mod *modContext) genHeader(w io.Writer, imports []string, qualifier string
 	}
 }
 
-func (mod *modContext) getConfigProperty(schemaType schema.Type, key string) (TypeShape, MethodCall) {
+func (mod *modContext) getConfigProperty(ctx *classFileContext, schemaType schema.Type, key string) (TypeShape, MethodCall) {
 	propertyType := mod.typeString(
+		ctx,
 		schemaType,
 		"types",
 		false,
@@ -1453,24 +1483,20 @@ func (mod *modContext) getConfigProperty(schemaType schema.Type, key string) (Ty
 		switch t := schemaType.(type) {
 		case *schema.TokenType:
 			if t.UnderlyingType != nil {
-				return mod.getConfigProperty(t.UnderlyingType, key)
+				return mod.getConfigProperty(ctx, t.UnderlyingType, key)
 			}
 		}
 		// TODO: C# has a special case for Arrays here, should we port it?
 
 		getFunc.Method = "getObject"
-		getFunc.Args = append(getFunc.Args, propertyType.StringJavaTypeShape())
+		getFunc.Args = append(getFunc.Args, propertyType.StringJavaTypeShape(ctx.imports))
 	}
 
 	return propertyType, getFunc
 }
 
-func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
-	w := &bytes.Buffer{}
-
-	mod.genHeader(w, []string{
-		"java.util.Optional",
-	}, "")
+func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Property) error {
+	w := ctx.writer
 
 	// Open the config class.
 	_, _ = fmt.Fprintf(w, "public final class Config {\n")
@@ -1481,7 +1507,7 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 
 	// Emit an entry for all config variables.
 	for _, p := range variables {
-		propertyType, getFunc := mod.getConfigProperty(p.Type, p.Name)
+		propertyType, getFunc := mod.getConfigProperty(ctx, p.Type, p.Name)
 		propertyName := javaIdentifier(mod.propertyName(p))
 
 		returnStatement := getFunc.String()
@@ -1489,7 +1515,7 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 		if p.DefaultValue != nil {
 			defaultValueString, defType, err := mod.getDefaultValue(p.DefaultValue, p.Type)
 			if err != nil {
-				return "", err
+				return err
 			}
 			defaultValueInitializer := typeInitializer(p.Type, defaultValueString, defType)
 			returnStatement += ".orElse(" + defaultValueInitializer + ")"
@@ -1498,11 +1524,11 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 		// TODO: printComment(w, p.Comment, "        ")
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
-			GetterType:      propertyType.String(),
+			GetterType:      propertyType.ToCode(ctx.imports),
 			GetterName:      propertyName,
 			ReturnStatement: returnStatement,
 		}); err != nil {
-			return "", err
+			return err
 		}
 		_, _ = fmt.Fprintf(w, "\n")
 	}
@@ -1512,7 +1538,7 @@ func (mod *modContext) genConfig(variables []*schema.Property) (string, error) {
 	// Close the config class and namespace.
 	_, _ = fmt.Fprintf(w, "}\n")
 
-	return w.String(), nil
+	return nil
 }
 
 type fs map[string][]byte
@@ -1584,6 +1610,11 @@ func (mod *modContext) gen(fs fs) error {
 		return nil
 	}
 
+	javaPkg, err := parsePackageName(mod.packageName)
+	if err != nil {
+		return err
+	}
+
 	// Utilities, config
 	switch mod.mod {
 	case "":
@@ -1601,18 +1632,13 @@ func (mod *modContext) gen(fs fs) error {
 		fs.add("README.md", []byte(readme))
 	case "config":
 		if len(mod.pkg.Config) > 0 {
-			config, err := mod.genConfig(mod.pkg.Config)
-			if err != nil {
+			if err := addClass(javaPkg, names.Ident("Config"), func(ctx *classFileContext) error {
+				return mod.genConfig(ctx, mod.pkg.Config)
+			}); err != nil {
 				return err
 			}
-			addFile("Config.java", config)
 			return nil
 		}
-	}
-
-	javaPkg, err := parsePackageName(mod.packageName)
-	if err != nil {
-		return err
 	}
 
 	// Resources
@@ -1624,7 +1650,7 @@ func (mod *modContext) gen(fs fs) error {
 
 		// Generate Resource class
 		if err := addClass(javaPkg, names.Ident(resourceName(r)), func(ctx *classFileContext) error {
-			return mod.genResource(ctx.writer, r)
+			return mod.genResource(ctx, r)
 		}); err != nil {
 			return err
 		}
@@ -1640,7 +1666,7 @@ func (mod *modContext) gen(fs fs) error {
 				properties:            r.InputProperties,
 				args:                  true,
 			}
-			return args.genInputType(ctx.writer)
+			return args.genInputType(ctx)
 		}); err != nil {
 			return err
 		}
@@ -1659,7 +1685,7 @@ func (mod *modContext) gen(fs fs) error {
 					args:                  true,
 					state:                 true,
 				}
-				return state.genInputType(ctx.writer)
+				return state.genInputType(ctx)
 			}); err != nil {
 				return err
 			}
@@ -1691,7 +1717,7 @@ func (mod *modContext) gen(fs fs) error {
 					propertyTypeQualifier: "inputs",
 					properties:            f.Inputs.Properties,
 				}
-				return args.genInputType(ctx.writer)
+				return args.genInputType(ctx)
 			}); err != nil {
 				return err
 			}
@@ -1707,7 +1733,7 @@ func (mod *modContext) gen(fs fs) error {
 					propertyTypeQualifier: "outputs",
 					properties:            f.Outputs.Properties,
 				}
-				return res.genOutputType(ctx.writer)
+				return res.genOutputType(ctx)
 			}); err != nil {
 				return err
 			}
@@ -1724,7 +1750,7 @@ func (mod *modContext) gen(fs fs) error {
 			t := t.PlainShape
 			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx.writer, t, "inputs", true, false)
+				return mod.genType(ctx, t, "inputs", true, false)
 			}); err != nil {
 				return err
 			}
@@ -1732,7 +1758,7 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).inputType {
 			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx.writer, t, "inputs", true, false)
+				return mod.genType(ctx, t, "inputs", true, false)
 			}); err != nil {
 				return err
 			}
@@ -1740,7 +1766,7 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).stateType {
 			className := names.Ident(mod.typeName(t, true, true))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx.writer, t, "inputs", true, true)
+				return mod.genType(ctx, t, "inputs", true, true)
 			}); err != nil {
 				return err
 			}
@@ -1748,7 +1774,7 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).outputType {
 			className := names.Ident(mod.typeName(t, false, false))
 			if err := addClass(javaPkg.Dot(names.Ident("outputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx.writer, t, "outputs", false, false)
+				return mod.genType(ctx, t, "outputs", false, false)
 			}); err != nil {
 				return err
 			}
@@ -1760,7 +1786,7 @@ func (mod *modContext) gen(fs fs) error {
 		for _, enum := range mod.enums {
 			enumClassName := names.Ident(tokenToName(enum.Token))
 			if err := addClass(javaPkg.Dot(names.Ident("enums")), enumClassName, func(ctx *classFileContext) error {
-				return mod.genEnum(ctx.writer, "enums", enum)
+				return mod.genEnum(ctx, "enums", enum)
 			}); err != nil {
 				return err
 			}
