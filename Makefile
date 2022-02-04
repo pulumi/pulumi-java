@@ -47,6 +47,33 @@ build_random::	bin/pulumi-java-gen
 install_random::
 	cd providers/pulumi-random && make install
 
+define generate_sdk
+	rm -rf ./providers/./$(1)
+	mkdir ./providers/./$(1)
+	curl $(2) -o ./bin/$(1)-schema.json
+	./bin/pulumi-java-gen -schema ./bin/$(1)-schema.json -out ./providers/$(1)
+endef
+
+providers_all: aws-native kubernetes aws-native azure-native google-native
+
+aws-native: bin/pulumi-java-gen
+	-$(call generate_sdk,aws-native,https://raw.githubusercontent.com/pulumi/pulumi-aws-native/master/provider/cmd/pulumi-resource-aws-native/schema.json)
+
+kubernetes: bin/pulumi-java-gen
+	-$(call generate_sdk,kubernetes,https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/provider/cmd/pulumi-resource-kubernetes/schema.json)
+
+azure-native: bin/pulumi-java-gen
+	-$(call generate_sdk,azure-native,https://raw.githubusercontent.com/pulumi/pulumi-azure-native/master/provider/cmd/pulumi-resource-azure-native/schema.json)
+
+google-native: bin/pulumi-java-gen
+	-$(call generate_sdk,google-native,https://raw.githubusercontent.com/pulumi/pulumi-google-native/master/provider/cmd/pulumi-resource-google-native/schema.json)
+
+bin/pulumi-java-gen: bin
+	cd pkg && go build -o ../bin/ github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
+
+bin:
+	mkdir -p bin
+
 # Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
 # stacks in Pulumi service.
 integration_tests::	bin/pulumi-language-jvm ensure_tests install_random
