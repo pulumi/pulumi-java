@@ -526,9 +526,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                             (@Nullable String pUrn) -> {
                                                                 logExcessive("Got parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
                                                                 var providerRef = custom
-                                                                        ? CompletableFuture.completedFuture(Optional.<String>empty())
-                                                                        : CompletableFutures.flipOptional(
-                                                                        options.getProvider().map(p -> p.accept(ProviderResource.registrationIdVisitor())));
+                                                                        ? CompletableFutures.flipOptional(
+                                                                                options.getProvider().map(p -> p.accept(ProviderResource.registrationIdVisitor())))
+                                                                        : CompletableFuture.completedFuture(Optional.<String>empty());
 
                                                                 return providerRef.thenCompose(
                                                                         (Optional<String> pRef) -> {
