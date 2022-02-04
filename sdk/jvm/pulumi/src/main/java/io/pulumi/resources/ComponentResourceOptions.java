@@ -33,10 +33,11 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable List<ResourceTransformation> resourceTransformations,
             @Nullable List<Input<Alias>> aliases,
             @Nullable String urn,
+            @Nullable List<String> replaceOnChanges,
             @Nullable List<ProviderResource> providers
     ) {
         super(id, parent, dependsOn, protect, ignoreChanges, version, null /* use providers instead */, customTimeouts,
-                resourceTransformations, aliases, urn);
+                resourceTransformations, aliases, urn, replaceOnChanges);
         this.providers = providers;
         Objects.requireNullState(this.provider, () -> "expected 'provider' to be null, use 'providers' instead");
     }
@@ -82,6 +83,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
                 copyNullableList(this.resourceTransformations),
                 copyNullableList(this.aliases),
                 this.urn,
+                copyNullableList(this.replaceOnChanges),
                 copyNullableList(this.providers) // TODO: should we also invoke copy() on the items?
         );
     }

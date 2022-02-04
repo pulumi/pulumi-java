@@ -36,6 +36,8 @@ public abstract class ResourceOptions {
     protected List<Input<Alias>> aliases;
     @Nullable
     protected String urn;
+    @Nullable
+    protected List<String> replaceOnChanges;
 
     protected ResourceOptions() { /* empty */ }
 
@@ -50,7 +52,8 @@ public abstract class ResourceOptions {
             @Nullable CustomTimeouts customTimeouts,
             @Nullable List<ResourceTransformation> resourceTransformations,
             @Nullable List<Input<Alias>> aliases,
-            @Nullable String urn
+            @Nullable String urn,
+            @Nullable List<String> replaceOnChanges
     ) {
         this.id = id;
         this.parent = parent;
@@ -135,6 +138,11 @@ public abstract class ResourceOptions {
 
         public B setUrn(@Nullable String urn) {
             options.urn = urn;
+            return (B) this;
+        }
+
+        public B setReplaceOnChanges(@Nullable List<String> replaceOnChanges) {
+            options.replaceOnChanges = replaceOnChanges;
             return (B) this;
         }
     }
@@ -225,6 +233,16 @@ public abstract class ResourceOptions {
         return Optional.ofNullable(urn);
     }
 
+    /**
+     * Changes to any of these property paths will force a replacement.
+     * If this list includes `"*"`, changes to any properties will force a replacement.
+     * Initialization errors from previous deployments will require replacement
+     * instead of update only if `"*"` is passed.
+     */
+    public List<String> getReplaceOnChanges() {
+        return this.replaceOnChanges == null ? List.of() : List.copyOf(this.replaceOnChanges);
+    }
+
     protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2) {
         return mergeSharedOptions(options1, options2, null);
     }
@@ -244,6 +262,7 @@ public abstract class ResourceOptions {
         options1.ignoreChanges = mergeNullableList(options1.ignoreChanges, options2.ignoreChanges);
         options1.resourceTransformations = mergeNullableList(options1.resourceTransformations, options2.resourceTransformations);
         options1.aliases = mergeNullableList(options1.aliases, options2.aliases);
+        options1.replaceOnChanges = mergeNullableList(options1.replaceOnChanges, options2.replaceOnChanges);
 
         options1.dependsOn = Input.concatList(options1.dependsOn, options2.dependsOn);
 
