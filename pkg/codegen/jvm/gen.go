@@ -493,7 +493,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 
 	// TODO: add docs comment
 	_, _ = fmt.Fprintf(w, "%s@InputImport(name=\"%s\"%s)\n", indent, wireName, attributeArgs)
-	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType, propertyName)
+	_, _ = fmt.Fprintf(w, "%sprivate final %s %s;\n", indent, propertyType.ToCode(ctx.imports), propertyName)
 	_, _ = fmt.Fprintf(w, "\n")
 
 	// Add getter
@@ -584,7 +584,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			false, // requireInitializers
 			false, // outer optional
 			false, // inputless overload
-		)
+		).ToCode(ctx.imports)
 
 		if i == 0 && len(pt.properties) > 1 { // first param
 			_, _ = fmt.Fprint(w, "\n")
@@ -1069,7 +1069,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 	}
 
 	printObsoleteAttribute(w, r.DeprecationMessage, "")
-	_, _ = fmt.Fprintf(w, "@ResourceType(type=\"%s\")\n", r.Token)
+	_, _ = fmt.Fprintf(w, "@%s(type=\"%s\")\n",
+		ctx.imports.Ref(names.ResourceType),
+		r.Token)
 	_, _ = fmt.Fprintf(w, "public class %s extends %s {\n", className, baseType)
 
 	var secretProps []string
@@ -1114,13 +1116,13 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 			CommentOutAnnotations: true,
 		})
 		_, _ = fmt.Fprintf(w, "    @OutputExport(name=\"%s\", type=%s, parameters={%s})\n", wireName, outputExportType, outputExportParameters)
-		_, _ = fmt.Fprintf(w, "    private Output<%s> %s;\n", outputParameterType, propertyName)
+		_, _ = fmt.Fprintf(w, "    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
 		_, _ = fmt.Fprintf(w, "\n")
 
 		// Add getter
 		getterType := outputParameterType
 		getterName := javaIdentifier("get" + title(prop.Name))
-		_, _ = fmt.Fprintf(w, "    public Output<%s> %s() {\n", getterType, getterName)
+		_, _ = fmt.Fprintf(w, "    public %s<%s> %s() {\n", ctx.imports.Ref(names.Output), getterType, getterName)
 		_, _ = fmt.Fprintf(w, "        return this.%s;\n", propertyName)
 		_, _ = fmt.Fprintf(w, "    }\n")
 	}
@@ -1158,9 +1160,9 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource) er
 
 	_, _ = fmt.Fprintf(w, "    public %s(String name, %s args, @Nullable %s options) {\n", className, argsType, optionsType)
 	if r.IsComponent {
-		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, Input.empty()), true);\n", tok, argsOverride)
+		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty()), true);\n", tok, argsOverride, ctx.imports.Ref(names.Input))
 	} else {
-		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, Input.empty()));\n", tok, argsOverride)
+		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty()));\n", tok, argsOverride, ctx.imports.Ref(names.Input))
 	}
 	_, _ = fmt.Fprintf(w, "    }\n")
 

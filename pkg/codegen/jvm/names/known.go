@@ -10,7 +10,13 @@ var Pulumi = Ident("io").FQN().Dot("pulumi")
 
 var PulumiCore = Pulumi.Dot("core")
 
-var Input = Pulumi.Dot("input")
+var PulumiAnnotations = PulumiCore.Dot("internal").Dot("annotations")
+
+var ResourceType = PulumiAnnotations.Dot("ResourceType")
+
+var Input = PulumiCore.Dot("Input")
+
+var Output = PulumiCore.Dot("Output")
 
 var List = JavaUtil.Dot("List")
 
