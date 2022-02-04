@@ -2,6 +2,7 @@ package names
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 )
 
@@ -57,6 +58,19 @@ func NewImports(pkg FQN, pubClass Ident) (*Imports, error) {
 		return nil, err
 	}
 	return i, nil
+}
+
+func (i *Imports) PackageCode() string {
+	return fmt.Sprintf("package %s;", i.pkg.ToString())
+}
+
+func (i *Imports) ImportCode() string {
+	lines := []string{}
+	for _, fqn := range i.imports {
+		lines = append(lines, fmt.Sprintf("import %s;", fqn.ToString()))
+	}
+	sort.Strings(lines)
+	return strings.Join(lines, "\n")
 }
 
 func (i *Imports) add(name FQN) error {

@@ -22,7 +22,12 @@ func TestImports(t *testing.T) {
 	i, err := NewImports(pkg, cls)
 	assert.NoError(t, err)
 	assert.True(t, i.Resolve(cls).Equal(pkg.Dot(cls)))
-	assert.Equal(t, i.Ref(mapType), "Map")
-	assert.Equal(t, i.Ref(confoundingMapType), "org.confound.Map")
-	assert.Equal(t, i.Ref(pkg.Dot(cls)), "RandomString")
+	assert.Equal(t, "Map", i.Ref(mapType))
+	assert.Equal(t, "org.confound.Map", i.Ref(confoundingMapType))
+	assert.Equal(t, "RandomString", i.Ref(pkg.Dot(cls)))
+
+	assert.Equal(t, `import io.pulumi.random.RandomString;
+import java.util.Map;`, i.ImportCode())
+
+	assert.Equal(t, `package io.pulumi.random;`, i.PackageCode())
 }
