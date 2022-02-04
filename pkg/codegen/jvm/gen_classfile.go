@@ -33,7 +33,7 @@ func genClassFile(
 	ctx := &classFileContext{&buf, imports, pkg, className}
 	err = generator(ctx)
 
-	code := fmt.Sprintf("%s\n%s\n%s",
+	code := fmt.Sprintf("%s\n\n%s\n\n%s",
 		imports.PackageCode(),
 		imports.ImportCode(),
 		buf.String())
