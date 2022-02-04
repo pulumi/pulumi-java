@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     implementation 'io.pulumi:pulumi:1.0.0'
-    implementation 'io.pulumi:random:4.0.0'
+    implementation 'io.pulumi:random:4.3.1'
 }
 
 application {
