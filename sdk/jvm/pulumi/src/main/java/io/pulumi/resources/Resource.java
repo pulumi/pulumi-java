@@ -46,6 +46,8 @@ public abstract class Resource {
 
     protected final Set<Resource> childResources = Collections.synchronizedSet(new HashSet<>());
 
+    protected final boolean remote;
+
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
      */
@@ -73,6 +75,8 @@ public abstract class Resource {
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency
     ) {
+        this.remote = remote;
+
         if (dependency) {
             // this.urn will be set using setter in the subtype constructor after this supertype constructor finishes
             this.type = "";
@@ -237,6 +241,11 @@ public abstract class Resource {
     @Internal
     public List<Input<String>> internalGetAliases() {
         return this.aliases;
+    }
+
+    @Internal
+    public boolean internalGetRemote() {
+        return this.remote;
     }
 
     public String getResourceType() {

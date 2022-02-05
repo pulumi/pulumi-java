@@ -7,6 +7,7 @@ import io.pulumi.Stack;
 import io.pulumi.deployment.MockEngine;
 import io.pulumi.deployment.MockMonitor;
 import io.pulumi.deployment.MyMocks;
+import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
 import io.pulumi.test.internal.TestOptions;
 
@@ -15,17 +16,13 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
+import static com.google.common.collect.ImmutableList.toImmutableList;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 public class DeploymentTests {
-
-    public static final Logger Log = Logger.getLogger(DeploymentTests.class.getName());
-
-    static {
-        Log.setLevel(Level.FINEST);
-    }
 
     private DeploymentTests() {
         throw new UnsupportedOperationException("static class");
@@ -74,6 +71,19 @@ public class DeploymentTests {
         }
 
         public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Class<T> stackType) {
+            return tryTestAsync(stackType).thenApply(r -> {
+                if (!r.exceptions.isEmpty()) {
+                    throw new RunException(String.format("Error count: %d, errors: %s",
+                            r.exceptions.size(), r.exceptions.stream()
+                                    .map(Throwable::getMessage)
+                                    .collect(Collectors.joining(", "))
+                    ));
+                }
+                return r.resources;
+            });
+        }
+
+        public <T extends Stack> CompletableFuture<TestAsyncResult> tryTestAsync(Class<T> stackType) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
             }
@@ -83,14 +93,21 @@ public class DeploymentTests {
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
             return this.runner.runAsync(stackType)
-                    .thenApply(ignore -> {
-                        if (!mockEngine.errors.isEmpty()) {
-                            throw new RuntimeException(String.format("Error count: %d, errors: %s",
-                                    mockEngine.errors.size(), String.join(", ", mockEngine.errors)
-                            ));
-                        }
-                        return ImmutableList.copyOf(mockMonitor.resources);
-                    });
+                    .thenApply(ignore -> new TestAsyncResult(
+                            ImmutableList.copyOf(mockMonitor.resources),
+                            mockEngine.errors.stream()
+                                    .map(RunException::new).collect(toImmutableList())
+                    ));
+        }
+
+        public static class TestAsyncResult {
+            public final ImmutableList<Resource> resources;
+            public final ImmutableList<Exception> exceptions;
+
+            public TestAsyncResult(ImmutableList<Resource> resources, ImmutableList<Exception> exceptions) {
+                this.resources = resources;
+                this.exceptions = exceptions;
+            }
         }
     }
 
@@ -112,6 +129,8 @@ public class DeploymentTests {
         private Engine engine;
         @Nullable
         private EngineLogger logger;
+        @Nullable
+        private Logger standardLogger;
 
         private DeploymentMockBuilder() {
             // Empty
@@ -163,7 +182,16 @@ public class DeploymentTests {
             return this;
         }
 
+        public DeploymentMockBuilder setStandardLogger(Logger logger) {
+            Objects.requireNonNull(logger);
+            this.standardLogger = logger;
+            return this;
+        }
+
         private void initUnset() {
+            if (this.standardLogger == null) {
+                this.standardLogger = defaultLogger();
+            }
             if (this.options == null) {
                 this.options = new TestOptions();
             }
@@ -183,7 +211,7 @@ public class DeploymentTests {
             if (this.state == null) {
                 this.state = new DeploymentImpl.DeploymentState(
                         config,
-                        DeploymentTests.Log,
+                        this.standardLogger,
                         options.getProjectName(),
                         options.getStackName(),
                         options.isPreview(),
@@ -193,7 +221,7 @@ public class DeploymentTests {
             }
 
             if (this.logger == null) {
-                this.logger = new DeploymentImpl.DefaultEngineLogger(state, Log);
+                this.logger = new DeploymentImpl.DefaultEngineLogger(state, this.standardLogger);
             }
         }
 
@@ -254,5 +282,11 @@ public class DeploymentTests {
 
     public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
         return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
+    }
+
+    public static Logger defaultLogger() {
+        var standardLogger = Logger.getLogger(DeploymentTests.class.getName());
+        standardLogger.setLevel(Level.FINEST);
+        return standardLogger;
     }
 }
