@@ -3,15 +3,13 @@
 
 package io.pulumi.plant.tree.v1.inputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.Either;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.plant.tree.v1.enums.Farm;
+import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.plant.Utilities;
+import javax.annotation.Nullable;
 
 
 public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
@@ -19,13 +17,13 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     public static final RubberTreeState Empty = new RubberTreeState();
 
     @InputImport(name="farm")
-    private final @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
+    private final @Nullable Input<Either<Farm,String>> farm;
 
-    public Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> getFarm() {
+    public Input<Either<Farm,String>> getFarm() {
         return this.farm == null ? Input.empty() : this.farm;
     }
 
-    public RubberTreeState(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
+    public RubberTreeState(@Nullable Input<Either<Farm,String>> farm) {
         this.farm = farm == null ? Input.ofRight("(unknown)") : farm;
     }
 
@@ -42,7 +40,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm;
+        private @Nullable Input<Either<Farm,String>> farm;
 
         public Builder() {
     	      // Empty
@@ -53,12 +51,12 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     	      this.farm = defaults.farm;
         }
 
-        public Builder setFarm(@Nullable Input<Either<io.pulumi.plant.tree.v1.enums.Farm,String>> farm) {
+        public Builder setFarm(@Nullable Input<Either<Farm,String>> farm) {
             this.farm = farm;
             return this;
         }
 
-        public Builder setFarm(@Nullable Either<io.pulumi.plant.tree.v1.enums.Farm,String> farm) {
+        public Builder setFarm(@Nullable Either<Farm,String> farm) {
             this.farm = Input.ofNullable(farm);
             return this;
         }

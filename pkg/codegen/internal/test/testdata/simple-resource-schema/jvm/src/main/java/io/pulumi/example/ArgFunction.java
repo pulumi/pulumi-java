@@ -3,20 +3,16 @@
 
 package io.pulumi.example;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
+import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.deployment.Deployment;
+import io.pulumi.deployment.InvokeOptions;
+import io.pulumi.example.inputs.ArgFunctionArgs;
+import io.pulumi.example.outputs.ArgFunctionResult;
 import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
-import io.pulumi.example.outputs.*;
+import javax.annotation.Nullable;
 
 public class ArgFunction {
-    public static CompletableFuture<ArgFunctionResult> invokeAsync(@Nullable ArgFunctionArgs args, @Nullable io.pulumi.deployment.InvokeOptions options) {
-        return io.pulumi.deployment.Deployment.getInstance().invokeAsync("example::argFunction", io.pulumi.core.internal.Reflection.TypeShape.of(ArgFunctionResult.class), args == null ? ArgFunctionArgs.Empty : args, Utilities.withVersion(options));
+    public static CompletableFuture<ArgFunctionResult> invokeAsync(@Nullable ArgFunctionArgs args, @Nullable InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args == null ? ArgFunctionArgs.Empty : args, Utilities.withVersion(options));
     }
 }

@@ -3,15 +3,8 @@
 
 package io.pulumi.plant.enums;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.plant.Utilities;
+import io.pulumi.core.internal.annotations.EnumType;
+import java.lang.Integer;
 import java.util.StringJoiner;
 
     @EnumType
