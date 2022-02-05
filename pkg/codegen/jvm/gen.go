@@ -616,7 +616,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		// set default values or assign given values
 		var defaultValueCode string
 		if prop.DefaultValue != nil {
-			defaultValueString, defType, err := pt.mod.getDefaultValue(prop.DefaultValue, codegen.UnwrapType(prop.Type))
+			defaultValueString, defType, err := pt.mod.getDefaultValue(ctx, prop.DefaultValue, codegen.UnwrapType(prop.Type))
 			if err != nil {
 				return err
 			}
@@ -624,8 +624,8 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValueInitializer)
 		}
 		if prop.IsRequired() {
-			_, _ = fmt.Fprintf(w, "        this.%[1]s = %[2]s%[4]s.requireNonNull(%[3]s, \"expected parameter '%[3]s' to be non-null\");\n",
-				fieldName, defaultValueCode, paramName, ctx.ref(names.Objects))
+			_, _ = fmt.Fprintf(w, "        this.%s = %s%s.requireNonNull(%s, \"expected parameter '%s' to be non-null\");\n",
+				fieldName, defaultValueCode, ctx.ref(names.Objects), paramName, paramName)
 		} else {
 			_, _ = fmt.Fprintf(w, "        this.%s = %s%s;\n", fieldName, defaultValueCode, paramName)
 		}
@@ -770,7 +770,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 		// TODO: add docs comment
-		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType, fieldName)
+		_, _ = fmt.Fprintf(w, "%s    private final %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
 	}
 	if len(pt.properties) > 0 {
 		_, _ = fmt.Fprintf(w, "\n")
@@ -816,7 +816,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			terminator = ",\n"
 		}
 
-		paramDef := fmt.Sprintf("%s %s%s", paramType, paramName, terminator)
+		paramDef := fmt.Sprintf("%s %s%s",
+			paramType.ToCode(ctx.imports), paramName, terminator)
 		if len(pt.properties) > 1 {
 			paramDef = fmt.Sprintf("%s        %s", indent, paramDef)
 		}
@@ -830,7 +831,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		paramName := javaIdentifier(prop.Name)
 		fieldName := javaIdentifier(pt.mod.propertyName(prop))
 		if prop.IsRequired() {
-			_, _ = fmt.Fprintf(w, "%s        this.%s = %s.requireNonNull(%s);\n", indent, ctx.ref(names.Objects), fieldName, paramName)
+			_, _ = fmt.Fprintf(w, "%s        this.%s = %s.requireNonNull(%s);\n",
+				indent, fieldName, ctx.ref(names.Objects), paramName)
 		} else {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
 		}
@@ -976,7 +978,7 @@ func primitiveValue(value interface{}) (string, string, error) {
 	}
 }
 
-func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (string, string, error) {
+func (mod *modContext) getDefaultValue(ctx *classFileContext, dv *schema.DefaultValue, t schema.Type) (string, string, error) {
 	var val string
 	schemaType := t.String()
 	if dv.Value != nil {
@@ -1028,7 +1030,7 @@ func (mod *modContext) getDefaultValue(dv *schema.DefaultValue, t schema.Type) (
 			envVars += fmt.Sprintf(", %q", e)
 		}
 
-		getEnv := fmt.Sprintf("Utilities.getEnv%s(%s).orElse(null)", getType, envVars)
+		getEnv := fmt.Sprintf("%s.getEnv%s(%s).orElse(null)", mod.utilitiesRef(ctx), getType, envVars)
 		if val != "" {
 			val = fmt.Sprintf("%s == null ? %s : %s", getEnv, val, getEnv)
 		} else {
@@ -1214,7 +1216,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	_, _ = fmt.Fprintf(w, "    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Input))
 	_, _ = fmt.Fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
-	_, _ = fmt.Fprintf(w, "            .setVersion(Utilities.getVersion())\n")
+	_, _ = fmt.Fprintf(w, "            .setVersion(%s.getVersion())\n", mod.utilitiesRef(ctx))
 
 	if len(r.Aliases) > 0 {
 		_, _ = fmt.Fprintf(w, "            .setAliases(%s.of(\n", ctx.ref(names.List))
@@ -1272,13 +1274,13 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	return nil
 }
 
-func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function) error {
+func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, argsFQN, resultFQN names.FQN) error {
 	w := ctx.writer
 	className := tokenToFunctionName(fun.Token)
 
 	var typeParameter string
 	if fun.Outputs != nil {
-		typeParameter = fmt.Sprintf("%sResult", className)
+		typeParameter = ctx.imports.Ref(resultFQN)
 	}
 
 	var argsParamDef string
@@ -1296,8 +1298,8 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function) 
 			nullable = fmt.Sprintf("@%s ", ctx.ref(names.Nullable))
 		}
 
-		argsParamDef = fmt.Sprintf("%s%sArgs args, ", nullable, className)
-		argsParamRef = fmt.Sprintf("args == null ? %sArgs.Empty : args", className)
+		argsParamDef = fmt.Sprintf("%s%s args, ", nullable, ctx.ref(argsFQN))
+		argsParamRef = fmt.Sprintf("args == null ? %s.Empty : args", ctx.ref(argsFQN))
 	}
 
 	printObsoleteAttribute(ctx, fun.DeprecationMessage, "")
@@ -1386,11 +1388,11 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 		}
 		_, _ = fmt.Fprintf(w, "\n")
 
-		_, _ = fmt.Fprintf(w, "%sprivate final %s value;\n", indent, underlyingType)
+		_, _ = fmt.Fprintf(w, "%sprivate final %s value;\n", indent, underlyingType.ToCode(ctx.imports))
 		_, _ = fmt.Fprintf(w, "\n")
 
 		// Constructor
-		_, _ = fmt.Fprintf(w, "%s%s(%s value) {\n", indent, enumName, underlyingType)
+		_, _ = fmt.Fprintf(w, "%s%s(%s value) {\n", indent, enumName, underlyingType.ToCode(ctx.imports))
 		if enum.ElementType == schema.StringType {
 			_, _ = fmt.Fprintf(w, "%s    this.value = %s.requireNonNull(value);\n", indent, ctx.ref(names.Objects))
 		} else {
@@ -1401,7 +1403,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 
 		// Explicit conversion operator
 		_, _ = fmt.Fprintf(w, "%[1]s@%s.Converter\n", indent, ctx.ref(names.EnumType))
-		_, _ = fmt.Fprintf(w, "%[1]spublic %s getValue() {\n", indent, underlyingType)
+		_, _ = fmt.Fprintf(w, "%[1]spublic %s getValue() {\n", indent, underlyingType.ToCode(ctx.imports))
 		_, _ = fmt.Fprintf(w, "%s    return this.value;\n", indent)
 		_, _ = fmt.Fprintf(w, "%s}\n", indent)
 		_, _ = fmt.Fprintf(w, "\n")
@@ -1521,7 +1523,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 		returnStatement := getFunc.String()
 
 		if p.DefaultValue != nil {
-			defaultValueString, defType, err := mod.getDefaultValue(p.DefaultValue, p.Type)
+			defaultValueString, defType, err := mod.getDefaultValue(ctx, p.DefaultValue, p.Type)
 			if err != nil {
 				return err
 			}
@@ -1555,6 +1557,14 @@ func (fs fs) add(path string, contents []byte) {
 	_, has := fs[path]
 	contract.Assertf(!has, "duplicate file: %s", path)
 	fs[path] = contents
+}
+
+func (mod *modContext) utilitiesRef(ctx *classFileContext) string {
+	javaPkg, err := parsePackageName(mod.rootPackageName)
+	if err != nil {
+		panic(err)
+	}
+	return ctx.ref(javaPkg.Dot(names.Ident("Utilities")))
 }
 
 func (mod *modContext) genUtilities() (string, error) {
@@ -1716,16 +1726,21 @@ func (mod *modContext) gen(fs fs) error {
 			continue
 		}
 
+		outputsPkg := javaPkg.Dot(names.Ident("outputs"))
+		resultClass := names.Ident(tokenToName(f.Token) + "Result")
+		resultFQN := outputsPkg.Dot(resultClass)
+		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
+		argsClass := names.Ident(tokenToName(f.Token) + "Args")
+		argsFQN := inputsPkg.Dot(argsClass)
+
 		if err := addClass(javaPkg, names.Ident(tokenToName(f.Token)), func(ctx *classFileContext) error {
-			return mod.genFunction(ctx, f)
+			return mod.genFunction(ctx, f, argsFQN, resultFQN)
 		}); err != nil {
 			return err
 		}
 
 		// Emit the args and result types, if any.
 		if f.Inputs != nil {
-			inputsPkg := javaPkg.Dot(names.Ident("inputs"))
-			argsClass := names.Ident(tokenToName(f.Token) + "Args")
 			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
@@ -1741,8 +1756,6 @@ func (mod *modContext) gen(fs fs) error {
 		}
 
 		if f.Outputs != nil {
-			outputsPkg := javaPkg.Dot(names.Ident("outputs"))
-			resultClass := names.Ident(tokenToName(f.Token) + "Result")
 			if err := addClass(outputsPkg, resultClass, func(ctx *classFileContext) error {
 				res := &plainType{
 					mod:                   mod,
