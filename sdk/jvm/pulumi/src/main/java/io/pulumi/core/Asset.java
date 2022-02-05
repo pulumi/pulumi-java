@@ -1,5 +1,6 @@
 package io.pulumi.core;
 
+import io.grpc.Internal;
 import io.pulumi.core.internal.Constants;
 
 /**
@@ -37,6 +38,13 @@ public abstract class Asset extends AssetOrArchive {
     public static final class RemoteAsset extends Asset {
         public RemoteAsset(String uri) {
             super(Constants.AssetOrArchiveUriName, uri);
+        }
+    }
+
+    @Internal
+    public static final class InvalidAsset extends Asset {
+        public InvalidAsset() {
+            super(Constants.AssetTextName, "");
         }
     }
 }

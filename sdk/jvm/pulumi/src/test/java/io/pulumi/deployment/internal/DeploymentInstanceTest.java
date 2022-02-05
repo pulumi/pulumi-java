@@ -42,7 +42,7 @@ public class DeploymentInstanceTest {
         var config = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
         var state = new DeploymentImpl.DeploymentState(
                 config,
-                DeploymentTests.Log,
+                DeploymentTests.defaultLogger(),
                 options.getProjectName(),
                 options.getStackName(),
                 options.isPreview(),
