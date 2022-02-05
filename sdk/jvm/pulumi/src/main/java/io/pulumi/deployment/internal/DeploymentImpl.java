@@ -43,6 +43,7 @@ import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.*;
 import java.util.logging.Level;
@@ -562,7 +563,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                 var allDirectDependencies = new HashSet<>(explicitDirectDependencies);
 
                                                                                 var allDirectDependencyUrnsFuture =
-                                                                                        CompletableFutures.builder(getAllTransitivelyReferencedCustomResourceUrnsAsync(explicitDirectDependencies));
+                                                                                        CompletableFutures.builder(getAllTransitivelyReferencedResourceUrnsAsync(explicitDirectDependencies));
                                                                                 var propertyToDirectDependencyUrnFutures = new HashMap<String, CompletableFuture<ImmutableSet<String>>>();
 
                                                                                 for (var entry : propertyToDirectDependencies.entrySet()) {
@@ -571,7 +572,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                                                                     allDirectDependencies.addAll(directDependencies);
 
-                                                                                    var urns = getAllTransitivelyReferencedCustomResourceUrnsAsync(
+                                                                                    var urns = getAllTransitivelyReferencedResourceUrnsAsync(
                                                                                             ImmutableSet.copyOf(directDependencies)
                                                                                     );
                                                                                     allDirectDependencyUrnsFuture.accumulate(urns, (s1, s2) -> Sets.union(s1, s2).immutableCopy());
@@ -624,34 +625,46 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return TypedInputOutput.cast(resources).view(InputOutputData::getValueNullable);
         }
 
-        private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedCustomResourceUrnsAsync(
+        private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedResourceUrnsAsync(
                 ImmutableSet<Resource> resources
         ) {
-            // Go through 'resources', but transitively walk through **Component** resources,
-            // collecting any of their child resources. This way, a Component acts as an
-            // aggregation really of all the reachable custom resources it parents. This walking
-            // will transitively walk through other child ComponentResources, but will stop when it
-            // hits custom resources. In other words, if we had:
+            // Go through 'resources', but transitively walk through **Component** resources, collecting any
+            // of their child resources.  This way, a Component acts as an aggregation really of all the
+            // reachable resources it parents.  This walking will stop when it hits custom resources.
             //
-            //              Comp1
-            //              /   \
-            //          Cust1   Comp2
-            //                  /   \
-            //              Cust2   Cust3
-            //              /
-            //          Cust4
+            // This function also terminates at remote components, whose children are not known to the Node SDK directly.
+            // Remote components will always wait on all of their children, so ensuring we return the remote component
+            // itself here and waiting on it will accomplish waiting on all of it's children regardless of whether they
+            // are returned explicitly here.
             //
-            // Then the transitively reachable custom resources of Comp1 will be [Cust1, Cust2, Cust3].
-            // It will *not* include 'Cust4'.
-
-            // To do this, first we just get the transitively reachable set of resources (not diving
-            // into custom resources).  In the above picture, if we start with 'Comp1', this will be
-            // [Comp1, Cust1, Comp2, Cust2, Cust3]
+            // In other words, if we had:
+            //
+            //                  Comp1
+            //              /     |     \
+            //          Cust1   Comp2  Remote1
+            //                  /   \       \
+            //              Cust2   Cust3  Comp3
+            //              /                 \
+            //          Cust4                Cust5
+            //
+            // Then the transitively reachable resources of Comp1 will be [Cust1, Cust2, Cust3, Remote1]. It
+            // will *not* include:
+            // * Cust4 because it is a child of a custom resource
+            // * Comp2 because it is a non-remote component resoruce
+            // * Comp3 and Cust5 because Comp3 is a child of a remote component resource
             var transitivelyReachableResources =
                     getTransitivelyReferencedChildResourcesOfComponentResources(resources);
 
             var transitivelyReachableCustomResources = transitivelyReachableResources.stream()
-                    .filter(resource -> resource instanceof CustomResource)
+                    .filter(resource -> {
+                        if (resource instanceof CustomResource) {
+                            return true;
+                        }
+                        if (resource instanceof ComponentResource) {
+                            return resource.internalGetRemote();
+                        }
+                        return false; // Unreachable
+                    })
                     .map(resource -> TypedInputOutput.cast(resource.getUrn()).view(InputOutputData::getValueNullable))
                     .collect(toImmutableSet());
             return CompletableFutures.allOf(transitivelyReachableCustomResources)
@@ -1345,8 +1358,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          * exiting once the set becomes empty.
          */
         private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
-
-        private final List<Exception> swallowedExceptions = new ArrayList<>();
+        private final Queue<Exception> swallowedExceptions = new ConcurrentLinkedQueue<>();
 
         public DefaultRunner(DeploymentState deployment, Logger standardLogger) {
             this.engineLogger = Objects.requireNonNull(Objects.requireNonNull(deployment).logger);
@@ -1411,12 +1423,15 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Objects.requireNonNull(task);
             standardLogger.log(Level.FINEST, String.format("Registering task: '%s', %s", description, task));
 
+            // we don't need the result here, just the future itself
+            CompletableFuture<Void> key = task.thenApply(ignore -> null);
+            // TODO: should we enforce a timeout (with .orTimeout()) on the task (and make it configurable)?
+
             // We may get several of the same tasks with different descriptions. That can
             // happen when the runtime reuses cached tasks that it knows are value-identical
             // (for example a completed future). In that case, we just store all the descriptions.
             // We'll print them all out as done once this task actually finishes.
-            inFlightTasks.compute(
-                    task.thenApply(ignore -> null), // TODO: should we enforce a timeout here (and make it configurable)?
+            inFlightTasks.compute(key,
                     (ignore, descriptions) -> {
                         if (descriptions == null) {
                             return Lists.newArrayList(description);
@@ -1455,7 +1470,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                     // Log the descriptions of completed tasks.
                     if (standardLogger.isLoggable(Level.FINEST)) {
-                        List<String> descriptions = inFlightTasks.getOrDefault(task, List.of()); // FIXME: this should never return null, but it does for whatever reason
+                        List<String> descriptions = inFlightTasks.getOrDefault(task, List.of());
+                        // getOrDefault should never return null, but it does for whatever reason, so just to be sure
+                        if (descriptions == null) {
+                            descriptions = List.of();
+                        }
                         standardLogger.log(Level.FINEST, String.format("Completed task: '%s', %s", String.join(",", descriptions), task));
                     }
                 } catch (Exception e) {
@@ -1502,7 +1521,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             };
 
             if (exception instanceof LogException) {
-                // We got an error while logging itself. Nothing to do here but print some errors and fail entirely.
+                // We got an error while logging itself.
+                // Nothing to do here but print some errors and abort.
                 standardLogger.log(Level.SEVERE, String.format(
                         "Error occurred trying to send logging message to engine: %s", exception.getMessage()));
                 return CompletableFuture.supplyAsync(() -> {
@@ -1519,13 +1539,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 return handleExceptionAsync((Exception) exception.getCause());
             }
 
-            // For the rest of the issue we encounter log the problem to the error stream. If we
-            // successfully do this, then return with a special error code stating as such so that
-            // our host doesn't print out another set of errors.
+            // For all other issues we encounter we log the
+            // problem to the error stream.
             //
-            // Note: if these logging calls fail, they will just end up bubbling up an exception
-            // that will be caught by nothing. This will tear down the actual process with a
-            // non-zero error which our host will handle properly.
+            // Note: if these logging calls fail, they will just
+            // end up bubbling up an exception that will be caught
+            // by nothing. This will tear down the actual process
+            // with a non-zero error which our host will handle
+            // properly.
             if (exception instanceof RunException) {
                 // Always hide the stack for RunErrors.
                 return engineLogger
