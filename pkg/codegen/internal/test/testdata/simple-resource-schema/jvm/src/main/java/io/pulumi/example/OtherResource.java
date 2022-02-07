@@ -7,9 +7,9 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.example.OtherResourceArgs;
 import io.pulumi.example.Resource;
 import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.OtherResourceArgs;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::OtherResource")
