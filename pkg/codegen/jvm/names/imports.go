@@ -12,6 +12,7 @@ func (id Ident) FQN() FQN {
 	return FQN{[]Ident{}, id}
 }
 
+// FQN represents a fully qualified names (1+ identifiers with dots in the middle)
 type FQN struct {
 	prefix []Ident
 	id     Ident
