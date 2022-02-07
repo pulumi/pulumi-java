@@ -331,7 +331,8 @@ func (mod *modContext) typeStringRecHelper(
 				Parameters: elementTypes,
 			}
 		default:
-			return TypeShape{Type: names.Object, Annotations: elementTypeSet.SortedValues()}
+			//return TypeShape{Type: names.Object, Annotations: elementTypeSet.SortedValues()}
+			return TypeShape{Type: names.Object}
 		}
 	default:
 		switch t {
@@ -867,10 +868,10 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 		// TODO: add docs comment
 		var returnStatement string
-		if prop.IsRequired() {
-			returnStatement = fmt.Sprintf("this.%s", paramName)
-		} else {
-			switch prop.Type.(type) {
+
+		switch propType := prop.Type.(type) {
+		case *schema.OptionalType:
+			switch propType.ElementType.(type) {
 			case *schema.ArrayType:
 				getterType = getterTypeNonOptional
 				returnStatement = fmt.Sprintf("this.%s == null ? List.of() : this.%s", paramName, paramName)
@@ -880,6 +881,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			default:
 				returnStatement = fmt.Sprintf("%s.ofNullable(this.%s)", ctx.ref(names.Optional), paramName)
 			}
+		default:
+			returnStatement = fmt.Sprintf("this.%s", paramName)
 		}
 
 		if err := getterTemplate.Execute(w, getterTemplateContext{
@@ -1311,8 +1314,8 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	// Emit the datasource method.
 	_, _ = fmt.Fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
 		ctx.ref(names.CompletableFuture), typeParameter, argsParamDef, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
-	_, _ = fmt.Fprintf(w, "        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, Utilities.withVersion(options));\n",
-		ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), typeParameter, argsParamRef)
+	_, _ = fmt.Fprintf(w, "        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(options));\n",
+		ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), typeParameter, argsParamRef, mod.utilitiesRef(ctx))
 	_, _ = fmt.Fprintf(w, "    }\n")
 
 	// Close the class.
@@ -1766,7 +1769,10 @@ func (mod *modContext) gen(fs fs) error {
 			continue
 		}
 		if mod.details(t).plainType {
-			t := t.PlainShape
+			t := t
+			if t.IsInputShape() {
+				t = t.PlainShape
+			}
 			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
 				return mod.genType(ctx, t, "inputs", true, false)

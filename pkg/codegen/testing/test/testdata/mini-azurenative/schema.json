@@ -128,6 +128,142 @@
         }
       },
       "type": "object"
+    },
+    "azure-native:alertsmanagement:SuppressionResponse": {
+      "type": "object"
+    },
+    "azure-native:alertsmanagement:DiagnosticsResponse": {
+      "type": "object"
+    },
+    "azure-native:alertsmanagement:ActionGroupResponse": {
+      "description": "Action rule with action group configuration",
+      "properties": {
+        "actionGroupId": {
+          "type": "string",
+          "description": "Action group to trigger if action rule matches"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation time of action rule. Date-Time in ISO-8601 format."
+        },
+        "createdBy": {
+          "type": "string",
+          "description": "Created by user name."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of action rule"
+        },
+        "lastModifiedAt": {
+          "type": "string",
+          "description": "Last updated time of action rule. Date-Time in ISO-8601 format."
+        },
+        "lastModifiedBy": {
+          "type": "string",
+          "description": "Last modified by user name."
+        },
+        "status": {
+          "type": "string",
+          "description": "Indicates if the given action rule is enabled or disabled"
+        },
+        "type": {
+          "type": "string",
+          "description": "Indicates type of action rule\nExpected value is 'ActionGroup'.",
+          "const": "ActionGroup"
+        }
+      },
+      "type": "object",
+      "required": [
+        "actionGroupId",
+        "createdAt",
+        "createdBy",
+        "lastModifiedAt",
+        "lastModifiedBy",
+        "type"
+      ]
+    }
+  },
+  "functions": {
+    "azure-native:alertsmanagement:getActionRuleByName": {
+      "description": "Action rule object containing target scope, conditions and suppression logic\nAPI Version: 2019-05-05-preview.",
+      "inputs": {
+        "properties": {
+          "actionRuleName": {
+            "type": "string",
+            "description": "The name of action rule that needs to be fetched"
+          },
+          "resourceGroupName": {
+            "type": "string",
+            "description": "Resource group name where the resource is created."
+          }
+        },
+        "type": "object",
+        "required": [
+          "actionRuleName",
+          "resourceGroupName"
+        ]
+      },
+      "outputs": {
+        "description": "Action rule object containing target scope, conditions and suppression logic",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Azure resource Id"
+          },
+          "location": {
+            "type": "string",
+            "description": "Resource location"
+          },
+          "name": {
+            "type": "string",
+            "description": "Azure resource name"
+          },
+          "properties": {
+            "oneOf": [
+              {
+                "type": "object",
+                "$ref": "#/types/azure-native:alertsmanagement:ActionGroupResponse"
+              },
+              {
+                "type": "object",
+                "$ref": "#/types/azure-native:alertsmanagement:DiagnosticsResponse"
+              },
+              {
+                "type": "object",
+                "$ref": "#/types/azure-native:alertsmanagement:SuppressionResponse"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "type",
+              "mapping": {
+                "ActionGroup": "#/types/azure-native:alertsmanagement:ActionGroupResponse",
+                "Diagnostics": "#/types/azure-native:alertsmanagement:DiagnosticsResponse",
+                "Suppression": "#/types/azure-native:alertsmanagement:SuppressionResponse"
+              }
+            },
+            "description": "action rule properties"
+          },
+          "tags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Resource tags"
+          },
+          "type": {
+            "type": "string",
+            "description": "Azure resource type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "location",
+          "name",
+          "properties",
+          "type"
+        ]
+      }
     }
   }
 }
