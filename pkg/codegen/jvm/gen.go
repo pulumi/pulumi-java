@@ -2143,14 +2143,9 @@ func parsePackageName(packageName string) (names.FQN, error) {
 	if len(parts) < 1 {
 		return names.FQN{}, fmt.Errorf("empty package name: %s", packageName)
 	}
-	result := names.Ident(normalizeJavaName(parts[0])).FQN()
+	result := names.Ident(javaIdentifier(parts[0])).FQN()
 	for _, p := range parts[1:] {
-		result = result.Dot(names.Ident(normalizeJavaName(p)))
+		result = result.Dot(names.Ident(javaIdentifier(p)))
 	}
 	return result, nil
-}
-
-func normalizeJavaName(name string) string {
-	// azure-native becomes azurenative
-	return strings.ReplaceAll(name, "-", "")
 }
