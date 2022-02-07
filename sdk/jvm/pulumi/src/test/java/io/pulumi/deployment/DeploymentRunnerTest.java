@@ -2,6 +2,7 @@ package io.pulumi.deployment;
 
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
+import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -10,13 +11,14 @@ import org.assertj.core.api.HamcrestCondition;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ForkJoinPool;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
@@ -53,6 +55,7 @@ public class DeploymentRunnerTest {
         assertThat(result.resources).hasSize(1);
         var stack = (TerminatesEarlyOnExceptionStack) result.resources.get(0);
         assertThat(TypedInputOutput.cast(stack.slowOutput).internalGetDataAsync()).isNotCompleted();
+        assertThat(TypedInputOutput.cast(stack.slowOutput).view(InputOutputData::getValueNullable)).isNotCompleted();
 
         printErrorCount(mock.logger);
     }
@@ -62,13 +65,16 @@ public class DeploymentRunnerTest {
         public final Output<Integer> slowOutput;
 
         public TerminatesEarlyOnExceptionStack() {
-            var delayed = CompletableFuture.delayedExecutor(1000L, TimeUnit.MILLISECONDS);
-            var task = CompletableFuture
-                    .supplyAsync(() -> {
+            var parallelExecutor = new ForkJoinPool(2);
+            Output.of(CompletableFuture.supplyAsync(
+                    () -> {
                         throw new RunException("Deliberate test error");
-                    }, delayed)
-                    .thenApply(ignore -> 1);
-            this.slowOutput = Output.of(task);
+                    }, parallelExecutor)
+            );
+            this.slowOutput = Output.of(CompletableFuture
+                    .supplyAsync(() -> sleep(60000), parallelExecutor)
+                    .thenApply(ignore -> 1)
+            );
         }
     }
 
@@ -82,9 +88,15 @@ public class DeploymentRunnerTest {
                 .setSpyGlobalInstance();
 
         var runner = mock.getRunner();
+        var parallelExecutor = new ForkJoinPool(2);
         for (var i = 0; i < 2; i++) {
-            var delayed = CompletableFuture.delayedExecutor(100L + i, TimeUnit.MILLISECONDS);
-            runner.registerTask(String.format("task%d", i), CompletableFuture.supplyAsync(() -> null, delayed));
+            final var delay = 100L + i;
+            runner.registerTask(String.format("task%d", i), CompletableFuture.<Void>supplyAsync(
+                    () -> {
+                        sleep(delay);
+                        return null;
+                    }, parallelExecutor)
+            );
         }
         Supplier<CompletableFuture<Map<String, Optional<Object>>>> supplier =
                 () -> CompletableFuture.completedFuture(Map.of());
@@ -98,7 +110,16 @@ public class DeploymentRunnerTest {
         }
 
         printErrorCount(mock.logger);
-        System.out.println(messages);
+    }
+
+    @Nullable
+    private static Object sleep(long millis) {
+        try {
+            Thread.sleep(millis);
+            return null;
+        } catch (InterruptedException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
     private static HamcrestCondition<String> containsStringCondition(String s) {
