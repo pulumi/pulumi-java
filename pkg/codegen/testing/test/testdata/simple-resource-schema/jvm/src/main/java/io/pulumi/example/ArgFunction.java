@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
+import io.pulumi.example.Utilities;
 import io.pulumi.example.inputs.ArgFunctionArgs;
 import io.pulumi.example.outputs.ArgFunctionResult;
 import java.util.concurrent.CompletableFuture;
