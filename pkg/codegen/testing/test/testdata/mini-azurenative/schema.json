@@ -1,0 +1,133 @@
+{
+  "version": "0.0.1",
+  "name": "azure-native",
+  "resources": {
+    "azure-native:machinelearningservices:BatchDeployment": {
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type."
+        },
+        "location": {
+          "type": "string",
+          "description": "The geo-location where the resource lives"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the resource"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Resource tags."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+        }
+      },
+      "type": "object",
+      "required": [
+        "location",
+        "name",
+        "type"
+      ],
+      "inputProperties": {
+        "deploymentName": {
+          "type": "string",
+          "description": "The identifier for the Batch inference deployment."
+        },
+        "endpointName": {
+          "type": "string",
+          "description": "Inference endpoint name"
+        },
+        "kind": {
+          "type": "string",
+          "description": "Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type."
+        },
+        "location": {
+          "type": "string",
+          "description": "The geo-location where the resource lives"
+        },
+        "properties": {
+          "type": "object",
+          "$ref": "#/types/azure-native:machinelearningservices:BatchDeployment",
+          "description": "Additional attributes of the entity."
+        },
+        "resourceGroupName": {
+          "type": "string",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Resource tags."
+        },
+        "workspaceName": {
+          "type": "string",
+          "description": "Name of Azure Machine Learning workspace."
+        }
+      },
+      "requiredInputs": [
+        "endpointName",
+        "properties",
+        "resourceGroupName",
+        "workspaceName"
+      ],
+      "aliases": [
+        {
+          "type": "azure-native:machinelearningservices/v20210301preview:BatchDeployment"
+        }
+      ]
+    }
+  },
+  "types": {
+    "azure-native:machinelearningservices:BatchDeployment": {
+      "description": "Batch inference settings per deployment.",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Description of the endpoint deployment."
+        },
+        "environmentId": {
+          "type": "string",
+          "description": "ARM resource ID of the environment specification for the endpoint deployment."
+        },
+        "environmentVariables": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Environment variables configuration for the deployment."
+        },
+        "errorThreshold": {
+          "type": "integer",
+          "description": "Error threshold, if the error count for the entire input goes above this value,\r\nthe batch inference will be aborted. Range is [-1, int.MaxValue].\r\nFor FileDataset, this value is the count of file failures.\r\nFor TabularDataset, this value is the count of record failures.\r\nIf set to -1 (the lower bound), all failures during batch inference will be ignored."
+        },
+        "miniBatchSize": {
+          "type": "number",
+          "description": "Size of the mini-batch passed to each batch invocation.\r\nFor FileDataset, this is the number of files per mini-batch.\r\nFor TabularDataset, this is the size of the records in bytes, per mini-batch."
+        },
+        "partitionKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Partition keys list used for Named partitioning."
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Property dictionary. Properties can be added, but not removed or altered."
+        }
+      },
+      "type": "object"
+    }
+  }
+}

@@ -15,7 +15,7 @@ func TestMakeSafeEnumName(t *testing.T) {
 		{"0", "Zero", false},
 		{"8.3", "TypeName_8_3", false},
 		{"11", "TypeName_11", false},
-		{"Microsoft-Windows-Shell-Startup", "Microsoft_Windows_Shell_Startup", false},
+		{"Microsoft-Windows-Shell-Startup", "MicrosoftWindowsShellStartup", false},
 		{"Microsoft.Batch", "Microsoft_Batch", false},
 		{"final", "$Final", false},
 		{"SystemAssigned, UserAssigned", "SystemAssigned_UserAssigned", false},
@@ -45,6 +45,7 @@ func Test_makeValidIdentifier(t *testing.T) {
 		{"default", "$default"},
 		{"@default", "_default"},
 		{"8", "_8"},
+		{"azure-native", "azurenative"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.input, func(t *testing.T) {

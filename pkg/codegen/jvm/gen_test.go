@@ -28,6 +28,10 @@ var tests []test.SDKTest = []test.SDKTest{
 		Directory:   "simple-plain-schema",
 		Description: "Simple schema with plain properties",
 	},
+	{
+		Directory:   "mini-azurenative",
+		Description: "Regression tests extracted from trying to codegen azure-natuve",
+	},
 }
 
 func TestGeneratePackage(t *testing.T) {
