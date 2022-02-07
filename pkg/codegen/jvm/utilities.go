@@ -59,7 +59,9 @@ func makeValidIdentifier(name string) string {
 			builder.WriteRune(c)
 			continue
 		}
-		if !isLegalIdentifierPart(c) {
+		if c == '-' { // skip `-` so azure-native becomes azurenative
+			continue
+		} else if !isLegalIdentifierPart(c) {
 			builder.WriteRune('_')
 		} else {
 			if i == 0 && !isLegalIdentifierStart(c) {

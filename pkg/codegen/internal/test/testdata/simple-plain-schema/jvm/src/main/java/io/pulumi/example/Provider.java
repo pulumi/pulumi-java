@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.example.ProviderArgs;
 import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.ProviderArgs;
 import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:example")
