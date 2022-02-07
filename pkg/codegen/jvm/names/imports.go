@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// A valid Java identifier
 type Ident string
 
 func (id Ident) FQN() FQN {
