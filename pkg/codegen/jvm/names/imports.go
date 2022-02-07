@@ -13,17 +13,25 @@ func (id Ident) FQN() FQN {
 	return FQN{[]Ident{}, id}
 }
 
-// FQN represents a fully qualified names (1+ identifiers with dots in the middle)
+// FQN represents a fully qualified names (1+ identifiers with dots in
+// the middle). For example, `javax.annotation.Nullable`:
+//
+//     Ident("javax").FQN().Dot("annotation").Dot("Nullable")
 type FQN struct {
 	prefix []Ident
 	id     Ident
 }
 
+// Appends a segment to the FQN. For example:
+//
+//     var JavaLang = Ident("java").FQN().Dot("lang") // java.lang
+//
+//     JavaLang.Dot("Boolean") // java.lang.Boolean
 func (fqn FQN) Dot(id Ident) FQN {
 	return FQN{prefix: append(fqn.prefix, fqn.id), id: id}
 }
 
-func (fqn FQN) ToString() string {
+func (fqn FQN) String() string {
 	var elements []string
 	for _, p := range fqn.prefix {
 		elements = append(elements, string(p))
@@ -53,17 +61,17 @@ type Imports struct {
 	imports  map[Ident]FQN
 }
 
-func NewImports(pkg FQN, pubClass Ident) (*Imports, error) {
+func NewImports(pkg FQN, pubClass Ident) *Imports {
 	bound := pkg.Dot(pubClass)
 	i := &Imports{pkg, pubClass, map[Ident]FQN{}}
 	if err := i.add(bound); err != nil {
-		return nil, err
+		panic(fmt.Sprintf("Impossible: %v", err))
 	}
-	return i, nil
+	return i
 }
 
 func (i *Imports) PackageCode() string {
-	return fmt.Sprintf("package %s;", i.pkg.ToString())
+	return fmt.Sprintf("package %s;", i.pkg.String())
 }
 
 func (i *Imports) ImportCode() string {
@@ -72,7 +80,7 @@ func (i *Imports) ImportCode() string {
 		if fqn.Equal(i.pkg.Dot(i.pubClass)) {
 			continue // do not import self
 		}
-		lines = append(lines, fmt.Sprintf("import %s;", fqn.ToString()))
+		lines = append(lines, fmt.Sprintf("import %s;", fqn.String()))
 	}
 	sort.Strings(lines)
 	return strings.Join(lines, "\n")
@@ -80,10 +88,10 @@ func (i *Imports) ImportCode() string {
 
 func (i *Imports) add(name FQN) error {
 	if len(name.prefix) == 0 {
-		return fmt.Errorf("Refusing to import unqualified name: %s", name.ToString())
+		return fmt.Errorf("Refusing to import unqualified name: %s", name.String())
 	}
 	if old, conflict := i.imports[name.id]; conflict && !old.Equal(name) {
-		return fmt.Errorf("Import conflict on %s", name.ToString())
+		return fmt.Errorf("Import conflict on %s", name.String())
 	}
 	i.imports[name.id] = name
 	return nil
@@ -101,5 +109,5 @@ func (i *Imports) Ref(name FQN) string {
 	if i.Resolve(name.id).Equal(name) {
 		return string(name.id)
 	}
-	return name.ToString()
+	return name.String()
 }

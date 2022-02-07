@@ -1613,7 +1613,7 @@ func (mod *modContext) gen(fs fs) error {
 
 	addClassFile := func(pkg names.FQN, className names.Ident, contents string) {
 		fqn := pkg.Dot(className)
-		relPath := path.Join(strings.Split(fqn.ToString(), ".")...)
+		relPath := path.Join(strings.Split(fqn.String(), ".")...)
 		path := path.Join(gradleProjectPath(), relPath) + ".java"
 		files = append(files, path)
 		fs.add(path, []byte(contents))

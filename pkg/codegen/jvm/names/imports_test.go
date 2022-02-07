@@ -13,14 +13,13 @@ var confoundingMapType FQN = Ident("org").FQN().Dot(Ident("confound")).Dot(Ident
 func TestFQN(t *testing.T) {
 	assert.True(t, mapType.Equal(mapType))
 	assert.False(t, mapType.Equal(treeMapType))
-	assert.Equal(t, mapType.ToString(), "java.util.Map")
+	assert.Equal(t, mapType.String(), "java.util.Map")
 }
 
 func TestImports(t *testing.T) {
 	pkg := Ident("io").FQN().Dot(Ident("pulumi")).Dot(Ident("random"))
 	cls := Ident("RandomString")
-	i, err := NewImports(pkg, cls)
-	assert.NoError(t, err)
+	i := NewImports(pkg, cls)
 	assert.True(t, i.Resolve(cls).Equal(pkg.Dot(cls)))
 	assert.Equal(t, "Map", i.Ref(mapType))
 	assert.Equal(t, "org.confound.Map", i.Ref(confoundingMapType))

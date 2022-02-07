@@ -29,13 +29,10 @@ func genClassFile(
 	generator func(ctx *classFileContext) error,
 ) (string, error) {
 
-	imports, err := names.NewImports(pkg, className)
-	if err != nil {
-		return "", err
-	}
+	imports := names.NewImports(pkg, className)
 	var buf bytes.Buffer
 	ctx := &classFileContext{&buf, imports, pkg, className}
-	err = generator(ctx)
+	err := generator(ctx)
 
 	code := fmt.Sprintf("%s\n\n%s\n\n%s",
 		imports.PackageCode(),
