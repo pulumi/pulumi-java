@@ -3,15 +3,11 @@
 
 package io.pulumi.example.inputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.example.Resource;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.example.Utilities;
+import javax.annotation.Nullable;
 
 
 public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
@@ -19,13 +15,13 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final OtherResourceArgs Empty = new OtherResourceArgs();
 
     @InputImport(name="foo")
-    private final @Nullable Input<io.pulumi.example.Resource> foo;
+    private final @Nullable Input<Resource> foo;
 
-    public Input<io.pulumi.example.Resource> getFoo() {
+    public Input<Resource> getFoo() {
         return this.foo == null ? Input.empty() : this.foo;
     }
 
-    public OtherResourceArgs(@Nullable Input<io.pulumi.example.Resource> foo) {
+    public OtherResourceArgs(@Nullable Input<Resource> foo) {
         this.foo = foo;
     }
 
@@ -42,7 +38,7 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<io.pulumi.example.Resource> foo;
+        private @Nullable Input<Resource> foo;
 
         public Builder() {
     	      // Empty
@@ -53,12 +49,12 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.foo = defaults.foo;
         }
 
-        public Builder setFoo(@Nullable Input<io.pulumi.example.Resource> foo) {
+        public Builder setFoo(@Nullable Input<Resource> foo) {
             this.foo = foo;
             return this;
         }
 
-        public Builder setFoo(@Nullable io.pulumi.example.Resource foo) {
+        public Builder setFoo(@Nullable Resource foo) {
             this.foo = Input.ofNullable(foo);
             return this;
         }

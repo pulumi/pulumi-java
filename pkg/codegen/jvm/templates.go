@@ -250,7 +250,7 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}    }
 
 {{ $.Indent }}    public {{ .Name }}({{ .ResultType }} defaults) {
-{{ $.Indent }}	      Objects.requireNonNull(defaults);
+{{ $.Indent }}	      {{ .Objects }}.requireNonNull(defaults);
 {{- range $field := .Fields }}
 {{ $.Indent }}	      this.{{ $field.FieldName }} = defaults.{{ $field.FieldName }};
 {{- end }}
@@ -280,4 +280,5 @@ type builderTemplateContext struct {
 	Fields     []builderFieldTemplateContext
 	Setters    []builderSetterTemplateContext
 	ResultType string
+	Objects    string
 }

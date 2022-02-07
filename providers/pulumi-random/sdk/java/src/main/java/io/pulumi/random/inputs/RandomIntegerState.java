@@ -3,15 +3,14 @@
 
 package io.pulumi.random.inputs;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.InputImport;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.String;
 import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.random.Utilities;
+import java.util.Objects;
+import javax.annotation.Nullable;
 
 
 public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {

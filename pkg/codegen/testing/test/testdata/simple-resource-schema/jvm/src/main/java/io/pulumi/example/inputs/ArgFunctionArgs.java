@@ -3,17 +3,11 @@
 
 package io.pulumi.example.inputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.example.Resource;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
-import io.pulumi.example.outputs.*;
+import javax.annotation.Nullable;
 
 
 public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
@@ -21,13 +15,13 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     public static final ArgFunctionArgs Empty = new ArgFunctionArgs();
 
     @InputImport(name="arg1")
-    private final @Nullable io.pulumi.example.Resource arg1;
+    private final @Nullable Resource arg1;
 
-    public Optional<io.pulumi.example.Resource> getArg1() {
+    public Optional<Resource> getArg1() {
         return this.arg1 == null ? Optional.empty() : Optional.ofNullable(this.arg1);
     }
 
-    public ArgFunctionArgs(@Nullable io.pulumi.example.Resource arg1) {
+    public ArgFunctionArgs(@Nullable Resource arg1) {
         this.arg1 = arg1;
     }
 
@@ -44,7 +38,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     public static final class Builder {
-        private @Nullable io.pulumi.example.Resource arg1;
+        private @Nullable Resource arg1;
 
         public Builder() {
     	      // Empty
@@ -55,7 +49,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.arg1 = defaults.arg1;
         }
 
-        public Builder setArg1(@Nullable io.pulumi.example.Resource arg1) {
+        public Builder setArg1(@Nullable Resource arg1) {
             this.arg1 = arg1;
             return this;
         }

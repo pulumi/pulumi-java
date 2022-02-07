@@ -3,15 +3,15 @@
 
 package io.pulumi.plant.inputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.Either;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.plant.enums.ContainerBrightness;
+import io.pulumi.plant.enums.ContainerColor;
+import io.pulumi.plant.enums.ContainerSize;
+import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.plant.Utilities;
+import javax.annotation.Nullable;
 
 
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
@@ -19,16 +19,16 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     public static final ContainerArgs Empty = new ContainerArgs();
 
     @InputImport(name="brightness")
-    private final @Nullable Input<io.pulumi.plant.enums.ContainerBrightness> brightness;
+    private final @Nullable Input<ContainerBrightness> brightness;
 
-    public Input<io.pulumi.plant.enums.ContainerBrightness> getBrightness() {
+    public Input<ContainerBrightness> getBrightness() {
         return this.brightness == null ? Input.empty() : this.brightness;
     }
 
     @InputImport(name="color")
-    private final @Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color;
+    private final @Nullable Input<Either<ContainerColor,String>> color;
 
-    public Input<Either<io.pulumi.plant.enums.ContainerColor,String>> getColor() {
+    public Input<Either<ContainerColor,String>> getColor() {
         return this.color == null ? Input.empty() : this.color;
     }
 
@@ -40,17 +40,17 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     @InputImport(name="size", required=true)
-    private final Input<io.pulumi.plant.enums.ContainerSize> size;
+    private final Input<ContainerSize> size;
 
-    public Input<io.pulumi.plant.enums.ContainerSize> getSize() {
+    public Input<ContainerSize> getSize() {
         return this.size;
     }
 
     public ContainerArgs(
-        @Nullable Input<io.pulumi.plant.enums.ContainerBrightness> brightness,
-        @Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color,
+        @Nullable Input<ContainerBrightness> brightness,
+        @Nullable Input<Either<ContainerColor,String>> color,
         @Nullable Input<String> material,
-        Input<io.pulumi.plant.enums.ContainerSize> size) {
+        Input<ContainerSize> size) {
         this.brightness = brightness == null ? Input.ofNullable(io.pulumi.plant.enums.ContainerBrightness.One) : brightness;
         this.color = color;
         this.material = material;
@@ -73,10 +73,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<io.pulumi.plant.enums.ContainerBrightness> brightness;
-        private @Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color;
+        private @Nullable Input<ContainerBrightness> brightness;
+        private @Nullable Input<Either<ContainerColor,String>> color;
         private @Nullable Input<String> material;
-        private Input<io.pulumi.plant.enums.ContainerSize> size;
+        private Input<ContainerSize> size;
 
         public Builder() {
     	      // Empty
@@ -90,22 +90,22 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.size = defaults.size;
         }
 
-        public Builder setBrightness(@Nullable Input<io.pulumi.plant.enums.ContainerBrightness> brightness) {
+        public Builder setBrightness(@Nullable Input<ContainerBrightness> brightness) {
             this.brightness = brightness;
             return this;
         }
 
-        public Builder setBrightness(@Nullable io.pulumi.plant.enums.ContainerBrightness brightness) {
+        public Builder setBrightness(@Nullable ContainerBrightness brightness) {
             this.brightness = Input.ofNullable(brightness);
             return this;
         }
 
-        public Builder setColor(@Nullable Input<Either<io.pulumi.plant.enums.ContainerColor,String>> color) {
+        public Builder setColor(@Nullable Input<Either<ContainerColor,String>> color) {
             this.color = color;
             return this;
         }
 
-        public Builder setColor(@Nullable Either<io.pulumi.plant.enums.ContainerColor,String> color) {
+        public Builder setColor(@Nullable Either<ContainerColor,String> color) {
             this.color = Input.ofNullable(color);
             return this;
         }
@@ -120,12 +120,12 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
 
-        public Builder setSize(Input<io.pulumi.plant.enums.ContainerSize> size) {
+        public Builder setSize(Input<ContainerSize> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSize(io.pulumi.plant.enums.ContainerSize size) {
+        public Builder setSize(ContainerSize size) {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }

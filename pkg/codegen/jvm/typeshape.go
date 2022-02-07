@@ -5,10 +5,12 @@ package jvm
 import (
 	"fmt"
 	"strings"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
 )
 
 type TypeShape struct {
-	Type        string
+	Type        names.FQN
 	Parameters  []TypeShape
 	Annotations []string
 }
@@ -21,11 +23,12 @@ type TypeShapeStringOptions struct {
 	AppendClassArrayLiteral bool // useful to append [].class
 }
 
-func (ts TypeShape) String() string {
-	return ts.StringWithOptions(TypeShapeStringOptions{})
+// Converts to Java code, may add imports to use short names.
+func (ts TypeShape) ToCode(imports *names.Imports) string {
+	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{})
 }
 
-func (ts TypeShape) StringWithOptions(opts TypeShapeStringOptions) string {
+func (ts TypeShape) ToCodeWithOptions(imports *names.Imports, opts TypeShapeStringOptions) string {
 	var annotationsString string
 	if !opts.SkipAnnotations {
 		annotationsString = strings.Join(ts.Annotations, " ")
@@ -41,7 +44,7 @@ func (ts TypeShape) StringWithOptions(opts TypeShapeStringOptions) string {
 	if !opts.GenericErasure && len(ts.Parameters) > 0 {
 		parametersStrings := make([]string, len(ts.Parameters))
 		for i, parameter := range ts.Parameters {
-			parameterString := parameter.StringWithOptions(TypeShapeStringOptions{CommentOutAnnotations: true})
+			parameterString := parameter.ToCodeWithOptions(imports, TypeShapeStringOptions{CommentOutAnnotations: true})
 			if len(parameterString) > 0 {
 				parametersStrings[i] = parameterString
 			}
@@ -59,12 +62,12 @@ func (ts TypeShape) StringWithOptions(opts TypeShapeStringOptions) string {
 		classLiteral = "[].class"
 	}
 
-	return fmt.Sprintf("%s%s%s%s", annotationsString, ts.Type, parametersString, classLiteral)
+	return fmt.Sprintf("%s%s%s%s", annotationsString, imports.Ref(ts.Type), parametersString, classLiteral)
 }
 
-func (ts TypeShape) ParameterTypes() []string {
+func (ts TypeShape) ParameterTypes(imports *names.Imports) []string {
 	return ts.ParameterTypesTransformed(func(ts TypeShape) string {
-		return ts.Type
+		return imports.Ref(ts.Type)
 	})
 }
 
@@ -76,14 +79,14 @@ func (ts TypeShape) ParameterTypesTransformed(f func(TypeShape) string) []string
 	return parameterTypes
 }
 
-func (ts TypeShape) StringJavaTypeShape() string {
+func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 	var shape string
 	shape += fmt.Sprintf("TypeShape.<%s>builder(%s)"+
-		ts.StringWithOptions(TypeShapeStringOptions{
+		ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
 			GenericErasure:        true,
 		}),
-		ts.StringWithOptions(TypeShapeStringOptions{
+		ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
 			GenericErasure:        true,
 			AppendClassLiteral:    true,
@@ -91,9 +94,9 @@ func (ts TypeShape) StringJavaTypeShape() string {
 	)
 	for _, parameter := range ts.Parameters {
 		if len(parameter.Parameters) > 0 {
-			shape += fmt.Sprintf(".addParameter(%s)", parameter.StringJavaTypeShape())
+			shape += fmt.Sprintf(".addParameter(%s)", parameter.StringJavaTypeShape(imports))
 		} else {
-			shape += fmt.Sprintf(".addParameter(%s)", parameter.StringWithOptions(TypeShapeStringOptions{
+			shape += fmt.Sprintf(".addParameter(%s)", parameter.ToCodeWithOptions(imports, TypeShapeStringOptions{
 				CommentOutAnnotations: true,
 				GenericErasure:        true,
 				AppendClassLiteral:    true,
