@@ -7,10 +7,10 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 
-	"github.com/pulumi/pulumi-java/pkg/codegen/internal/test"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 )
 
-var tests []test.SdkTest = []test.SdkTest{
+var tests []test.SDKTest = []test.SDKTest{
 	{
 		Directory:   "simple-resource-schema",
 		Description: "Simple schema with local resource properties",
@@ -46,7 +46,7 @@ func TestGeneratePackage(t *testing.T) {
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
 		GenPackage: GeneratePackage,
 		Language:   "jvm",
-		SdkTests:   tests,
+		TestCases:  tests,
 		Checks: map[string]test.CodegenCheck{
 			"jvm/compile": compileGeneratedPackage,
 			"jvm/test":    testGeneratedPackage,
