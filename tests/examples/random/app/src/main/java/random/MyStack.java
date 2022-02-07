@@ -16,13 +16,13 @@ import io.pulumi.random.RandomPet;
 import io.pulumi.random.RandomShuffle;
 import io.pulumi.random.RandomString;
 import io.pulumi.random.RandomUuid;
-import io.pulumi.random.inputs.RandomIdArgs;
-import io.pulumi.random.inputs.RandomIntegerArgs;
-import io.pulumi.random.inputs.RandomPasswordArgs;
-import io.pulumi.random.inputs.RandomPetArgs;
-import io.pulumi.random.inputs.RandomShuffleArgs;
-import io.pulumi.random.inputs.RandomStringArgs;
-import io.pulumi.random.inputs.RandomUuidArgs;
+import io.pulumi.random.RandomIdArgs;
+import io.pulumi.random.RandomIntegerArgs;
+import io.pulumi.random.RandomPasswordArgs;
+import io.pulumi.random.RandomPetArgs;
+import io.pulumi.random.RandomShuffleArgs;
+import io.pulumi.random.RandomStringArgs;
+import io.pulumi.random.RandomUuidArgs;
 
 public final class MyStack extends Stack {
 
