@@ -3,16 +3,11 @@
 
 package io.pulumi.plant.tree.v1;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.plant.Utilities;
-import io.pulumi.plant.tree.v1.inputs.*;
+import io.pulumi.plant.tree.v1.inputs.NurseryArgs;
+import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:Nursery")
 public class Nursery extends io.pulumi.resources.CustomResource {

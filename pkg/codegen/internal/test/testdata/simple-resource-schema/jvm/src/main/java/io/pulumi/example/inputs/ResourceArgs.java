@@ -3,15 +3,11 @@
 
 package io.pulumi.example.inputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.InputImport;
+import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.example.Utilities;
+import javax.annotation.Nullable;
 
 
 public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
