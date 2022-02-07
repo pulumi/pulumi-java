@@ -3,28 +3,22 @@
 
 package io.pulumi.example.outputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.example.Resource;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
-import io.pulumi.example.outputs.*;
+import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ArgFunctionResult {
-    private final @Nullable io.pulumi.example.Resource result;
+    private final @Nullable Resource result;
 
     @OutputCustomType.Constructor({"result"})
-    private ArgFunctionResult(@Nullable io.pulumi.example.Resource result) {
+    private ArgFunctionResult(@Nullable Resource result) {
         this.result = result;
     }
 
-    public Optional<io.pulumi.example.Resource> getResult() {
+    public Optional<Resource> getResult() {
         return Optional.ofNullable(this.result);
     }
 
@@ -37,7 +31,7 @@ public final class ArgFunctionResult {
     }
 
     public static final class Builder {
-        private @Nullable io.pulumi.example.Resource result;
+        private @Nullable Resource result;
 
         public Builder() {
     	      // Empty
@@ -48,7 +42,7 @@ public final class ArgFunctionResult {
     	      this.result = defaults.result;
         }
 
-        public Builder setResult(@Nullable io.pulumi.example.Resource result) {
+        public Builder setResult(@Nullable Resource result) {
             this.result = result;
             return this;
         }

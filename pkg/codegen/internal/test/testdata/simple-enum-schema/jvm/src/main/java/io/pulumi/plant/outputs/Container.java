@@ -3,36 +3,34 @@
 
 package io.pulumi.plant.outputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.plant.enums.ContainerBrightness;
+import io.pulumi.plant.enums.ContainerSize;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.plant.Utilities;
+import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Container {
-    private final @Nullable io.pulumi.plant.enums.ContainerBrightness brightness;
+    private final @Nullable ContainerBrightness brightness;
     private final @Nullable String color;
     private final @Nullable String material;
-    private final io.pulumi.plant.enums.ContainerSize size;
+    private final ContainerSize size;
 
     @OutputCustomType.Constructor({"brightness","color","material","size"})
     private Container(
-        @Nullable io.pulumi.plant.enums.ContainerBrightness brightness,
+        @Nullable ContainerBrightness brightness,
         @Nullable String color,
         @Nullable String material,
-        io.pulumi.plant.enums.ContainerSize size) {
+        ContainerSize size) {
         this.brightness = brightness;
         this.color = color;
         this.material = material;
         this.size = Objects.requireNonNull(size);
     }
 
-    public Optional<io.pulumi.plant.enums.ContainerBrightness> getBrightness() {
+    public Optional<ContainerBrightness> getBrightness() {
         return Optional.ofNullable(this.brightness);
     }
     public Optional<String> getColor() {
@@ -41,7 +39,7 @@ public final class Container {
     public Optional<String> getMaterial() {
         return Optional.ofNullable(this.material);
     }
-    public io.pulumi.plant.enums.ContainerSize getSize() {
+    public ContainerSize getSize() {
         return this.size;
     }
 
@@ -54,10 +52,10 @@ public final class Container {
     }
 
     public static final class Builder {
-        private @Nullable io.pulumi.plant.enums.ContainerBrightness brightness;
+        private @Nullable ContainerBrightness brightness;
         private @Nullable String color;
         private @Nullable String material;
-        private io.pulumi.plant.enums.ContainerSize size;
+        private ContainerSize size;
 
         public Builder() {
     	      // Empty
@@ -71,7 +69,7 @@ public final class Container {
     	      this.size = defaults.size;
         }
 
-        public Builder setBrightness(@Nullable io.pulumi.plant.enums.ContainerBrightness brightness) {
+        public Builder setBrightness(@Nullable ContainerBrightness brightness) {
             this.brightness = brightness;
             return this;
         }
@@ -86,7 +84,7 @@ public final class Container {
             return this;
         }
 
-        public Builder setSize(io.pulumi.plant.enums.ContainerSize size) {
+        public Builder setSize(ContainerSize size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }

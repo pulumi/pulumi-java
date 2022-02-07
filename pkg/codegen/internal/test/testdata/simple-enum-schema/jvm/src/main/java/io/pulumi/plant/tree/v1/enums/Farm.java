@@ -3,15 +3,9 @@
 
 package io.pulumi.plant.tree.v1.enums;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.internal.annotations.EnumType;
+import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.plant.Utilities;
 import java.util.StringJoiner;
 
     @EnumType
@@ -37,4 +31,3 @@ import java.util.StringJoiner;
                 .toString();
         }
     }
-

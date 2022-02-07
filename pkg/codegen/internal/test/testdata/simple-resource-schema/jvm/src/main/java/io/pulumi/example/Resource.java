@@ -3,16 +3,15 @@
 
 package io.pulumi.example;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
+import io.pulumi.example.inputs.ResourceArgs;
+import java.lang.String;
+import java.util.List;
+import javax.annotation.Nullable;
 
 @ResourceType(type="example::Resource")
 public class Resource extends io.pulumi.resources.CustomResource {
