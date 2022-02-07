@@ -1559,29 +1559,16 @@ func (fs fs) add(path string, contents []byte) {
 	fs[path] = contents
 }
 
-func (mod *modContext) utilitiesRef(ctx *classFileContext) string {
-	javaPkg, err := parsePackageName(mod.rootPackageName)
+func (mod *modContext) rootPackage() names.FQN {
+	pkg, err := parsePackageName(mod.rootPackageName)
 	if err != nil {
 		panic(err)
 	}
-	return ctx.ref(javaPkg.Dot(names.Ident("Utilities")))
+	return pkg
 }
 
-func (mod *modContext) genUtilities() (string, error) {
-	// Strip any 'v' off of the version.
-	w := &bytes.Buffer{}
-	err := jvmUtilitiesTemplate.Execute(w, jvmUtilitiesTemplateContext{
-		Name:        packageName(mod.packages, mod.pkg.Name),
-		PackageName: mod.packageName,
-		PackagePath: strings.ReplaceAll(mod.packageName, ".", "/"),
-		ClassName:   "Utilities",
-		Tool:        mod.tool,
-	})
-	if err != nil {
-		return "", err
-	}
-
-	return w.String(), nil
+func (mod *modContext) utilitiesRef(ctx *classFileContext) string {
+	return ctx.ref(mod.rootPackage().Dot(names.Ident("Utilities")))
 }
 
 func gradleProjectPath() string {
@@ -1602,13 +1589,6 @@ func (mod *modContext) gen(fs fs) error {
 		if d == dir {
 			files = append(files, p)
 		}
-	}
-
-	addFile := func(name, contents string) {
-		p := path.Join(dir, name)
-		files = append(files, p)
-
-		fs.add(p, []byte(contents))
 	}
 
 	addClassFile := func(pkg names.FQN, className names.Ident, contents string) {
@@ -1636,11 +1616,20 @@ func (mod *modContext) gen(fs fs) error {
 	// Utilities, config
 	switch mod.mod {
 	case "":
-		utilities, err := mod.genUtilities()
-		if err != nil {
+		if err := addClass(mod.rootPackage(), names.Ident("Utilities"), func(ctx *classFileContext) error {
+			pkgName, err := parsePackageName(packageName(mod.packages, mod.pkg.Name))
+			if err != nil {
+				return err
+			}
+			return jvmUtilitiesTemplate.Execute(ctx.writer, jvmUtilitiesTemplateContext{
+				Name:        pkgName.String(),
+				PackagePath: strings.ReplaceAll(mod.packageName, ".", "/"),
+				ClassName:   "Utilities",
+				Tool:        mod.tool,
+			})
+		}); err != nil {
 			return err
 		}
-		addFile("Utilities.java", utilities)
 
 		// Ensure that the target module directory contains a README.md file.
 		readme := mod.pkg.Description
@@ -1668,7 +1657,7 @@ func (mod *modContext) gen(fs fs) error {
 
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
 		argsClassName := names.Ident(resourceName(r) + "Args")
-		argsFQN := inputsPkg.Dot(argsClassName)
+		argsFQN := javaPkg.Dot(argsClassName)
 
 		var stateFQN names.FQN
 		stateClassName := names.Ident(resourceName(r) + "State")
@@ -1684,7 +1673,7 @@ func (mod *modContext) gen(fs fs) error {
 		}
 
 		// Generate ResourceArgs class
-		if err := addClass(inputsPkg, argsClassName, func(ctx *classFileContext) error {
+		if err := addClass(javaPkg, argsClassName, func(ctx *classFileContext) error {
 			args := &plainType{
 				mod:                   mod,
 				res:                   r,
@@ -2154,9 +2143,14 @@ func parsePackageName(packageName string) (names.FQN, error) {
 	if len(parts) < 1 {
 		return names.FQN{}, fmt.Errorf("empty package name: %s", packageName)
 	}
-	result := names.Ident(parts[0]).FQN()
+	result := names.Ident(normalizeJavaName(parts[0])).FQN()
 	for _, p := range parts[1:] {
-		result = result.Dot(names.Ident(p))
+		result = result.Dot(names.Ident(normalizeJavaName(p)))
 	}
 	return result, nil
+}
+
+func normalizeJavaName(name string) string {
+	// azure-native becomes azurenative
+	return strings.ReplaceAll(name, "-", "")
 }

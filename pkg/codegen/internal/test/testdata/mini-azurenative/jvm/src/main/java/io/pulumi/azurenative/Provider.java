@@ -3,15 +3,11 @@
 
 package io.pulumi.azurenative;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
+import io.pulumi.azurenative.ProviderArgs;
 import io.pulumi.azurenative.Utilities;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.ResourceType;
+import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:azure-native")
 public class Provider extends io.pulumi.resources.ProviderResource {

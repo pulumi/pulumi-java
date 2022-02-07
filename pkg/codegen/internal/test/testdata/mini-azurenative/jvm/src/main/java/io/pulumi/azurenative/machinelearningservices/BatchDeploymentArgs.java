@@ -3,15 +3,12 @@
 
 package io.pulumi.azurenative.machinelearningservices;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
+import io.pulumi.core.Input;
+import io.pulumi.core.internal.annotations.InputImport;
+import java.lang.String;
 import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.azurenative.Utilities;
+import java.util.Objects;
+import javax.annotation.Nullable;
 
 
 public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs {
@@ -47,9 +44,9 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     @InputImport(name="properties", required=true)
-    private final Input<io.pulumi.azurenative.machinelearningservices.BatchDeploymentArgs> properties;
+    private final Input<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
 
-    public Input<io.pulumi.azurenative.machinelearningservices.BatchDeploymentArgs> getProperties() {
+    public Input<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> getProperties() {
         return this.properties;
     }
 
@@ -79,7 +76,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         Input<String> endpointName,
         @Nullable Input<String> kind,
         @Nullable Input<String> location,
-        Input<io.pulumi.azurenative.machinelearningservices.BatchDeploymentArgs> properties,
+        Input<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties,
         Input<String> resourceGroupName,
         @Nullable Input<Map<String,String>> tags,
         Input<String> workspaceName) {
@@ -117,7 +114,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         private Input<String> endpointName;
         private @Nullable Input<String> kind;
         private @Nullable Input<String> location;
-        private Input<io.pulumi.azurenative.machinelearningservices.BatchDeploymentArgs> properties;
+        private Input<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
         private Input<String> resourceGroupName;
         private @Nullable Input<Map<String,String>> tags;
         private Input<String> workspaceName;
@@ -178,12 +175,12 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
 
-        public Builder setProperties(Input<io.pulumi.azurenative.machinelearningservices.BatchDeploymentArgs> properties) {
+        public Builder setProperties(Input<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(io.pulumi.azurenative.machinelearningservices.BatchDeploymentArgs properties) {
+        public Builder setProperties(io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
