@@ -3,22 +3,21 @@
 
 package io.pulumi.example;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.example.Resource;
 import io.pulumi.example.Utilities;
+import io.pulumi.example.inputs.OtherResourceArgs;
+import javax.annotation.Nullable;
 
 @ResourceType(type="example::OtherResource")
 public class OtherResource extends io.pulumi.resources.ComponentResource {
-    @OutputExport(name="foo", type=io.pulumi.example.Resource.class, parameters={})
-    private Output</* @Nullable */ io.pulumi.example.Resource> foo;
+    @OutputExport(name="foo", type=Resource.class, parameters={})
+    private Output</* @Nullable */ Resource> foo;
 
-    public Output</* @Nullable */ io.pulumi.example.Resource> getFoo() {
+    public Output</* @Nullable */ Resource> getFoo() {
         return this.foo;
     }
 

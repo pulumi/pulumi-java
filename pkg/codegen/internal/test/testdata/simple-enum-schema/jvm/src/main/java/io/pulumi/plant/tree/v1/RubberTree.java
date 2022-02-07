@@ -3,28 +3,32 @@
 
 package io.pulumi.plant.tree.v1;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.plant.Utilities;
+import io.pulumi.plant.outputs.Container;
+import io.pulumi.plant.tree.v1.enums.Diameter;
+import io.pulumi.plant.tree.v1.enums.RubberTreeVariety;
+import io.pulumi.plant.tree.v1.enums.TreeSize;
+import io.pulumi.plant.tree.v1.inputs.RubberTreeArgs;
+import io.pulumi.plant.tree.v1.inputs.RubberTreeState;
+import java.lang.String;
+import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:RubberTree")
 public class RubberTree extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="container", type=io.pulumi.plant.outputs.Container.class, parameters={})
-    private Output</* @Nullable */ io.pulumi.plant.outputs.Container> container;
+    @OutputExport(name="container", type=Container.class, parameters={})
+    private Output</* @Nullable */ Container> container;
 
-    public Output</* @Nullable */ io.pulumi.plant.outputs.Container> getContainer() {
+    public Output</* @Nullable */ Container> getContainer() {
         return this.container;
     }
-    @OutputExport(name="diameter", type=io.pulumi.plant.tree.v1.enums.Diameter.class, parameters={})
-    private Output<io.pulumi.plant.tree.v1.enums.Diameter> diameter;
+    @OutputExport(name="diameter", type=Diameter.class, parameters={})
+    private Output<Diameter> diameter;
 
-    public Output<io.pulumi.plant.tree.v1.enums.Diameter> getDiameter() {
+    public Output<Diameter> getDiameter() {
         return this.diameter;
     }
     @OutputExport(name="farm", type=String.class, parameters={})
@@ -33,16 +37,16 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getFarm() {
         return this.farm;
     }
-    @OutputExport(name="size", type=io.pulumi.plant.tree.v1.enums.TreeSize.class, parameters={})
-    private Output</* @Nullable */ io.pulumi.plant.tree.v1.enums.TreeSize> size;
+    @OutputExport(name="size", type=TreeSize.class, parameters={})
+    private Output</* @Nullable */ TreeSize> size;
 
-    public Output</* @Nullable */ io.pulumi.plant.tree.v1.enums.TreeSize> getSize() {
+    public Output</* @Nullable */ TreeSize> getSize() {
         return this.size;
     }
-    @OutputExport(name="type", type=io.pulumi.plant.tree.v1.enums.RubberTreeVariety.class, parameters={})
-    private Output<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> type;
+    @OutputExport(name="type", type=RubberTreeVariety.class, parameters={})
+    private Output<RubberTreeVariety> type;
 
-    public Output<io.pulumi.plant.tree.v1.enums.RubberTreeVariety> getType() {
+    public Output<RubberTreeVariety> getType() {
         return this.type;
     }
 
