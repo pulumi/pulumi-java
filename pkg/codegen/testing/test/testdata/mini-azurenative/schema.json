@@ -83,6 +83,156 @@
           "type": "azure-native:machinelearningservices/v20210301preview:BatchDeployment"
         }
       ]
+    },
+    "azure-native:insights:WebTest": {
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Purpose/user defined descriptive test for this WebTest."
+        },
+        "enabled": {
+          "type": "boolean",
+          "description": "Is the test actively being monitored."
+        },
+        "frequency": {
+          "type": "integer",
+          "description": "Interval in seconds between test runs for this WebTest. Default value is 300.",
+          "default": 300
+        },
+        "kind": {
+          "type": "string",
+          "description": "The kind of web test that this web test watches. Choices are ping and multistep.",
+          "default": "ping"
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "name": {
+          "type": "string",
+          "description": "Azure resource name"
+        },
+        "provisioningState": {
+          "type": "string",
+          "description": "Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed."
+        },
+        "retryEnabled": {
+          "type": "boolean",
+          "description": "Allow for retries should this WebTest fail."
+        },
+        "syntheticMonitorId": {
+          "type": "string",
+          "description": "Unique ID of this WebTest. This is typically the same value as the Name field."
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Resource tags"
+        },
+        "timeout": {
+          "type": "integer",
+          "description": "Seconds until this WebTest will timeout and fail. Default value is 30.",
+          "default": 30
+        },
+        "type": {
+          "type": "string",
+          "description": "Azure resource type"
+        },
+        "webTestKind": {
+          "type": "string",
+          "description": "The kind of web test this is, valid choices are ping and multistep.",
+          "default": "ping"
+        },
+        "webTestName": {
+          "type": "string",
+          "description": "User defined name if this WebTest."
+        }
+      },
+      "type": "object",
+      "required": [
+        "location",
+        "name",
+        "provisioningState",
+        "syntheticMonitorId",
+        "type",
+        "webTestKind",
+        "webTestName"
+      ],
+      "inputProperties": {
+        "description": {
+          "type": "string",
+          "description": "Purpose/user defined descriptive test for this WebTest."
+        },
+        "enabled": {
+          "type": "boolean",
+          "description": "Is the test actively being monitored."
+        },
+        "frequency": {
+          "type": "integer",
+          "description": "Interval in seconds between test runs for this WebTest. Default value is 300.",
+          "default": 300
+        },
+        "kind": {
+          "$ref": "#/types/azure-native:insights:WebTestKind",
+          "description": "The kind of web test that this web test watches. Choices are ping and multistep.",
+          "default": "ping"
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "resourceGroupName": {
+          "type": "string",
+          "description": "The name of the resource group. The name is case insensitive."
+        },
+        "retryEnabled": {
+          "type": "boolean",
+          "description": "Allow for retries should this WebTest fail."
+        },
+        "syntheticMonitorId": {
+          "type": "string",
+          "description": "Unique ID of this WebTest. This is typically the same value as the Name field."
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Resource tags"
+        },
+        "timeout": {
+          "type": "integer",
+          "description": "Seconds until this WebTest will timeout and fail. Default value is 30.",
+          "default": 30
+        },
+        "webTestKind": {
+          "$ref": "#/types/azure-native:insights:WebTestKind",
+          "description": "The kind of web test this is, valid choices are ping and multistep.",
+          "default": "ping"
+        },
+        "webTestName": {
+          "type": "string",
+          "description": "User defined name if this WebTest."
+        }
+      },
+      "requiredInputs": [
+        "resourceGroupName",
+        "syntheticMonitorId",
+        "webTestKind"
+      ],
+      "aliases": [
+        {
+          "type": "azure-native:insights/v20150501:WebTest"
+        },
+        {
+          "type": "azure-native:insights/v20180501preview:WebTest"
+        },
+        {
+          "type": "azure-native:insights/v20201005preview:WebTest"
+        }
+      ]
     }
   },
   "types": {
@@ -195,6 +345,18 @@
         }
       },
       "type": "object"
+    },
+    "azure-native:insights:WebTestKind": {
+      "description": "The kind of web test this is, valid choices are ping and multistep.",
+      "type": "string",
+      "enum": [
+        {
+          "value": "ping"
+        },
+        {
+          "value": "multistep"
+        }
+      ]
     }
   },
   "functions": {
