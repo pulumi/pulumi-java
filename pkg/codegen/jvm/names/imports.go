@@ -6,13 +6,6 @@ import (
 	"strings"
 )
 
-// A valid Java identifier
-type Ident string
-
-func (id Ident) FQN() FQN {
-	return FQN{[]Ident{}, id}
-}
-
 // FQN represents a fully qualified names (1+ identifiers with dots in
 // the middle). For example, `javax.annotation.Nullable`:
 //
@@ -34,9 +27,9 @@ func (fqn FQN) Dot(id Ident) FQN {
 func (fqn FQN) String() string {
 	var elements []string
 	for _, p := range fqn.prefix {
-		elements = append(elements, string(p))
+		elements = append(elements, p.String())
 	}
-	elements = append(elements, string(fqn.id))
+	elements = append(elements, fqn.id.String())
 	return strings.Join(elements, ".")
 }
 
@@ -107,7 +100,7 @@ func (i *Imports) Resolve(name Ident) FQN {
 func (i *Imports) Ref(name FQN) string {
 	i.add(name) // try adding, ignore error deliberately
 	if i.Resolve(name.id).Equal(name) {
-		return string(name.id)
+		return name.id.String()
 	}
 	return name.String()
 }

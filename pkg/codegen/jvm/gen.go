@@ -36,13 +36,6 @@ func title(s string) string {
 	return string(append([]rune{unicode.ToUpper(runes[0])}, runes[1:]...))
 }
 
-func javaIdentifier(s string) string {
-	// Note: Some schema field names may look like $ref or $schema.
-	// We DO NOT remove the leading $ since it is a valid identifier (but C# does this).
-
-	return makeValidIdentifier(s)
-}
-
 func packageName(packages map[string]string, name string) string {
 	if pkg, ok := packages[name]; ok {
 		return pkg
@@ -462,7 +455,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	requireInitializers := !pt.args || isInputType(prop.Type)
 
 	wireName := prop.Name
-	propertyName := javaIdentifier(pt.mod.propertyName(prop))
+	propertyName := names.Ident(pt.mod.propertyName(prop))
 	typ := prop.Type
 	if !prop.IsRequired() {
 		typ = codegen.OptionalType(prop)
@@ -514,7 +507,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		false,               // inputless overload
 	)
 
-	getterName := javaIdentifier("get" + title(prop.Name))
+	getterName := names.Ident("get" + title(prop.Name))
 	// TODO: add docs comment
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
@@ -545,7 +538,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	if err := getterTemplate.Execute(w, getterTemplateContext{
 		Indent:          strings.Repeat(" ", 4),
 		GetterType:      getterType.ToCode(ctx.imports),
-		GetterName:      getterName,
+		GetterName:      getterName.String(),
 		ReturnStatement: returnStatement,
 	}); err != nil {
 		return err
@@ -580,7 +573,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	// Generate the constructor parameters.
 	for i, prop := range pt.properties {
 		// TODO: factor this out (with similar code in genOutputType)
-		paramName := javaIdentifier(prop.Name)
+		paramName := names.Ident(prop.Name)
 		paramType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -612,8 +605,8 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 	// Generate the constructor body
 	for _, prop := range pt.properties {
-		paramName := javaIdentifier(prop.Name)
-		fieldName := javaIdentifier(pt.mod.propertyName(prop))
+		paramName := names.Ident(prop.Name)
+		fieldName := names.Ident(pt.mod.propertyName(prop))
 		// set default values or assign given values
 		var defaultValueCode string
 		if prop.DefaultValue != nil {
@@ -639,7 +632,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		_, _ = fmt.Fprintf(w, "\n")
 		_, _ = fmt.Fprintf(w, "    private %s() {\n", pt.name)
 		for _, prop := range pt.properties {
-			fieldName := javaIdentifier(pt.mod.propertyName(prop))
+			fieldName := names.Ident(pt.mod.propertyName(prop))
 			emptyValue := emptyTypeInitializer(ctx, prop.Type, true)
 			_, _ = fmt.Fprintf(w, "        this.%s = %s;\n", fieldName, emptyValue)
 		}
@@ -651,7 +644,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	var builderSetters []builderSetterTemplateContext
 	for _, prop := range pt.properties {
 		requireInitializers := !pt.args || isInputType(prop.Type)
-		propertyName := javaIdentifier(pt.mod.propertyName(prop))
+		propertyName := names.Ident(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -666,11 +659,11 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName,
+			FieldName: propertyName.String(),
 		})
 
-		setterName := javaIdentifier("set" + title(prop.Name))
-		assignment := func(propertyName string) string {
+		setterName := names.Ident("set" + title(prop.Name))
+		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
 				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
 			} else {
@@ -684,9 +677,9 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 		// add main setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:   setterName,
+			SetterName:   setterName.String(),
 			PropertyType: propertyType.ToCode(ctx.imports),
-			PropertyName: propertyName,
+			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
 		})
 
@@ -706,7 +699,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 				true,                // inputless overload
 			)
 
-			assignmentUnwrapped := func(propertyName string) string {
+			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
 					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
 				} else {
@@ -721,9 +714,9 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 			// add overloaded setter
 			builderSetters = append(builderSetters, builderSetterTemplateContext{
-				SetterName:   setterName,
+				SetterName:   setterName.String(),
 				PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
-				PropertyName: propertyName,
+				PropertyName: propertyName.String(),
 				Assignment:   assignmentUnwrapped(propertyName),
 			})
 		}
@@ -759,7 +752,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Generate each output field.
 	for _, prop := range pt.properties {
-		fieldName := javaIdentifier(pt.mod.propertyName(prop))
+		fieldName := names.Ident(pt.mod.propertyName(prop))
 		fieldType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -784,8 +777,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		if i > 0 {
 			paramNamesStringBuilder.WriteString(",")
 		}
-		paramName := javaIdentifier(prop.Name)
-		paramNamesStringBuilder.WriteString("\"" + paramName + "\"")
+		paramName := names.Ident(prop.Name)
+		paramNamesStringBuilder.WriteString("\"" + paramName.String() + "\"")
 	}
 	paramNamesStringBuilder.WriteString("}")
 
@@ -796,7 +789,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	// Generate the constructor parameters.
 	for i, prop := range pt.properties {
 		// TODO: factor this out (with similar code in genInputType)
-		paramName := javaIdentifier(prop.Name)
+		paramName := names.Ident(prop.Name)
 		paramType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -829,8 +822,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Generate the constructor body.
 	for _, prop := range pt.properties {
-		paramName := javaIdentifier(prop.Name)
-		fieldName := javaIdentifier(pt.mod.propertyName(prop))
+		paramName := names.Ident(prop.Name)
+		fieldName := names.Ident(pt.mod.propertyName(prop))
 		if prop.IsRequired() {
 			_, _ = fmt.Fprintf(w, "%s        this.%s = %s.requireNonNull(%s);\n",
 				indent, fieldName, ctx.ref(names.Objects), paramName)
@@ -843,8 +836,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 	// Generate getters
 	for _, prop := range pt.properties {
-		paramName := javaIdentifier(prop.Name)
-		getterName := javaIdentifier("get" + title(prop.Name))
+		paramName := names.Ident(prop.Name)
+		getterName := names.Ident("get" + title(prop.Name))
 		getterType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -888,7 +881,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
 			GetterType:      getterType.ToCode(ctx.imports),
-			GetterName:      getterName,
+			GetterName:      getterName.String(),
 			ReturnStatement: returnStatement,
 		}); err != nil {
 			return err
@@ -901,7 +894,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	var builderFields []builderFieldTemplateContext
 	var builderSetters []builderSetterTemplateContext
 	for _, prop := range pt.properties {
-		propertyName := javaIdentifier(pt.mod.propertyName(prop))
+		propertyName := names.Ident(pt.mod.propertyName(prop))
 		propertyType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -916,11 +909,11 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		// add field
 		builderFields = append(builderFields, builderFieldTemplateContext{
 			FieldType: propertyType.ToCode(ctx.imports),
-			FieldName: propertyName,
+			FieldName: propertyName.String(),
 		})
 
-		setterName := javaIdentifier("set" + title(prop.Name))
-		assignment := func(propertyName string) string {
+		setterName := names.Ident("set" + title(prop.Name))
+		assignment := func(propertyName names.Ident) string {
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
 			} else {
@@ -930,9 +923,9 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 		// add setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:   setterName,
+			SetterName:   setterName.String(),
 			PropertyType: propertyType.ToCode(ctx.imports),
-			PropertyName: propertyName,
+			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
 		})
 	}
@@ -1001,7 +994,7 @@ func (mod *modContext) getDefaultValue(ctx *classFileContext, dv *schema.Default
 				if elName == "" {
 					elName = fmt.Sprintf("%v", e.Value)
 				}
-				safeName, err := makeSafeEnumName(elName, enumName)
+				safeName, err := names.MakeSafeEnumName(elName, enumName)
 				if err != nil {
 					return "", "", err
 				}
@@ -1097,7 +1090,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	for _, prop := range r.Properties {
 		// Write the property attribute
 		wireName := prop.Name
-		propertyName := mod.propertyName(prop)
+		propertyName := names.Ident(mod.propertyName(prop))
 		propertyType := mod.typeString(
 			ctx,
 			prop.Type,
@@ -1139,7 +1132,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		// Add getter
 		getterType := outputParameterType
-		getterName := javaIdentifier("get" + title(prop.Name))
+		getterName := names.Ident("get" + title(prop.Name))
 		_, _ = fmt.Fprintf(w, "    public %s<%s> %s() {\n", ctx.imports.Ref(names.Output), getterType, getterName)
 		_, _ = fmt.Fprintf(w, "        return this.%s;\n", propertyName)
 		_, _ = fmt.Fprintf(w, "    }\n")
@@ -1210,7 +1203,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 				if err != nil {
 					return err
 				}
-				setterName := javaIdentifier("set" + title(mod.propertyName(prop)))
+				setterName := names.Ident("set" + title(mod.propertyName(prop)))
 				_, _ = fmt.Fprintf(w, "            .%s(%s)\n", setterName, v)
 			}
 		}
@@ -1349,7 +1342,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 			e.Name = fmt.Sprintf("%v", e.Value)
 		}
 
-		safeName, err := makeSafeEnumName(e.Name, enumName)
+		safeName, err := names.MakeSafeEnumName(e.Name, enumName)
 		if err != nil {
 			return err
 		}
@@ -1525,7 +1518,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 	// Emit an entry for all config variables.
 	for _, p := range variables {
 		propertyType, getFunc := mod.getConfigProperty(ctx, p.Type, p.Name)
-		propertyName := javaIdentifier(mod.propertyName(p))
+		propertyName := names.Ident(mod.propertyName(p))
 
 		returnStatement := getFunc.String()
 
@@ -1542,7 +1535,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
 			GetterType:      propertyType.ToCode(ctx.imports),
-			GetterName:      propertyName,
+			GetterName:      propertyName.String(),
 			ReturnStatement: returnStatement,
 		}); err != nil {
 			return err
@@ -2161,9 +2154,9 @@ func parsePackageName(packageName string) (names.FQN, error) {
 	if len(parts) < 1 {
 		return names.FQN{}, fmt.Errorf("empty package name: %s", packageName)
 	}
-	result := names.Ident(javaIdentifier(parts[0])).FQN()
+	result := names.Ident(parts[0]).FQN()
 	for _, p := range parts[1:] {
-		result = result.Dot(names.Ident(javaIdentifier(p)))
+		result = result.Dot(names.Ident(p))
 	}
 	return result, nil
 }
