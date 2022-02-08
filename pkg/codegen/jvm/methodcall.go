@@ -5,6 +5,8 @@ package jvm
 import (
 	"fmt"
 	"strings"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
 )
 
 type MethodCall struct {
@@ -14,5 +16,5 @@ type MethodCall struct {
 }
 
 func (m MethodCall) String() string {
-	return fmt.Sprintf("%s.%s(%s)", m.This, javaIdentifier(m.Method), strings.Join(m.Args, ","))
+	return fmt.Sprintf("%s.%s(%s)", m.This, names.Ident(m.Method), strings.Join(m.Args, ","))
 }

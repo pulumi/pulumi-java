@@ -1,6 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
-package jvm
+package names
 
 import "testing"
 
@@ -24,7 +24,7 @@ func TestMakeSafeEnumName(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.input, func(t *testing.T) {
-			got, err := makeSafeEnumName(tt.input, "TypeName")
+			got, err := MakeSafeEnumName(tt.input, "TypeName")
 			if (err != nil) != tt.wantErr {
 				t.Errorf("makeSafeEnumName() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -36,7 +36,7 @@ func TestMakeSafeEnumName(t *testing.T) {
 	}
 }
 
-func Test_makeValidIdentifier(t *testing.T) {
+func TestValidIdent(t *testing.T) {
 	tests := []struct {
 		input    string
 		expected string
@@ -46,10 +46,12 @@ func Test_makeValidIdentifier(t *testing.T) {
 		{"@default", "_default"},
 		{"8", "_8"},
 		{"azure-native", "azurenative"},
+		{"package", "$package"},
+		{"foo", "foo"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.input, func(t *testing.T) {
-			if got := makeValidIdentifier(tt.input); got != tt.expected {
+			if got := Ident(tt.input).String(); got != tt.expected {
 				t.Errorf("makeValidIdentifier() = %v, want %v", got, tt.expected)
 			}
 		})
