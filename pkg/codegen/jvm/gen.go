@@ -987,6 +987,10 @@ func (mod *modContext) getDefaultValue(ctx *classFileContext, dv *schema.Default
 	if dv.Value != nil {
 		switch enumOrUnion := t.(type) {
 		case *schema.EnumType:
+			pkg, err := parsePackageName(mod.packageName)
+			if err != nil {
+				return "", "", err
+			}
 			enumName := tokenToName(enumOrUnion.Token)
 			for _, e := range enumOrUnion.Elements {
 				if e.Value != dv.Value {
@@ -1001,7 +1005,7 @@ func (mod *modContext) getDefaultValue(ctx *classFileContext, dv *schema.Default
 				if err != nil {
 					return "", "", err
 				}
-				val = fmt.Sprintf("%s.enums.%s.%s", mod.packageName, enumName, safeName)
+				val = pkg.Dot(names.Ident("enums")).Dot(names.Ident(enumName)).Dot(names.Ident(safeName)).String()
 				break
 			}
 			if val == "" {
