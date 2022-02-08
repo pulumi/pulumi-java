@@ -118,14 +118,14 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         this.description = description;
         this.enabled = enabled;
         this.frequency = frequency == null ? Input.ofNullable(300) : frequency;
-        this.kind = kind == null ? Input.ofNullable(io.pulumi.azure-native.insights.enums.WebTestKind.Ping) : kind;
+        this.kind = kind == null ? Input.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : kind;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.retryEnabled = retryEnabled;
         this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId, "expected parameter 'syntheticMonitorId' to be non-null");
         this.tags = tags;
         this.timeout = timeout == null ? Input.ofNullable(30) : timeout;
-        this.webTestKind = webTestKind == null ? Input.ofNullable(io.pulumi.azure-native.insights.enums.WebTestKind.Ping) : Objects.requireNonNull(webTestKind, "expected parameter 'webTestKind' to be non-null");
+        this.webTestKind = webTestKind == null ? Input.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : Objects.requireNonNull(webTestKind, "expected parameter 'webTestKind' to be non-null");
         this.webTestName = webTestName;
     }
 
