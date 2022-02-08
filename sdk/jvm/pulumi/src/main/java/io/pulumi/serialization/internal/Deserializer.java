@@ -82,7 +82,7 @@ public class Deserializer {
         var innerData = func.apply(value);
         return InputOutputData.ofNullable(
                 innerData.getResources(),
-                innerData.getValueOptional().orElse(null),
+                innerData.getValueNullable(),
                 innerData.isKnown(),
                 isSecret || innerData.isSecret()
         );

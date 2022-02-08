@@ -113,7 +113,7 @@ public abstract class TypedInputOutput<T, IO extends InputOutput<T, IO> & Copyab
             mutableData
                     .complete(InputOutputData.ofNullable(
                             Sets.union(this.resources, data.getResources()).immutableCopy(),
-                            data.getValueOptional().orElse(null),
+                            data.getValueNullable(),
                             data.isKnown(),
                             data.isSecret()
                     ));

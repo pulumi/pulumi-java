@@ -125,7 +125,7 @@ public class StackReference extends CustomResource {
                         throw new UnsupportedOperationException(
                                 "Cannot call 'getValueAsync' if the referenced stack has secret outputs. Use 'getOutput' instead.");
                     }
-                    return data.getValueOptional().orElse(null);
+                    return data.getValueNullable();
                 });
     }
 
@@ -145,7 +145,7 @@ public class StackReference extends CustomResource {
                         throw new UnsupportedOperationException(
                                 "Cannot call 'requireValueAsync' if the referenced stack has secret outputs. Use 'requireOutput' instead.");
                     }
-                    return data.getValueOptional().orElse(null);
+                    return data.getValueNullable();
                 });
     }
 
@@ -163,7 +163,7 @@ public class StackReference extends CustomResource {
                             // output should be secret.
                             var names = secretOutputNamesData.getValueOptional();
                             return CompletableFuture.completedFuture(
-                                    names.isPresent() && names.get().contains(nameOutput.getValueOptional().orElse(null))
+                                    names.isPresent() && names.get().contains(nameOutput.getValueNullable())
                             );
                         }
                 )

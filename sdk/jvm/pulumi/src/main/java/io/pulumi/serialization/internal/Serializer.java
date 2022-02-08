@@ -180,7 +180,7 @@ public class Serializer {
                         }
 
                         if (isSecret) {
-                            return serializeAsync(String.format("%s.id", ctx), data.getValueOptional().orElse(null), keepResources).thenApply(
+                            return serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources).thenApply(
                                     /* @Nullable */ value -> {
                                         var result = new HashMap<String, /* @Nullable */ Object>();
                                         result.put(Constants.SpecialSigKey, Constants.SpecialSecretSig);
@@ -189,7 +189,7 @@ public class Serializer {
                                     }
                             );
                         }
-                        return serializeAsync(String.format("%s.id", ctx), data.getValueOptional().orElse(null), keepResources);
+                        return serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources);
                     }
             );
         }
