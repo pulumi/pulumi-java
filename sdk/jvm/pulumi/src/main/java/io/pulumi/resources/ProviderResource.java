@@ -58,7 +58,7 @@ public class ProviderResource extends CustomResource {
     @Internal
     private CompletableFuture<String> registrationIdAsync() {
         var providerUrn = TypedInputOutput.cast(this.getUrn())
-                .view(data -> data.getValueOptional().orElseThrow());
+                .view(data -> data.getValueOrDefault(""));
         var providerId = TypedInputOutput.cast(this.getId())
                 .view(data -> data.filter(String::isBlank).orElse(Constants.UnknownValue));
 
