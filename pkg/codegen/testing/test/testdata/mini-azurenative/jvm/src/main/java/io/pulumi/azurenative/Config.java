@@ -3,48 +3,50 @@
 
 package io.pulumi.azurenative;
 
+import io.pulumi.core.internal.Optionals;
+import io.pulumi.core.internal.Reflection.TypeShape;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
-import javax.annotation.Nullable;
+import java.util.Optional;
 
 public final class Config {
 
     private static final io.pulumi.Config config = io.pulumi.Config.of("azure-native");
-    public @Nullable List<String> auxiliaryTenantIds() {
-        return config.getObject("auxiliaryTenantIds",TypeShape.</* @Nullable */ List.class>builder(%!s(MISSING))/* @Nullable */ List.addParameter(String.class).build());
+    public Optional<List<String>> auxiliaryTenantIds() {
+        return config.getObject("auxiliaryTenantIds",TypeShape.<List<String>>builder(List.class).addParameter(String.class).build());
     }
-    public @Nullable String clientCertificatePassword() {
-        return config.getObject("clientCertificatePassword",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> clientCertificatePassword() {
+        return config.getObject("clientCertificatePassword",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable String clientCertificatePath() {
-        return config.getObject("clientCertificatePath",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> clientCertificatePath() {
+        return config.getObject("clientCertificatePath",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable String clientId() {
-        return config.getObject("clientId",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> clientId() {
+        return config.getObject("clientId",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable String clientSecret() {
-        return config.getObject("clientSecret",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> clientSecret() {
+        return config.getObject("clientSecret",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable Boolean disablePulumiPartnerId() {
-        return config.getObject("disablePulumiPartnerId",TypeShape.</* @Nullable */ Boolean.class>builder(%!s(MISSING))/* @Nullable */ Boolean.build());
+    public Optional<Boolean> disablePulumiPartnerId() {
+        return config.getObject("disablePulumiPartnerId",TypeShape.<Boolean>builder(Boolean.class).build());
     }
-    public @Nullable String environment() {
-        return config.getObject("environment",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> environment() {
+        return config.getObject("environment",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable String msiEndpoint() {
-        return config.getObject("msiEndpoint",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> msiEndpoint() {
+        return config.getObject("msiEndpoint",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable String partnerId() {
-        return config.getObject("partnerId",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> partnerId() {
+        return config.getObject("partnerId",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable String subscriptionId() {
-        return config.getObject("subscriptionId",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> subscriptionId() {
+        return config.getObject("subscriptionId",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable String tenantId() {
-        return config.getObject("tenantId",TypeShape.</* @Nullable */ String.class>builder(%!s(MISSING))/* @Nullable */ String.build());
+    public Optional<String> tenantId() {
+        return config.getObject("tenantId",TypeShape.<String>builder(String.class).build());
     }
-    public @Nullable Boolean useMsi() {
-        return config.getObject("useMsi",TypeShape.</* @Nullable */ Boolean.class>builder(%!s(MISSING))/* @Nullable */ Boolean.build()).orElse(Optional.ofNullable(false));
+    public Optional<Boolean> useMsi() {
+        return Optionals.combine(config.getObject("useMsi",TypeShape.<Boolean>builder(Boolean.class).build()), Optional.ofNullable(false));
     }
 }
