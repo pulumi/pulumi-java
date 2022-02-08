@@ -521,10 +521,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                     logExcessive("Getting parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
 
                                                     var parentUrn = options.getParent().isPresent()
-                                                            ? TypedInputOutput.cast(options.getParent().get().getUrn()).view(InputOutputData::getValueNullable)
-                                                            : this.rootResource.getRootResourceAsync(type).thenApply(o -> o.orElse(null)); // FIXME
+                                                            ? TypedInputOutput.cast(options.getParent().get().getUrn()).view(InputOutputData::getValueOptional)
+                                                            : this.rootResource.getRootResourceAsync(type);
                                                     return parentUrn.thenCompose(
-                                                            (@Nullable String pUrn) -> {
+                                                            (Optional<String> pUrn) -> {
                                                                 logExcessive("Got parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
                                                                 var providerRef = custom
                                                                         ? CompletableFutures.flipOptional(
@@ -593,15 +593,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                     // 'registerResource' - both adding new inherited aliases and simplifying aliases down to URNs.
                                                                                                     var aliasesFuture = CompletableFutures.allOf(
                                                                                                             res.internalGetAliases().stream()
-                                                                                                                    .map(alias -> TypedInputOutput.cast(alias).view(InputOutputData::getValueNullable))
+                                                                                                                    .map(alias -> TypedInputOutput.cast(alias).view(v -> v.getValueOrDefault("")))
                                                                                                                     .collect(toSet()))
                                                                                                             .thenApply(completed -> completed.stream()
                                                                                                                     .map(CompletableFuture::join)
-                                                                                                                    .collect(toImmutableSet()));
+                                                                                                                    .filter(Strings::isNonEmptyOrNull)
+                                                                                                                    .collect(toImmutableSet())); // the Set will make sure the aliases de-duplicated
 
                                                                                                     return aliasesFuture.thenApply(aliases -> new PrepareResult(
                                                                                                             serializedProps,
-                                                                                                            pUrn == null ? "" : pUrn,
+                                                                                                            pUrn.orElse(""),
                                                                                                             pRef.orElse(""),
                                                                                                             providerRefs,
                                                                                                             allDirectDependencyUrns,
@@ -622,7 +623,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Input<List<Resource>> resources) {
-            return TypedInputOutput.cast(resources).view(InputOutputData::getValueNullable);
+            return TypedInputOutput.cast(resources).view(d -> d.getValueOrDefault(List.of()));
         }
 
         private CompletableFuture<ImmutableSet<String>> getAllTransitivelyReferencedResourceUrnsAsync(
@@ -665,11 +666,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         }
                         return false; // Unreachable
                     })
-                    .map(resource -> TypedInputOutput.cast(resource.getUrn()).view(InputOutputData::getValueNullable))
+                    .map(resource -> TypedInputOutput.cast(resource.getUrn()).view(d -> d.getValueOrDefault("")))
                     .collect(toImmutableSet());
             return CompletableFutures.allOf(transitivelyReachableCustomResources)
                     .thenApply(ts -> ts.stream()
                             .map(CompletableFuture::join)
+                            .filter(Strings::isNonEmptyOrNull)
                             .collect(toImmutableSet())
                     );
         }
@@ -873,7 +875,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             if (options.getId().isPresent()) {
                 return TypedInputOutput.cast(options.getId().get())
-                        .view(InputOutputData::getValueNullable)
+                        .view(d -> d.getValueOrDefault(""))
                         .thenCompose(id -> {
                             if (isNonEmptyOrNull(id)) {
                                 if (!(resource instanceof CustomResource)) {
@@ -1108,12 +1110,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         ) {
             var opLabel = "monitor.registerResourceOutputs(...)";
 
-            var urnFuture = TypedInputOutput.cast(resource.getUrn()).view(InputOutputData::getValueNullable);
-            var propsFuture = TypedInputOutput.cast(outputs).view(InputOutputData::getValueNullable);
+            var urnFuture = TypedInputOutput.cast(resource.getUrn())
+                    .view(d -> d.getValueOrDefault(""));
+            var propsFuture = TypedInputOutput.cast(outputs)
+                    .view(d -> d.getValueOrDefault(Map.of()));
 
             BiFunction<String, Struct, CompletableFuture<Void>> registerResourceOutputsAsync = (urn, serialized) -> {
-                if (urn == null || urn.isBlank()) {
-                    throw new IllegalStateException(String.format("Expected urn at this point, got: '%s'", urn));
+                if (Strings.isEmptyOrNull(urn)) {
+                    throw new IllegalStateException(String.format("Expected a urn at this point, got: '%s'", urn));
                 }
                 Log.debug(String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn) +
                         (DeploymentState.ExcessiveDebugOutput ?
@@ -1693,7 +1697,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private static CompletableFuture<String> tryGetResourceUrnAsync(@Nullable Resource resource) {
             if (resource != null) {
                 try {
-                    return TypedInputOutput.cast(resource.getUrn()).view(v -> v.getValueOptional().orElse(""));
+                    return TypedInputOutput.cast(resource.getUrn()).view(v -> v.getValueOrDefault(""));
                 } catch (Throwable ignore) {
                     // getting the urn for a resource may itself fail, in that case we don't want to
                     // fail to send an logging message. we'll just send the logging message unassociated

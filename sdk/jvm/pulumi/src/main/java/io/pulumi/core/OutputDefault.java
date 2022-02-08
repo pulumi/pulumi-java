@@ -50,6 +50,7 @@ public final class OutputDefault<T> extends InputOutputImpl<T, Output<T>> implem
         return new InputDefault<>(dataFuture.copy());
     }
 
+    @Override
     public <U> Output<U> apply(Function<T, Output<U>> func) {
         return new OutputDefault<>(InputOutputData.apply(dataFuture, func.andThen(
                 o -> TypedInputOutput.cast(o).internalGetDataAsync())));
