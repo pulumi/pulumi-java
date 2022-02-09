@@ -38,27 +38,7 @@ build_sdk::
 ensure_sdk::
 	cd sdk/jvm && make ensure
 
-define generate_sdk
-	rm -rf ./providers/./$(1)
-	mkdir ./providers/./$(1)
-	curl $(2) -o ./bin/$(1)-schema.json
-	./bin/pulumi-java-gen -schema ./bin/$(1)-schema.json -out ./providers/$(1)
-	cd ./providers/$(1) && gradle build
-endef
-
-providers_all: aws-native kubernetes aws-native azure-native google-native
-
-aws-native: bin/pulumi-java-gen install_sdk
-	-$(call generate_sdk,aws-native,https://raw.githubusercontent.com/pulumi/pulumi-aws-native/master/provider/cmd/pulumi-resource-aws-native/schema.json)
-
-kubernetes: bin/pulumi-java-gen install_sdk
-	-$(call generate_sdk,kubernetes,https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/provider/cmd/pulumi-resource-kubernetes/schema.json)
-
-azure-native: bin/pulumi-java-gen install_sdk
-	-$(call generate_sdk,azure-native,https://raw.githubusercontent.com/pulumi/pulumi-azure-native/master/provider/cmd/pulumi-resource-azure-native/schema.json)
-
-google-native: bin/pulumi-java-gen install_sdk
-	-$(call generate_sdk,google-native,https://raw.githubusercontent.com/pulumi/pulumi-google-native/master/provider/cmd/pulumi-resource-google-native/schema.json)
+providers_all: provider.random.install provider.aws-native.install provider.kubernetes.install provider.azure-native.install provider.google-native.install
 
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
