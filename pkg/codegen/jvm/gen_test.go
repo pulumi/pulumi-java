@@ -51,10 +51,7 @@ func TestGeneratePackage(t *testing.T) {
 			"jvm/test":    testGeneratedPackage,
 		},
 	})
-}
 
-func TestGeneratePackagePulumiPulumi(t *testing.T) {
-	// pre set-up pulumi/pulumi submodule
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
 		GenPackage: GeneratePackage,
 		Language:   "jvm",

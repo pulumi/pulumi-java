@@ -60,9 +60,9 @@ integration_tests::	bin/pulumi-language-jvm ensure_tests provider.random.install
 ensure_tests::
 	pulumi plugin install resource random v4.3.1
 	git submodule update --init --recursive
-	cd pulumi && git pull
-	find "./pkg/codegen/testing" "-name" "schema.*" "-exec" "cp" "--parents" "{}" "../" ";"
+	cd pulumi && git pull \
+	&& find "./pkg/codegen/testing" "-name" "schema.json" "-exec" "cp" "--parents" "{}" "../" ";" \
+	&& find "./pkg/codegen/testing" "-name" "schema.yaml" "-exec" "cp" "--parents" "{}" "../" ";"
 
-codegen_tests::	bin/pulumi-language-jvm ensure_tests provider.random.install
-	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestJava -test.v
-	cd ./pkg/codegen/testing && go test ./...
+codegen_tests::	ensure_tests
+	cd ./pkg/codegen/jvm && PULUMI_ACCEPT=true go test ./...
