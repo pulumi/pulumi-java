@@ -1,3 +1,4 @@
 */sdk/java/build
 */sdk/java/.gradle
 version.txt
+*/sdk/java/gradle.properties
