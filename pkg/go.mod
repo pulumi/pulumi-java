@@ -12,6 +12,7 @@ require (
 	github.com/pulumi/pulumi/sdk/v3 v3.24.2-0.20220207111004-a1e18dae4dc0
 	github.com/stretchr/testify v1.6.1
 	google.golang.org/grpc v1.37.0
+	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
 )
 
 require (
@@ -139,6 +140,5 @@ require (
 	gopkg.in/src-d/go-git.v4 v4.13.1 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 	sourcegraph.com/sourcegraph/appdash v0.0.0-20190731080439-ebfcffb1b5c0 // indirect
 )
