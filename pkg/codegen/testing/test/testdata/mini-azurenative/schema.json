@@ -2,6 +2,29 @@
   "version": "0.0.1",
   "name": "azure-native",
   "resources": {
+    "azure-native:netapp:Volume": {
+      "properties": {
+        "usageThreshold": {
+          "type": "number",
+          "description": "Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.",
+          "default": 107374182400
+        }
+      },
+      "type": "object",
+      "required": [
+        "usageThreshold"
+      ],
+      "inputProperties": {
+        "usageThreshold": {
+          "type": "number",
+          "description": "Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.",
+          "default": 107374182400
+        }
+      },
+      "requiredInputs": [
+        "usageThreshold"
+      ]
+    },
     "azure-native:machinelearningservices:BatchDeployment": {
       "properties": {
         "kind": {

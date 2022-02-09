@@ -26,6 +26,8 @@
     "src/main/java/io/pulumi/azurenative/machinelearningservices/BatchDeployment.java",
     "src/main/java/io/pulumi/azurenative/machinelearningservices/BatchDeploymentArgs.java",
     "src/main/java/io/pulumi/azurenative/machinelearningservices/inputs/BatchDeploymentArgs.java",
+    "src/main/java/io/pulumi/azurenative/netapp/Volume.java",
+    "src/main/java/io/pulumi/azurenative/netapp/VolumeArgs.java",
     "src/main/java/io/pulumi/azurenative/web/GetWebAppSlot.java",
     "src/main/java/io/pulumi/azurenative/web/inputs/GetWebAppSlotArgs.java",
     "src/main/java/io/pulumi/azurenative/web/inputs/SiteConfigResponse.java",
