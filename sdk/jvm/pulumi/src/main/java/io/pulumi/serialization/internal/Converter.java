@@ -76,8 +76,13 @@ public class Converter {
             ));
         }
 
+        var mergedResources = ImmutableSet.<Resource>builder()
+                .addAll(resources)
+                .addAll(data.getResources())
+                .build();
+
         //noinspection unchecked
-        return InputOutputData.ofNullable(resources, (T) converted, data.isKnown(), data.isSecret());
+        return InputOutputData.ofNullable(mergedResources, (T) converted, data.isKnown(), data.isSecret());
     }
 
     @Nullable

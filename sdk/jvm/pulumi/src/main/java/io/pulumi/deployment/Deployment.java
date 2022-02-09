@@ -52,6 +52,22 @@ public interface Deployment {
     /**
      * Dynamically invokes the function {@code token}, which is offered by a provider plugin.
      * <p>
+     * The result of {@code invoke} will be an @see {@link Output<T>} resolved to the
+     * result value of the provider plugin.
+     * <p>
+     * The {@code args} inputs can be a bag of computed values
+     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link io.pulumi.core.Output}s, etc.)
+     */
+    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options);
+
+    /**
+     * Same as @see {@link #invoke(String, TypeShape, InvokeArgs, InvokeOptions)}
+     */
+    <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args);
+
+    /**
+     * Dynamically invokes the function {@code token}, which is offered by a provider plugin.
+     * <p>
      * The result of {@code invokeAsync} will be a @see {@link CompletableFuture} resolved to the
      * result value of the provider plugin.
      * <p>
