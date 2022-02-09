@@ -614,7 +614,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			if err != nil {
 				return err
 			}
-			defaultValueInitializer := typeInitializer(ctx, prop.Type, defaultValueString, defType)
+			defaultValueInitializer := typeInitializer(ctx, unOptional(prop.Type), defaultValueString, defType)
 			defaultValueCode = fmt.Sprintf("%s == null ? %s : ", paramName, defaultValueInitializer)
 		}
 		if prop.IsRequired() {
@@ -1465,16 +1465,6 @@ func (mod *modContext) genHeader() string {
 }
 
 func (mod *modContext) getConfigProperty(ctx *classFileContext, schemaType schema.Type, key string) (TypeShape, MethodCall) {
-
-	unOptional := func(t schema.Type) schema.Type {
-		switch tt := t.(type) {
-		case *schema.OptionalType:
-			return tt.ElementType
-		default:
-			return t
-		}
-	}
-
 	typeShape := func(t schema.Type) TypeShape {
 		return mod.typeString(
 			ctx,
@@ -2186,4 +2176,13 @@ func parsePackageName(packageName string) (names.FQN, error) {
 		result = result.Dot(names.Ident(p))
 	}
 	return result, nil
+}
+
+func unOptional(t schema.Type) schema.Type {
+	switch tt := t.(type) {
+	case *schema.OptionalType:
+		return tt.ElementType
+	default:
+		return t
+	}
 }

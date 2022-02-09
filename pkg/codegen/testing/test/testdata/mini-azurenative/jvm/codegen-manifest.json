@@ -25,6 +25,11 @@
     "src/main/java/io/pulumi/azurenative/logic/outputs/ListIntegrationAccountKeyVaultKeysResult.java",
     "src/main/java/io/pulumi/azurenative/machinelearningservices/BatchDeployment.java",
     "src/main/java/io/pulumi/azurenative/machinelearningservices/BatchDeploymentArgs.java",
-    "src/main/java/io/pulumi/azurenative/machinelearningservices/inputs/BatchDeploymentArgs.java"
+    "src/main/java/io/pulumi/azurenative/machinelearningservices/inputs/BatchDeploymentArgs.java",
+    "src/main/java/io/pulumi/azurenative/web/GetWebAppSlot.java",
+    "src/main/java/io/pulumi/azurenative/web/inputs/GetWebAppSlotArgs.java",
+    "src/main/java/io/pulumi/azurenative/web/inputs/SiteConfigResponse.java",
+    "src/main/java/io/pulumi/azurenative/web/outputs/GetWebAppSlotResult.java",
+    "src/main/java/io/pulumi/azurenative/web/outputs/SiteConfigResponse.java"
   ]
 }

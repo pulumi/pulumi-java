@@ -236,6 +236,17 @@
     }
   },
   "types": {
+    "azure-native:web:SiteConfigResponse": {
+      "description": "Configuration of an App Service app.",
+      "properties": {
+        "netFrameworkVersion": {
+          "type": "string",
+          "description": ".NET Framework version.",
+          "default": "v4.6"
+        }
+      },
+      "type": "object"
+    },
     "azure-native:machinelearningservices:BatchDeployment": {
       "description": "Batch inference settings per deployment.",
       "properties": {
@@ -360,6 +371,32 @@
     }
   },
   "functions": {
+    "azure-native:web:getWebAppSlot": {
+      "description": "A web app, a mobile app backend, or an API app.\nAPI Version: 2020-12-01.",
+      "inputs": {
+        "properties": {
+          "slot": {
+            "type": "string",
+            "description": "Name of the deployment slot. By default, this API returns the production slot."
+          }
+        },
+        "type": "object",
+        "required": [
+          "slot"
+        ]
+      },
+      "outputs": {
+          "description": "A web app, a mobile app backend, or an API app.",
+          "properties": {
+              "siteConfig": {
+                  "type": "object",
+                  "$ref": "#/types/azure-native:web:SiteConfigResponse",
+                  "description": "Configuration of the app."
+              }
+          },
+          "type": "object"
+      }
+    },
     "azure-native:alertsmanagement:getActionRuleByName": {
       "description": "Action rule object containing target scope, conditions and suppression logic\nAPI Version: 2019-05-05-preview.",
       "inputs": {
