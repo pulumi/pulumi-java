@@ -48,6 +48,16 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, @Nullable InvokeOptions options) {
+        return deployment.invoke(token, targetType, args, options);
+    }
+
+    @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
+        return deployment.invoke(token, targetType, args);
+    }
+
+    @Override
     public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
         return deployment.invokeAsync(token, targetType, args, options);
     }

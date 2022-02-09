@@ -1,7 +1,5 @@
 package io.pulumi.resources;
 
-import io.pulumi.core.Input;
-
 import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
@@ -16,9 +14,6 @@ public abstract class InvokeArgs extends InputArgs {
 
     @Override
     protected void validateMember(Class<?> memberType, String fullName) {
-        if (Input.class.isAssignableFrom(memberType)) {
-            throw new UnsupportedOperationException(
-                    String.format("'%s' must not be an Input<T>", fullName));
-        }
+        // No validation. A member may or may not be Input.
     }
 }

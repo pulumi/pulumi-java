@@ -369,6 +369,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
+        return this.invoke.invoke(token, targetType, args, InvokeOptions.Empty);
+    }
+
+    @Override
+    public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+        return this.invoke.invoke(token, targetType, args, options);
+    }
+
+    @Override
     public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options) {
         return this.invoke.invokeAsync(token, args, options);
     }
@@ -399,6 +409,66 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.featureSupport = Objects.requireNonNull(featureSupport);
         }
 
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
+            return invoke(token, targetType, args, InvokeOptions.Empty);
+        }
+
+        public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+            return OutputDefault.of(rawInvoke(token, targetType, args, options));
+        }
+
+        private <T> CompletableFuture<InputOutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+            Objects.requireNonNull(token);
+            Objects.requireNonNull(targetType);
+            Objects.requireNonNull(args);
+            Objects.requireNonNull(options);
+
+            // This method backs all calls that generate
+            // `Output<T>` and may include `Input<T>` values in the
+            // `args`. It needs to decide which control-flow tracking
+            // features are supported in the SDK and which ones in the
+            // provider implementing the invoke logic.
+            //
+            // Current choices are:
+            //
+            // - any resource dependency found by a recursive
+            //   traversal of `args` that awaits and inspects every
+            //   `Input<T>` will always be propagated into the
+            //   `Output<T>`; the provider cannot "swallow"
+            //   dependencies
+            //
+            // - the provider is responsible for deciding whether the
+            //   `Output<T>` is secret and known, and may add
+            //   additional dependencies
+            //
+            // This means that presence of secrets or unknowns in the
+            // `args` does not guarantee the result is secret or
+            // unknown, which differs from Pulumi SDKs that choose to
+            // implement these invokes via `apply` (currently Go and
+            // Python) and is the same as C# SDK.
+            //
+            // Differences from `call`: the `invoke` gRPC protocol
+            // does not yet support passing or returning out-of-band
+            // dependencies to the provider, and in-band `Resource`
+            // value support is subject to feature negotiation (see
+            // `monitorSupportsResourceReferences`). So `call` makes
+            // the provider fully responsible for dependency
+            // tracking, which is a good future direction also for
+            // `invoke`.
+
+            return invokeRawAsync(token, args, options)
+                    .thenApply(result -> Converter.convertValue(
+                            String.format("%s result", token),
+                            Value.newBuilder()
+                                    .setStructValue(result.serialized)
+                                    .build(),
+                            targetType,
+                            result.propertyToDependentResources.values().stream()
+                                    .flatMap(Collection::stream)
+                                    .collect(toImmutableSet()))
+                    );
+        }
+
         public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args) {
             return invokeAsync(token, args, InvokeOptions.Empty);
         }
@@ -413,17 +483,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
             return invokeRawAsync(token, args, options).thenApply(
-                    struct -> Converter.convertValue(
+                    result -> Converter.convertValue(
                             String.format("%s result", token),
                             Value.newBuilder()
-                                    .setStructValue(struct)
+                                    .setStructValue(result.serialized)
                                     .build(),
                             targetType
                     ))
                     .thenApply(InputOutputData::getValueNullable);
         }
 
-        private CompletableFuture<Struct> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
+        private CompletableFuture<Serialization.SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
@@ -434,9 +504,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var serializedFuture = args.internalToOptionalMapAsync()
                     .thenCompose(argsDict ->
                             this.featureSupport.monitorSupportsResourceReferences()
-                                    .thenCompose(supportsResourceReferences ->
-                                            Serialization.serializeAllPropertiesAsync(
-                                                    String.format("invoke:%s", token), argsDict, supportsResourceReferences
+                                    .thenCompose(keepResources ->
+                                            Serialization.serializeFilteredPropertiesAsync(
+                                                    String.format("invoke:%s", token), argsDict, ignore -> true, keepResources
                                             ))
                     );
 
@@ -456,19 +526,20 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 .setTok(token)
                                 .setProvider(provider.orElse(""))
                                 .setVersion(version.orElse(""))
-                                .setArgs(serialized)
+                                .setArgs(serialized.serialized)
                                 .setAcceptResources(!DeploymentState.DisableResourceReferences)
-                                .build());
-                    }).thenApply(response -> {
-                        // Handle failures.
-                        if (response.getFailuresCount() > 0) {
-                            var reasons = response.getFailuresList().stream()
-                                    .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
-                                    .collect(Collectors.joining("; "));
+                                .build()
+                        ).thenApply(response -> {
+                            // Handle failures.
+                            if (response.getFailuresCount() > 0) {
+                                var reasons = response.getFailuresList().stream()
+                                        .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
+                                        .collect(Collectors.joining("; "));
 
-                            throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
-                        }
-                        return response.getReturn();
+                                throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
+                            }
+                            return new Serialization.SerializationResult(response.getReturn(), serialized.propertyToDependentResources);
+                        });
                     });
         }
 
@@ -542,6 +613,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private <T> CompletableFuture<InputOutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
+            Objects.requireNonNull(token);
+            Objects.requireNonNull(targetType);
+            Objects.requireNonNull(args);
+            Objects.requireNonNull(options);
+
             return callRawAsync(token, args, self, options).thenApply(
                     r -> Converter.convertValue(
                             String.format("%s result", token),
@@ -1037,7 +1113,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         "pulumi:pulumi:getResource",
                         new GetResourceInvokeArgs(options.getUrn().get()),
                         InvokeOptions.Empty
-                ).thenApply(result -> {
+                ).thenApply(invokeResult -> {
+                    var result = invokeResult.serialized;
                     var urn = result.getFieldsMap().get(Constants.UrnPropertyName).getStringValue();
                     var id = result.getFieldsMap().get(Constants.IdPropertyName).getStringValue();
                     var state = result.getFieldsMap().get(Constants.StatePropertyName).getStructValue();
@@ -1226,6 +1303,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
             if (customOpts) {
                 request.addAllAdditionalSecretOutputs(((CustomResourceOptions) options).getAdditionalSecretOutputs());
+                request.addAllReplaceOnChanges(options.getReplaceOnChanges());
             }
 
             request.addAllIgnoreChanges(options.getIgnoreChanges());
