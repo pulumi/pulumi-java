@@ -36,7 +36,7 @@ var Object = JavaLang.Dot("Object")
 
 var GSON = Ident("com").FQN().Dot("google").Dot("gson")
 
-var JsonElement = GSON.Dot("JsonElement")
+var JSONElement = GSON.Dot("JsonElement")
 
 var Archive = PulumiCore.Dot("Archive")
 

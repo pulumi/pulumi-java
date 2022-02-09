@@ -41,7 +41,7 @@ func main() {
 func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 	var stream io.ReadCloser
 	if strings.HasPrefix(path, "http") {
-		resp, err := http.Get(path)
+		resp, err := http.Get(path) // #nosec G107
 		if err != nil {
 			return nil, err
 		}
