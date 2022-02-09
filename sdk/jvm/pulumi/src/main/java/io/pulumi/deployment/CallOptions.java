@@ -1,8 +1,9 @@
 package io.pulumi.deployment;
 
 import io.grpc.Internal;
+import io.pulumi.core.internal.Reflection;
 import io.pulumi.core.internal.Visitor;
-import io.pulumi.resources.InvokeArgs;
+import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
 
@@ -12,12 +13,12 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
- * Options to help control the behavior of @see {@link Deployment#invokeAsync(String, io.pulumi.core.internal.Reflection.TypeShape, InvokeArgs, InvokeOptions)}.
+ * Options to help control the behavior of  @see {@link Deployment#call(String, Reflection.TypeShape, CallArgs, Resource, CallOptions)}"/>.
  */
 @ParametersAreNonnullByDefault
-public final class InvokeOptions {
+public final class CallOptions {
 
-    public static InvokeOptions Empty = new InvokeOptions();
+    public static CallOptions Empty = new CallOptions();
 
     @Nullable
     private final Resource parent;
@@ -26,11 +27,11 @@ public final class InvokeOptions {
     @Nullable
     private final String version;
 
-    public InvokeOptions() {
+    public CallOptions() {
         this(null, null, null);
     }
 
-    public InvokeOptions(@Nullable Resource parent, @Nullable ProviderResource provider, @Nullable String version) {
+    public CallOptions(@Nullable Resource parent, @Nullable ProviderResource provider, @Nullable String version) {
         this.parent = parent;
         this.provider = provider;
         this.version = version;
@@ -61,12 +62,12 @@ public final class InvokeOptions {
     }
 
     @Internal
-    public <T> T accept(Visitor<T, InvokeOptions> visitor) {
+    public <T> T accept(Visitor<T, CallOptions> visitor) {
         return visitor.visit(this);
     }
 
     @Internal
-    public static class NestedProviderVisitor implements Visitor<Optional<ProviderResource>, InvokeOptions> {
+    public static class NestedProviderVisitor implements Visitor<Optional<ProviderResource>, CallOptions> {
 
         private final String token;
 
@@ -79,7 +80,7 @@ public final class InvokeOptions {
         }
 
         @Override
-        public Optional<ProviderResource> visit(InvokeOptions options) {
+        public Optional<ProviderResource> visit(CallOptions options) {
             return options.getProvider().or(
                     () -> options.getParent().map(p -> Resource.internalGetProvider(p, token))
             );

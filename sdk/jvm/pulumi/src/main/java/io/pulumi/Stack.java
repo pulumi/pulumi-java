@@ -1,6 +1,5 @@
 package io.pulumi;
 
-import com.google.common.collect.ImmutableMap;
 import io.grpc.Internal;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
@@ -22,6 +21,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
+import static com.google.common.collect.ImmutableMap.toImmutableMap;
 
 public class Stack extends ComponentResource {
 
@@ -142,11 +142,12 @@ public class Stack extends ComponentResource {
         }
 
 
-        this.outputs = Output.of(
-                ImmutableMap.copyOf(outputs.entrySet().stream().collect(
-                        Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)
-                ))
-        );
+        this.outputs = Output.of(outputs.entrySet().stream().collect(
+                toImmutableMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (o1, o2) -> {
+                            throw new IllegalStateException("Duplicate key");
+                        })
+        ));
         this.registerOutputs(this.outputs);
     }
 

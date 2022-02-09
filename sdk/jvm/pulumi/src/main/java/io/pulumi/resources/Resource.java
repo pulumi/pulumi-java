@@ -48,6 +48,12 @@ public abstract class Resource {
 
     protected final boolean remote;
 
+    @Nullable
+    private final ProviderResource provider;
+
+    @Nullable
+    private final String version;
+
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
      */
@@ -85,6 +91,8 @@ public abstract class Resource {
             this.transformations = List.of();
             this.aliases = List.of();
             this.providers = Map.of();
+            this.provider = null;
+            this.version = null;
             return;
         }
 
@@ -166,8 +174,9 @@ public abstract class Resource {
             // Make a copy of the aliases array, and add to it any implicit aliases inherited from its parent
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
+                //noinspection ConstantConditions
                 options.aliases.add(
-                        Urn.internalInheritedChildAlias(name, options.parent.getResourceName(), parentAlias, type).toInput()
+                        Urn.internalInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type).toInput()
                 );
             }
 
@@ -180,16 +189,19 @@ public abstract class Resource {
             if (provider == null) {
                 if (options.parent != null) {
                     // If no provider was given, but we have a parent, then inherit the provider from our parent.
-                    options.provider = internalGetProvider(options.parent, type);
+                    //noinspection ConstantConditions
+                    options.provider = internalGetProvider(options.parent, this.type);
                 }
             } else {
                 // If a provider was specified, add it to the providers map under this type's package so that
                 // any children of this resource inherit its provider.
-                var typeComponents = type.split(":");
+                //noinspection ConstantConditions
+                var typeComponents = this.type.split(":");
                 if (typeComponents.length == 3) {
                     var pkg = typeComponents[0];
                     thisProviders.put(pkg, provider);
                 }
+                // TODO: why do we silently ignore invalid type?
             }
         } else {
             // Note: we've checked above that at most one of options.provider or options.providers is set.
@@ -205,6 +217,8 @@ public abstract class Resource {
         }
 
         this.protect = options.protect;
+        this.provider = custom ? options.provider : null;
+        this.version = options.version;
 
         this.providers = Map.copyOf(thisProviders);
 
@@ -232,12 +246,16 @@ public abstract class Resource {
     static public ProviderResource internalGetProvider(Resource resource, String moduleMember) {
         var memComponents = moduleMember.split(":");
         if (memComponents.length != 3) {
+            // TODO: why do we silently ignore invalid type?
             return null;
         }
 
         return resource.providers.getOrDefault(memComponents[0], null);
     }
 
+    /**
+     * A list of aliases applied to this resource.
+     */
     @Internal
     public List<Input<String>> internalGetAliases() {
         return this.aliases;
@@ -248,10 +266,32 @@ public abstract class Resource {
         return this.remote;
     }
 
+    /**
+     * The specified provider or provider determined from the parent for custom resources.
+     */
+    @Internal
+    public Optional<ProviderResource> internalGetProvider() {
+        return Optional.ofNullable(this.provider);
+    };
+
+    /**
+     * The specified provider version.
+     */
+    @Internal
+    public Optional<String> internalGetVersion() {
+        return Optional.ofNullable(this.version);
+    }
+
+    /**
+     * The type assigned to the resource at construction.
+     */
     public String getResourceType() {
         return type;
     }
 
+    /**
+     * The name assigned to the resource at construction.
+     */
     public String getResourceName() {
         return name;
     }

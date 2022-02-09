@@ -7,10 +7,14 @@ import io.pulumi.Stack;
 import io.pulumi.core.Urn;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.deployment.internal.Monitor;
+import io.pulumi.resources.Resource;
 import io.pulumi.serialization.internal.Deserializer;
 import io.pulumi.serialization.internal.Serializer;
-import pulumirpc.Provider;
-import pulumirpc.Resource;
+import pulumirpc.Provider.CallRequest;
+import pulumirpc.Provider.CallResponse;
+import pulumirpc.Provider.InvokeRequest;
+import pulumirpc.Provider.InvokeResponse;
+import pulumirpc.Resource.*;
 
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
@@ -19,23 +23,23 @@ public class MockMonitor implements Monitor {
 
     private final Serializer serializer = new Serializer(false);
     private final Map<String, ImmutableMap<String, Object>> registeredResources = Collections.synchronizedMap(new HashMap<>());
-    public final List<io.pulumi.resources.Resource> resources = Collections.synchronizedList(new LinkedList<>());
     private final Mocks mocks;
+    public final List<Resource> resources = Collections.synchronizedList(new LinkedList<>());
 
     public MockMonitor(Mocks mocks) {
         this.mocks = Objects.requireNonNull(mocks);
     }
 
     @Override
-    public CompletableFuture<Resource.SupportsFeatureResponse> supportsFeatureAsync(Resource.SupportsFeatureRequest request) {
+    public CompletableFuture<SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request) {
         var hasSupport = "secrets".equals(request.getId()) || "resourceReferences".equals(request.getId());
         return CompletableFuture.completedFuture(
-                Resource.SupportsFeatureResponse.newBuilder().setHasSupport(hasSupport).build()
+                SupportsFeatureResponse.newBuilder().setHasSupport(hasSupport).build()
         );
     }
 
     @Override
-    public CompletableFuture<Provider.InvokeResponse> invokeAsync(Provider.InvokeRequest request) {
+    public CompletableFuture<InvokeResponse> invokeAsync(InvokeRequest request) {
         var args = deserializeToMap(request.getArgs());
 
         CompletableFuture<Map<String, Object>> toBeSerialized;
@@ -50,11 +54,24 @@ public class MockMonitor implements Monitor {
 
         return toBeSerialized
                 .thenCompose(this::serializeToStruct)
-                .thenApply(struct -> Provider.InvokeResponse.newBuilder().setReturn(struct).build());
+                .thenApply(struct -> InvokeResponse.newBuilder().setReturn(struct).build());
     }
 
     @Override
-    public CompletableFuture<Resource.ReadResourceResponse> readResourceAsync(io.pulumi.resources.Resource resource, Resource.ReadResourceRequest request) {
+    public CompletableFuture<CallResponse> callAsync(CallRequest request) {
+        // For now, we'll route both Invoke and Call through IMocks.CallAsync.
+        var args = deserializeToMap(request.getArgs());
+
+        var toBeSerialized = mocks.callAsync(
+                new MockCallArgs(request.getTok(), args, request.getProvider())
+        );
+        return toBeSerialized
+                .thenCompose(this::serializeToStruct)
+                .thenApply(struct -> CallResponse.newBuilder().setReturn(struct).build());
+    }
+
+    @Override
+    public CompletableFuture<ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
         return mocks.newResourceAsync(new MockResourceArgs(
                 request.getType(),
                 request.getName(),
@@ -76,7 +93,7 @@ public class MockMonitor implements Monitor {
 
                         registeredResources.put(urn, builder.build());
 
-                        return Resource.ReadResourceResponse.newBuilder()
+                        return ReadResourceResponse.newBuilder()
                                 .setUrn(urn)
                                 .setProperties(Serializer.createStruct(serializedState))
                                 .build();
@@ -85,12 +102,12 @@ public class MockMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<Resource.RegisterResourceResponse> registerResourceAsync(io.pulumi.resources.Resource resource, Resource.RegisterResourceRequest request) {
+    public CompletableFuture<RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
         this.resources.add(resource);
 
         if (Stack.InternalRootPulumiStackTypeName.equals(request.getType())) {
             return CompletableFuture.completedFuture(
-                    Resource.RegisterResourceResponse.newBuilder()
+                    RegisterResourceResponse.newBuilder()
                             .setUrn(Urn.create(request.getParent(), request.getType(), request.getName()))
                             .setObject(Struct.newBuilder().build())
                             .build()
@@ -115,7 +132,7 @@ public class MockMonitor implements Monitor {
                                 "state", serializedState
                         ));
 
-                        return Resource.RegisterResourceResponse.newBuilder()
+                        return RegisterResourceResponse.newBuilder()
                                 .setId(id.isPresent() ? id.get() : request.getImportId())
                                 .setUrn(urn)
                                 .setObject(Serializer.createStruct(serializedState))
@@ -125,7 +142,7 @@ public class MockMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<Void> registerResourceOutputsAsync(Resource.RegisterResourceOutputsRequest request) {
+    public CompletableFuture<Void> registerResourceOutputsAsync(RegisterResourceOutputsRequest request) {
         return CompletableFuture.completedFuture(null);
     }
 
