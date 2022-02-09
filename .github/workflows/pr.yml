@@ -60,3 +60,18 @@ jobs:
         run: make install_random
       - name: Integration tests
         run: make integration_tests
+  go-lint:
+    container: golangci/golangci-lint:latest
+    name: Lint ${{ matrix.directory }}
+    strategy:
+      matrix:
+        directory: [ pkg ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.PR_COMMIT_SHA }}
+      - name: Lint ${{ matrix.directory }}
+        run: |
+          cd ${{ matrix.directory }} && golangci-lint run -c ../.golangci.yml
