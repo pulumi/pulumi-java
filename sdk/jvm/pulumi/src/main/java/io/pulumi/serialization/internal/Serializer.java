@@ -377,6 +377,7 @@ public class Serializer {
         );
     }
 
+    // TODO: should we omit null's like serializeMapAsync()?
     private CompletableFuture<ArrayList</* @Nullable */ Object>> serializeListAsync(String ctx, List</* @Nullable */ Object> list, boolean keepResources) {
         if (excessiveDebugOutput) {
             Log.debug(String.format("Serialize property[%s]: Hit list", ctx));
@@ -391,14 +392,11 @@ public class Serializer {
             resultFutures.add(serializeAsync(String.format("%s[%s]", ctx, i), list.get(i), keepResources));
         }
 
-        return CompletableFutures.allOf(resultFutures).thenApply(
-                completedFutures -> {
-                    var results = new ArrayList</* @Nullable */>(completedFutures.size());
-                    for (var future : completedFutures) {
-                        results.add(future.join());
-                    }
-                    return results;
-                }
+        // ArrayList will preserve the null's
+        return CompletableFutures.flatAllOf(resultFutures).thenApply(
+                completed -> completed.stream()
+                        .map(f -> f.join())
+                        .collect(Collectors.toCollection(ArrayList::new))
         );
     }
 
@@ -423,20 +421,8 @@ public class Serializer {
             resultFutures.put(stringKey, serializeAsync(String.format("%s.%s", ctx, stringKey), map.get(stringKey), keepResources));
         }
 
-        return CompletableFutures.allOf(resultFutures).thenApply(
-                completedFutures -> {
-                    var results = new HashMap<String, /* @Nullable */ Object>();
-                    for (var entry : completedFutures.entrySet()) {
-                        var key = entry.getKey();
-                        var value = /* @Nullable */ entry.getValue().join();
-                        // Omit the nulls. We treat properties with null values as if they do not exist.
-                        if (value != null) {
-                            results.put(key, value);
-                        }
-                    }
-                    return results;
-                }
-        );
+        // allOf() will omit the nulls, we treat properties with null values as if they do not exist.
+        return CompletableFutures.allOf(resultFutures);
     }
 
     /**

@@ -11,13 +11,14 @@ import io.pulumi.Log;
 import io.pulumi.Stack;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputDefault;
 import io.pulumi.core.Tuples;
-import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.Tuples.Tuple4;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.deployment.CallOptions;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.exceptions.LogException;
@@ -28,7 +29,8 @@ import io.pulumi.serialization.internal.*;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
-import pulumirpc.Provider;
+import pulumirpc.Provider.CallRequest;
+import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
@@ -36,7 +38,6 @@ import pulumirpc.Resource.SupportsFeatureRequest;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.lang.reflect.InvocationTargetException;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.*;
@@ -48,12 +49,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
+import static io.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
 import static io.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
 import static io.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static io.pulumi.core.internal.Exceptions.getStackTrace;
+import static io.pulumi.core.internal.PulumiCollectors.toTupleOfMaps2;
 import static io.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
@@ -63,6 +67,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final DeploymentState state;
     private final FeatureSupport featureSupport;
     private final Invoke invoke;
+    private final Call call;
     private final Prepare prepare;
     private final ReadOrRegisterResource readOrRegisterResource;
     private final ReadResource readResource;
@@ -86,6 +91,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.invoke = new Invoke(state.monitor, this.featureSupport);
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.featureSupport, this.rootResource);
+        this.call = new Call(state.monitor, this.prepare);
         this.readResource = new ReadResource(prepare, state.monitor);
         this.registerResource = new RegisterResource(prepare, state.monitor);
         this.readOrRegisterResource = new ReadOrRegisterResource(state.runner, this.invoke, this.readResource, this.registerResource, state.isDryRun);
@@ -106,9 +112,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         try {
             var monitorTarget = getEnvironmentVariable("PULUMI_MONITOR").orThrow(startErrorSupplier);
-            var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);;
-            var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);;
-            var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);;
+            var engineTarget = getEnvironmentVariable("PULUMI_ENGINE").orThrow(startErrorSupplier);
+            var project = getEnvironmentVariable("PULUMI_PROJECT").orThrow(startErrorSupplier);
+            var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
 //            var pwd = getEnvironmentVariable("PULUMI_PWD");
             var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
 //            var queryMode = getBooleanEnvironmentVariable("PULUMI_QUERY_MODE");
@@ -363,23 +369,23 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
-    public CompletableFuture<Void> invokeAsyncVoid(String token, InvokeArgs args, InvokeOptions options) {
-        return invoke.invokeAsyncVoid(token, args, options);
+    public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options) {
+        return this.invoke.invokeAsync(token, args, options);
     }
 
     @Override
-    public CompletableFuture<Void> invokeAsyncVoid(String token, InvokeArgs args) {
-        return invoke.invokeAsyncVoid(token, args);
+    public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args) {
+        return this.invoke.invokeAsync(token, args);
     }
 
     @Override
     public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-        return invoke.invokeAsync(token, targetType, args, options);
+        return this.invoke.invokeAsync(token, targetType, args, options);
     }
 
     @Override
     public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args) {
-        return invoke.invokeAsync(token, targetType, args);
+        return this.invoke.invokeAsync(token, targetType, args);
     }
 
     @ParametersAreNonnullByDefault
@@ -393,11 +399,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.featureSupport = Objects.requireNonNull(featureSupport);
         }
 
-        public CompletableFuture<Void> invokeAsyncVoid(String token, InvokeArgs args) {
-            return invokeAsyncVoid(token, args, InvokeOptions.Empty);
+        public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args) {
+            return invokeAsync(token, args, InvokeOptions.Empty);
         }
 
-        public CompletableFuture<Void> invokeAsyncVoid(String token, InvokeArgs args, InvokeOptions options) {
+        public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options) {
             return invokeRawAsync(token, args, options).thenApply(unused -> null);
         }
 
@@ -422,8 +428,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
 
-            var label = String.format("Invoking function: token='%s' asynchronously", token);
-            Log.debug(label);
+            Log.debug(String.format("Invoking function: token='%s' asynchronously", token));
 
             // Wait for all values to be available, and then perform the RPC.
             var serializedFuture = args.internalToOptionalMapAsync()
@@ -436,33 +441,30 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     );
 
             CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
-                    () -> getProviderFrom(token, options)
-                            .map(p -> p.accept(ProviderResource.registrationIdVisitor()))
+                    () -> getProviderFrom(token, options).map(p -> p.accept(ProviderResource.registrationIdVisitor()))
             );
 
             return CompletableFuture.allOf(serializedFuture, providerFuture)
                     .thenCompose(unused -> {
                         var serialized = serializedFuture.join();
                         var provider = providerFuture.join();
+                        var version = options.getVersion();
 
                         Log.debug(String.format("Invoke RPC prepared: token='%s'", token) +
                                 (DeploymentState.ExcessiveDebugOutput ? String.format(", obj='%s'", serialized) : ""));
-                        return this.monitor.invokeAsync(Provider.InvokeRequest.newBuilder()
+                        return this.monitor.invokeAsync(InvokeRequest.newBuilder()
                                 .setTok(token)
                                 .setProvider(provider.orElse(""))
-                                .setVersion(options.getVersion().orElse(""))
+                                .setVersion(version.orElse(""))
                                 .setArgs(serialized)
                                 .setAcceptResources(!DeploymentState.DisableResourceReferences)
                                 .build());
                     }).thenApply(response -> {
+                        // Handle failures.
                         if (response.getFailuresCount() > 0) {
-                            StringBuilder reasons = new StringBuilder();
-                            for (var reason : response.getFailuresList()) {
-                                if (!Objects.equals(reasons.toString(), "")) {
-                                    reasons.append("; ");
-                                }
-                                reasons.append(String.format("%s (%s)", reason.getReason(), reason.getProperty()));
-                            }
+                            var reasons = response.getFailuresList().stream()
+                                    .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
+                                    .collect(Collectors.joining("; "));
 
                             throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
                         }
@@ -470,13 +472,189 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     });
         }
 
-        private Optional<ProviderResource> getProviderFrom(String token, InvokeOptions options) {
+        private static Optional<ProviderResource> getProviderFrom(String token, InvokeOptions options) {
             return options.accept(InvokeOptions.NestedProviderVisitor.of(token));
         }
     }
 
     private static class InvokeException extends RuntimeException {
         public InvokeException(String message) {
+            super(message);
+        }
+    }
+
+    public <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
+        return this.call.call(token, targetType, args, self, options);
+    }
+
+    public <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self) {
+        return this.call.call(token, targetType, args, self);
+    }
+
+    public <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
+        return this.call.call(token, targetType, args);
+    }
+
+    public void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
+        this.call.call(token, args, self, options);
+    }
+
+    public void call(String token, CallArgs args, @Nullable Resource self) {
+        this.call.call(token, args, self);
+    }
+
+    public void call(String token, CallArgs args) {
+        this.call.call(token, args);
+    }
+
+    @ParametersAreNonnullByDefault
+    private final static class Call {
+        private final Monitor monitor;
+        private final Prepare prepare;
+
+        public Call(Monitor monitor, Prepare prepare) {
+            this.monitor = Objects.requireNonNull(monitor);
+            this.prepare = Objects.requireNonNull(prepare);
+        }
+
+        void call(String token, CallArgs args) {
+            call(token, args, null, CallOptions.Empty);
+        }
+
+        void call(String token, CallArgs args, @Nullable Resource self) {
+            call(token, args, self, CallOptions.Empty);
+        }
+
+        void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
+            OutputDefault.of(callRawAsync(token, args, self, options).thenApply(unused -> null));
+        }
+
+        <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
+            return call(token, targetType, args, null, CallOptions.Empty);
+        }
+
+        <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self) {
+            return call(token, targetType, args, self, CallOptions.Empty);
+        }
+
+        <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
+            return OutputDefault.of(callAsync(token, targetType, args, self, options));
+        }
+
+        private <T> CompletableFuture<InputOutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
+            return callRawAsync(token, args, self, options).thenApply(
+                    r -> Converter.convertValue(
+                            String.format("%s result", token),
+                            Value.newBuilder()
+                                    .setStructValue(r.result)
+                                    .build(),
+                            targetType,
+                            r.dependencies
+                    )
+            );
+        }
+
+        private CompletableFuture<CallRawAsyncResult> callRawAsync(
+                String token, CallArgs args, @Nullable Resource self, CallOptions options) {
+            Objects.requireNonNull(token);
+            Objects.requireNonNull(args);
+            Objects.requireNonNull(options);
+
+            Log.debug(String.format("Calling function: token='%s' asynchronously", token));
+
+            // Wait for all values to be available, and then perform the RPC.
+            var serializedFuture = args.internalToOptionalMapAsync()
+                    .thenApply(argsDict -> self == null
+                            ? argsDict
+                            : ImmutableMap.<String, Optional<Object>>builder()
+                            .putAll(argsDict)
+                            .put("__self__", Optional.of(self))
+                            .build()
+                    )
+                    .thenCompose(
+                            argsDict -> Serialization.serializeFilteredPropertiesAsync(
+                                    String.format("call:%s", token), argsDict, ignore -> true, true)
+                    );
+
+
+            // Determine the provider and version to use.
+            var provider = self == null ? getProviderFrom(token, options) : self.internalGetProvider();
+            var version = self == null ? options.getVersion() : self.internalGetVersion();
+
+            CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
+                    () -> provider.map(p -> p.accept(ProviderResource.registrationIdVisitor()))
+            );
+
+            return CompletableFuture.allOf(serializedFuture, providerFuture)
+                    .thenCompose(unused -> {
+                        var serialized = serializedFuture.join();
+                        var providerReference = providerFuture.join();
+
+                        // Add arg dependencies to the request.
+                        var argDependencies = CompletableFutures.allOf(
+                                serialized.propertyToDependentResources.entrySet().stream().collect(Collectors.toMap(
+                                        Map.Entry::getKey,
+                                        e -> {
+                                            var directDependencies = ImmutableSet.copyOf(e.getValue());
+                                            return prepare.getAllTransitivelyReferencedResourceUrnsAsync(directDependencies)
+                                                    .thenApply(
+                                                            urns -> CallRequest.ArgumentDependencies.newBuilder()
+                                                                    .addAllUrns(urns)
+                                                                    .build()
+                                                    );
+                                        }
+                                ))
+                        );
+
+                        Log.debug(String.format("Call RPC prepared: token='%s'", token) +
+                                (DeploymentState.ExcessiveDebugOutput ? String.format(", obj='%s'", serialized) : ""));
+
+                        // Kick off the call.
+                        return argDependencies.thenCompose(deps ->
+                                this.monitor.callAsync(CallRequest.newBuilder()
+                                        .setTok(token)
+                                        .setProvider(providerReference.orElse(""))
+                                        .setVersion(version.orElse(""))
+                                        .setArgs(serialized.serialized)
+                                        .putAllArgDependencies(deps)
+                                        .build()
+                                ));
+                    }).thenApply(response -> {
+                        // Handle failures.
+                        if (response.getFailuresCount() > 0) {
+                            var reasons = response.getFailuresList().stream()
+                                    .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
+                                    .collect(Collectors.joining("; "));
+
+                            throw new CallException(String.format("Call of '%s' failed: %s", token, reasons));
+                        }
+
+                        // Unmarshal return dependencies.
+                        var dependencies = response.getReturnDependenciesMap().values().stream()
+                                .flatMap(deps -> deps.getUrnsList().stream().map(DependencyResource::new))
+                                .map(r -> (Resource) r)
+                                .collect(toImmutableSet());
+                        return new CallRawAsyncResult(response.getReturn(), dependencies);
+                    });
+        }
+
+        private static class CallRawAsyncResult {
+            public final Struct result;
+            public final ImmutableSet<Resource> dependencies;
+
+            private CallRawAsyncResult(Struct result, ImmutableSet<Resource> dependencies) {
+                this.result = Objects.requireNonNull(result);
+                this.dependencies = Objects.requireNonNull(dependencies);
+            }
+        }
+
+        private static Optional<ProviderResource> getProviderFrom(String token, CallOptions options) {
+            return options.accept(CallOptions.NestedProviderVisitor.of(token));
+        }
+    }
+
+    private static class CallException extends RuntimeException {
+        public CallException(String message) {
             super(message);
         }
     }
@@ -527,8 +705,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                             (Optional<String> pUrn) -> {
                                                                 logExcessive("Got parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
                                                                 var providerRef = custom
-                                                                        ? CompletableFutures.flipOptional(
-                                                                                options.getProvider().map(p -> p.accept(ProviderResource.registrationIdVisitor())))
+                                                                        ? CompletableFutures.flipOptional(options.getProvider().map(p -> p.accept(ProviderResource.registrationIdVisitor())))
                                                                         : CompletableFuture.completedFuture(Optional.<String>empty());
 
                                                                 return providerRef.thenCompose(
@@ -539,7 +716,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                                                                 // TODO: C# had the following logic here:
                                                                                 //          "If only the Provider opt is set, move it to the Providers list for further processing."
-                                                                                //       But the ComponentResourceOptions should guarantee the desired semantics.
+                                                                                //       But our ComponentResourceOptions should guarantee the desired semantics.
                                                                                 //       It would be great to add more tests and maybe remove 'provider' in favour of 'providers' only
 
                                                                                 providerFutures = CompletableFutures.allOf(
@@ -548,9 +725,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                         p -> p.accept(ProviderResource.packageVisitor()),
                                                                                                         p -> p.accept(ProviderResource.registrationIdVisitor())
                                                                                                 )))
-                                                                                        .thenApply(completed -> completed.entrySet().stream().collect(
-                                                                                                toImmutableMap(Map.Entry::getKey, entry -> entry.getValue().join())
-                                                                                        ));
+                                                                                        .thenApply(ImmutableMap::copyOf);
                                                                             } else {
                                                                                 providerFutures = CompletableFuture.completedFuture(ImmutableMap.of());
                                                                             }
@@ -579,10 +754,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                     propertyToDirectDependencyUrnFutures.put(propertyName, urns);
                                                                                 }
 
-                                                                                var propertyToDirectDependencyUrnsFuture = CompletableFutures.allOf(propertyToDirectDependencyUrnFutures)
-                                                                                        .thenApply(futureMap -> futureMap.entrySet().stream().collect(
-                                                                                                toImmutableMap(Map.Entry::getKey, entry -> entry.getValue().join())
-                                                                                        ));
+                                                                                var propertyToDirectDependencyUrnsFuture =
+                                                                                        CompletableFutures.allOf(propertyToDirectDependencyUrnFutures)
+                                                                                                .thenApply(ImmutableMap::copyOf);
 
                                                                                 return allDirectDependencyUrnsFuture.build().thenCompose(
                                                                                         allDirectDependencyUrns -> propertyToDirectDependencyUrnsFuture.thenCompose(
@@ -596,7 +770,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                                     .map(alias -> TypedInputOutput.cast(alias).view(v -> v.getValueOrDefault("")))
                                                                                                                     .collect(toSet()))
                                                                                                             .thenApply(completed -> completed.stream()
-                                                                                                                    .map(CompletableFuture::join)
                                                                                                                     .filter(Strings::isNonEmptyOrNull)
                                                                                                                     .collect(toImmutableSet())); // the Set will make sure the aliases de-duplicated
 
@@ -670,7 +843,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                     .collect(toImmutableSet());
             return CompletableFutures.allOf(transitivelyReachableCustomResources)
                     .thenApply(ts -> ts.stream()
-                            .map(CompletableFuture::join)
                             .filter(Strings::isNonEmptyOrNull)
                             .collect(toImmutableSet())
                     );
@@ -1234,40 +1406,35 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         private static CompletableFuture<SerializationResult> serializeFilteredPropertiesAsync(
                 String label, Map<String, Optional<Object>> args, Predicate<String> acceptKey, boolean keepResources) {
-            var propertyToDependentResources = ImmutableMap.<String, Set<Resource>>builder();
             var resultFutures = new HashMap<String, CompletableFuture</* @Nullable */ Object>>();
             var temporaryResources = new HashMap<String, Set<Resource>>();
 
+            // FIXME: this is ugly, try to factor out a method with named tuple as result type
             for (var arg : args.entrySet()) {
                 var key = arg.getKey();
                 var value = arg.getValue();
                 if (acceptKey.test(key)) {
-                    // We treat properties with null values as if they do not exist.
-                    var serializer = new Serializer(DeploymentState.ExcessiveDebugOutput);
-                    resultFutures.put(key, serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources));
-                    temporaryResources.put(key, serializer.dependentResources); // FIXME: this is ugly
+                    // We treat properties with null values as if they do not exist, CompletableFutures.allOf does it for us
+                    var serializer = new Serializer(DeploymentState.ExcessiveDebugOutput); // serializer is mutable, that's why it's inside the loop
+                    var v = serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources);
+                    resultFutures.put(key, v);
+                    temporaryResources.put(key, serializer.dependentResources);
                 }
             }
 
-            return CompletableFutures.allOf(resultFutures)
-                    .thenApply(
-                            completedFutures -> {
-                                var results = new HashMap<String, /* @Nullable */ Object>();
-                                for (var entry : completedFutures.entrySet()) {
-                                    var key = entry.getKey();
-                                    var value = /* @Nullable */ entry.getValue().join();
-                                    // We treat properties with null values as if they do not exist.
-                                    if (value != null) {
-                                        results.put(key, value);
-                                        propertyToDependentResources.put(key, temporaryResources.get(key)); // FIXME: this is ugly
-                                    }
-                                }
-                                return results;
-                            })
-                    .thenApply(
+            return CompletableFutures.flatAllOf(resultFutures)
+                    .thenApply(results -> results.entrySet().stream()
+                            .filter(ignoreNullMapValues())
+                            .collect(toTupleOfMaps2(
+                                    Map.Entry::getKey,
+                                    Map.Entry::getKey,
+                                    e -> e.getValue().join(),
+                                    e -> temporaryResources.get(e.getKey())
+                            ))
+                    ).thenApply(
                             results -> new SerializationResult(
-                                    Serializer.createStruct(results),
-                                    propertyToDependentResources.build()
+                                    Serializer.createStruct(results.t1),
+                                    results.t2
                             )
                     );
         }
@@ -1283,10 +1450,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 this.serialized = result;
                 this.propertyToDependentResources = propertyToDependentResources;
             }
-
-            public Tuple2<Struct, ImmutableMap<String, Set<Resource>>> deconstruct() {
-                return Tuples.of(serialized, propertyToDependentResources);
-            }
         }
     }
 
@@ -1295,7 +1458,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @VisibleForTesting
     static class DeploymentState {
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
-        public static final boolean ExcessiveDebugOutput = false;
+        public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
 
         public final DeploymentImpl.Config config;
         public final String projectName;

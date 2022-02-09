@@ -16,9 +16,9 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
+import static java.util.stream.Collectors.toMap;
 
 /**
  * Base type for all input argument classes.
@@ -38,8 +38,8 @@ public abstract class InputArgs {
     public CompletableFuture<Map<Object, /* @Nullable */ Object>> internalToNullableMapAsync() {
         return internalToOptionalMapAsync()
                 .thenApply(map -> map.entrySet()
-                    .stream()
-                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue))
+                        .stream()
+                        .collect(toMap(Map.Entry::getKey, Map.Entry::getValue))
                 );
     }
 

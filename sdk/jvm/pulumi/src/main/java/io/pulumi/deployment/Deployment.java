@@ -2,10 +2,13 @@ package io.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
+import io.pulumi.core.Output;
 import io.pulumi.core.internal.Reflection.TypeShape;
 import io.pulumi.deployment.internal.DeploymentInstanceHolder;
 import io.pulumi.deployment.internal.DeploymentInternal;
+import io.pulumi.resources.CallArgs;
 import io.pulumi.resources.InvokeArgs;
+import io.pulumi.resources.Resource;
 import io.pulumi.resources.StackOptions;
 
 import javax.annotation.Nonnull;
@@ -53,7 +56,7 @@ public interface Deployment {
      * result value of the provider plugin.
      * <p>
      * The {@code args} inputs can be a bag of computed values
-     * (including, {@code T}s, @see {@link CompletableFuture}, @see {@link io.pulumi.core.Output}, s etc.).
+     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link io.pulumi.core.Output}s, etc.).
      */
     <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options);
 
@@ -65,12 +68,48 @@ public interface Deployment {
     /**
      * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}, however the return value is ignored.
      */
-    CompletableFuture<Void> invokeAsyncVoid(String token, InvokeArgs args, InvokeOptions options);
+    CompletableFuture<Void> invokeAsync(String token, InvokeArgs args, InvokeOptions options);
 
     /**
      * Same as @see {@link #invokeAsync(String, TypeShape, InvokeArgs, InvokeOptions)}, however the return value is ignored.
      */
-    CompletableFuture<Void> invokeAsyncVoid(String token, InvokeArgs args);
+    CompletableFuture<Void> invokeAsync(String token, InvokeArgs args);
+
+    /**
+     * Dynamically calls the function {@code token}, which is offered by a provider plugin.
+     * <p>
+     * The result of {@code call} will be a @see {@link Output<T>} resolved to the
+     * result value of the provider plugin.
+     * <p>
+     * The {@code args} inputs can be a bag of computed values
+     * (including, {@code T}s, @see {@link CompletableFuture}s, @see {@link io.pulumi.core.Output}s, etc.).
+     */
+    <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, @Nullable CallOptions options);
+
+    /**
+     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}
+     */
+    <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self);
+
+    /**
+     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}
+     */
+    <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args);
+
+    /**
+     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}, however the return value is ignored.
+     */
+    void call(String token, CallArgs args, @Nullable Resource self, @Nullable CallOptions options);
+
+    /**
+     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}, however the return value is ignored.
+     */
+    void call(String token, CallArgs args, @Nullable Resource self);
+
+    /**
+     * Same as {@link #call(String, TypeShape, CallArgs, Resource, CallOptions)}, however the return value is ignored.
+     */
+    void call(String token, CallArgs args);
 
     /**
      * An entry-point to a Pulumi application.
