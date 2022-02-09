@@ -8,6 +8,10 @@
           "type": "number",
           "description": "Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.",
           "default": 107374182400
+        },
+        "throughputMibps": {
+          "type": "number",
+          "default": 0
         }
       },
       "type": "object",
@@ -19,6 +23,10 @@
           "type": "number",
           "description": "Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.",
           "default": 107374182400
+        },
+        "throughputMibps": {
+          "type": "number",
+          "default": 0
         }
       },
       "requiredInputs": [
@@ -409,15 +417,15 @@
         ]
       },
       "outputs": {
-          "description": "A web app, a mobile app backend, or an API app.",
-          "properties": {
-              "siteConfig": {
-                  "type": "object",
-                  "$ref": "#/types/azure-native:web:SiteConfigResponse",
-                  "description": "Configuration of the app."
-              }
-          },
-          "type": "object"
+        "description": "A web app, a mobile app backend, or an API app.",
+        "properties": {
+          "siteConfig": {
+            "type": "object",
+            "$ref": "#/types/azure-native:web:SiteConfigResponse",
+            "description": "Configuration of the app."
+          }
+        },
+        "type": "object"
       }
     },
     "azure-native:alertsmanagement:getActionRuleByName": {
