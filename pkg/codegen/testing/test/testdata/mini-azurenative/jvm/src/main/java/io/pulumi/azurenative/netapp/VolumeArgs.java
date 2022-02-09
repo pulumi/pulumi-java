@@ -7,11 +7,19 @@ import io.pulumi.core.Input;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
+import javax.annotation.Nullable;
 
 
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
+
+    @InputImport(name="throughputMibps")
+    private final @Nullable Input<Double> throughputMibps;
+
+    public Input<Double> getThroughputMibps() {
+        return this.throughputMibps == null ? Input.empty() : this.throughputMibps;
+    }
 
     @InputImport(name="usageThreshold", required=true)
     private final Input<Double> usageThreshold;
@@ -20,11 +28,15 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.usageThreshold;
     }
 
-    public VolumeArgs(Input<Double> usageThreshold) {
-        this.usageThreshold = usageThreshold == null ? Input.ofNullable(1.073741824E+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
+    public VolumeArgs(
+        @Nullable Input<Double> throughputMibps,
+        Input<Double> usageThreshold) {
+        this.throughputMibps = throughputMibps == null ? Input.ofNullable(0e+00) : throughputMibps;
+        this.usageThreshold = usageThreshold == null ? Input.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
     }
 
     private VolumeArgs() {
+        this.throughputMibps = Input.empty();
         this.usageThreshold = Input.empty();
     }
 
@@ -37,6 +49,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
+        private @Nullable Input<Double> throughputMibps;
         private Input<Double> usageThreshold;
 
         public Builder() {
@@ -45,7 +58,18 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
         public Builder(VolumeArgs defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.throughputMibps = defaults.throughputMibps;
     	      this.usageThreshold = defaults.usageThreshold;
+        }
+
+        public Builder setThroughputMibps(@Nullable Input<Double> throughputMibps) {
+            this.throughputMibps = throughputMibps;
+            return this;
+        }
+
+        public Builder setThroughputMibps(@Nullable Double throughputMibps) {
+            this.throughputMibps = Input.ofNullable(throughputMibps);
+            return this;
         }
 
         public Builder setUsageThreshold(Input<Double> usageThreshold) {
@@ -59,7 +83,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         }
 
         public VolumeArgs build() {
-            return new VolumeArgs(usageThreshold);
+            return new VolumeArgs(throughputMibps, usageThreshold);
         }
     }
 }

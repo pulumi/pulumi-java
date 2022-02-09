@@ -954,7 +954,7 @@ func primitiveValue(value interface{}) (string, string, error) {
 	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32:
 		return strconv.FormatUint(v.Uint(), 10), "integer", nil
 	case reflect.Float32, reflect.Float64:
-		return strconv.FormatFloat(v.Float(), 'G', -1, 64), "number", nil
+		return strconv.FormatFloat(v.Float(), 'e', -1, 64), "number", nil
 	case reflect.String:
 		return fmt.Sprintf("%q", v.String()), "string", nil
 	default:
