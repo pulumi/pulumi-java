@@ -2,6 +2,8 @@ package io.pulumi.deployment.internal;
 
 import io.grpc.ManagedChannelBuilder;
 import io.pulumi.resources.Resource;
+import pulumirpc.Provider.CallRequest;
+import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Provider.InvokeResponse;
 import pulumirpc.Resource.*;
@@ -35,6 +37,11 @@ public class GrpcMonitor implements Monitor {
     @Override
     public CompletableFuture<InvokeResponse> invokeAsync(InvokeRequest request) {
         return toCompletableFuture(this.monitor.invoke(request));
+    }
+
+    @Override
+    public CompletableFuture<CallResponse> callAsync(CallRequest request) {
+        return toCompletableFuture(this.monitor.call(request));
     }
 
     @Override

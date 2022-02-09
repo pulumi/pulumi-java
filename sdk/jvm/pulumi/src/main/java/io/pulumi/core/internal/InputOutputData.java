@@ -21,7 +21,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 /**
  * Immutable internal type
@@ -233,21 +232,16 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     public static <T> CompletableFuture<InputOutputData<List<T>>> internalAllHelperAsync(
             List<CompletableFuture<InputOutputData<T>>> values) {
         return CompletableFutures.allOf(values)
-                .thenApply(vs -> {
-                    List<InputOutputData<T>> dataList = vs
-                            .stream()
-                            .map(CompletableFuture::join)
-                            .collect(Collectors.toList());
-
-                    return builder(new ArrayList<T>(vs.size()))
-                            .accumulate(dataList, (ts, t) -> {
-                                if (t != null) {
-                                    ts.add(t);
-                                }
-                                return ts;
-                            })
-                            .build(ImmutableList::copyOf);
-                });
+                .thenApply(dataList ->
+                        builder(new ArrayList<T>(dataList.size()))
+                                .accumulate(dataList, (ts, t) -> {
+                                    if (t != null) {
+                                        ts.add(t);
+                                    }
+                                    return ts;
+                                })
+                                .build(ImmutableList::copyOf)
+                );
     }
 
     @Internal
