@@ -11,6 +11,13 @@ import (
 
 func TestGeneratePackage(t *testing.T) {
 	// pre set-up
+	test.RunCommand(t, "git", "../../..",
+		"git",
+		"submodule",
+		"update",
+		"--init",
+		"--recursive",
+	)
 	test.RunCommand(t, "git", "../../../pulumi",
 		"git",
 		"pull",
