@@ -29,6 +29,8 @@
     "src/main/java/io/pulumi/azurenative/netapp/Volume.java",
     "src/main/java/io/pulumi/azurenative/netapp/VolumeArgs.java",
     "src/main/java/io/pulumi/azurenative/web/GetWebAppSlot.java",
+    "src/main/java/io/pulumi/azurenative/web/WebAppRelayServiceConnection.java",
+    "src/main/java/io/pulumi/azurenative/web/WebAppRelayServiceConnectionArgs.java",
     "src/main/java/io/pulumi/azurenative/web/inputs/GetWebAppSlotArgs.java",
     "src/main/java/io/pulumi/azurenative/web/inputs/SiteConfigResponse.java",
     "src/main/java/io/pulumi/azurenative/web/outputs/GetWebAppSlotResult.java",
