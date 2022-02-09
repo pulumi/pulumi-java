@@ -125,7 +125,7 @@ func generateJava(configFile string) error {
 
 	if err := emitFile(filepath.Join(outDir, "gradle.properties"),
 		[]byte(fmt.Sprintf("version=%s", cfg.Version))); err != nil {
-		return fmt.Errorf("Failed to generate gradle.properties", err)
+		return fmt.Errorf("Failed to generate gradle.properties: %w", err)
 	}
 
 	return nil
