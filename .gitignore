@@ -1,4 +1,6 @@
-**.gradle/
+pkg/codegen/testing/test/testdata/**/.gradle
+pkg/codegen/testing/test/testdata/**/build
+
 *.swp
 **/vendor/
 **/node_modules/
