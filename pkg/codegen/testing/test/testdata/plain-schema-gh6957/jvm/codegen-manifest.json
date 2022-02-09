@@ -1,0 +1,14 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/xyz/Provider.java",
+    "src/main/java/io/pulumi/xyz/ProviderArgs.java",
+    "src/main/java/io/pulumi/xyz/StaticPage.java",
+    "src/main/java/io/pulumi/xyz/StaticPageArgs.java",
+    "src/main/java/io/pulumi/xyz/Utilities.java",
+    "src/main/java/io/pulumi/xyz/inputs/Foo.java",
+    "src/main/java/io/pulumi/xyz/inputs/FooArgs.java"
+  ]
+}

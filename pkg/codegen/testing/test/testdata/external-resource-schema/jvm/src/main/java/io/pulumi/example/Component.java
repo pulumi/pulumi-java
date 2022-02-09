@@ -3,35 +3,37 @@
 
 package io.pulumi.example;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
+import io.pulumi.aws.ec2.SecurityGroup;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.example.ComponentArgs;
 import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
+import io.pulumi.kubernetes.Provider;
+import io.pulumi.kubernetes.storage.k8s.io_v1.StorageClass;
+import java.lang.String;
+import java.util.Map;
+import javax.annotation.Nullable;
 
 @ResourceType(type="example::Component")
 public class Component extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="provider", type=io.pulumi.kubernetes.Provider.class, parameters={})
-    private Output</* @Nullable */ io.pulumi.kubernetes.Provider> provider;
+    @OutputExport(name="provider", type=Provider.class, parameters={})
+    private Output</* @Nullable */ Provider> provider;
 
-    public Output</* @Nullable */ io.pulumi.kubernetes.Provider> getProvider() {
+    public Output</* @Nullable */ Provider> getProvider() {
         return this.provider;
     }
-    @OutputExport(name="securityGroup", type=io.pulumi.aws.ec2.SecurityGroup.class, parameters={})
-    private Output<io.pulumi.aws.ec2.SecurityGroup> securityGroup;
+    @OutputExport(name="securityGroup", type=SecurityGroup.class, parameters={})
+    private Output<SecurityGroup> securityGroup;
 
-    public Output<io.pulumi.aws.ec2.SecurityGroup> getSecurityGroup() {
+    public Output<SecurityGroup> getSecurityGroup() {
         return this.securityGroup;
     }
-    @OutputExport(name="storageClasses", type=Map.class, parameters={String.class, io.pulumi.kubernetes.storage.v1.StorageClass.class})
-    private Output</* @Nullable */ Map<String,io.pulumi.kubernetes.storage.v1.StorageClass>> storageClasses;
+    @OutputExport(name="storageClasses", type=Map.class, parameters={String.class, StorageClass.class})
+    private Output</* @Nullable */ Map<String,StorageClass>> storageClasses;
 
-    public Output</* @Nullable */ Map<String,io.pulumi.kubernetes.storage.v1.StorageClass>> getStorageClasses() {
+    public Output</* @Nullable */ Map<String,StorageClass>> getStorageClasses() {
         return this.storageClasses;
     }
 

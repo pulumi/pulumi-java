@@ -55,31 +55,6 @@ func TestGeneratePackage(t *testing.T) {
 
 func TestGeneratePackagePulumiPulumi(t *testing.T) {
 	// pre set-up pulumi/pulumi submodule
-	test.RunCommand(t, "git", "../../..",
-		"git",
-		"submodule",
-		"update",
-		"--init",
-		"--recursive",
-	)
-	test.RunCommand(t, "git", "../../../pulumi",
-		"git",
-		"pull",
-	)
-	test.RunCommand(t, "copy dirs", "../../../pulumi",
-		//"find ./pulumi/pkg/codegen/testing -name 'schema.json' -exec cp --parents \{\} ./pkg/codegen/testing \;"
-		"find",
-		"./pkg/codegen/testing",
-		"-name",
-		"schema.*",
-		"-exec",
-		"cp",
-		"--parents",
-		"{}",
-		"../",
-		";",
-	)
-
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
 		GenPackage: GeneratePackage,
 		Language:   "jvm",

@@ -1,0 +1,30 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/example/ArgFunction.java",
+    "src/main/java/io/pulumi/example/OtherResource.java",
+    "src/main/java/io/pulumi/example/OtherResourceArgs.java",
+    "src/main/java/io/pulumi/example/Provider.java",
+    "src/main/java/io/pulumi/example/ProviderArgs.java",
+    "src/main/java/io/pulumi/example/Resource.java",
+    "src/main/java/io/pulumi/example/ResourceArgs.java",
+    "src/main/java/io/pulumi/example/TypeUses.java",
+    "src/main/java/io/pulumi/example/TypeUsesArgs.java",
+    "src/main/java/io/pulumi/example/Utilities.java",
+    "src/main/java/io/pulumi/example/enums/OutputOnlyEnumType.java",
+    "src/main/java/io/pulumi/example/enums/RubberTreeVariety.java",
+    "src/main/java/io/pulumi/example/inputs/ArgFunctionArgs.java",
+    "src/main/java/io/pulumi/example/inputs/ConfigMapArgs.java",
+    "src/main/java/io/pulumi/example/inputs/ObjectArgs.java",
+    "src/main/java/io/pulumi/example/inputs/ObjectWithNodeOptionalInputsArgs.java",
+    "src/main/java/io/pulumi/example/inputs/SomeOtherObjectArgs.java",
+    "src/main/java/io/pulumi/example/outputs/ArgFunctionResult.java",
+    "src/main/java/io/pulumi/example/outputs/ConfigMap.java",
+    "src/main/java/io/pulumi/example/outputs/Object.java",
+    "src/main/java/io/pulumi/example/outputs/ObjectWithNodeOptionalInputs.java",
+    "src/main/java/io/pulumi/example/outputs/OutputOnlyObjectType.java",
+    "src/main/java/io/pulumi/example/outputs/SomeOtherObject.java"
+  ]
+}

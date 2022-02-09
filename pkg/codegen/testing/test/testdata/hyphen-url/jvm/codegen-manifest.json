@@ -1,0 +1,12 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/registrygeoreplication/Provider.java",
+    "src/main/java/io/pulumi/registrygeoreplication/ProviderArgs.java",
+    "src/main/java/io/pulumi/registrygeoreplication/RegistryGeoReplication.java",
+    "src/main/java/io/pulumi/registrygeoreplication/RegistryGeoReplicationArgs.java",
+    "src/main/java/io/pulumi/registrygeoreplication/Utilities.java"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/my8110/ExampleFunc.java",
+    "src/main/java/io/pulumi/my8110/Provider.java",
+    "src/main/java/io/pulumi/my8110/ProviderArgs.java",
+    "src/main/java/io/pulumi/my8110/Utilities.java",
+    "src/main/java/io/pulumi/my8110/enums/MyEnum.java",
+    "src/main/java/io/pulumi/my8110/inputs/ExampleFuncArgs.java"
+  ]
+}

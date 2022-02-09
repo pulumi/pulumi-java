@@ -1,0 +1,20 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/example/ArgFunction.java",
+    "src/main/java/io/pulumi/example/Cat.java",
+    "src/main/java/io/pulumi/example/CatArgs.java",
+    "src/main/java/io/pulumi/example/Component.java",
+    "src/main/java/io/pulumi/example/ComponentArgs.java",
+    "src/main/java/io/pulumi/example/Provider.java",
+    "src/main/java/io/pulumi/example/ProviderArgs.java",
+    "src/main/java/io/pulumi/example/Utilities.java",
+    "src/main/java/io/pulumi/example/Workload.java",
+    "src/main/java/io/pulumi/example/WorkloadArgs.java",
+    "src/main/java/io/pulumi/example/inputs/ArgFunctionArgs.java",
+    "src/main/java/io/pulumi/example/inputs/PetArgs.java",
+    "src/main/java/io/pulumi/example/outputs/ArgFunctionResult.java"
+  ]
+}

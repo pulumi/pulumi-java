@@ -3,23 +3,21 @@
 
 package io.pulumi.example;
 
-import javax.annotation.Nullable;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
+import io.pulumi.core.Input;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.annotations.OutputExport;
+import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
+import io.pulumi.example.WorkloadArgs;
+import io.pulumi.kubernetes.core_v1.outputs.Pod;
+import javax.annotation.Nullable;
 
 @ResourceType(type="example::Workload")
 public class Workload extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="pod", type=io.pulumi.kubernetes.core.v1.outputs.Pod.class, parameters={})
-    private Output</* @Nullable */ io.pulumi.kubernetes.core.v1.outputs.Pod> pod;
+    @OutputExport(name="pod", type=Pod.class, parameters={})
+    private Output</* @Nullable */ Pod> pod;
 
-    public Output</* @Nullable */ io.pulumi.kubernetes.core.v1.outputs.Pod> getPod() {
+    public Output</* @Nullable */ Pod> getPod() {
         return this.pod;
     }
 

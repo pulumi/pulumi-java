@@ -1,0 +1,21 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/example/Foo.java",
+    "src/main/java/io/pulumi/example/FooArgs.java",
+    "src/main/java/io/pulumi/example/Foo_bar.java",
+    "src/main/java/io/pulumi/example/Foo_baz.java",
+    "src/main/java/io/pulumi/example/Foo_generateKubeconfig.java",
+    "src/main/java/io/pulumi/example/Provider.java",
+    "src/main/java/io/pulumi/example/ProviderArgs.java",
+    "src/main/java/io/pulumi/example/Utilities.java",
+    "src/main/java/io/pulumi/example/inputs/Foo_barArgs.java",
+    "src/main/java/io/pulumi/example/inputs/Foo_bazArgs.java",
+    "src/main/java/io/pulumi/example/inputs/Foo_generateKubeconfigArgs.java",
+    "src/main/java/io/pulumi/example/nested/inputs/Baz.java",
+    "src/main/java/io/pulumi/example/outputs/Foo_barResult.java",
+    "src/main/java/io/pulumi/example/outputs/Foo_generateKubeconfigResult.java"
+  ]
+}

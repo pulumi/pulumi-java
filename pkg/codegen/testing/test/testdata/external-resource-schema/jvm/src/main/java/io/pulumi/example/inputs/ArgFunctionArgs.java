@@ -3,17 +3,11 @@
 
 package io.pulumi.example.inputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.random.RandomPet;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
-import io.pulumi.example.outputs.*;
+import javax.annotation.Nullable;
 
 
 public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
@@ -21,13 +15,13 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     public static final ArgFunctionArgs Empty = new ArgFunctionArgs();
 
     @InputImport(name="name")
-    private final @Nullable io.pulumi.random.RandomPet name;
+    private final @Nullable RandomPet name;
 
-    public Optional<io.pulumi.random.RandomPet> getName() {
+    public Optional<RandomPet> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    public ArgFunctionArgs(@Nullable io.pulumi.random.RandomPet name) {
+    public ArgFunctionArgs(@Nullable RandomPet name) {
         this.name = name;
     }
 
@@ -44,7 +38,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     public static final class Builder {
-        private @Nullable io.pulumi.random.RandomPet name;
+        private @Nullable RandomPet name;
 
         public Builder() {
     	      // Empty
@@ -55,7 +49,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable io.pulumi.random.RandomPet name) {
+        public Builder setName(@Nullable RandomPet name) {
             this.name = name;
             return this;
         }
