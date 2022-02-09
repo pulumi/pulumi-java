@@ -10,7 +10,7 @@ import (
 )
 
 func TestGeneratePackage(t *testing.T) {
-	// pre set-up
+	// pre set-up pulumi/pulumi submodule
 	test.RunCommand(t, "git", "../../..",
 		"git",
 		"submodule",
@@ -29,7 +29,9 @@ func TestGeneratePackage(t *testing.T) {
 	testGeneratedPackage := func(t *testing.T, pwd string) {
 		test.RunCommand(t, "gradle build", pwd, "gradle", "build")
 	}
-	os.Setenv("PULUMI_ACCEPT", "yes") // skips
+
+	os.Setenv("PULUMI_ACCEPT", "yes") // skips manifest test
+
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
 		GenPackage: GeneratePackage,
 		Language:   "jvm",
