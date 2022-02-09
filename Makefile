@@ -56,6 +56,12 @@ define generate_sdk
 	cd ./providers/$(1) && gradle build
 endef
 
+.PHONY: lint_pkg
+lint:: lint_pkg
+lint_pkg:
+	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m
+
+
 providers_all: aws-native kubernetes aws-native azure-native google-native
 
 aws-native: bin/pulumi-java-gen install_sdk
