@@ -1,3 +1,4 @@
+**.gradle/
 *.swp
 **/vendor/
 **/node_modules/
