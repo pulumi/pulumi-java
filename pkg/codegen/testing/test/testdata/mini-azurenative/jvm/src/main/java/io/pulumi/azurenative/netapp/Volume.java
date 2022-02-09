@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="azure-native:netapp:Volume")
 public class Volume extends io.pulumi.resources.CustomResource {
+    @OutputExport(name="throughputMibps", type=Double.class, parameters={})
+    private Output</* @Nullable */ Double> throughputMibps;
+
+    public Output</* @Nullable */ Double> getThroughputMibps() {
+        return this.throughputMibps;
+    }
     @OutputExport(name="usageThreshold", type=Double.class, parameters={})
     private Output<Double> usageThreshold;
 
