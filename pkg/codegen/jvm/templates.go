@@ -134,11 +134,6 @@ java {
     }
 }
 
-compileJava {
-    options.fork = true
-    options.forkOptions.jvmArgs.addAll(["-Xmx4g"])
-}
-
 repositories {
   maven { // The google mirror is less flaky than mavenCentral()
       url("https://maven-central.storage-download.googleapis.com/maven2/")
