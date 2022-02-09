@@ -481,5 +481,63 @@
         "type": "object"
       }
     }
+  },
+  "config": {
+    "variables": {
+      "auxiliaryTenantIds": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "clientCertificatePassword": {
+        "type": "string",
+        "description": "The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate",
+        "secret": true
+      },
+      "clientCertificatePath": {
+        "type": "string",
+        "description": "The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate."
+      },
+      "clientId": {
+        "type": "string",
+        "description": "The Client ID which should be used.",
+        "secret": true
+      },
+      "clientSecret": {
+        "type": "string",
+        "description": "The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.",
+        "secret": true
+      },
+      "disablePulumiPartnerId": {
+        "type": "boolean",
+        "description": "This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified."
+      },
+      "environment": {
+        "type": "string",
+        "description": "The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public."
+      },
+      "msiEndpoint": {
+        "type": "string",
+        "description": "The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. "
+      },
+      "partnerId": {
+        "type": "string",
+        "description": "A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution."
+      },
+      "subscriptionId": {
+        "type": "string",
+        "description": "The Subscription ID which should be used."
+      },
+      "tenantId": {
+        "type": "string",
+        "description": "The Tenant ID which should be used."
+      },
+      "useMsi": {
+        "type": "boolean",
+        "description": "Allowed Managed Service Identity be used for Authentication.",
+        "default": false
+      }
+    }
   }
 }

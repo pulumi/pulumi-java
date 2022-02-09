@@ -3,6 +3,7 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
+    "src/main/java/io/pulumi/azurenative/Config.java",
     "src/main/java/io/pulumi/azurenative/Provider.java",
     "src/main/java/io/pulumi/azurenative/ProviderArgs.java",
     "src/main/java/io/pulumi/azurenative/Utilities.java",
