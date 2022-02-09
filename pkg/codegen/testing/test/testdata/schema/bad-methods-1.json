@@ -1,9 +1,0 @@
-{
-    "resources": {
-        "xyz:index:Foo": {
-            "methods": {
-                "bar": "xyz:index:Foo/bar"
-            }
-        }
-    }
-}
