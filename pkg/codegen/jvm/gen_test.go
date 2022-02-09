@@ -3,38 +3,18 @@
 package jvm
 
 import (
+	"os"
 	"testing"
-
-	"github.com/pulumi/pulumi/pkg/v3/codegen"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 )
 
-var tests []test.SDKTest = []test.SDKTest{
-	{
-		Directory:   "simple-resource-schema",
-		Description: "Simple schema with local resource properties",
-	},
-	{
-		Directory:   "simple-enum-schema",
-		Description: "Simple schema with enum types",
-	},
-	{
-		Directory:   "external-resource-schema",
-		Description: "External resource schema",
-		Skip:        codegen.NewStringSet("jvm/any"), // TODO[pulumi/pulumi-java#13]
-	},
-	{
-		Directory:   "simple-plain-schema",
-		Description: "Simple schema with plain properties",
-	},
-	{
-		Directory:   "mini-azurenative",
-		Description: "Regression tests extracted from trying to codegen azure-natuve",
-	},
-}
-
 func TestGeneratePackage(t *testing.T) {
+	// pre set-up
+	test.RunCommand(t, "git", "../../../pulumi",
+		"git",
+		"pull",
+	)
 	compileGeneratedPackage := func(t *testing.T, pwd string) {
 		test.RunCommand(t, "gradle build", pwd, "gradle", "build", "-x", "test")
 	}
@@ -42,11 +22,11 @@ func TestGeneratePackage(t *testing.T) {
 	testGeneratedPackage := func(t *testing.T, pwd string) {
 		test.RunCommand(t, "gradle build", pwd, "gradle", "build")
 	}
-
+	os.Setenv("PULUMI_ACCEPT", "yes") // skips
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
 		GenPackage: GeneratePackage,
 		Language:   "jvm",
-		TestCases:  tests,
+		TestCases:  test.PulumiPulumiSDKTests,
 		Checks: map[string]test.CodegenCheck{
 			"jvm/compile": compileGeneratedPackage,
 			"jvm/test":    testGeneratedPackage,
