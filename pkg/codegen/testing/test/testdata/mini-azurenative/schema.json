@@ -2,6 +2,27 @@
   "version": "0.0.1",
   "name": "azure-native",
   "resources": {
+    "azure-native:web:WebAppRelayServiceConnection": {
+      "properties": {
+        "resourceType": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "description": "Resource type."
+        }
+      },
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "inputProperties": {
+        "resourceType": {
+          "type": "string"
+        }
+      },
+      "requiredInputs": []
+    },
     "azure-native:netapp:Volume": {
       "properties": {
         "usageThreshold": {
