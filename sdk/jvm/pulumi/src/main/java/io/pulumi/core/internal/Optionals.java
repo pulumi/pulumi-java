@@ -28,4 +28,11 @@ public class Optionals {
         }
         return Optional.of(value);
     }
+
+    public static <T> Optional<T> combine(Optional<T> a, Optional<T> b) {
+        if (a.isPresent()) {
+            return a;
+        }
+        return b;
+    }
 }

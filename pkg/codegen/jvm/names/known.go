@@ -69,3 +69,5 @@ var CompletableFuture = JavaUtil.Dot("concurrent").Dot("CompletableFuture")
 var TypeShape = PulumiInternal.Dot("Reflection").Dot("TypeShape")
 
 var StringJoiner = JavaUtil.Dot("StringJoiner")
+
+var Optionals = PulumiInternal.Dot("Optionals")

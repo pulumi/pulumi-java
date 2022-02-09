@@ -1465,16 +1465,28 @@ func (mod *modContext) genHeader() string {
 }
 
 func (mod *modContext) getConfigProperty(ctx *classFileContext, schemaType schema.Type, key string) (TypeShape, MethodCall) {
-	propertyType := mod.typeString(
-		ctx,
-		schemaType,
-		"types",
-		false,
-		false,
-		false,
-		false, // outer optional
-		false, // inputless overload
-	)
+
+	unOptional := func(t schema.Type) schema.Type {
+		switch tt := t.(type) {
+		case *schema.OptionalType:
+			return tt.ElementType
+		default:
+			return t
+		}
+	}
+
+	typeShape := func(t schema.Type) TypeShape {
+		return mod.typeString(
+			ctx,
+			t,
+			"types",
+			false,
+			false,
+			true,  // requireInitializers - set to true so we preserve Optional
+			true,  // outer optional
+			false, // inputless overload
+		)
+	}
 
 	getFunc := MethodCall{
 		This: "config",
@@ -1498,11 +1510,23 @@ func (mod *modContext) getConfigProperty(ctx *classFileContext, schemaType schem
 		}
 		// TODO: C# has a special case for Arrays here, should we port it?
 
+		// Calling this SDK method:
+		//
+		// public <T> Optional<T> getObject(String key, TypeShape<T> shapeOfT)
 		getFunc.Method = "getObject"
-		getFunc.Args = append(getFunc.Args, propertyType.StringJavaTypeShape(ctx.imports))
+
+		// TODO it is unclear if `getObject` can handle nested
+		// optionals (that is, GSON deserializer can read
+		// them). We do not handle that case, but we must
+		// handle outer Optional which is quite frequent. For
+		// now we simply drop it, so if the type is
+		// Optional(X) we pass X as the TypeShape to
+		// `getObject`.
+		t := unOptional(schemaType)
+		getFunc.Args = append(getFunc.Args, typeShape(t).StringJavaTypeShape(ctx.imports))
 	}
 
-	return propertyType, getFunc
+	return typeShape(schemaType), getFunc
 }
 
 func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Property) error {
@@ -1528,7 +1552,10 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 				return err
 			}
 			defaultValueInitializer := typeInitializer(ctx, p.Type, defaultValueString, defType)
-			returnStatement += ".orElse(" + defaultValueInitializer + ")"
+			returnStatement = fmt.Sprintf("%s.combine(%s, %s)",
+				ctx.ref(names.Optionals),
+				returnStatement,
+				defaultValueInitializer)
 		}
 
 		// TODO: printComment(w, p.Comment, "        ")

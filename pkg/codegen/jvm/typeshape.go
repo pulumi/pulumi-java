@@ -80,11 +80,11 @@ func (ts TypeShape) ParameterTypesTransformed(f func(TypeShape) string) []string
 }
 
 func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
-	var shape string
-	shape += fmt.Sprintf("TypeShape.<%s>builder(%s)"+
+	shape := fmt.Sprintf("%s.<%s>builder(%s)",
+		imports.Ref(names.TypeShape),
 		ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
-			GenericErasure:        true,
+			GenericErasure:        false,
 		}),
 		ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
@@ -92,6 +92,7 @@ func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 			AppendClassLiteral:    true,
 		}),
 	)
+
 	for _, parameter := range ts.Parameters {
 		if len(parameter.Parameters) > 0 {
 			shape += fmt.Sprintf(".addParameter(%s)", parameter.StringJavaTypeShape(imports))
