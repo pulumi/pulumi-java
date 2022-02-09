@@ -1,0 +1,16 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/my8664/ConditionalAccessPolicy.java",
+    "src/main/java/io/pulumi/my8664/ConditionalAccessPolicyArgs.java",
+    "src/main/java/io/pulumi/my8664/Provider.java",
+    "src/main/java/io/pulumi/my8664/ProviderArgs.java",
+    "src/main/java/io/pulumi/my8664/Utilities.java",
+    "src/main/java/io/pulumi/my8664/inputs/ConditionalAccessPolicyConditionsArgs.java",
+    "src/main/java/io/pulumi/my8664/inputs/ConditionalAccessPolicyConditionsGetArgs.java",
+    "src/main/java/io/pulumi/my8664/inputs/ConditionalAccessPolicyState.java",
+    "src/main/java/io/pulumi/my8664/outputs/ConditionalAccessPolicyConditions.java"
+  ]
+}

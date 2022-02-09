@@ -2102,6 +2102,11 @@ func genBuildFile(name string, basePackageName string) ([]byte, error) {
 }
 
 func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Recovered from \"", r, "\" in", pkg.DisplayName)
+		}
+	}()
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
 		return nil, err

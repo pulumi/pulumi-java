@@ -3,17 +3,11 @@
 
 package io.pulumi.example.outputs;
 
-import javax.annotation.Nullable;
+import io.pulumi.core.internal.annotations.OutputCustomType;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.Map;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import io.pulumi.core.*;
-import io.pulumi.core.internal.annotations.*;
-import io.pulumi.example.Utilities;
-import io.pulumi.example.inputs.*;
-import io.pulumi.example.outputs.*;
+import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ArgFunctionResult {
