@@ -9,7 +9,6 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
-	"unicode"
 
 	"github.com/pkg/errors"
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
@@ -24,16 +23,6 @@ type typeDetails struct {
 	inputType  bool
 	stateType  bool
 	plainType  bool
-}
-
-// title converts the input string to a title case
-// where only the initial letter is upper-cased.
-func title(s string) string {
-	if s == "" {
-		return ""
-	}
-	runes := []rune(s)
-	return string(append([]rune{unicode.ToUpper(runes[0])}, runes[1:]...))
 }
 
 func packageName(packages map[string]string, name string) string {
@@ -84,7 +73,7 @@ func tokenToName(tok string) string {
 
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
-	return title(components[2])
+	return names.Title(components[2])
 }
 
 func resourceName(r *schema.Resource) string {
@@ -507,7 +496,6 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		false,               // inputless overload
 	)
 
-	getterName := names.Ident("get" + title(prop.Name))
 	// TODO: add docs comment
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	returnStatement := fmt.Sprintf("this.%s", propertyName)
@@ -538,7 +526,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	if err := getterTemplate.Execute(w, getterTemplateContext{
 		Indent:          strings.Repeat(" ", 4),
 		GetterType:      getterType.ToCode(ctx.imports),
-		GetterName:      getterName.String(),
+		GetterName:      names.Ident(prop.Name).AsProperty().Getter(),
 		ReturnStatement: returnStatement,
 	}); err != nil {
 		return err
@@ -662,7 +650,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			FieldName: propertyName.String(),
 		})
 
-		setterName := names.Ident("set" + title(prop.Name))
+		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
 				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
@@ -677,7 +665,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 		// add main setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:   setterName.String(),
+			SetterName:   setterName,
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
@@ -714,7 +702,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 			// add overloaded setter
 			builderSetters = append(builderSetters, builderSetterTemplateContext{
-				SetterName:   setterName.String(),
+				SetterName:   setterName,
 				PropertyType: propertyTypeUnwrapped.ToCode(ctx.imports),
 				PropertyName: propertyName.String(),
 				Assignment:   assignmentUnwrapped(propertyName),
@@ -837,7 +825,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	// Generate getters
 	for _, prop := range pt.properties {
 		paramName := names.Ident(prop.Name)
-		getterName := names.Ident("get" + title(prop.Name))
+		getterName := names.Ident(prop.Name).AsProperty().Getter()
 		getterType := pt.mod.typeString(
 			ctx,
 			prop.Type,
@@ -881,7 +869,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          strings.Repeat("    ", 1),
 			GetterType:      getterType.ToCode(ctx.imports),
-			GetterName:      getterName.String(),
+			GetterName:      getterName,
 			ReturnStatement: returnStatement,
 		}); err != nil {
 			return err
@@ -912,7 +900,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			FieldName: propertyName.String(),
 		})
 
-		setterName := names.Ident("set" + title(prop.Name))
+		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -923,7 +911,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 
 		// add setter
 		builderSetters = append(builderSetters, builderSetterTemplateContext{
-			SetterName:   setterName.String(),
+			SetterName:   setterName,
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
 			Assignment:   assignment(propertyName),
@@ -1132,7 +1120,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		// Add getter
 		getterType := outputParameterType
-		getterName := names.Ident("get" + title(prop.Name))
+		getterName := names.Ident(prop.Name).AsProperty().Getter()
 		_, _ = fmt.Fprintf(w, "    public %s<%s> %s() {\n", ctx.imports.Ref(names.Output), getterType, getterName)
 		_, _ = fmt.Fprintf(w, "        return this.%s;\n", propertyName)
 		_, _ = fmt.Fprintf(w, "    }\n")
@@ -1203,7 +1191,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 				if err != nil {
 					return err
 				}
-				setterName := names.Ident("set" + title(mod.propertyName(prop)))
+				setterName := names.Ident(mod.propertyName(prop)).AsProperty().Setter()
 				_, _ = fmt.Fprintf(w, "            .%s(%s)\n", setterName, v)
 			}
 		}

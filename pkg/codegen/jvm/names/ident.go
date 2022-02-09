@@ -33,6 +33,18 @@ func isReservedWord(s string) bool {
 	}
 }
 
+// isReservedResourceMethod checks if a method is valid is valid when inherited from a resource.
+func isReservedResourceMethod(s string) bool {
+	switch s {
+	// These names conflicts with methods on Resource.
+	// TODO: add other methods that can conflict.
+	case "getResourceType", "getResourceName":
+		return true
+	default:
+		return isReservedWord(s)
+	}
+}
+
 // isLegalIdentifierStart returns true if it is legal for c to be the first character of a Java identifier
 // as per https://docs.oracle.com/javase/specs/jls/se10/html/jls-3.html#jls-Identifier
 func isLegalIdentifierStart(c rune) bool {
@@ -46,8 +58,6 @@ func isLegalIdentifierPart(c rune) bool {
 	return c == '_' || c == '$' ||
 		unicode.In(c, unicode.Letter, unicode.Digit)
 }
-
-// TODO
 
 func MakeSafeEnumName(name, typeName string) (string, error) {
 	// Replace common single character enum names.
@@ -110,4 +120,38 @@ func (id Ident) makeValid() string {
 
 func (id Ident) FQN() FQN {
 	return FQN{[]Ident{}, id}
+}
+
+type Property Ident
+
+func (id Ident) AsProperty() Property {
+	return Property(id)
+}
+
+func (id Property) safePrefix(prefix string) string {
+	s := prefix + Title(Ident(id).String())
+	if !isReservedResourceMethod(s) {
+		return s
+	}
+	return prefix + "Prop" + Title(Ident(id).String())
+}
+
+// The name of a getter for this property.
+func (mi Property) Getter() string {
+	return mi.safePrefix("get")
+}
+
+// The name of a setter for this property.
+func (mi Property) Setter() string {
+	return mi.safePrefix("set")
+}
+
+// Title converts the input string to a title cased string.
+// If `s` has upper case letters, they are kept.
+func Title(s string) string {
+	if s == "" {
+		return ""
+	}
+	runes := []rune(s)
+	return string(append([]rune{unicode.ToUpper(runes[0])}, runes[1:]...))
 }
