@@ -1269,6 +1269,8 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	var typeParameter string
 	if fun.Outputs != nil {
 		typeParameter = ctx.imports.Ref(resultFQN)
+	} else {
+		typeParameter = ctx.imports.Ref(names.Void)
 	}
 
 	var argsParamDef string
@@ -1559,8 +1561,10 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 type fs map[string][]byte
 
 func (fs fs) add(path string, contents []byte) {
-	_, has := fs[path]
-	contract.Assertf(!has, "duplicate file: %s", path)
+	old, has := fs[path]
+	if string(old) != string(contents) {
+		contract.Assertf(!has, "duplicate file: %s", path)
+	}
 	fs[path] = contents
 }
 
