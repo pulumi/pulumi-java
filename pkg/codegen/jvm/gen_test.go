@@ -23,8 +23,6 @@ func adaptTest(t test.SDKTest) test.SDKTest {
 		t.Skip = codegen.NewStringSet("jvm/any")
 	case "plain-schema-gh6957":
 		t.Skip = codegen.NewStringSet("jvm/any") // TODO
-	case "simple-plain-schema":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
 	case "simple-methods-schema":
 		t.Skip = codegen.NewStringSet("jvm/any") // TODO
 	case "provider-config-schema":
