@@ -60,6 +60,10 @@ jobs:
         run: make provider.azure-native.build
       - name: Install pulumi-azure-native JVM SDK to a local Maven repo
         run: make provider.azure-native.install
+      - name: Build pulumi-google-native JVM SDK
+        run: make provider.google-native.build
+      - name: Install pulumi-google-native JVM SDK to a local Maven repo
+        run: make provider.google-native.install
       - name: Integration tests
         run: make integration_tests
   go-lint:

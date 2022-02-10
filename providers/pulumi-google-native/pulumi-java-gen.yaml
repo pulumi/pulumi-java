@@ -1,4 +1,4 @@
 version: 0.14.0
 schema: https://raw.githubusercontent.com/pulumi/pulumi-google-native/v0.14.0/provider/cmd/pulumi-resource-google-native/schema.json
 out: sdk/java
-# versionFile: src/main/resources/io/pulumi/random/version.txt ?
+versionFile: io/pulumi/google-native/version.txt
