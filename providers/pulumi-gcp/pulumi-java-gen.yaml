@@ -1,0 +1,4 @@
+version: 6.11.0
+schema: https://raw.githubusercontent.com/pulumi/pulumi-gcp/master/provider/cmd/pulumi-resource-gcp/schema.json
+out: sdk/java
+# versionFile: src/main/resources/io/pulumi/random/version.txt ?
