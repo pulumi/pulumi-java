@@ -12,7 +12,7 @@ PKG_FILES := $(shell  find pkg -name '*.go' -type f)
 build_go::	ensure_go
 	cd pkg && go build -v all
 
-test_go:: build_go
+test_go:: build_go submodule_update
 	cd pkg && go test -test.v ./...
 
 ensure_go::
