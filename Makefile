@@ -64,7 +64,7 @@ codegen_tests::	ensure_tests
 	cd ./pkg/codegen/jvm && go test ./...
 
 submodule_update::
-	git submodule update --checkout --recursive
+	git submodule update --init --recursive
 
 # Borrows test case schemas from pulumi/pulumi repo linked in via git
 # submodule as symlinks.
