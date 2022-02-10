@@ -12,7 +12,7 @@ PKG_FILES := $(shell  find pkg -name '*.go' -type f)
 build_go::	ensure_go
 	cd pkg && go build -v all
 
-test_go:: build_go
+test_go:: build_go submodule_update
 	cd pkg && go test -test.v ./...
 
 ensure_go::
@@ -57,12 +57,16 @@ provider.%.install:	provider.%.build
 integration_tests::	bin/pulumi-language-jvm ensure_tests provider.random.install
 	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestJava -test.v
 
-ensure_tests::
+ensure_tests::	submodule_update
 	pulumi plugin install resource random v4.3.1
-	git submodule update --init --recursive
-	cd pulumi && git pull \
-	&& find "./pkg/codegen/testing" "-name" "schema.json" "-exec" "cp" "--parents" "{}" "../" ";" \
-	&& find "./pkg/codegen/testing" "-name" "schema.yaml" "-exec" "cp" "--parents" "{}" "../" ";"
 
 codegen_tests::	ensure_tests
 	cd ./pkg/codegen/jvm && go test ./...
+
+submodule_update::
+	git submodule update --init --recursive
+
+# Borrows test case schemas from pulumi/pulumi repo linked in via git
+# submodule as symlinks.
+borrow_schemas:: submodule_update
+	find pulumi/pkg/codegen/testing -name "schema.*" -exec ./scripts/borrow-schema.sh "{}" ";"
