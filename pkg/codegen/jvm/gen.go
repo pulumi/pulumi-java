@@ -847,7 +847,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		)
 
 		// TODO: add docs comment
-		var returnStatement string
+		returnStatement := fmt.Sprintf("this.%s", paramName)
 
 		switch propType := prop.Type.(type) {
 		case *schema.OptionalType:
@@ -859,10 +859,12 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 				getterType = getterTypeNonOptional
 				returnStatement = fmt.Sprintf("this.%s == null ? Map.of() : this.%s", paramName, paramName)
 			default:
-				returnStatement = fmt.Sprintf("%s.ofNullable(this.%s)", ctx.ref(names.Optional), paramName)
+				// Option<Input<T>> are stored as @Nullable Input<T>. We don't
+				// need to perform the nullable conversion for them.
+				if !getterType.Type.Equal(names.Input) {
+					returnStatement = fmt.Sprintf("%s.ofNullable(this.%s) /* foo */", ctx.ref(names.Optional), paramName)
+				}
 			}
-		default:
-			returnStatement = fmt.Sprintf("this.%s", paramName)
 		}
 
 		if err := getterTemplate.Execute(w, getterTemplateContext{
