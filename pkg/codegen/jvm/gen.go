@@ -222,9 +222,9 @@ func (mod *modContext) typeStringRecHelper(
 			// If object type belongs to another package, we apply naming conventions from that package,
 			// including package naming and compatibility mode.
 			extPkg := t.Package
-			var info JVMPackageInfo
+			var info PackageInfo
 			contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"jvm": Importer}))
-			if v, ok := t.Package.Language["jvm"].(JVMPackageInfo); ok {
+			if v, ok := t.Package.Language["jvm"].(PackageInfo); ok {
 				info = v
 			}
 			namingCtx = &modContext{
@@ -255,9 +255,9 @@ func (mod *modContext) typeStringRecHelper(
 				// If resource type belongs to another package, we apply naming conventions from that package,
 				// including package naming and compatibility mode.
 				extPkg := t.Resource.Package
-				var info JVMPackageInfo
+				var info PackageInfo
 				contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"jvm": Importer}))
-				if v, ok := t.Resource.Package.Language["jvm"].(JVMPackageInfo); ok {
+				if v, ok := t.Resource.Package.Language["jvm"].(PackageInfo); ok {
 					info = v
 				}
 				namingCtx = &modContext{
@@ -331,7 +331,7 @@ func (mod *modContext) typeStringRecHelper(
 		case schema.AssetType:
 			return TypeShape{Type: names.AssetOrArchive}
 		case schema.JSONType:
-			return TypeShape{Type: names.JsonElement}
+			return TypeShape{Type: names.JSONElement}
 		case schema.AnyType:
 			return TypeShape{Type: names.Object}
 		default:
@@ -357,8 +357,9 @@ func emptyTypeInitializer(ctx *classFileContext, t schema.Type, optionalAsNull b
 		return fmt.Sprintf("%s.of()", ctx.ref(names.List))
 	case *schema.MapType:
 		return fmt.Sprintf("%s.of()", ctx.ref(names.Map))
-	case *schema.UnionType:
-		return "null" // TODO: should we return an "empty Either" (not sure what that means exactly)
+	// TODO: should we return an "empty Either" (not sure what that means exactly)
+	// case *schema.UnionType:
+	// 	return "null"
 	default:
 		return "null"
 	}
@@ -654,13 +655,11 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
 				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
-			} else {
-				if prop.IsRequired() {
-					return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
-				} else {
-					return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
-				}
 			}
+			if prop.IsRequired() {
+				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
+			}
+			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
 		}
 
 		// add main setter
@@ -690,14 +689,12 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
 					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Input), propertyName)
-				} else {
-					if prop.IsRequired() {
-						return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
-							propertyName, ctx.ref(names.Input), ctx.ref(names.Objects), propertyName)
-					} else {
-						return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Input), propertyName)
-					}
 				}
+				if prop.IsRequired() {
+					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
+						propertyName, ctx.ref(names.Input), ctx.ref(names.Objects), propertyName)
+				}
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Input), propertyName)
 			}
 
 			// add overloaded setter
@@ -771,8 +768,10 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 	paramNamesStringBuilder.WriteString("}")
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	_, _ = fmt.Fprintf(w, "%s    @%s.Constructor(%s)\n", indent, ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
-	_, _ = fmt.Fprintf(w, "%s    private %s(", indent, pt.name)
+	fmt.Fprintf(w,
+		"%s    @%s.Constructor(%s)\n",
+		indent, ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
+	fmt.Fprintf(w, "%s    private %s(", indent, pt.name)
 
 	// Generate the constructor parameters.
 	for i, prop := range pt.properties {
@@ -904,9 +903,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 		assignment := func(propertyName names.Ident) string {
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
-			} else {
-				return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
 			}
+			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
 		}
 
 		// add setter
@@ -962,7 +960,11 @@ func primitiveValue(value interface{}) (string, string, error) {
 	}
 }
 
-func (mod *modContext) getDefaultValue(ctx *classFileContext, dv *schema.DefaultValue, t schema.Type) (string, string, error) {
+func (mod *modContext) getDefaultValue(
+	ctx *classFileContext,
+	dv *schema.DefaultValue,
+	t schema.Type,
+) (string, string, error) {
 	var val string
 	schemaType := t.String()
 	if dv.Value != nil {
@@ -1114,16 +1116,19 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		outputParameterType := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
 			CommentOutAnnotations: true,
 		})
-		_, _ = fmt.Fprintf(w, "    @%s(name=\"%s\", type=%s, parameters={%s})\n", ctx.ref(names.OutputExport), wireName, outputExportType, outputExportParameters)
-		_, _ = fmt.Fprintf(w, "    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
-		_, _ = fmt.Fprintf(w, "\n")
+		fmt.Fprintf(w,
+			"    @%s(name=\"%s\", type=%s, parameters={%s})\n",
+			ctx.ref(names.OutputExport), wireName, outputExportType, outputExportParameters)
+		fmt.Fprintf(w,
+			"    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
+		fmt.Fprintf(w, "\n")
 
 		// Add getter
 		getterType := outputParameterType
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
-		_, _ = fmt.Fprintf(w, "    public %s<%s> %s() {\n", ctx.imports.Ref(names.Output), getterType, getterName)
-		_, _ = fmt.Fprintf(w, "        return this.%s;\n", propertyName)
-		_, _ = fmt.Fprintf(w, "    }\n")
+		fmt.Fprintf(w, "    public %s<%s> %s() {\n", ctx.imports.Ref(names.Output), getterType, getterName)
+		fmt.Fprintf(w, "        return this.%s;\n", propertyName)
+		fmt.Fprintf(w, "    }\n")
 	}
 
 	if len(r.Properties) > 0 {
@@ -1157,13 +1162,19 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	// TODO: add docs comment
 
-	_, _ = fmt.Fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n", className, argsType, ctx.ref(names.Nullable), optionsType)
+	fmt.Fprintf(w,
+		"    public %s(String name, %s args, @%s %s options) {\n",
+		className, argsType, ctx.ref(names.Nullable), optionsType)
 	if r.IsComponent {
-		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty()), true);\n", tok, argsOverride, ctx.imports.Ref(names.Input))
+		fmt.Fprintf(w,
+			"        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty()), true);\n",
+			tok, argsOverride, ctx.imports.Ref(names.Input))
 	} else {
-		_, _ = fmt.Fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty()));\n", tok, argsOverride, ctx.imports.Ref(names.Input))
+		fmt.Fprintf(w,
+			"        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty()));\n",
+			tok, argsOverride, ctx.imports.Ref(names.Input))
 	}
-	_, _ = fmt.Fprintf(w, "    }\n")
+	fmt.Fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.
 	if !r.IsProvider && !r.IsComponent {
@@ -1183,7 +1194,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		// Write the method that will calculate the resource arguments.
 		_, _ = fmt.Fprintf(w, "\n")
 		_, _ = fmt.Fprintf(w, "    private static %s makeArgs(%s args) {\n", ctx.ref(argsFQN), argsType)
-		_, _ = fmt.Fprintf(w, "        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", ctx.ref(argsFQN))
+		_, _ = fmt.Fprintf(w,
+			"        var builder = args == null ? %[1]s.builder() : %[1]s.builder(args);\n", ctx.ref(argsFQN))
 		_, _ = fmt.Fprintf(w, "        return builder\n")
 		for _, prop := range r.InputProperties {
 			if prop.ConstValue != nil {
@@ -1201,7 +1213,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	// Write the method that will calculate the resource options.
 	_, _ = fmt.Fprintf(w, "\n")
-	_, _ = fmt.Fprintf(w, "    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
+	_, _ = fmt.Fprintf(w,
+		"    private static %[1]s makeResourceOptions(@%[2]s %[1]s options, @%[2]s %[3]s<String> id) {\n",
 		optionsType, ctx.ref(names.Nullable), ctx.ref(names.Input))
 	_, _ = fmt.Fprintf(w, "        var defaultOptions = %s.builder()\n", optionsType)
 	_, _ = fmt.Fprintf(w, "            .setVersion(%s.getVersion())\n", mod.utilitiesRef(ctx))
@@ -1239,7 +1252,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	_, _ = fmt.Fprintf(w, "        return %s.merge(defaultOptions, options, id);\n", optionsType)
 	_, _ = fmt.Fprintf(w, "    }\n\n")
 
-	// Write the `get` method for reading instances of this resource unless this is a provider resource or ComponentResource.
+	// Write the `get` method for reading instances of this resource unless this
+	// is a provider resource or ComponentResource.
 	if !r.IsProvider && !r.IsComponent {
 		stateParam, stateRef := "", ""
 
@@ -1299,7 +1313,8 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	// Emit the datasource method.
 	_, _ = fmt.Fprintf(w, "    public static %s<%s> invokeAsync(%s@%s %s options) {\n",
 		ctx.ref(names.CompletableFuture), typeParameter, argsParamDef, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
-	_, _ = fmt.Fprintf(w, "        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(options));\n",
+	_, _ = fmt.Fprintf(w,
+		"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), %s, %s.withVersion(options));\n",
 		ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), typeParameter, argsParamRef, mod.utilitiesRef(ctx))
 	_, _ = fmt.Fprintf(w, "    }\n")
 
@@ -1422,7 +1437,12 @@ func visitObjectTypes(properties []*schema.Property, visitor func(*schema.Object
 	})
 }
 
-func (mod *modContext) genType(ctx *classFileContext, obj *schema.ObjectType, propertyTypeQualifier string, input, state bool) error {
+func (mod *modContext) genType(
+	ctx *classFileContext,
+	obj *schema.ObjectType,
+	propertyTypeQualifier string,
+	input, state bool,
+) error {
 	pt := &plainType{
 		mod:                   mod,
 		name:                  mod.typeName(obj, state, obj.IsInputShape()),
@@ -1452,7 +1472,11 @@ func (mod *modContext) genHeader() string {
 	return buf.String()
 }
 
-func (mod *modContext) getConfigProperty(ctx *classFileContext, schemaType schema.Type, key string) (TypeShape, MethodCall) {
+func (mod *modContext) getConfigProperty(
+	ctx *classFileContext,
+	schemaType schema.Type,
+	key string,
+) (TypeShape, MethodCall) {
 	typeShape := func(t schema.Type) TypeShape {
 		return mod.typeString(
 			ctx,
@@ -1834,22 +1858,22 @@ func (mod *modContext) gen(fs fs) error {
 
 func computePropertyNames(props []*schema.Property, names map[*schema.Property]string) {
 	for _, p := range props {
-		if info, ok := p.Language["jvm"].(JVMPropertyInfo); ok && info.Name != "" {
+		if info, ok := p.Language["jvm"].(PropertyInfo); ok && info.Name != "" {
 			names[p] = info.Name
 		}
 	}
 }
 
-func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*modContext, *JVMPackageInfo, error) {
+func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*modContext, *PackageInfo, error) {
 	// Decode Java-specific info for each package as we discover them.
-	infos := map[*schema.Package]*JVMPackageInfo{}
-	var getPackageInfo = func(p *schema.Package) *JVMPackageInfo {
+	infos := map[*schema.Package]*PackageInfo{}
+	var getPackageInfo = func(p *schema.Package) *PackageInfo {
 		info, ok := infos[p]
 		if !ok {
 			if err := p.ImportLanguages(map[string]schema.Language{"jvm": Importer}); err != nil {
 				panic(err)
 			}
-			jvmInfo, _ := pkg.Language["jvm"].(JVMPackageInfo)
+			jvmInfo, _ := pkg.Language["jvm"].(PackageInfo)
 			info = &jvmInfo
 			infos[p] = info
 		}
@@ -2062,7 +2086,11 @@ func LanguageResources(tool string, pkg *schema.Package) (map[string]LanguageRes
 }
 
 // genGradleProject generates gradle files
-func genGradleProject(pkg *schema.Package, basePackageName string, packageName string, packageReferences map[string]string, files fs) error {
+func genGradleProject(pkg *schema.Package,
+	basePackageName string,
+	packageName string,
+	packageReferences map[string]string,
+	files fs) error {
 	genSettingsFile, err := genSettingsFile(basePackageName + packageName)
 	if err != nil {
 		return err

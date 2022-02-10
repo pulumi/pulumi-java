@@ -1,0 +1,22 @@
+run:
+  timeout: 10m
+linters:
+  enable-all: false
+  enable:
+    - deadcode
+    - errcheck
+    - goconst
+    - gofmt
+    - revive
+    - gosec
+    - govet
+    - ineffassign
+    - lll
+    - misspell
+    - nakedret
+    - structcheck
+    - unconvert
+    - varcheck
+  disable:
+    - staticcheck # Disabled due to OOM errors in golangci-lint@v1.18.0
+    - megacheck # Disabled due to OOM errors in golangci-lint@v1.18.0

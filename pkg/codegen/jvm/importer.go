@@ -12,32 +12,30 @@ import (
 const defaultBasePackage = "io.pulumi."
 
 // JVMPropertyInfo represents the a JVM language-specific info for a property.
-type JVMPropertyInfo struct {
+type PropertyInfo struct {
 	Name string `json:"name,omitempty"`
 }
 
 // JVMPackageInfo represents the a JVM language-specific info for a package.
-type JVMPackageInfo struct {
+type PackageInfo struct {
 	PackageReferences      map[string]string `json:"packageReferences,omitempty"`
 	Packages               map[string]string `json:"packages,omitempty"`
 	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
 	BasePackage            string            `json:"basePackage"`
 }
 
-func (i JVMPackageInfo) BasePackageOrDefault() string {
+func (i PackageInfo) BasePackageOrDefault() string {
 	if len(i.BasePackage) > 0 {
 		return ensureEndsWithDot(i.BasePackage)
-	} else {
-		return ensureEndsWithDot(defaultBasePackage)
 	}
+	return ensureEndsWithDot(defaultBasePackage)
 }
 
 func ensureEndsWithDot(s string) string {
 	if strings.HasSuffix(s, ".") {
 		return s
-	} else {
-		return s + "."
 	}
+	return s + "."
 }
 
 // Importer implements schema.Language for JVM
@@ -52,7 +50,7 @@ func (importer) ImportDefaultSpec(def *schema.DefaultValue, raw json.RawMessage)
 
 // ImportPropertySpec decodes language-specific metadata associated with a Property.
 func (importer) ImportPropertySpec(property *schema.Property, raw json.RawMessage) (interface{}, error) {
-	var info JVMPropertyInfo
+	var info PropertyInfo
 	if err := json.Unmarshal([]byte(raw), &info); err != nil {
 		return nil, err
 	}
@@ -76,7 +74,7 @@ func (importer) ImportFunctionSpec(function *schema.Function, raw json.RawMessag
 
 // ImportPackageSpec decodes language-specific metadata associated with a Package.
 func (importer) ImportPackageSpec(pkg *schema.Package, raw json.RawMessage) (interface{}, error) {
-	var info JVMPackageInfo
+	var info PackageInfo
 	if err := json.Unmarshal([]byte(raw), &info); err != nil {
 		return nil, err
 	}

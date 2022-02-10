@@ -16,11 +16,16 @@ type TypeShape struct {
 }
 
 type TypeShapeStringOptions struct {
-	CommentOutAnnotations   bool // useful for type parameters because (most) annotations are not allowed on a generic parameter type
-	SkipAnnotations         bool // useful for annotation parameters and other contexts where comments or annotations are not allowed
-	GenericErasure          bool // useful for .class or [].class to skip the generic part of the type
-	AppendClassLiteral      bool // useful to append .class
-	AppendClassArrayLiteral bool // useful to append [].class
+	// useful for type parameters because (most) annotations are not allowed on a generic parameter type
+	CommentOutAnnotations bool
+	// useful for annotation parameters and other contexts where comments or annotations are not allowed
+	SkipAnnotations bool
+	// useful for .class or [].class to skip the generic part of the type
+	GenericErasure bool
+	// useful to append .class
+	AppendClassLiteral bool
+	// useful to append [].class
+	AppendClassArrayLiteral bool
 }
 
 // Converts to Java code, may add imports to use short names.
