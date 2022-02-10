@@ -1,0 +1,15 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/example/Component.java",
+    "src/main/java/io/pulumi/example/ComponentArgs.java",
+    "src/main/java/io/pulumi/example/Provider.java",
+    "src/main/java/io/pulumi/example/ProviderArgs.java",
+    "src/main/java/io/pulumi/example/Utilities.java",
+    "src/main/java/io/pulumi/example/inputs/Foo.java",
+    "src/main/java/io/pulumi/example/inputs/FooArgs.java",
+    "src/main/java/io/pulumi/example/outputs/Foo.java"
+  ]
+}

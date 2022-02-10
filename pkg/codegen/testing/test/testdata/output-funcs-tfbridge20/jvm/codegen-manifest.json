@@ -1,0 +1,20 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/io/pulumi/mypkg/GetAmiIds.java",
+    "src/main/java/io/pulumi/mypkg/ListStorageAccountKeys.java",
+    "src/main/java/io/pulumi/mypkg/Provider.java",
+    "src/main/java/io/pulumi/mypkg/ProviderArgs.java",
+    "src/main/java/io/pulumi/mypkg/Utilities.java",
+    "src/main/java/io/pulumi/mypkg/inputs/GetAmiIdsArgs.java",
+    "src/main/java/io/pulumi/mypkg/inputs/GetAmiIdsFilter.java",
+    "src/main/java/io/pulumi/mypkg/inputs/ListStorageAccountKeysArgs.java",
+    "src/main/java/io/pulumi/mypkg/inputs/StorageAccountKeyResponse.java",
+    "src/main/java/io/pulumi/mypkg/outputs/GetAmiIdsFilter.java",
+    "src/main/java/io/pulumi/mypkg/outputs/GetAmiIdsResult.java",
+    "src/main/java/io/pulumi/mypkg/outputs/ListStorageAccountKeysResult.java",
+    "src/main/java/io/pulumi/mypkg/outputs/StorageAccountKeyResponse.java"
+  ]
+}

@@ -71,3 +71,5 @@ var TypeShape = PulumiInternal.Dot("Reflection").Dot("TypeShape")
 var StringJoiner = JavaUtil.Dot("StringJoiner")
 
 var Optionals = PulumiInternal.Dot("Optionals")
+
+var Void = JavaLang.Dot("Void")
