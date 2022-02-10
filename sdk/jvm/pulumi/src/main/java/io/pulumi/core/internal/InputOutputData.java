@@ -144,6 +144,11 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     }
 
     @Nullable
+    public T getValueOrDefault(@Nullable T defaultValue) {
+        return getValueOptional().orElse(defaultValue);
+    }
+
+    @Nullable
     public T getValueNullable() {
         return this.value;
     }
@@ -217,7 +222,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
             Objects.requireNonNull(inner);
             return inner.thenApply(innerData -> InputOutputData.ofNullable(
                     ImmutableSet.copyOf(Sets.union(resources, innerData.getResources())),
-                    innerData.getValueOptional().orElse(null),
+                    innerData.getValueNullable(),
                     data.known && innerData.known,
                     data.secret || innerData.secret
             ));

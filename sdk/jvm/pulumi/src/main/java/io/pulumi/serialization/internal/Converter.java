@@ -8,6 +8,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.stream.JsonWriter;
 import com.google.protobuf.Value;
+import io.pulumi.core.Archive;
+import io.pulumi.core.Archive.InvalidArchive;
+import io.pulumi.core.Asset.InvalidAsset;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
 import io.pulumi.core.internal.InputOutputData;
@@ -201,8 +204,20 @@ public class Converter {
             return value;
         }
 
+        if (Archive.class.isAssignableFrom(targetType.getType())) {
+            try {
+                return tryEnsureType(context, value, targetType);
+            } catch (UnsupportedOperationException ex) {
+                return tryEnsureType(context, new InvalidArchive(), targetType);
+            }
+        }
+
         if (AssetOrArchive.class.isAssignableFrom(targetType.getType())) {
-            return tryEnsureType(context, value, targetType);
+            try {
+                return tryEnsureType(context, value, targetType);
+            } catch (UnsupportedOperationException ex) {
+                return tryEnsureType(context, new InvalidAsset(), targetType);
+            }
         }
 
         if (JsonElement.class.isAssignableFrom(targetType.getType())) {

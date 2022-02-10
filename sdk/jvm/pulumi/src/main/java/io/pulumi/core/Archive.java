@@ -1,5 +1,6 @@
 package io.pulumi.core;
 
+import io.grpc.Internal;
 import io.pulumi.core.internal.Constants;
 
 import java.util.Map;
@@ -42,6 +43,13 @@ public abstract class Archive extends AssetOrArchive {
     public static final class RemoteArchive extends Archive {
         public RemoteArchive(String uri) {
             super(Constants.AssetOrArchiveUriName, uri);
+        }
+    }
+
+    @Internal
+    public static final class InvalidArchive extends Archive {
+        public InvalidArchive() {
+            super(Constants.ArchiveAssetsName, Map.<String, AssetOrArchive>of());
         }
     }
 }

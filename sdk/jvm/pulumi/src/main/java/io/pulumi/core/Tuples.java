@@ -4,10 +4,13 @@ import com.google.common.base.MoreObjects;
 
 import java.util.Objects;
 
+// TODO: consider making this class a package, would it make it a better API?
 public class Tuples {
 
     public interface Tuple {
         // Empty
+
+        // TODO: consider moving TupleX factory methods here to get better usage: Tuple.of, instead of Tuples.of
     }
 
     public static final class Tuple0 implements Tuple {

@@ -52,12 +52,14 @@ jobs:
         run: make build_go
       - name: Test Pulumi JVM Language Provider and Codegen
         run: make test_go
-      - name: Ensure dependencies for pulumi-random JVM SDK
-        run: make ensure_random
       - name: Build pulumi-random JVM SDK
-        run: make build_random
+        run: make provider.random.build
       - name: Install pulumi-random JVM SDK to a local Maven repo
-        run: make install_random
+        run: make provider.random.install
+      - name: Build pulumi-azure-native JVM SDK
+        run: make provider.azure-native.build
+      - name: Install pulumi-azure-native JVM SDK to a local Maven repo
+        run: make provider.azure-native.install
       - name: Integration tests
         run: make integration_tests
   go-lint:

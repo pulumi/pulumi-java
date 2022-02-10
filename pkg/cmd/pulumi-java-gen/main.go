@@ -12,30 +12,47 @@ import (
 	"path/filepath"
 	"strings"
 
+	"gopkg.in/yaml.v3"
+
 	jvmgen "github.com/pulumi/pulumi-java/pkg/codegen/jvm"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
+type Config struct {
+	Version     string `yaml:"version"`
+	Schema      string `yaml:"schema"`
+	Out         string `yaml:"out"`
+	VersionFile string `yaml:"versionFile"`
+}
+
 func main() {
-	schema := flag.String("schema", "", "path to schema.json")
-	out := flag.String("out", "", "output directory")
+	config := flag.String("config", "pulumi-java-gen.yaml", "path to pulumi-java-gen.yaml")
 	flag.Parse()
 
-	if *schema == "" {
-		fmt.Printf("-schema is parameter required")
-		flag.Usage()
-		os.Exit(1)
-	}
-
-	if *out == "" {
-		fmt.Printf("-out is parameter required")
-		flag.Usage()
-		os.Exit(1)
-	}
-
-	if err := generateJava(*out, *schema); err != nil {
+	if err := generateJava(*config); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func parseConfig(path string) (*Config, error) {
+	bytes, err := ioutil.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("Failed to read yaml config from %s: %w", path, err)
+	}
+	var cfg Config
+	if err := yaml.Unmarshal([]byte(bytes), &cfg); err != nil {
+		return nil, fmt.Errorf("Failed to parse yaml config from %s: %w", path, err)
+	}
+	if cfg.Schema == "" {
+		return nil, fmt.Errorf("Missing required field in config at %s: schema", path)
+	}
+	if cfg.Out == "" {
+		cfg.Out = "sdk/java"
+	}
+	if cfg.Version == "" {
+		return nil, fmt.Errorf("Missing required field in config at %s: version", path)
+	}
+	return &cfg, nil
 }
 
 func readPackageSchema(path string) (*pschema.PackageSpec, error) {
@@ -62,10 +79,20 @@ func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 	return &result, nil
 }
 
-func generateJava(rootDir, schemaFile string) error {
-	pkgSpec, err := readPackageSchema(schemaFile)
+func generateJava(configFile string) error {
+	rootDir, err := filepath.Abs(filepath.Dir(configFile))
 	if err != nil {
-		return fmt.Errorf("failed to read schema from %s: %w", schemaFile, err)
+		return err
+	}
+
+	cfg, err := parseConfig(configFile)
+	if err != nil {
+		return err
+	}
+
+	pkgSpec, err := readPackageSchema(cfg.Schema)
+	if err != nil {
+		return fmt.Errorf("failed to read schema from %s: %w", cfg.Schema, err)
 	}
 
 	pkg, err := pschema.ImportSpec(*pkgSpec, nil)
@@ -80,17 +107,36 @@ func generateJava(rootDir, schemaFile string) error {
 		return err
 	}
 
+	outDir := filepath.Join(rootDir, cfg.Out)
+
 	for f, bytes := range files {
-		path := filepath.Join(rootDir, f)
-
-		if err := os.MkdirAll(filepath.Dir(path), os.ModePerm); err != nil {
-			return fmt.Errorf("os.MkdirAll failed: %w", err)
-		}
-
-		if err := ioutil.WriteFile(path, bytes, 0600); err != nil {
-			return fmt.Errorf("ioutil.WriteFile failed: %w", err)
+		if err := emitFile(filepath.Join(outDir, f), bytes); err != nil {
+			return err
 		}
 	}
 
+	if cfg.VersionFile != "" {
+		f := filepath.Join(outDir, cfg.VersionFile)
+		bytes := []byte(cfg.Version)
+		if err := emitFile(f, bytes); err != nil {
+			return fmt.Errorf("Failed to generate version file at %s: %w", f, err)
+		}
+	}
+
+	if err := emitFile(filepath.Join(outDir, "gradle.properties"),
+		[]byte(fmt.Sprintf("version=%s", cfg.Version))); err != nil {
+		return fmt.Errorf("Failed to generate gradle.properties: %w", err)
+	}
+
+	return nil
+}
+
+func emitFile(path string, bytes []byte) error {
+	if err := os.MkdirAll(filepath.Dir(path), os.ModePerm); err != nil {
+		return fmt.Errorf("os.MkdirAll failed: %w", err)
+	}
+	if err := ioutil.WriteFile(path, bytes, 0600); err != nil {
+		return fmt.Errorf("ioutil.WriteFile failed: %w", err)
+	}
 	return nil
 }

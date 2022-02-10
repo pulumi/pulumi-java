@@ -7,6 +7,8 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.grpc.Internal;
 import io.pulumi.Log;
+import io.pulumi.core.Archive.InvalidArchive;
+import io.pulumi.core.Asset.InvalidAsset;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
 import io.pulumi.core.InputOutput;
@@ -178,7 +180,7 @@ public class Serializer {
                         }
 
                         if (isSecret) {
-                            return serializeAsync(String.format("%s.id", ctx), data.getValueOptional().orElse(null), keepResources).thenApply(
+                            return serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources).thenApply(
                                     /* @Nullable */ value -> {
                                         var result = new HashMap<String, /* @Nullable */ Object>();
                                         result.put(Constants.SpecialSigKey, Constants.SpecialSecretSig);
@@ -187,7 +189,7 @@ public class Serializer {
                                     }
                             );
                         }
-                        return serializeAsync(String.format("%s.id", ctx), data.getValueOptional().orElse(null), keepResources);
+                        return serializeAsync(String.format("%s.id", ctx), data.getValueNullable(), keepResources);
                     }
             );
         }
@@ -345,6 +347,13 @@ public class Serializer {
     private CompletableFuture<Map<String, /* @Nullable */ Object>> serializeAssetOrArchiveAsync(String ctx, AssetOrArchive assetOrArchive, boolean keepResources) {
         if (excessiveDebugOutput) {
             Log.debug(String.format("Serialize property[%s]: asset/archive=%s", ctx, assetOrArchive.getClass().getSimpleName()));
+        }
+
+        if (assetOrArchive instanceof InvalidAsset) {
+            throw new UnsupportedOperationException("Cannot serialize invalid asset");
+        }
+        if (assetOrArchive instanceof InvalidArchive) {
+            throw new UnsupportedOperationException("Cannot serialize invalid archive");
         }
 
         var propName = assetOrArchive.getPropName();
