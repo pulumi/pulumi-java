@@ -98,7 +98,7 @@ func (i *Imports) Resolve(name Ident) FQN {
 }
 
 func (i *Imports) Ref(name FQN) string {
-	i.add(name) // try adding, ignore error deliberately
+	_ = i.add(name) // try adding, ignore error deliberately
 	if i.Resolve(name.id).Equal(name) {
 		return name.id.String()
 	}

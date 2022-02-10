@@ -48,6 +48,11 @@ provider.%.build:	provider.%.generate
 provider.%.generate:	bin/pulumi-java-gen
 	./bin/pulumi-java-gen -config providers/pulumi-$*/pulumi-java-gen.yaml
 
+.PHONY: lint_pkg
+lint:: lint_pkg
+lint_pkg:
+	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m
+
 # Example: make provider.random.install
 provider.%.install:	provider.%.build
 	cd providers/pulumi-$*/sdk/java && gradle publishToMavenLocal

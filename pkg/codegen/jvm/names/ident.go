@@ -137,13 +137,13 @@ func (id Property) safePrefix(prefix string) string {
 }
 
 // The name of a getter for this property.
-func (mi Property) Getter() string {
-	return mi.safePrefix("get")
+func (id Property) Getter() string {
+	return id.safePrefix("get")
 }
 
 // The name of a setter for this property.
-func (mi Property) Setter() string {
-	return mi.safePrefix("set")
+func (id Property) Setter() string {
+	return id.safePrefix("set")
 }
 
 // Title converts the input string to a title cased string.
