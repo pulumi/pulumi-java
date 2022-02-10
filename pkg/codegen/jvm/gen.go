@@ -862,7 +862,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 				// Option<Input<T>> are stored as @Nullable Input<T>. We don't
 				// need to perform the nullable conversion for them.
 				if !getterType.Type.Equal(names.Input) {
-					returnStatement = fmt.Sprintf("%s.ofNullable(this.%s) /* foo */", ctx.ref(names.Optional), paramName)
+					returnStatement = fmt.Sprintf("%s.ofNullable(this.%s)", ctx.ref(names.Optional), paramName)
 				}
 			}
 		}
