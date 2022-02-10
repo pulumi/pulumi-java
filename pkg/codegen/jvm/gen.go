@@ -2131,13 +2131,7 @@ func genBuildFile(name string, basePackageName string) ([]byte, error) {
 	return w.Bytes(), nil
 }
 
-func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (retMap map[string][]byte, retErr error) {
-	defer func() {
-		if r := recover(); r != nil {
-			retMap = nil
-			retErr = fmt.Errorf("recovered from panic in \"%s\": \"%s\"", pkg.DisplayName, r)
-		}
-	}()
+func GeneratePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
 	modules, info, err := generateModuleContextMap(tool, pkg)
 	if err != nil {
 		return nil, err
