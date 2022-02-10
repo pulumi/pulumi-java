@@ -1453,6 +1453,7 @@ func (mod *modContext) genType(
 		args:                  obj.IsInputShape(),
 	}
 
+	contract.Assertf(pt.name == ctx.className.String(), "This is required by the java compiler")
 	if input {
 		pt.baseClass = "io.pulumi.resources.ResourceArgs"
 		if !obj.IsInputShape() {
@@ -1762,7 +1763,7 @@ func (mod *modContext) gen(fs fs) error {
 			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
-					name:                  string(ctx.className),
+					name:                  ctx.className.String(),
 					baseClass:             "io.pulumi.resources.InvokeArgs",
 					propertyTypeQualifier: "inputs",
 					properties:            f.Inputs.Properties,
@@ -1777,10 +1778,11 @@ func (mod *modContext) gen(fs fs) error {
 			if err := addClass(outputsPkg, resultClass, func(ctx *classFileContext) error {
 				res := &plainType{
 					mod:                   mod,
-					name:                  string(ctx.className),
+					name:                  ctx.className.String(),
 					propertyTypeQualifier: "outputs",
 					properties:            f.Outputs.Properties,
 				}
+				contract.Assert(resultClass.String() == res.name)
 				return res.genOutputType(ctx)
 			}); err != nil {
 				return err
@@ -1823,7 +1825,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 		}
 		if mod.details(t).stateType {
-			className := names.Ident(mod.typeName(t, true, true))
+			className := names.Ident(mod.typeName(t, true, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
 				return mod.genType(ctx, t, "inputs", true, true)
 			}); err != nil {
@@ -1831,7 +1833,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 		}
 		if mod.details(t).outputType {
-			className := names.Ident(mod.typeName(t, false, false))
+			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("outputs")), className, func(ctx *classFileContext) error {
 				return mod.genType(ctx, t, "outputs", false, false)
 			}); err != nil {
