@@ -40,7 +40,7 @@ func parseConfig(path string) (*Config, error) {
 		return nil, fmt.Errorf("Failed to read yaml config from %s: %w", path, err)
 	}
 	var cfg Config
-	if err := yaml.Unmarshal([]byte(bytes), &cfg); err != nil {
+	if err := yaml.Unmarshal(bytes, &cfg); err != nil {
 		return nil, fmt.Errorf("Failed to parse yaml config from %s: %w", path, err)
 	}
 	if cfg.Schema == "" {
