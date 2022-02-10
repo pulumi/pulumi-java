@@ -1259,7 +1259,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		// TODO: add docs comments
 		if r.StateInputs != nil {
-			stateParam = fmt.Sprintf("@%s %sState state, ", ctx.ref(names.Nullable), className)
+			stateParam = fmt.Sprintf("@%s %s state, ", ctx.ref(names.Nullable), ctx.ref(stateFQN))
 			stateRef = "state, "
 			// TODO: add docs param
 		}
