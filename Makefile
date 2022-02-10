@@ -38,7 +38,7 @@ build_sdk::
 ensure_sdk::
 	cd sdk/jvm && make ensure
 
-providers_all: provider.random.install provider.aws-native.install provider.kubernetes.install provider.azure-native.install provider.google-native.install
+providers_all: provider.random.install provider.aws-native.install provider.kubernetes.install provider.azure-native.install provider.google-native.install provider.gcp.install
 
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
