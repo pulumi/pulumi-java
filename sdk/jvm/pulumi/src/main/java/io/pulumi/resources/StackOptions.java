@@ -1,14 +1,22 @@
 package io.pulumi.resources;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
 /**
  * @see StackOptions is a bag of optional settings that control a stack's behavior.
  */
+@ParametersAreNonnullByDefault
 public class StackOptions {
-    @Nullable
+
+    public static final StackOptions Empty = new StackOptions();
+
     private final List<ResourceTransformation> resourceTransformations;
+
+    public StackOptions() {
+        this.resourceTransformations = null;
+    }
 
     public StackOptions(@Nullable List<ResourceTransformation> resourceTransformations) {
         this.resourceTransformations = resourceTransformations;
@@ -20,6 +28,6 @@ public class StackOptions {
      * and component resources in the stack.
      */
     public List<ResourceTransformation> getResourceTransformations() {
-        return resourceTransformations == null ? List.of() : resourceTransformations;
+        return this.resourceTransformations == null ? List.of() : this.resourceTransformations;
     }
 }

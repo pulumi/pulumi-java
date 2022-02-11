@@ -3,7 +3,6 @@ package io.pulumi.deployment.internal;
 import io.pulumi.Stack;
 import io.pulumi.resources.StackOptions;
 
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -15,7 +14,9 @@ public interface Runner {
 
     <T> void registerTask(String description, CompletableFuture<T> task);
 
-    CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, @Nullable StackOptions options);
+    CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback);
+
+    CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options);
 
     <T extends Stack> CompletableFuture<Integer> runAsync(Class<T> stackType);
 

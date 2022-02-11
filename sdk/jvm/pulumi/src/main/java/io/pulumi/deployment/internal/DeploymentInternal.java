@@ -28,8 +28,6 @@ public interface DeploymentInternal extends Deployment {
 
     void setStack(Stack stack);
 
-    EngineLogger getLogger();
-
     Runner getRunner();
 
     void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency,

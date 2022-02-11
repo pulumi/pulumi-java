@@ -12,7 +12,6 @@ import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import io.pulumi.test.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +23,6 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static io.pulumi.deployment.internal.DeploymentTests.printErrorCount;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentResourceDependencyGatheringTest {
@@ -34,18 +32,13 @@ public class DeploymentResourceDependencyGatheringTest {
     public static void mockSetup() {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
-                .setMonitor(new MockMonitor(new MyMocks(true)))
+                .setMocks(new MyMocks(true))
                 .setSpyGlobalInstance();
     }
 
     @AfterAll
     static void cleanup() {
         cleanupDeploymentMocks();
-    }
-
-    @AfterEach
-    public void printInternalErrorCount() {
-        printErrorCount(mock.logger);
     }
 
     @Test

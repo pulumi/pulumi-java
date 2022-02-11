@@ -33,7 +33,7 @@ public class DeploymentInvokeTest {
     void testCustomInvokes() {
         DeploymentTests.DeploymentMockBuilder.builder()
                 .setOptions(new TestOptions(true))
-                .setMonitor(new MockMonitor(new Mocks() {
+                .setMocks(new Mocks() {
                     @Override
                     public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
                         return CompletableFuture.completedFuture(null);
@@ -50,7 +50,7 @@ public class DeploymentInvokeTest {
                                 )
                         );
                     }
-                }))
+                })
                 .setSpyGlobalInstance();
 
         var out = CustomInvokes.doStuff(CustomArgs.Empty, InvokeOptions.Empty).applyVoid(r -> {

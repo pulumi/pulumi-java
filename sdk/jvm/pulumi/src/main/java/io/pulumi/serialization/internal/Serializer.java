@@ -34,11 +34,11 @@ public class Serializer {
 
     public final Set<Resource> dependentResources;
 
-    private final boolean excessiveDebugOutput;
+    private final Log log;
 
-    public Serializer(boolean excessiveDebugOutput) {
+    public Serializer(Log log) {
+        this.log = Objects.requireNonNull(log);
         this.dependentResources = new HashSet<>();
-        this.excessiveDebugOutput = excessiveDebugOutput;
     }
 
     /**
@@ -106,18 +106,14 @@ public class Serializer {
                 prop instanceof Integer ||
                 prop instanceof Double ||
                 prop instanceof String) {
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: primitive=%s", ctx, prop));
-            }
+            log.excessive(String.format("Serialize property[%s]: primitive=%s", ctx, prop));
             return CompletableFuture.completedFuture(/* @Nullable */ prop);
         }
 
         if (prop instanceof Optional) {
             //noinspection unchecked
             var optional = (Optional<Object>) prop;
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: Recursion into Optional", ctx));
-            }
+            log.excessive(String.format("Serialize property[%s]: Recursion into Optional", ctx));
 
             return serializeAsync(ctx, optional.orElse(null), keepResources);
         }
@@ -142,27 +138,21 @@ public class Serializer {
         if (prop instanceof Either) {
             //noinspection unchecked
             var either = (Either<Object, Object>) prop;
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: Recursion into Either", ctx));
-            }
+            log.excessive(String.format("Serialize property[%s]: Recursion into Either", ctx));
 
             return serializeAsync(ctx, either.either(Function.identity(), Function.identity()), keepResources);
         }
 
         if (prop instanceof JsonElement) {
             var element = (JsonElement) prop;
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: Recursion into JsonElement", ctx));
-            }
+            log.excessive(String.format("Serialize property[%s]: Recursion into JsonElement", ctx));
 
             return CompletableFuture.completedFuture(serializeJson(ctx, element));
         }
 
         if (prop instanceof InputOutput) {
             var inputOutput = (InputOutput<Object, ?>) prop;
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
-            }
+            log.excessive(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
 
             return TypedInputOutput.cast(inputOutput).internalGetDataAsync().thenCompose(
                     (InputOutputData<Object> data) -> {
@@ -197,9 +187,7 @@ public class Serializer {
         if (prop instanceof CustomResource) {
             var customResource = (CustomResource) prop;
             // Resources aren't serializable; instead, we serialize them as references to the ID property.
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: Encountered CustomResource", ctx));
-            }
+            log.excessive(String.format("Serialize property[%s]: Encountered CustomResource", ctx));
 
             this.dependentResources.add(customResource);
 
@@ -241,9 +229,7 @@ public class Serializer {
             // to be identified and tracked in a reasonable manner, while not causing us to
             // compute or embed information about it that is not needed, and which can lead to
             // deadlocks.
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: Encountered ComponentResource", ctx));
-            }
+            log.excessive(String.format("Serialize property[%s]: Encountered ComponentResource", ctx));
 
             return serializeAsync(String.format("%s.urn", ctx), componentResource.getUrn(), keepResources).thenApply(
                     /* @Nullable */ urn -> {
@@ -345,9 +331,7 @@ public class Serializer {
     }
 
     private CompletableFuture<Map<String, /* @Nullable */ Object>> serializeAssetOrArchiveAsync(String ctx, AssetOrArchive assetOrArchive, boolean keepResources) {
-        if (excessiveDebugOutput) {
-            Log.debug(String.format("Serialize property[%s]: asset/archive=%s", ctx, assetOrArchive.getClass().getSimpleName()));
-        }
+        log.excessive(String.format("Serialize property[%s]: asset/archive=%s", ctx, assetOrArchive.getClass().getSimpleName()));
 
         if (assetOrArchive instanceof InvalidAsset) {
             throw new UnsupportedOperationException("Cannot serialize invalid asset");
@@ -368,26 +352,20 @@ public class Serializer {
     }
 
     private CompletableFuture<Map<String, /* @Nullable */ Object>> serializeInputArgsAsync(String ctx, InputArgs args, boolean keepResources) {
-        if (excessiveDebugOutput) {
-            Log.debug(String.format("Serialize property[%s]: Recursion into ResourceArgs", ctx));
-        }
+        log.excessive(String.format("Serialize property[%s]: Recursion into ResourceArgs", ctx));
 
-        return args.internalToNullableMapAsync().thenCompose(
+        return args.internalToNullableMapAsync(this.log).thenCompose(
                 map -> serializeMapAsync(ctx, map, keepResources)
         );
     }
 
     // TODO: should we omit null's like serializeMapAsync()?
     private CompletableFuture<ArrayList</* @Nullable */ Object>> serializeListAsync(String ctx, List</* @Nullable */ Object> list, boolean keepResources) {
-        if (excessiveDebugOutput) {
-            Log.debug(String.format("Serialize property[%s]: Hit list", ctx));
-        }
+        log.excessive(String.format("Serialize property[%s]: Hit list", ctx));
 
         var resultFutures = new ArrayList<CompletableFuture</* @Nullable */ Object>>(list.size());
         for (int i = 0, n = list.size(); i < n; i++) {
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: array[%d] element", ctx, i));
-            }
+            log.excessive(String.format("Serialize property[%s]: array[%d] element", ctx, i));
 
             resultFutures.add(serializeAsync(String.format("%s[%s]", ctx, i), list.get(i), keepResources));
         }
@@ -401,9 +379,7 @@ public class Serializer {
     }
 
     private CompletableFuture<Map<String, /* @Nullable */ Object>> serializeMapAsync(String ctx, Map<Object, /* @Nullable */ Object> map, boolean keepResources) {
-        if (excessiveDebugOutput) {
-            Log.debug(String.format("Serialize property[%s]: Hit dictionary", ctx));
-        }
+        log.excessive(String.format("Serialize property[%s]: Hit dictionary", ctx));
 
         var resultFutures = new HashMap<String, CompletableFuture</* @Nullable */ Object>>();
         for (var key : map.keySet()) {
@@ -413,9 +389,7 @@ public class Serializer {
             }
             var stringKey = (String) key;
 
-            if (excessiveDebugOutput) {
-                Log.debug(String.format("Serialize property[%s]: object.%s", ctx, stringKey));
-            }
+            log.excessive(String.format("Serialize property[%s]: object.%s", ctx, stringKey));
 
             // When serializing an object, we omit any keys with null values, see code below. This matches JSON semantics.
             resultFutures.put(stringKey, serializeAsync(String.format("%s.%s", ctx, stringKey), map.get(stringKey), keepResources));
