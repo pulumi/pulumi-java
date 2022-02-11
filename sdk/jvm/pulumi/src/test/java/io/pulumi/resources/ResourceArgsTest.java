@@ -1,7 +1,9 @@
 package io.pulumi.resources;
 
+import io.pulumi.Log;
 import io.pulumi.core.Input;
 import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.deployment.internal.DeploymentTests;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
@@ -13,6 +15,9 @@ import static io.pulumi.core.InputOutputTests.waitFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceArgsTest {
+
+    private final static Log log = DeploymentTests.mockLog();
+
     public static class ComplexResourceArgs1 extends ResourceArgs {
         @InputImport
         @Nullable
@@ -34,7 +39,7 @@ class ResourceArgsTest {
     @Test
     void testComplexResourceArgs1_emptyValues() {
         var args = new ComplexResourceArgs1();
-        var map = args.internalToOptionalMapAsync().join();
+        var map = args.internalToOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
@@ -48,7 +53,7 @@ class ResourceArgsTest {
         var args = new ComplexResourceArgs1();
         args.s = Input.of("s");
         args.array = Input.of(List.of(true, false));
-        var map = args.internalToOptionalMapAsync().join();
+        var map = args.internalToOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
@@ -93,7 +98,7 @@ class ResourceArgsTest {
         var args = new JsonResourceArgs1();
         args.setArray(Input.ofList(true, false));
         args.setMap(Input.ofMap("k1", 1, "k2", 2));
-        var map = args.internalToOptionalMapAsync().join();
+        var map = args.internalToOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("array");
         assertThat(map).containsKey("map");

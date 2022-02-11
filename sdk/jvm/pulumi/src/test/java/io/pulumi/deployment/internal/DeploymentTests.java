@@ -3,17 +3,23 @@ package io.pulumi.deployment.internal;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
+import io.pulumi.Log;
 import io.pulumi.Stack;
 import io.pulumi.deployment.MockEngine;
 import io.pulumi.deployment.MockMonitor;
-import io.pulumi.deployment.MyMocks;
+import io.pulumi.deployment.Mocks;
+import io.pulumi.deployment.MocksTest;
+import io.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
 import io.pulumi.test.internal.TestOptions;
 
 import javax.annotation.Nullable;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -37,6 +43,7 @@ public class DeploymentTests {
         public final DeploymentImpl.Config config;
         public final DeploymentImpl.DeploymentState state;
         public final EngineLogger logger;
+        public final Log log;
 
         private DeploymentMock(
                 TestOptions options,
@@ -46,7 +53,8 @@ public class DeploymentTests {
                 DeploymentImpl deployment,
                 DeploymentImpl.Config config,
                 DeploymentImpl.DeploymentState state,
-                EngineLogger logger
+                EngineLogger logger,
+                Log log
         ) {
             this.options = Objects.requireNonNull(options);
             this.runner = Objects.requireNonNull(runner);
@@ -56,6 +64,7 @@ public class DeploymentTests {
             this.config = Objects.requireNonNull(config);
             this.state = Objects.requireNonNull(state);
             this.logger = Objects.requireNonNull(logger);
+            this.log = Objects.requireNonNull(log);
         }
 
         public void overrideConfig(String key, String value) {
@@ -64,10 +73,6 @@ public class DeploymentTests {
 
         public void overrideConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) {
             this.config.setAllConfig(config, secretKeys);
-        }
-
-        public Runner getRunner() {
-            return this.runner;
         }
 
         public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Class<T> stackType) {
@@ -95,8 +100,26 @@ public class DeploymentTests {
             return this.runner.runAsync(stackType)
                     .thenApply(ignore -> new TestAsyncResult(
                             ImmutableList.copyOf(mockMonitor.resources),
-                            mockEngine.errors.stream()
+                            mockEngine.getErrors().stream()
                                     .map(RunException::new).collect(toImmutableList())
+                    ));
+        }
+
+        public CompletableFuture<TestAsyncResult> runAsync(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback) {
+            if (!(engine instanceof MockEngine)) {
+                throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
+            }
+            if (!(monitor instanceof MockMonitor)) {
+                throw new IllegalStateException("Expected monitor to be an instanceof MockMonitor");
+            }
+            var mockEngine = (MockEngine) engine;
+            var mockMonitor = (MockMonitor) monitor;
+            return this.runner.runAsyncFuture(callback)
+                    .thenApply(ignore -> new TestAsyncResult(
+                            ImmutableList.copyOf(mockMonitor.resources),
+                            mockEngine.getErrors().stream()
+                                    .map(RunException::new)
+                                    .collect(toImmutableList())
                     ));
         }
 
@@ -131,10 +154,12 @@ public class DeploymentTests {
         private EngineLogger logger;
         @Nullable
         private Logger standardLogger;
+        @Nullable
+        private Log log;
+        @Nullable
+        private Mocks mocks;
 
-        private DeploymentMockBuilder() {
-            // Empty
-        }
+        private DeploymentMockBuilder() { /* Empty */ }
 
         public static DeploymentMockBuilder builder() {
             return new DeploymentMockBuilder();
@@ -164,6 +189,12 @@ public class DeploymentTests {
             return this;
         }
 
+        public DeploymentMockBuilder setMocks(Mocks mocks) {
+            Objects.requireNonNull(mocks);
+            this.mocks = mocks;
+            return this;
+        }
+
         public DeploymentMockBuilder setConfig(DeploymentImpl.Config config) {
             Objects.requireNonNull(config);
             this.config = config;
@@ -188,9 +219,25 @@ public class DeploymentTests {
             return this;
         }
 
+        public DeploymentMockBuilder setLog(Log log) {
+            Objects.requireNonNull(log);
+            this.log = log;
+            return this;
+        }
+
         private void initUnset() {
             if (this.standardLogger == null) {
                 this.standardLogger = defaultLogger();
+            }
+            if (this.logger == null) {
+                this.logger = new DefaultEngineLogger(
+                        this.standardLogger,
+                        () -> this.runner,
+                        () -> this.engine
+                );
+            }
+            if (this.log == null) {
+                this.log = new Log(this.logger);
             }
             if (this.options == null) {
                 this.options = new TestOptions();
@@ -201,8 +248,11 @@ public class DeploymentTests {
             if (this.engine == null) {
                 this.engine = new MockEngine();
             }
+            if (this.mocks == null) {
+                this.mocks = new MocksTest.MyMocks();
+            }
             if (this.monitor == null) {
-                this.monitor = new MockMonitor(new MyMocks());
+                this.monitor = new MockMonitor(this.mocks, this.log);
             }
             if (this.config == null) {
                 this.config = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
@@ -219,10 +269,6 @@ public class DeploymentTests {
                         monitor
                 );
             }
-
-            if (this.logger == null) {
-                this.logger = new DeploymentImpl.DefaultEngineLogger(state, this.standardLogger);
-            }
         }
 
         public DeploymentMock setSpyGlobalInstance() {
@@ -232,14 +278,14 @@ public class DeploymentTests {
             this.runner = this.deployment.getRunner();
 
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
-            return new DeploymentMock(
-                    options, runner, engine, monitor, deployment, config, state, logger);
+            return new DeploymentMock(options, runner, engine, monitor, deployment, config, state, logger, log);
         }
 
         public DeploymentMock setMockGlobalInstance() {
             initUnset();
 
             var mock = mock(DeploymentImpl.class);
+            //noinspection ConstantConditions
             when(mock.isDryRun()).thenReturn(this.state.isDryRun);
             when(mock.getProjectName()).thenReturn(this.state.projectName);
             when(mock.getStackName()).thenReturn(this.state.stackName);
@@ -250,13 +296,12 @@ public class DeploymentTests {
                     this.state.config.isConfigSecret((String) invocation.getArguments()[0])
             );
             when(mock.getRunner()).thenReturn(this.runner);
-            when(mock.getLogger()).thenReturn(this.logger);
 
             this.deployment = mock;
 
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
             return new DeploymentMock(
-                    options, runner, engine, monitor, deployment, config, state, logger);
+                    options, runner, engine, monitor, deployment, config, state, logger, log);
         }
     }
 
@@ -264,12 +309,6 @@ public class DeploymentTests {
         // ensure we don't get the error:
         //   java.lang.IllegalStateException: Deployment.getInstance should only be set once at the beginning of a 'run' call.
         DeploymentImpl.internalUnsafeDestroyInstance(); // FIXME: how to avoid this?
-    }
-
-    public static void printErrorCount(EngineLogger logger) {
-        if (logger.hasLoggedErrors()) {
-            System.out.println("logger.errorCount=" + logger.getErrorCount());
-        }
     }
 
     public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
@@ -286,7 +325,15 @@ public class DeploymentTests {
 
     public static Logger defaultLogger() {
         var standardLogger = Logger.getLogger(DeploymentTests.class.getName());
-        standardLogger.setLevel(Level.FINEST);
+        standardLogger.setLevel(Level.INFO);
         return standardLogger;
+    }
+
+    public static Log mockLog() {
+        return mockLog(defaultLogger(), () -> mock(Engine.class));
+    }
+
+    public static Log mockLog(Logger logger, Supplier<Engine> engine) {
+        return new Log(new DefaultEngineLogger(logger, () -> mock(Runner.class), engine));
     }
 }

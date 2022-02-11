@@ -3,6 +3,7 @@ package io.pulumi.resources;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.grpc.Internal;
+import io.pulumi.Log;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.annotations.InputImport;
 import io.pulumi.core.internal.annotations.InputMetadata;
@@ -35,8 +36,8 @@ public abstract class InputArgs {
     protected abstract void validateMember(Class<?> memberType, String fullName);
 
     // TODO: try to remove, this only casts the type
-    public CompletableFuture<Map<Object, /* @Nullable */ Object>> internalToNullableMapAsync() {
-        return internalToOptionalMapAsync()
+    public CompletableFuture<Map<Object, /* @Nullable */ Object>> internalToNullableMapAsync(Log log) {
+        return internalToOptionalMapAsync(log)
                 .thenApply(map -> map.entrySet()
                         .stream()
                         .collect(toMap(Map.Entry::getKey, Map.Entry::getValue))
@@ -44,12 +45,12 @@ public abstract class InputArgs {
     }
 
     @Internal
-    public CompletableFuture<Map<String, Optional<Object>>> internalToOptionalMapAsync() {
+    public CompletableFuture<Map<String, Optional<Object>>> internalToOptionalMapAsync(Log log) {
         BiFunction<String, Object, CompletableFuture<Optional<Object>>> convertToJson = (context, input) -> {
             Objects.requireNonNull(context);
             Objects.requireNonNull(input);
 
-            final var serializer = new Serializer(false);
+            final var serializer = new Serializer(log);
             return serializer.serializeAsync(context, input, false)
                     .thenApply(Serializer::createValue)
                     .thenApply(value -> JsonFormatter.format(value)

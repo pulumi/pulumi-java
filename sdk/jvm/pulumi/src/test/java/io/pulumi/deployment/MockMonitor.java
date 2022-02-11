@@ -3,6 +3,7 @@ package io.pulumi.deployment;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
+import io.pulumi.Log;
 import io.pulumi.Stack;
 import io.pulumi.core.Urn;
 import io.pulumi.core.internal.Maps;
@@ -21,13 +22,16 @@ import java.util.concurrent.CompletableFuture;
 
 public class MockMonitor implements Monitor {
 
-    private final Serializer serializer = new Serializer(false);
-    private final Map<String, ImmutableMap<String, Object>> registeredResources = Collections.synchronizedMap(new HashMap<>());
     private final Mocks mocks;
-    public final List<Resource> resources = Collections.synchronizedList(new LinkedList<>());
+    private final Serializer serializer;
+    private final Map<String, ImmutableMap<String, Object>> registeredResources;
+    public final List<Resource> resources;
 
-    public MockMonitor(Mocks mocks) {
+    public MockMonitor(Mocks mocks, Log log) {
         this.mocks = Objects.requireNonNull(mocks);
+        this.serializer = new Serializer(log);
+        this.registeredResources = Collections.synchronizedMap(new HashMap<>());
+        this.resources = Collections.synchronizedList(new LinkedList<>());
     }
 
     @Override
@@ -46,7 +50,9 @@ public class MockMonitor implements Monitor {
         if ("pulumi:pulumi:getResource".equals(request.getTok())) {
             var urn = (String) args.get("urn");
             Map<String, Object> registeredResource = Maps.tryGetValue(registeredResources, urn)
-                    .orElseThrow(() -> new IllegalArgumentException(String.format("Unknown resource '%s'", urn)));
+                    .orElseThrow(() -> new IllegalArgumentException(String.format(
+                            "Unknown resource '%s', got: %s", urn, registeredResources
+                    )));
             toBeSerialized = CompletableFuture.completedFuture(registeredResource);
         } else {
             toBeSerialized = mocks.callAsync(new MockCallArgs(request.getTok(), args, request.getProvider()));
