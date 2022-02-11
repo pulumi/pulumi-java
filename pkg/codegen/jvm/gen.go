@@ -49,6 +49,7 @@ type modContext struct {
 	basePackageName        string
 	packages               map[string]string
 	dictionaryConstructors bool
+	configClassPackageName string
 }
 
 func (mod *modContext) propertyName(p *schema.Property) string {
@@ -1486,7 +1487,7 @@ func (mod *modContext) getConfigProperty(
 		return mod.typeString(
 			ctx,
 			t,
-			"types",
+			"inputs",
 			false,
 			false,
 			true,  // requireInitializers - set to true so we preserve Optional
@@ -1548,17 +1549,27 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 
 	// Emit an entry for all config variables.
 	for _, p := range variables {
-		propertyType, getFunc := mod.getConfigProperty(ctx, p.Type, p.Name)
-		propertyName := names.Ident(mod.propertyName(p))
 
+		typ := p.Type
+
+		// TODO mini-awsnative.json example seems to hit this
+		// case where a prop is required but has no default
+		// value; where should the default be coming from?
+		// Should we be generating code that throws?
+		if p.IsRequired() && p.DefaultValue == nil {
+			typ = &schema.OptionalType{ElementType: typ}
+		}
+
+		propertyType, getFunc := mod.getConfigProperty(ctx, typ, p.Name)
+		propertyName := names.Ident(mod.propertyName(p))
 		returnStatement := getFunc.String()
 
 		if p.DefaultValue != nil {
-			defaultValueString, defType, err := mod.getDefaultValue(ctx, p.DefaultValue, p.Type)
+			defaultValueString, defType, err := mod.getDefaultValue(ctx, p.DefaultValue, typ)
 			if err != nil {
 				return err
 			}
-			defaultValueInitializer := typeInitializer(ctx, p.Type, defaultValueString, defType)
+			defaultValueInitializer := typeInitializer(ctx, typ, defaultValueString, defType)
 			returnStatement = fmt.Sprintf("%s.combine(%s, %s)",
 				ctx.ref(names.Optionals),
 				returnStatement,
@@ -1675,12 +1686,15 @@ func (mod *modContext) gen(fs fs) error {
 		fs.add("README.md", []byte(readme))
 	case "config":
 		if len(mod.pkg.Config) > 0 {
-			if err := addClass(javaPkg, names.Ident("Config"), func(ctx *classFileContext) error {
+			configPkg, err := parsePackageName(mod.configClassPackageName)
+			if err != nil {
+				return err
+			}
+			if err := addClass(configPkg, names.Ident("Config"), func(ctx *classFileContext) error {
 				return mod.genConfig(ctx, mod.pkg.Config)
 			}); err != nil {
 				return err
 			}
-			return nil
 		}
 	}
 
@@ -1976,11 +1990,11 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	// Create the config module if necessary.
 	if len(pkg.Config) > 0 {
 		cfg := getMod("config", pkg)
-		cfg.packageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
+		cfg.configClassPackageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
 	}
 
 	visitObjectTypes(pkg.Config, func(t *schema.ObjectType) {
-		getModFromToken(t.Token, pkg).details(t).outputType = true
+		getModFromToken(t.Token, pkg).details(t).plainType = true
 	})
 
 	// Find input and output types referenced by resources.
