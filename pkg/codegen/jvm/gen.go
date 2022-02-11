@@ -49,6 +49,7 @@ type modContext struct {
 	basePackageName        string
 	packages               map[string]string
 	dictionaryConstructors bool
+	configClassPackageName string
 }
 
 func (mod *modContext) propertyName(p *schema.Property) string {
@@ -1486,7 +1487,7 @@ func (mod *modContext) getConfigProperty(
 		return mod.typeString(
 			ctx,
 			t,
-			"types",
+			"inputs",
 			false,
 			false,
 			true,  // requireInitializers - set to true so we preserve Optional
@@ -1675,12 +1676,15 @@ func (mod *modContext) gen(fs fs) error {
 		fs.add("README.md", []byte(readme))
 	case "config":
 		if len(mod.pkg.Config) > 0 {
-			if err := addClass(javaPkg, names.Ident("Config"), func(ctx *classFileContext) error {
+			configPkg, err := parsePackageName(mod.configClassPackageName)
+			if err != nil {
+				return err
+			}
+			if err := addClass(configPkg, names.Ident("Config"), func(ctx *classFileContext) error {
 				return mod.genConfig(ctx, mod.pkg.Config)
 			}); err != nil {
 				return err
 			}
-			return nil
 		}
 	}
 
@@ -1976,11 +1980,11 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	// Create the config module if necessary.
 	if len(pkg.Config) > 0 {
 		cfg := getMod("config", pkg)
-		cfg.packageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
+		cfg.configClassPackageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
 	}
 
 	visitObjectTypes(pkg.Config, func(t *schema.ObjectType) {
-		getModFromToken(t.Token, pkg).details(t).outputType = true
+		getModFromToken(t.Token, pkg).details(t).plainType = true
 	})
 
 	// Find input and output types referenced by resources.

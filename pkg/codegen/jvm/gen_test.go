@@ -14,6 +14,10 @@ var javaSpecificTests []test.SDKTest = []test.SDKTest{
 		Directory:   "mini-azurenative",
 		Description: "Regression tests extracted from trying to codegen azure-natuve",
 	},
+	{
+		Directory:   "mini-awsnative",
+		Description: "Regression tests extracted from trying to codegen aws-native",
+	},
 }
 
 func adaptTest(t test.SDKTest) test.SDKTest {
