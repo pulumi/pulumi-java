@@ -6,26 +6,21 @@ import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.deployment.internal.DeploymentTests;
+import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
-import org.assertj.core.api.HamcrestCondition;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Queue;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
 
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.CoreMatchers.containsString;
 
 public class DeploymentRunnerTest {
 
@@ -69,8 +64,8 @@ public class DeploymentRunnerTest {
 
     @Test
     void testLogsTaskDescriptions() {
-        var logger = new InMemoryLogger();
-        logger.setLevel(Level.FINEST);
+        // The test requires Level.FINEST
+        var logger = InMemoryLogger.getLogger(Level.FINEST, "DeploymentRunnerTest#testLogsTaskDescriptions");
 
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
                 .setStandardLogger(logger)
@@ -87,35 +82,8 @@ public class DeploymentRunnerTest {
 
         var messages = logger.getMessages();
         for (var i = 0; i < 2; i++) {
-            assertThat(messages).haveAtLeastOne(containsStringCondition(String.format("Registering task: 'task%d'", i)));
-            assertThat(messages).haveAtLeastOne(containsStringCondition(String.format("Completed task: 'task%d'", i)));
-        }
-    }
-
-    private static HamcrestCondition<String> containsStringCondition(String s) {
-        return new HamcrestCondition<>(containsString(s));
-    }
-
-    private static class InMemoryLogger extends Logger {
-        private final Queue<String> messages = new ConcurrentLinkedQueue<>();
-
-        public InMemoryLogger() {
-            this(DeploymentRunnerTest.class.getTypeName(), null);
-        }
-
-        protected InMemoryLogger(String name, String resourceBundleName) {
-            super(name, resourceBundleName);
-            this.setLevel(Level.FINEST);
-        }
-
-        public List<String> getMessages() {
-            return List.copyOf(messages);
-        }
-
-        @Override
-        public void log(LogRecord record) {
-            this.messages.add(String.format("%s %s %s", record.getLevel(), record.getSequenceNumber(), record.getMessage()));
-            super.log(record);
+            assertThat(messages).haveAtLeastOne(containsString(String.format("Registering task: 'task%d'", i)));
+            assertThat(messages).haveAtLeastOne(containsString(String.format("Completed task: 'task%d'", i)));
         }
     }
 }

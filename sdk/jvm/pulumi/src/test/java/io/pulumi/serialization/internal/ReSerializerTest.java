@@ -20,6 +20,7 @@ import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
 class ReSerializerTest {
+
     private static DeploymentMock mock;
 
     @BeforeAll
@@ -33,14 +34,10 @@ class ReSerializerTest {
         cleanupDeploymentMocks();
     }
 
-    @AfterEach
-    public void printInternalErrorCount() {
-        printErrorCount(mock.logger);
-    }
 
     @Nullable
     private Object reSerialize(@Nullable Object o) {
-        var serialized = new Serializer(true)
+        var serialized = new Serializer(mock.log)
                 .serializeAsync("ReSerializerTest", o, true);
 
         return serialized

@@ -94,7 +94,7 @@ public interface Deployment {
     /**
      * Dynamically calls the function {@code token}, which is offered by a provider plugin.
      * <p>
-     * The result of {@code call} will be a @see {@link Output<T>} resolved to the
+     * The result of {@code call} will be an @see {@link Output<T>} resolved to the
      * result value of the provider plugin.
      * <p>
      * The {@code args} inputs can be a bag of computed values

@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.test.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CompletableFuture;
@@ -16,16 +15,9 @@ import static org.mockito.Mockito.mock;
 
 public class DeploymentInstanceTest {
 
-    private static EngineLogger logger;
-
     @AfterAll
     static void cleanup() {
         cleanupDeploymentMocks();
-    }
-
-    @AfterEach
-    public void printInternalErrorCount() {
-        DeploymentTests.printErrorCount(logger);
     }
 
     @Test
@@ -49,7 +41,6 @@ public class DeploymentInstanceTest {
                 engine,
                 monitor
         );
-        logger = state.logger;
         var deployment = new DeploymentImpl(state);
 
         var task = DeploymentInternal.createRunnerAndRunAsync(

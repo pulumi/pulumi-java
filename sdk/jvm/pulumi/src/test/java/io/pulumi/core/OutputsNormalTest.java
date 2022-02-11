@@ -2,7 +2,6 @@ package io.pulumi.core;
 
 import io.pulumi.test.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -25,11 +24,6 @@ public class OutputsNormalTest {
     @AfterAll
     static void cleanup() {
         cleanupDeploymentMocks();
-    }
-
-    @AfterEach
-    public void printInternalErrorCount() {
-        printErrorCount(mock.logger);
     }
 
     @Test

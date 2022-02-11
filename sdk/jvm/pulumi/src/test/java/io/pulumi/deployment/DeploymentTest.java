@@ -3,7 +3,10 @@ package io.pulumi.deployment;
 import io.pulumi.Config;
 import io.pulumi.core.Output;
 import io.pulumi.deployment.internal.DeploymentInternal;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -17,6 +20,7 @@ import static io.pulumi.deployment.internal.DeploymentTests.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentTest {
+
     private static DeploymentMock mock;
 
     @BeforeAll
@@ -28,11 +32,6 @@ public class DeploymentTest {
     @AfterAll
     static void cleanup() {
         cleanupDeploymentMocks();
-    }
-
-    @AfterEach
-    public void printInternalErrorCount() {
-        printErrorCount(mock.logger);
     }
 
     @Test
@@ -126,7 +125,7 @@ public class DeploymentTest {
     void testRunWaitsForOrphanedOutput() {
         final var result = new AtomicInteger(0);
         var cf = new CompletableFuture<Integer>();
-        var runTaskOne = mock.getRunner().runAsyncFuture(() -> {
+        var runTaskOne = mock.runner.runAsyncFuture(() -> {
             //noinspection unused
             Output<Integer> orphaned = Output.of(cf).applyValue(result::getAndSet); // the orphaned output
             return CompletableFuture.completedFuture(Map.of()); // empty outputs

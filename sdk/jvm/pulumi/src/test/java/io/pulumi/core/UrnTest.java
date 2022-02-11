@@ -5,12 +5,10 @@ import io.pulumi.core.internal.TypedInputOutput;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.test.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static io.pulumi.deployment.internal.DeploymentTests.printErrorCount;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class UrnTest {
@@ -27,11 +25,6 @@ class UrnTest {
     @AfterAll
     static void cleanup() {
         cleanupDeploymentMocks();
-    }
-
-    @AfterEach
-    public void printInternalErrorCount() {
-        printErrorCount(mock.logger);
     }
 
     @Test

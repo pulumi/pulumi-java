@@ -1,129 +1,161 @@
 package io.pulumi;
 
-import io.pulumi.deployment.internal.DeploymentInternal;
+import io.pulumi.deployment.internal.CountingLogger;
+import io.pulumi.deployment.internal.EngineLogger;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 /**
- * Logging functions that can be called from a .NET application that will be logged to the {@code Pulumi} log stream.
+ * Logging functions that can be called from a Java application that will be logged to the {@code Pulumi} log stream.
  * These events will be printed in the terminal while the Pulumi app runs,
  * and will be available from the CLI and Web console afterwards.
  */
-public class Log {
+@ParametersAreNonnullByDefault
+public class Log implements CountingLogger {
 
-    private Log() {
-        throw new UnsupportedOperationException("static class");
+    private final EngineLogger logger;
+    private final boolean excessiveDebugOutput;
+
+    public Log(EngineLogger logger) {
+        this(logger, false);
+    }
+
+    public Log(EngineLogger logger, boolean excessiveDebugOutput) {
+        this.logger = Objects.requireNonNull(logger);
+        this.excessiveDebugOutput = excessiveDebugOutput;
+    }
+
+    public void excessive(String message, Object... args) {
+        if (excessiveDebugOutput) {
+            debug(String.format(message, args));
+        }
+    }
+
+    public void debugOrExcessive(String debugMessage, String excessiveMessage) {
+        debug(debugMessage + (excessiveDebugOutput ? excessiveMessage : ""));
     }
 
     /**
      * Logs a debug-level message that is generally hidden from end-users.
      */
-    public static void debug(String message) {
-        DeploymentInternal.getInstance().getLogger().debugAsync(message);
+    public void debug(String message) {
+        this.logger.debugAsync(message);
     }
 
     /**
      * Logs a debug-level message that is generally hidden from end-users.
      */
-    public static void debug(String message, @Nullable Resource resource) {
-        DeploymentInternal.getInstance().getLogger().debugAsync(message, resource);
+    public void debug(String message, @Nullable Resource resource) {
+        this.logger.debugAsync(message, resource);
     }
 
     /**
      * Logs a debug-level message that is generally hidden from end-users.
      */
-    public static void debug(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
-        DeploymentInternal.getInstance().getLogger().debugAsync(message, resource, streamId, ephemeral);
+    public void debug(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
+        this.logger.debugAsync(message, resource, streamId, ephemeral);
     }
 
     /**
      * Logs an informational message that is generally printed to stdout during resource
      * operations.
      */
-    public static void info(String message) {
-        DeploymentInternal.getInstance().getLogger().infoAsync(message);
+    public void info(String message) {
+        this.logger.infoAsync(message);
     }
 
     /**
      * Logs an informational message that is generally printed to stdout during resource
      * operations.
      */
-    public static void info(String message, @Nullable Resource resource) {
-        DeploymentInternal.getInstance().getLogger().infoAsync(message, resource);
+    public void info(String message, @Nullable Resource resource) {
+        this.logger.infoAsync(message, resource);
     }
 
     /**
      * Logs an informational message that is generally printed to stdout during resource
      * operations.
      */
-    public static void info(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
-        DeploymentInternal.getInstance().getLogger().infoAsync(message, resource, streamId, ephemeral);
+    public void info(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
+        this.logger.infoAsync(message, resource, streamId, ephemeral);
     }
 
     /**
      * Logs a warning to indicate that something went wrong, but not catastrophically so.
      */
-    public static void warn(String message) {
-        DeploymentInternal.getInstance().getLogger().warnAsync(message);
+    public void warn(String message) {
+        this.logger.warnAsync(message);
     }
 
     /**
      * Logs a warning to indicate that something went wrong, but not catastrophically so.
      */
-    public static void warn(String message, @Nullable Resource resource) {
-        DeploymentInternal.getInstance().getLogger().warnAsync(message, resource);
+    public void warn(String message, @Nullable Resource resource) {
+        this.logger.warnAsync(message, resource);
     }
 
     /**
      * Logs a warning to indicate that something went wrong, but not catastrophically so.
      */
-    public static void warn(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
-        DeploymentInternal.getInstance().getLogger().warnAsync(message, resource, streamId, ephemeral);
+    public void warn(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
+        this.logger.warnAsync(message, resource, streamId, ephemeral);
     }
 
     /**
      * Logs a fatal condition. Consider raising an exception
      * after calling Error to stop the Pulumi program.
      */
-    public static void error(String message) {
-        DeploymentInternal.getInstance().getLogger().errorAsync(message);
+    public void error(String message) {
+        this.logger.errorAsync(message);
     }
 
     /**
      * Logs a fatal condition. Consider raising an exception
      * after calling Error to stop the Pulumi program.
      */
-    public static void error(String message, @Nullable Resource resource) {
-        DeploymentInternal.getInstance().getLogger().errorAsync(message, resource);
+    public void error(String message, @Nullable Resource resource) {
+        this.logger.errorAsync(message, resource);
     }
 
     /**
      * Logs a fatal condition. Consider raising an exception
      * after calling Error to stop the Pulumi program.
      */
-    public static void error(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
-        DeploymentInternal.getInstance().getLogger().errorAsync(message, resource, streamId, ephemeral);
+    public void error(String message, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
+        this.logger.errorAsync(message, resource, streamId, ephemeral);
     }
 
     /**
      * Logs an exception. Consider raising the exception after calling this method to stop the Pulumi program.
      */
-    public static void exception(Exception exception) {
-        error(exception.getLocalizedMessage());
+    public void exception(Exception exception) {
+        this.error(exception.getLocalizedMessage());
     }
 
     /**
      * Logs an exception. Consider raising the exception after calling this method to stop the Pulumi program.
      */
-    public static void exception(Exception exception, @Nullable Resource resource) {
-        error(exception.getLocalizedMessage(), resource);
+    public void exception(Exception exception, @Nullable Resource resource) {
+        this.error(exception.getLocalizedMessage(), resource);
     }
 
     /**
      * Logs an exception. Consider raising the exception after calling this method to stop the Pulumi program.
      */
-    public static void exception(Exception exception, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
-        error(exception.getLocalizedMessage(), resource, streamId, ephemeral);
+    public void exception(Exception exception, @Nullable Resource resource, @Nullable Integer streamId, @Nullable Boolean ephemeral) {
+        this.error(exception.getLocalizedMessage(), resource, streamId, ephemeral);
+    }
+
+    @Override
+    public int getErrorCount() {
+        return this.logger.getErrorCount();
+    }
+
+    @Override
+    public boolean hasLoggedErrors() {
+        return this.logger.hasLoggedErrors();
     }
 }

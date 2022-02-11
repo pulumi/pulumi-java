@@ -65,7 +65,9 @@ import static java.util.stream.Collectors.toSet;
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
 
     private final DeploymentState state;
+    private final Log log;
     private final FeatureSupport featureSupport;
+    private final Serialization serialization;
     private final Invoke invoke;
     private final Call call;
     private final Prepare prepare;
@@ -87,17 +89,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             DeploymentState state
     ) {
         this.state = Objects.requireNonNull(state);
+        this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
-        this.invoke = new Invoke(state.monitor, this.featureSupport);
+        this.serialization = new Serialization(this.log);
+        this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization);
         this.rootResource = new RootResource(state.engine);
-        this.prepare = new Prepare(this.featureSupport, this.rootResource);
-        this.call = new Call(state.monitor, this.prepare);
-        this.readResource = new ReadResource(prepare, state.monitor);
-        this.registerResource = new RegisterResource(prepare, state.monitor);
+        this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
+        this.call = new Call(this.log, state.monitor, this.prepare, this.serialization);
+        this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
+        this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
         this.readOrRegisterResource = new ReadOrRegisterResource(state.runner, this.invoke, this.readResource, this.registerResource, state.isDryRun);
-        this.registerResourceOutputs = new RegisterResourceOutputs(state.runner, state.monitor, featureSupport);
-
-        this.state.standardLogger.log(Level.INFO, "Deployment initialized.");
+        this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, state.monitor, this.featureSupport, this.serialization);
     }
 
     /**
@@ -155,11 +157,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Override
     public boolean isDryRun() {
         return this.state.isDryRun;
-    }
-
-    @Internal
-    public EngineLogger getLogger() {
-        return this.state.logger;
     }
 
     @Internal
@@ -401,12 +398,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @ParametersAreNonnullByDefault
     private final static class Invoke {
 
+        private final Log log;
         private final Monitor monitor;
         private final FeatureSupport featureSupport;
+        private final Serialization serialization;
 
-        private Invoke(Monitor monitor, FeatureSupport featureSupport) {
+        private Invoke(Log log, Monitor monitor, FeatureSupport featureSupport, Serialization serialization) {
+            this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.featureSupport = Objects.requireNonNull(featureSupport);
+            this.serialization = Objects.requireNonNull(serialization);
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args) {
@@ -498,14 +499,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
 
-            Log.debug(String.format("Invoking function: token='%s' asynchronously", token));
+            log.debug(String.format("Invoking function: token='%s' asynchronously", token));
 
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = args.internalToOptionalMapAsync()
+            var serializedFuture = args.internalToOptionalMapAsync(this.log)
                     .thenCompose(argsDict ->
                             this.featureSupport.monitorSupportsResourceReferences()
                                     .thenCompose(keepResources ->
-                                            Serialization.serializeFilteredPropertiesAsync(
+                                            serialization.serializeFilteredPropertiesAsync(
                                                     String.format("invoke:%s", token), argsDict, ignore -> true, keepResources
                                             ))
                     );
@@ -520,8 +521,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var provider = providerFuture.join();
                         var version = options.getVersion();
 
-                        Log.debug(String.format("Invoke RPC prepared: token='%s'", token) +
-                                (DeploymentState.ExcessiveDebugOutput ? String.format(", obj='%s'", serialized) : ""));
+                        log.debugOrExcessive(
+                                String.format("Invoke RPC prepared: token='%s'", token),
+                                String.format(", obj='%s'", serialized)
+                        );
                         return this.monitor.invokeAsync(InvokeRequest.newBuilder()
                                 .setTok(token)
                                 .setProvider(provider.orElse(""))
@@ -580,12 +583,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @ParametersAreNonnullByDefault
     private final static class Call {
+
+        private final Log log;
         private final Monitor monitor;
         private final Prepare prepare;
+        private final Serialization serialization;
 
-        public Call(Monitor monitor, Prepare prepare) {
+        public Call(Log log, Monitor monitor, Prepare prepare, Serialization serialization) {
+            this.log = Objects.requireNonNull(log);
             this.monitor = Objects.requireNonNull(monitor);
             this.prepare = Objects.requireNonNull(prepare);
+            this.serialization = Objects.requireNonNull(serialization);
         }
 
         void call(String token, CallArgs args) {
@@ -636,10 +644,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
 
-            Log.debug(String.format("Calling function: token='%s' asynchronously", token));
+            log.debug(String.format("Calling function: token='%s' asynchronously", token));
 
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = args.internalToOptionalMapAsync()
+            var serializedFuture = args.internalToOptionalMapAsync(this.log)
                     .thenApply(argsDict -> self == null
                             ? argsDict
                             : ImmutableMap.<String, Optional<Object>>builder()
@@ -648,7 +656,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                             .build()
                     )
                     .thenCompose(
-                            argsDict -> Serialization.serializeFilteredPropertiesAsync(
+                            argsDict -> serialization.serializeFilteredPropertiesAsync(
                                     String.format("call:%s", token), argsDict, ignore -> true, true)
                     );
 
@@ -682,8 +690,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 ))
                         );
 
-                        Log.debug(String.format("Call RPC prepared: token='%s'", token) +
-                                (DeploymentState.ExcessiveDebugOutput ? String.format(", obj='%s'", serialized) : ""));
+                        log.debugOrExcessive(
+                                String.format("Call RPC prepared: token='%s'", token),
+                                String.format(", obj='%s'", serialized)
+                        );
 
                         // Kick off the call.
                         return argDependencies.thenCompose(deps ->
@@ -737,12 +747,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private static final class Prepare {
 
+        private final Log log;
         private final FeatureSupport featureSupport;
         private final RootResource rootResource;
+        private final Serialization serialization;
 
-        private Prepare(FeatureSupport featureSupport, RootResource rootResource) {
+        private Prepare(Log log, FeatureSupport featureSupport, RootResource rootResource, Serialization serialization) {
+            this.log = Objects.requireNonNull(log);
             this.featureSupport = Objects.requireNonNull(featureSupport);
             this.rootResource = Objects.requireNonNull(rootResource);
+            this.serialization = Objects.requireNonNull(serialization);
         }
 
         private CompletableFuture<PrepareResult> prepareResourceAsync(
@@ -753,33 +767,33 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var name = res.getResourceName();
 
             // Before we can proceed, all our dependencies must be finished.
-            logExcessive("Gathering explicit dependencies: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+            log.excessive("Gathering explicit dependencies: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
             return gatherExplicitDependenciesAsync(options.getDependsOn())
                     .thenApply(ImmutableSet::copyOf)
                     .thenCompose(explicitDirectDependencies -> {
-                        logExcessive("Gathered explicit dependencies: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+                        log.excessive("Gathered explicit dependencies: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
 
                         // Serialize out all our props to their final values. In doing so, we'll also collect all
                         // the Resources pointed to by any Dependency objects we encounter, adding them to 'propertyDependencies'.
-                        logExcessive("Serializing properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
-                        return args.internalToOptionalMapAsync().thenCompose(
+                        log.excessive("Serializing properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+                        return args.internalToOptionalMapAsync(this.log).thenCompose(
                                 map -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
-                                        supportsResourceReferences -> Serialization.serializeResourcePropertiesAsync(label, map, supportsResourceReferences).thenCompose(
+                                        supportsResourceReferences -> serialization.serializeResourcePropertiesAsync(label, map, supportsResourceReferences).thenCompose(
                                                 serializationResult -> {
                                                     var serializedProps = serializationResult.serialized;
                                                     var propertyToDirectDependencies = serializationResult.propertyToDependentResources;
-                                                    logExcessive("Serialized properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+                                                    log.excessive("Serialized properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
 
                                                     // Wait for the parent to complete.
                                                     // If no parent was provided, parent to the root resource.
-                                                    logExcessive("Getting parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+                                                    log.excessive("Getting parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
 
                                                     var parentUrn = options.getParent().isPresent()
                                                             ? TypedInputOutput.cast(options.getParent().get().getUrn()).view(InputOutputData::getValueOptional)
                                                             : this.rootResource.getRootResourceAsync(type);
                                                     return parentUrn.thenCompose(
                                                             (Optional<String> pUrn) -> {
-                                                                logExcessive("Got parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+                                                                log.excessive("Got parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
                                                                 var providerRef = custom
                                                                         ? CompletableFutures.flipOptional(options.getProvider().map(p -> p.accept(ProviderResource.registrationIdVisitor())))
                                                                         : CompletableFuture.completedFuture(Optional.<String>empty());
@@ -1164,10 +1178,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private static final class ReadResource {
 
+        private final Log log;
         private final Prepare prepare;
         private final Monitor monitor;
 
-        private ReadResource(Prepare prepare, Monitor monitor) {
+        private ReadResource(Log log, Prepare prepare, Monitor monitor) {
+            this.log = Objects.requireNonNull(log);
             this.prepare = Objects.requireNonNull(prepare);
             this.monitor = Objects.requireNonNull(monitor);
         }
@@ -1178,11 +1194,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var name = resource.getResourceName();
             var type = resource.getResourceType();
             var label = String.format("resource:%s[%s]#...", name, type);
-            Log.debug(String.format("Reading resource: id=%s, type=%s, name=%s", id, type, name));
+            log.debug(String.format("Reading resource: id=%s, type=%s, name=%s", id, type, name));
 
             return this.prepare.prepareResourceAsync(label, resource, /* custom */ true, /* remote */ false, args, options)
                     .thenCompose(prepareResult -> {
-                        Log.debug(String.format(
+                        log.debug(String.format(
                                 "ReadResource RPC prepared: id=%s, type=%s, name=%s", id, type, name) +
                                 (DeploymentState.ExcessiveDebugOutput ? String.format(", obj=%s", prepareResult.serializedProps) : "")
                         );
@@ -1214,10 +1230,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private static final class RegisterResource {
 
+        private final Log log;
         private final Prepare prepare;
         private final Monitor monitor;
 
-        private RegisterResource(Prepare prepare, Monitor monitor) {
+        private RegisterResource(Log log, Prepare prepare, Monitor monitor) {
+            this.log = Objects.requireNonNull(log);
             this.prepare = Objects.requireNonNull(prepare);
             this.monitor = Objects.requireNonNull(monitor);
         }
@@ -1229,14 +1247,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var type = resource.getResourceType();
             var custom = resource instanceof CustomResource;
 
-            Log.debug(String.format(
+            log.debug(String.format(
                     "Preparing resource: t=%s, name=%s, custom=%s, remote=%s",
                     type, name, custom, remote
             ));
             var label = String.format("resource:%s[%s]", name, type);
             return this.prepare.prepareResourceAsync(label, resource, custom, remote, args, options)
                     .thenCompose(prepareResult -> {
-                        Log.debug(String.format(
+                        log.debug(String.format(
                                 "Prepared resource: t=%s, name=%s, custom=%s, remote=%s",
                                 type, name, custom, remote
                         ));
@@ -1245,13 +1263,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 type, name, custom, remote, options, prepareResult
                         );
 
-                        Log.debug(String.format(
+                        log.debug(String.format(
                                 "Registering resource monitor start: t=%s, name=%s, custom=%s, remote=%s",
                                 type, name, custom, remote
                         ));
                         return this.monitor.registerResourceAsync(resource, request)
                                 .thenApply(result -> {
-                                    Log.debug(String.format(
+                                    log.debug(String.format(
                                             "Registering resource monitor end: t=%s, name=%s, custom=%s, remote=%s",
                                             type, name, custom, remote
                                     ));
@@ -1337,14 +1355,24 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private static final class RegisterResourceOutputs {
 
+        private final Log log;
         private final Runner runner;
         private final Monitor monitor;
         private final FeatureSupport featureSupport;
+        private final Serialization serialization;
 
-        private RegisterResourceOutputs(Runner runner, Monitor monitor, FeatureSupport featureSupport) {
+        private RegisterResourceOutputs(
+                Log log,
+                Runner runner,
+                Monitor monitor,
+                FeatureSupport featureSupport,
+                Serialization serialization
+        ) {
+            this.log = Objects.requireNonNull(log);
             this.runner = Objects.requireNonNull(runner);
             this.monitor = Objects.requireNonNull(monitor);
             this.featureSupport = Objects.requireNonNull(featureSupport);
+            this.serialization = Objects.requireNonNull(serialization);
         }
 
         public void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs) {
@@ -1369,7 +1397,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 if (Strings.isEmptyOrNull(urn)) {
                     throw new IllegalStateException(String.format("Expected a urn at this point, got: '%s'", urn));
                 }
-                Log.debug(String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn) +
+                log.debug(String.format("RegisterResourceOutputs RPC prepared: urn='%s'", urn) +
                         (DeploymentState.ExcessiveDebugOutput ?
                                 String.format(", outputs=%s", JsonFormatter
                                         .format(serialized)
@@ -1390,7 +1418,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return urnFuture.thenCompose(
                     urn -> propsFuture.thenCompose(
                             props -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
-                                    keepResources -> Serialization.serializeAllPropertiesAsync(opLabel, props, keepResources).thenCompose(
+                                    keepResources -> serialization.serializeAllPropertiesAsync(opLabel, props, keepResources).thenCompose(
                                             serialized -> registerResourceOutputsAsync.apply(urn, serialized)
                                     )
                             )
@@ -1454,8 +1482,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     private final static class Serialization {
 
-        private Serialization() {
-            throw new UnsupportedOperationException("static class");
+        private final Log log;
+
+        public Serialization(Log log) {
+            this.log = Objects.requireNonNull(log);
         }
 
         /**
@@ -1463,14 +1493,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          * for @see {@link Resource#getUrn()} and @see {@link CustomResource#getId()},
          * creating a reasonable POJO object that can be remoted over to registerResource.
          */
-        private static CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(
+        private CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(
                 String label, Map<String, Optional<Object>> args, boolean keepResources
         ) {
             Predicate<String> filter = key -> !Constants.IdPropertyName.equals(key) && !Constants.UrnPropertyName.equals(key);
             return serializeFilteredPropertiesAsync(label, args, filter, keepResources);
         }
 
-        private static CompletableFuture<Struct> serializeAllPropertiesAsync(
+        private CompletableFuture<Struct> serializeAllPropertiesAsync(
                 String label, Map<String, Optional<Object>> args, boolean keepResources
         ) {
             return serializeFilteredPropertiesAsync(label, args, unused -> true, keepResources)
@@ -1482,7 +1512,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          * with keys that match the provided filter, creating a reasonable POJO object that
          * can be remoted over to registerResource.
          */
-        private static CompletableFuture<SerializationResult> serializeFilteredPropertiesAsync(
+        private CompletableFuture<SerializationResult> serializeFilteredPropertiesAsync(
                 String label, Map<String, Optional<Object>> args, Predicate<String> acceptKey, boolean keepResources) {
             var resultFutures = new HashMap<String, CompletableFuture</* @Nullable */ Object>>();
             var temporaryResources = new HashMap<String, Set<Resource>>();
@@ -1493,7 +1523,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var value = arg.getValue();
                 if (acceptKey.test(key)) {
                     // We treat properties with null values as if they do not exist, CompletableFutures.allOf does it for us
-                    var serializer = new Serializer(DeploymentState.ExcessiveDebugOutput); // serializer is mutable, that's why it's inside the loop
+                    var serializer = new Serializer(this.log); // serializer is mutable, that's why it's inside the loop
                     var v = serializer.serializeAsync(String.format("%s.%s", label, key), value, keepResources);
                     resultFutures.put(key, v);
                     temporaryResources.put(key, serializer.dependentResources);
@@ -1546,6 +1576,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public final Monitor monitor;
         public Runner runner; // late init
         public EngineLogger logger; // late init
+
         private final Logger standardLogger;
 
         @Internal
@@ -1558,19 +1589,16 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 boolean isDryRun,
                 Engine engine,
                 Monitor monitor) {
-            this.standardLogger = Objects.requireNonNull(standardLogger);
             this.config = Objects.requireNonNull(config);
+            this.standardLogger = Objects.requireNonNull(standardLogger);
             this.projectName = Objects.requireNonNull(projectName);
             this.stackName = Objects.requireNonNull(stackName);
             this.isDryRun = isDryRun;
             this.engine = Objects.requireNonNull(engine);
             this.monitor = Objects.requireNonNull(monitor);
-            postInit();
-        }
-
-        private void postInit() {
-            this.logger = new DefaultEngineLogger(this, standardLogger);
-            this.runner = new DefaultRunner(this, standardLogger);
+            // Use Suppliers to avoid problems with cyclic dependencies
+            this.logger = new DefaultEngineLogger(standardLogger, () -> this.runner, () -> this.engine);
+            this.runner = new DefaultRunner(standardLogger, this.logger);
         }
     }
 
@@ -1587,8 +1615,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // 32 was picked so as to be very unlikely to collide with any other error codes.
         private static final int ProcessExitedAfterLoggingUserActionableMessage = 32;
 
-        private final EngineLogger engineLogger;
         private final Logger standardLogger;
+        private final EngineLogger engineLogger;
 
         /**
          * The set of tasks (futures) that we have fired off. We issue futures in a Fire-and-Forget manner
@@ -1605,9 +1633,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Map<CompletableFuture<Void>, List<String>> inFlightTasks = new ConcurrentHashMap<>();
         private final Queue<Exception> swallowedExceptions = new ConcurrentLinkedQueue<>();
 
-        public DefaultRunner(DeploymentState deployment, Logger standardLogger) {
-            this.engineLogger = Objects.requireNonNull(Objects.requireNonNull(deployment).logger);
+        public DefaultRunner(Logger standardLogger, EngineLogger engineLogger) {
             this.standardLogger = Objects.requireNonNull(standardLogger);
+            this.engineLogger = Objects.requireNonNull(engineLogger);
         }
 
         public List<Exception> getSwallowedExceptions() {
@@ -1655,7 +1683,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, @Nullable StackOptions options) {
+        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback) {
+            return runAsyncFuture(callback, StackOptions.Empty);
+        }
+
+        @Override
+        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Optional<Object>>>> callback, StackOptions options) {
             var stack = new Stack(callback, options);
             registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
                     TypedInputOutput.cast(stack.internalGetOutputs()).internalGetDataAsync());
@@ -1797,19 +1830,19 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // properly.
             if (exception instanceof RunException) {
                 // Always hide the stack for RunErrors.
-                return engineLogger
+                return this.engineLogger
                         .errorAsync(exception.getMessage())
                         .thenApply(exitMessageAndCode);
             } else if (exception instanceof ResourceException) {
                 var resourceEx = (ResourceException) exception;
                 var message = resourceEx.isHideStack() ? resourceEx.getMessage() : getStackTrace(resourceEx);
-                return engineLogger
+                return this.engineLogger
                         .errorAsync(message, resourceEx.getResource().orElse(null))
                         .thenApply(exitMessageAndCode);
             } else {
                 var pid = ProcessHandle.current().pid();
                 var command = ProcessHandle.current().info().commandLine().orElse("unknown");
-                return engineLogger
+                return this.engineLogger
                         .errorAsync(String.format(
                                 "Running program [PID: %d](%s) failed with an unhandled exception:\n%s",
                                 pid, command, Exceptions.getStackTrace(exception)))
@@ -1822,7 +1855,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Internal
     @VisibleForTesting
     static class DefaultEngineLogger implements EngineLogger {
-        private final DeploymentState state;
+        private final Supplier<Runner> runner;
+        private final Supplier<Engine> engine;
         private final Logger standardLogger;
         private final AtomicInteger errorCount;
 
@@ -1831,18 +1865,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private CompletableFuture<Void> lastLogTask = CompletableFuture.allOf();
         private final Object logGate = new Object(); // lock target
 
-        public DefaultEngineLogger(DeploymentState state, Logger standardLogger) {
-            this.state = Objects.requireNonNull(state);
+        public DefaultEngineLogger(Logger standardLogger, Supplier<Runner> runner, Supplier<Engine> engine) {
             this.standardLogger = Objects.requireNonNull(standardLogger);
+            this.runner = Objects.requireNonNull(runner);
+            this.engine = Objects.requireNonNull(engine);
             this.errorCount = new AtomicInteger(0);
-        }
-
-        private Runner getRunner() {
-            return Objects.requireNonNull(this.state.runner);
-        }
-
-        private Engine getEngine() {
-            return Objects.requireNonNull(this.state.engine);
         }
 
         @Override
@@ -1883,13 +1910,21 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                      @Nullable Resource resource, @Nullable Integer streamId,
                                                      @Nullable Boolean ephemeral
         ) {
+            if (severity == LogSeverity.ERROR) {
+                this.errorCount.incrementAndGet();
+            }
+
+            var runner = this.runner.get();
+            if (runner == null) {
+                // Graceful degradation of logging
+                standardLogger.warning("Degraded functionality [DefaultEngineLogger]: async logging is unavailable because of no Runner");
+                return CompletableFuture.completedFuture(null);
+            }
+
             // Serialize our logging tasks so that streaming logs appear in order.
+            // TODO: this implementation will compose CompletableFuture's infinitely and this may cause issues at some point
             CompletableFuture<Void> task;
             synchronized (logGate) {
-                if (severity == LogSeverity.ERROR) {
-                    this.errorCount.incrementAndGet();
-                }
-
                 // TODO: C# uses a 'Task.Run' here (like CompletableFuture.runAsync/supplyAsync?)
                 //       so that "we don't end up aggressively running the actual logging while holding this lock."
                 //       Is something similar required in Java or thenComposeAsync is enough?
@@ -1899,17 +1934,23 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 task = this.lastLogTask;
             }
 
-            getRunner().registerTask(message, task);
+            runner.registerTask(message, task);
             return task;
         }
 
         private CompletableFuture<Void> logAsync(LogSeverity severity, String message,
                                                  @Nullable Resource resource, @Nullable Integer streamId,
                                                  @Nullable Boolean ephemeral) {
+            var engine = this.engine.get();
+            if (engine == null) {
+                // Graceful degradation of logging
+                standardLogger.warning("Degraded functionality [DefaultEngineLogger]: async logging is unavailable because of no Engine");
+                return CompletableFuture.completedFuture(null);
+            }
             try {
                 return tryGetResourceUrnAsync(resource)
                         .thenCompose(
-                                urn -> getEngine().logAsync(
+                                urn -> engine.logAsync(
                                         LogRequest.newBuilder()
                                                 .setSeverity(severity)
                                                 .setMessage(message)
@@ -1920,11 +1961,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 )
                         );
             } catch (Exception e) {
-                synchronized (logGate) {
-                    // mark that we had an error so that our top level process quits with an error
-                    // code.
-                    errorCount.incrementAndGet();
-                }
+                // mark that we had an error so that our top level process quits with an error code.
+                errorCount.incrementAndGet();
 
                 // We have a potential pathological case with logging. Consider if logging a
                 // message itself throws an error.  If we then allow the error to bubble up, our top
@@ -1950,12 +1988,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             }
 
             return CompletableFuture.completedFuture("");
-        }
-    }
-
-    private static void logExcessive(String message, Object... args) {
-        if (DeploymentState.ExcessiveDebugOutput) {
-            Log.debug(String.format(message, args));
         }
     }
 }

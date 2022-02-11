@@ -26,7 +26,7 @@ public class Environment {
         var value = Optional.ofNullable(System.getenv(name))
                 .map(String::trim) // make sure we get rid of white spaces
                 .map(v -> v.isEmpty() ? null : v);
-        logger.log(Level.FINEST, name + "=" + value);
+        logger.log(Level.FINE, name + "=" + value.orElse(""));
         return value
                 .map(Either::<Exception, String>valueOf)
                 .orElse(Either.errorOf(
