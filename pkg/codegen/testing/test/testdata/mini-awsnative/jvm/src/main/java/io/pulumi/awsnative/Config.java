@@ -5,6 +5,7 @@ package io.pulumi.awsnative;
 
 import io.pulumi.awsnative.config.inputs.IgnoreTags;
 import io.pulumi.core.internal.Reflection.TypeShape;
+import java.lang.String;
 import java.util.Optional;
 
 public final class Config {
@@ -12,5 +13,8 @@ public final class Config {
     private static final io.pulumi.Config config = io.pulumi.Config.of("aws-native");
     public Optional<IgnoreTags> ignoreTags() {
         return config.getObject("ignoreTags",TypeShape.<IgnoreTags>builder(IgnoreTags.class).build());
+    }
+    public Optional<String> region() {
+        return config.getObject("region",TypeShape.<String>builder(String.class).build());
     }
 }

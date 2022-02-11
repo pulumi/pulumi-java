@@ -7,6 +7,7 @@
     "src/main/java/io/pulumi/awsnative/Provider.java",
     "src/main/java/io/pulumi/awsnative/ProviderArgs.java",
     "src/main/java/io/pulumi/awsnative/Utilities.java",
-    "src/main/java/io/pulumi/awsnative/config/inputs/IgnoreTags.java"
+    "src/main/java/io/pulumi/awsnative/config/inputs/IgnoreTags.java",
+    "src/main/java/io/pulumi/awsnative/enums/Region.java"
   ]
 }
