@@ -64,6 +64,10 @@ jobs:
         run: make provider.google-native.build
       - name: Install pulumi-google-native JVM SDK to a local Maven repo
         run: make provider.google-native.install
+      - name: Build pulumi-aws-native JVM SDK
+        run: make provider.aws-native.build
+      - name: Install pulumi-aws-native JVM SDK to a local Maven repo
+        run: make provider.aws-native.install
       - name: Build pulumi-kubernetes JVM SDK
         run: make provider.kubernetes.build
       - name: Install pulumi-kubernetes JVM SDK to a local Maven repo
